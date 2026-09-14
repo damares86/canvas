@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Showcase multi-step healthcare services with Canvas vertical steps layout—doctors consultations, dietician advice, nurse assistance, medicine delivery, and 24/7 support.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Vertical Steps Block | Canvas</title>
+
+	<style>
+		.feature-box-border-vertical .feature-box { position: relative; }
+
+		.feature-box-border-vertical .feature-box:not(.noborder)::before,
+		.feature-box-border-vertical.border-hover-animate .feature-box:not(.noborder)::after {
+			content: "";
+			position: absolute;
+			top: calc(64px + 13px);
+			left: 59px;
+			width: 2px;
+			height: calc(100% - 90px);
+			background-color: #EEE;
+			z-index: 0;
+		}
+
+		.feature-box-border-vertical.border-hover-animate .feature-box:not(.noborder)::after {
+			background-color: #0F6458;
+			height: 0;
+			transition: height .3s ease-in-out;
+		}
+
+		.feature-box-border-vertical .feature-box:nth-child(1):not(.noborder)::before { background-color: #0F6458; }
+
+		.feature-box-border-vertical.border-hover-animate .feature-box:hover:not(.noborder)::after { height: calc(100% - 90px); }
+
+		.feature-box-border-vertical .fbox-icon i,
+		.feature-box-border-vertical .fbox-border.fbox-light .fbox-icon i {
+			line-height: 60px;
+			font-size: 24px;
+			z-index: 1;
+			text-align: center;
+		}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-content-steps-vertical.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-steps-vertical.html">
+	<meta property="og:title" content="Vertical Steps Block | Canvas">
+	<meta property="og:description" content="Showcase multi-step healthcare services with Canvas vertical steps layout—doctors consultations, dietician advice, nurse assistance, medicine delivery, and 24/7 support.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Vertical Steps Block | Canvas">
+	<meta name="twitter:description" content="Showcase multi-step healthcare services with Canvas vertical steps layout—doctors consultations, dietician advice, nurse assistance, medicine delivery, and 24/7 support.">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+				{
+						"@type": "WebSite",
+						"name": "Canvas",
+						"url": "block-content-steps-vertical.html"
+				},
+				{
+						"@type": "Service",
+						"name": "Telehealth & Home Care Services",
+						"url": "block-content-steps-vertical.html",
+						"description": "Showcase multi-step healthcare services with Canvas vertical steps layout\u2014doctors consultations, dietician advice, nurse assistance, medicine delivery, and 24/7 support.",
+						"provider": {
+								"@type": "Organization",
+								"name": "Canvas Health",
+								"address": {
+										"@type": "PostalAddress",
+										"streetAddress": "123 Example Avenue",
+										"addressLocality": "New York",
+										"addressRegion": "NY",
+										"postalCode": "10001",
+										"addressCountry": "US"
+								},
+								"telephone": "+1-555-123-4567"
+						},
+						"hasOfferCatalog": {
+								"@type": "OfferCatalog",
+								"name": "Healthcare Services",
+								"itemListElement": [
+										{
+												"@type": "Offer",
+												"itemOffered": {
+														"@type": "Service",
+														"name": "Doctors Video Consultation"
+												}
+										},
+										{
+												"@type": "Offer",
+												"itemOffered": {
+														"@type": "Service",
+														"name": "Dietician Consultation"
+												}
+										},
+										{
+												"@type": "Offer",
+												"itemOffered": {
+														"@type": "Service",
+														"name": "Nurse Assistance"
+												}
+										},
+										{
+												"@type": "Offer",
+												"itemOffered": {
+														"@type": "Service",
+														"name": "Home Delivery Medicine"
+												}
+										},
+										{
+												"@type": "Offer",
+												"itemOffered": {
+														"@type": "Service",
+														"name": "24/7 Support"
+												}
+										}
+								]
+						}
+				}
+		]
+}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="row feature-box-border-vertical border-hover-animate col-mb-50 justify-content-center align-items-center my-5">
+						<div class="col-md-6 feature-box fbox-dark">
+							<div class="fbox-icon bg-white">
+								<a href="#"><i>1</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-2">Doctors Video Consultation</h3>
+								<p>Connect instantly with licensed doctors from your home. Book on-demand video consultations for diagnoses, prescriptions, and follow-up care—available any time.</p>
+								<a href="#" class="button button-small button-dark button-rounded border-width-1 ms-0 mt-3">Get Started <i class="uil uil-angle-right-b me-0"></i></a>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-border fbox-light fbox-effect">
+							<div class="fbox-icon bg-white">
+								<a href="#"><i>2</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-2">Dietician Consultation</h3>
+								<p>Get personalized nutrition plans from certified dieticians. One-on-one video sessions help you manage weight, chronic conditions, and overall dietary health.</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-border fbox-light fbox-effect">
+							<div class="fbox-icon bg-white">
+								<a href="#"><i>3</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-2">Nurse Assistance</h3>
+								<p>Our trained nursing staff provide at-home care and monitoring for post-surgical recovery, chronic illness management, and routine health checks on your schedule.</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-border fbox-light fbox-effect">
+							<div class="fbox-icon bg-white">
+								<a href="#"><i>4</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-2">Home Delivery Medicine</h3>
+								<p>Order prescribed medications and wellness products online with same-day or next-day delivery straight to your doorstep—no pharmacy visits or waiting lines needed.</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-border fbox-light fbox-effect noborder">
+							<div class="fbox-icon bg-white">
+								<a href="#"><i>5</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-2">24/7 Support</h3>
+								<p>Round-the-clock assistance is always available. Reach our dedicated support team any time by chat, call, or email for urgent medical queries and appointment help.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

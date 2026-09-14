@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="AI-powered code assistant with 40+ language support, VS Code &amp; JetBrains plugins, bug detection, and code review. Ship code 10x faster.">
+	<meta name="author" content="SemiColonWeb">
+
+	<!-- Open Graph / SEO -->
+	<meta property="og:title" content="CodePilot AI — Intelligent Code Assistant">
+	<meta property="og:description" content="AI-powered code assistant with 40+ language support, VS Code &amp; JetBrains plugins, bug detection, and code review. Ship code 10x faster.">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Niche Demo -->
+	<link rel="stylesheet" href="demos/ai-coding/ai-coding.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Document Title
+	============================================= -->
+	<title>CodePilot AI &mdash; Intelligent Code Assistant | Canvas</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#6366f1">
+	<link rel="canonical" href="demo-ai-coding.html">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="demo-ai-coding.html">
+	<meta property="og:image" content="images/logo.png">
+	<meta name="twitter:title" content="CodePilot AI — Intelligent Code Assistant">
+	<meta name="twitter:description" content="AI-powered code assistant with 40+ language support, VS Code &amp; JetBrains plugins, bug detection, and code review. Ship code 10x faster.">
+	<meta name="twitter:image" content="images/logo.png">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "Organization",
+				"name": "CodePilot AI",
+				"url": "demo-ai-coding.html",
+				"logo": "images/logo.png",
+				"description": "AI-powered code assistant with 40+ language support, VS Code and JetBrains plugins, bug detection, and automated code review.",
+				"sameAs": [
+					"https://github.com/example",
+					"https://x.com/example",
+					"https://www.linkedin.com/company/example"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "+1-555-123-4567",
+					"contactType": "sales",
+					"email": "hello@example.com"
+				},
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "123 Example Avenue",
+					"addressLocality": "San Francisco",
+					"addressRegion": "CA",
+					"postalCode": "94105",
+					"addressCountry": "US"
+				}
+			},
+			{
+				"@type": "SoftwareApplication",
+				"name": "CodePilot AI",
+				"url": "demo-ai-coding.html",
+				"image": "images/logo.png",
+				"applicationCategory": "DeveloperApplication",
+				"operatingSystem": "Windows, macOS, Linux",
+				"description": "Context-aware AI code assistant supporting 40+ languages with VS Code and JetBrains plugins, pre-commit bug detection, PR review automation, and documentation generation.",
+				"offers": [
+					{
+						"@type": "Offer",
+						"name": "Individual",
+						"price": "0",
+						"priceCurrency": "USD"
+					},
+					{
+						"@type": "Offer",
+						"name": "Team",
+						"price": "15",
+						"priceCurrency": "USD"
+					}
+				],
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "4.9",
+					"ratingCount": "14000"
+				}
+			},
+			{
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "demo-ai-coding.html"
+			}
+		]
+	}
+	</script>
+
+</head>
+
+<body class="stretched dark">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header dark no-sticky">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-lg-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="col-lg-2 order-lg-2 mx-lg-auto justify-content-lg-center">
+							<a href="index.html">
+								<img class="logo-default" srcset="images/logo.png, images/logo.png 2x" src="images/logo.png" alt="CodePilot Logo">
+								<img class="logo-dark" srcset="images/logo-dark.png, images/logo-dark.png 2x" src="images/logo-dark.png" alt="CodePilot Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger" data-target=".primary-menu">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<div class="col-lg-5 d-lg-flex justify-content-end order-lg-last">
+							<div class="header-misc">
+								<a href="#" class="button cp-header-cta rounded m-0" data-class="down-lg:button-small"><span>Install Free Plugin</span> <i class="bi-arrow-right ms-2 me-0 d-none d-lg-inline"></i></a>
+							</div>
+						</div>
+
+						<nav class="primary-menu col-lg-5 order-lg-1 on-click" aria-label="Main navigation">
+
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="#features"><div>Features</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#benchmarks"><div>Benchmarks</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#compare"><div>Compare</div></a></li>
+								<li class="menu-item menu-item-more"><a class="menu-link" href="#"><div><i class="bi-three-dots"></i></div></a>
+									<ul class="sub-menu-container" data-class="up-lg:not-dark">
+										<li class="menu-item"><a class="menu-link" href="#pricing"><div>Pricing</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Docs</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+									</ul>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Hero
+		============================================= -->
+		<section id="hero" class="min-vh-100 d-flex align-items-center dark include-header py-5 py-lg-0" style="background-color: #0d0d14; position: relative; overflow: hidden;">
+
+			<!-- Dot Grid SVG -->
+			<svg class="cp-dot-grid" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+				<defs>
+					<pattern id="cp-dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+						<circle cx="1.5" cy="1.5" r="1.5" fill="#6366f1"/>
+					</pattern>
+				</defs>
+				<rect width="100%" height="100%" fill="url(#cp-dots)"/>
+			</svg>
+
+			<!-- Right side radial glow -->
+			<div class="cp-hero-glow"></div>
+
+			<div class="container" style="position: relative; z-index: 1; padding-bottom: 80px;">
+				<div class="row align-items-center g-5">
+
+					<!-- LEFT COLUMN -->
+					<div class="col-lg-6">
+						<span class="cp-eyebrow">// AI-POWERED CODE INTELLIGENCE</span>
+						<h1 class="cp-hero-h1 mb-4">
+							Write Better Code,<br><span style="color: #6366f1;">Faster.</span>
+						</h1>
+						<p style="font-family: 'Inter', sans-serif; font-size: 1.125rem; color: #94a3b8; line-height: 1.75; max-width: 480px; margin-bottom: 0;">
+							CodePilot understands your codebase, autocompletes with context, catches bugs before runtime, and documents as you go.
+						</p>
+						<div class="d-flex gap-3 flex-wrap" style="margin-top: 2rem;">
+							<a href="#" class="button button-rounded button-large" style="background: #6366f1; border-color: #6366f1; color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; padding: 14px 32px; box-shadow: 0 4px 24px rgba(99,102,241,0.35);">Install Free Plugin</a>
+							<a href="#" class="button button-rounded button-large button-border" style="border-color: rgba(99,102,241,0.45); color: #a5b4fc; font-family: 'Inter', sans-serif; font-weight: 600; padding: 14px 32px;">
+								<i class="fa-solid fa-circle-play me-2" style="font-size: 0.875rem;"></i>Watch Demo
+							</a>
+						</div>
+						<p style="margin-top: 1.25rem; font-size: 0.875rem; color: #64748b; font-family: 'JetBrains Mono', monospace;">
+							<span style="color: #22c55e;">&#9679;</span>&nbsp; 14,000+ developers already shipping faster
+						</p>
+					</div>
+
+					<!-- RIGHT COLUMN — Terminal Card -->
+					<div class="col-lg-6">
+						<div class="cp-terminal-wrapper">
+							<div class="cp-terminal-inner">
+
+								<!-- Window chrome -->
+								<div style="background: #1a1a2e; padding: 12px 18px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(99,102,241,0.15);">
+									<span style="width:12px;height:12px;border-radius:50%;background:#ff5f57;display:inline-block;flex-shrink:0;"></span>
+									<span style="width:12px;height:12px;border-radius:50%;background:#febc2e;display:inline-block;flex-shrink:0;"></span>
+									<span style="width:12px;height:12px;border-radius:50%;background:#28c840;display:inline-block;flex-shrink:0;"></span>
+									<span style="margin-left: 14px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #64748b; letter-spacing: 0.02em;">recommendation_engine.py</span>
+									<span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: #374151; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 4px; padding: 2px 8px;">Python 3.11</span>
+								</div>
+
+								<!-- Code block -->
+								<div style="padding: 24px 26px; font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem; line-height: 1.9; background: #0d0d14; overflow-x: auto;">
+									<div><span style="color:#6b7280"># CodePilot context-aware completion</span></div>
+									<div><span style="color:#a78bfa">import</span> <span style="color:#f1f5f9">numpy</span> <span style="color:#a78bfa">as</span> <span style="color:#f1f5f9">np</span></div>
+									<div><span style="color:#a78bfa">from</span> <span style="color:#f1f5f9">typing</span> <span style="color:#a78bfa">import</span> <span style="color:#34d399">List</span><span style="color:#f1f5f9">, Optional</span></div>
+									<div>&nbsp;</div>
+									<div>
+										<span style="color:#a78bfa">class</span>
+										<span style="color:#fb923c"> RecommendationEngine</span><span style="color:#f1f5f9">:</span>
+									</div>
+									<div style="padding-left: 1.5em;">
+										<span style="color:#a78bfa">def</span>
+										<span style="color:#fb923c"> __init__</span><span style="color:#f1f5f9">(self, model_path: </span><span style="color:#34d399">str</span><span style="color:#f1f5f9">):</span>
+									</div>
+									<div style="padding-left: 3em;"><span style="color:#f1f5f9">self.model = </span><span style="color:#fb923c">self._load_model</span><span style="color:#f1f5f9">(model_path)</span></div>
+									<div style="padding-left: 3em;"><span style="color:#f1f5f9">self.cache: </span><span style="color:#34d399">dict</span><span style="color:#f1f5f9"> = {}</span></div>
+									<div>&nbsp;</div>
+									<div style="padding-left: 1.5em;">
+										<span style="color:#a78bfa">def</span>
+										<span style="color:#fb923c"> recommend</span><span style="color:#f1f5f9">(self, user_id: </span><span style="color:#34d399">int</span><span style="color:#f1f5f9">,</span>
+									</div>
+									<div style="padding-left: 3.5em;">
+										<span style="color:#f1f5f9">items: </span><span style="color:#34d399">List</span><span style="color:#f1f5f9">[</span><span style="color:#34d399">str</span><span style="color:#f1f5f9">], top_k: </span><span style="color:#34d399">int</span><span style="color:#f1f5f9"> = </span><span style="color:#fb923c">10</span><span style="color:#f1f5f9">) -&gt; </span><span style="color:#34d399">List</span><span style="color:#f1f5f9">[</span><span style="color:#34d399">str</span><span style="color:#f1f5f9">]:</span>
+									</div>
+									<div style="padding-left: 3em;">
+										<span style="color:#6b7280">"""Get top-k recommendations for user."""</span>
+									</div>
+									<div style="padding-left: 3em;">
+										<span style="color:#f1f5f9">embeddings = self.model.encode(</span><span style="color:#34d399">items</span><span style="color:#f1f5f9">,</span>
+									</div>
+									<div style="padding-left: 5.5em;">
+										<span style="color:#f1f5f9">batch_size=</span><span style="color:#fb923c">32</span><span style="color:#f1f5f9">, </span><span style="color:#f1f5f9">normalize=</span><span style="color:#fb923c">True</span><span style="color:#f1f5f9">)</span>
+									</div>
+									<!-- Ghost text / autocomplete suggestion -->
+									<div style="padding-left: 3em; position: relative;">
+										<span style="color:#f1f5f9">scores = </span><span style="color: rgba(99,102,241,0.55); font-style: italic;">np.dot(embeddings, self.cache[user_id])</span><span class="cp-cursor"></span>
+									</div>
+								</div>
+
+								<!-- AI Hint Badge -->
+								<div style="padding: 10px 18px; border-top: 1px solid rgba(99,102,241,0.15); background: rgba(99,102,241,0.07); display: flex; align-items: center; gap: 8px;">
+									<span style="color: #6366f1; font-size: 0.8rem; line-height: 1;">&#10022;</span>
+									<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #a5b4fc;">CodePilot suggestion — <strong style="color: #e0e7ff;">Tab</strong> to accept</span>
+									<span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #4b5563; white-space: nowrap;">98% confidence</span>
+								</div>
+
+							</div><!-- .cp-terminal-inner end -->
+						</div><!-- .cp-terminal-wrapper end -->
+					</div>
+
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+
+			<!-- Marquee Strip — pinned to bottom -->
+			<div style="position: absolute; bottom: 0; left: 0; right: 0; background: #1a1a2e; border-top: 1px solid rgba(99,102,241,0.15); padding: 14px 0; overflow: hidden; z-index: 2;">
+				<div class="cp-marquee-track">
+					<!-- Set 1 -->
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-code" style="color:#007ACC;"></i>VS Code</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-laptop-code" style="color:#EE4330;"></i>JetBrains</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-terminal" style="color:#57A143;"></i>Neovim</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-keyboard" style="color:#7F5AB6;"></i>Emacs</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-file-code" style="color:#FF9800;"></i>Sublime Text</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(99,102,241,0.3); margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;"><i class="fa-solid fa-circle-dot" style="font-size:0.5rem;"></i></span>
+					<!-- Set 2 (duplicate for seamless loop) -->
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-code" style="color:#007ACC;"></i>VS Code</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-laptop-code" style="color:#EE4330;"></i>JetBrains</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-terminal" style="color:#57A143;"></i>Neovim</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-keyboard" style="color:#7F5AB6;"></i>Emacs</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #64748b; margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;"><i class="fa-solid fa-file-code" style="color:#FF9800;"></i>Sublime Text</span>
+					<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(99,102,241,0.3); margin: 0 36px; letter-spacing: 0.05em; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;"><i class="fa-solid fa-circle-dot" style="font-size:0.5rem;"></i></span>
+				</div>
+			</div>
+
+		</section><!-- #hero end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<!-- Features
+				============================================= -->
+				<section id="features" class="section my-0 dark" style="background-color: #111827; padding: 100px 0;">
+					<div class="container">
+						<div class="text-center mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+							<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6366f1; display: block; margin-bottom: 1rem;">// CAPABILITIES</span>
+							<h2 style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 2.5rem; line-height: 1.2; letter-spacing: -0.01em; color: #f1f5f9; margin-bottom: 1rem;">Everything You Need to Ship Faster</h2>
+							<p style="font-family: 'Inter', sans-serif; font-size: 1.125rem; color: #94a3b8; line-height: 1.75; margin: 0;">One assistant. Every language. Every workflow.</p>
+						</div>
+						<div class="row g-4 mt-2">
+							<div class="col-lg-4 col-md-6 col-12">
+								<div class="cp-feat-card">
+									<div class="cp-feat-icon" style="width: 48px; height: 48px; border-radius: 10px; background: rgba(99,102,241,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: background 0.3s ease;">
+										<i class="fa-solid fa-code" style="font-size: 1.25rem; color: #6366f1;"></i>
+									</div>
+									<h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.125rem; color: #f1f5f9; margin-bottom: 10px;">40+ Languages</h3>
+									<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.7; margin: 0;">Full context-aware completion for Python, TypeScript, Rust, Go, Java, C++, Ruby, PHP, Swift and 30+ more. No config needed.</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12">
+								<div class="cp-feat-card">
+									<div class="cp-feat-icon" style="width: 48px; height: 48px; border-radius: 10px; background: rgba(99,102,241,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: background 0.3s ease;">
+										<i class="fa-solid fa-puzzle-piece" style="font-size: 1.25rem; color: #6366f1;"></i>
+									</div>
+									<h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.125rem; color: #f1f5f9; margin-bottom: 10px;">VS Code &amp; JetBrains Plugins</h3>
+									<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.7; margin: 0;">Native IDE integration — zero latency suggestions, project-wide context indexing, inline diff previews.</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12">
+								<div class="cp-feat-card">
+									<div class="cp-feat-icon" style="width: 48px; height: 48px; border-radius: 10px; background: rgba(99,102,241,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: background 0.3s ease;">
+										<i class="fa-solid fa-magnifying-glass" style="font-size: 1.25rem; color: #6366f1;"></i>
+									</div>
+									<h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.125rem; color: #f1f5f9; margin-bottom: 10px;">Bug Detection</h3>
+									<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.7; margin: 0;">Static analysis powered by LLM reasoning. Spots null-pointer risks, logic errors, and security vulnerabilities before you commit.</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12">
+								<div class="cp-feat-card">
+									<div class="cp-feat-icon" style="width: 48px; height: 48px; border-radius: 10px; background: rgba(99,102,241,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: background 0.3s ease;">
+										<i class="fa-solid fa-rotate-left" style="font-size: 1.25rem; color: #6366f1;"></i>
+									</div>
+									<h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.125rem; color: #f1f5f9; margin-bottom: 10px;">Code Review</h3>
+									<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.7; margin: 0;">Automated PR review comments. Flags style violations, complexity hotspots, and missing edge cases with fix suggestions.</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12">
+								<div class="cp-feat-card">
+									<div class="cp-feat-icon" style="width: 48px; height: 48px; border-radius: 10px; background: rgba(99,102,241,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: background 0.3s ease;">
+										<i class="fa-solid fa-file-lines" style="font-size: 1.25rem; color: #6366f1;"></i>
+									</div>
+									<h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.125rem; color: #f1f5f9; margin-bottom: 10px;">Doc Generation</h3>
+									<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.7; margin: 0;">Auto-generate JSDoc, docstrings, and README sections from your code — context-aware, not boilerplate.</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-12">
+								<div class="cp-feat-card">
+									<div class="cp-feat-icon" style="width: 48px; height: 48px; border-radius: 10px; background: rgba(99,102,241,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: background 0.3s ease;">
+										<i class="fa-solid fa-bolt" style="font-size: 1.25rem; color: #6366f1;"></i>
+									</div>
+									<h3 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.125rem; color: #f1f5f9; margin-bottom: 10px;">Instant Refactoring</h3>
+									<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.7; margin: 0;">Select any block — CodePilot rewrites it cleaner, faster, or in a different pattern. One shortcut, zero rework.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section><!-- #features end -->
+
+				<!-- Benchmarks
+				============================================= -->
+				<section id="benchmarks" class="section my-0 dark" style="background-color: #0d0d14; padding: 100px 0; position: relative; overflow: hidden;">
+					<div style="position: absolute; top: -120px; left: -180px; width: 640px; height: 640px; background: radial-gradient(ellipse, rgba(99,102,241,0.13) 0%, transparent 68%); pointer-events: none; z-index: 0;"></div>
+					<div style="position: absolute; bottom: 0; right: 0; width: 400px; height: 400px; background: radial-gradient(ellipse, rgba(124,58,237,0.07) 0%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+
+					<div class="container" style="position: relative; z-index: 1;">
+
+						<!-- Header -->
+						<div class="text-center" style="max-width: 620px; margin: 0 auto 64px;">
+							<span class="cp-eyebrow">// BENCHMARKS</span>
+							<h2 style="font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 700; color: #f1f5f9; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 16px;">Code 10x Faster. Measurably.</h2>
+							<p style="font-size: 1.0625rem; color: #94a3b8; line-height: 1.75; margin: 0;">Independently measured across 500 developers over 30 days.</p>
+						</div>
+
+						<!-- Stat Row -->
+						<div class="row g-0 mb-5" style="border: 1px solid rgba(99,102,241,0.15); border-radius: 14px; background: rgba(255,255,255,0.02); overflow: hidden;">
+							<div class="col-lg-4 cp-stat-col text-center" style="padding: 40px 24px;">
+								<div class="cp-mono" style="font-family: 'JetBrains Mono', monospace; font-size: 3.5rem; font-weight: 700; color: #6366f1; line-height: 1; letter-spacing: -0.03em;">67%</div>
+								<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #94a3b8; margin-top: 12px; letter-spacing: 0.03em;">less time writing boilerplate</div>
+							</div>
+							<div class="col-lg-4 cp-stat-col text-center" style="padding: 40px 24px;">
+								<div class="cp-mono" style="font-family: 'JetBrains Mono', monospace; font-size: 3.5rem; font-weight: 700; color: #22c55e; line-height: 1; letter-spacing: -0.03em;">4.2x</div>
+								<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #94a3b8; margin-top: 12px; letter-spacing: 0.03em;">faster code reviews</div>
+							</div>
+							<div class="col-lg-4 cp-stat-col text-center" style="padding: 40px 24px;">
+								<div class="cp-mono" style="font-family: 'JetBrains Mono', monospace; font-size: 3.5rem; font-weight: 700; color: #22c55e; line-height: 1; letter-spacing: -0.03em;">89%</div>
+								<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #94a3b8; margin-top: 12px; letter-spacing: 0.03em;">of bugs caught pre-commit</div>
+							</div>
+						</div>
+
+						<!-- Chart Section -->
+						<div class="row g-5 align-items-start">
+
+							<!-- Left: Descriptive Text -->
+							<div class="col-lg-5">
+								<h3 style="font-family: 'Inter', sans-serif; font-size: 1.25rem; font-weight: 600; color: #f1f5f9; letter-spacing: -0.01em; margin-bottom: 14px;">Measured Real-World Tasks</h3>
+								<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.75; margin-bottom: 24px;">Benchmarks run across 500 developers on real codebases. Controlled environment: same tasks, same repositories — CodePilot vs. unassisted. Every result independently verified by a third-party engineering team.</p>
+								<p style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: #94a3b8; line-height: 1.75; margin-bottom: 28px;">Participants ranged from junior engineers to senior architects across fintech, SaaS, and infrastructure teams based in San Francisco, Austin, and New York.</p>
+								<div style="padding: 14px 18px; background: rgba(99,102,241,0.07); border-left: 3px solid #6366f1; border-radius: 0 6px 6px 0;">
+									<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #94a3b8; line-height: 1.9;">
+										<span style="color: #6b7280;">// study metadata</span><br>
+										n = 500 developers<br>
+										duration = 30 days<br>
+										cohort = enterprise beta, Nov 2024<br>
+										auditor = <span style="color: #a5b4fc;">independent third party</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Right: Bar Chart -->
+							<div class="col-lg-7">
+
+								<!-- Row 1 -->
+								<div class="cp-bench-row">
+									<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem; color: #f1f5f9; margin-bottom: 14px; letter-spacing: 0.01em;">Writing a REST endpoint</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #64748b;">Manual</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-manual" style="--bar-width: 85%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #64748b;">47 min</span>
+									</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #a5b4fc;">CodePilot</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-pilot" style="--bar-width: 22%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #a5b4fc;">12 min</span>
+									</div>
+								</div>
+
+								<!-- Row 2 -->
+								<div class="cp-bench-row">
+									<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem; color: #f1f5f9; margin-bottom: 14px; letter-spacing: 0.01em;">Documenting a module</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #64748b;">Manual</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-manual" style="--bar-width: 70%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #64748b;">38 min</span>
+									</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #a5b4fc;">CodePilot</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-pilot" style="--bar-width: 13%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #a5b4fc;">7 min</span>
+									</div>
+								</div>
+
+								<!-- Row 3 -->
+								<div class="cp-bench-row">
+									<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem; color: #f1f5f9; margin-bottom: 14px; letter-spacing: 0.01em;">Reviewing a 200-line PR</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #64748b;">Manual</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-manual" style="--bar-width: 90%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #64748b;">52 min</span>
+									</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #a5b4fc;">CodePilot</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-pilot" style="--bar-width: 29%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #a5b4fc;">17 min</span>
+									</div>
+								</div>
+
+								<!-- Row 4 -->
+								<div class="cp-bench-row">
+									<div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem; color: #f1f5f9; margin-bottom: 14px; letter-spacing: 0.01em;">Debugging a runtime error</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #64748b;">Manual</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-manual" style="--bar-width: 75%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #64748b;">43 min</span>
+									</div>
+									<div class="cp-bar-row">
+										<span class="cp-bar-label" style="color: #a5b4fc;">CodePilot</span>
+										<div class="cp-bar-track">
+											<div class="cp-bar-fill cp-bar-pilot" style="--bar-width: 24%;"></div>
+										</div>
+										<span class="cp-bar-time" style="color: #a5b4fc;">14 min</span>
+									</div>
+								</div>
+
+								<!-- Legend + Footer Note -->
+								<div style="display: flex; align-items: center; gap: 24px; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(99,102,241,0.1);">
+									<div style="display: flex; align-items: center; gap: 8px;">
+										<div style="width: 28px; height: 8px; border-radius: 999px; background: #374151;"></div>
+										<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #64748b;">Manual</span>
+									</div>
+									<div style="display: flex; align-items: center; gap: 8px;">
+										<div style="width: 28px; height: 8px; border-radius: 999px; background: linear-gradient(90deg, #6366f1, #818cf8);"></div>
+										<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #a5b4fc;">With CodePilot</span>
+									</div>
+									<p style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #4b5563; margin: 0; margin-left: auto;">Based on internal study with enterprise beta cohort, Nov 2024.</p>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</section><!-- #benchmarks end -->
+
+				<!-- Compare
+				============================================= -->
+				<section id="compare" class="section my-0 dark" style="background-color: #0d0d14; padding: 100px 0; border-top: 1px solid rgba(99,102,241,0.12);">
+
+					<div class="container">
+
+						<div class="text-center mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+							<span class="cp-eyebrow amber">// COMPARE</span>
+							<h2 style="font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 700; color: #f1f5f9; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1rem;">CodePilot vs GitHub Copilot</h2>
+							<p style="font-size: 1.125rem; color: #94a3b8; line-height: 1.7; margin: 0;">We built what Copilot missed.</p>
+						</div>
+
+						<div class="row justify-content-center">
+							<div class="col-xl-10 col-lg-12">
+
+								<div style="overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 14px; box-shadow: 0 0 48px rgba(99,102,241,0.1);">
+									<table class="cp-compare-table mb-0">
+										<thead>
+											<tr>
+												<th>FEATURE</th>
+
+												<th class="cp-th-codepilot">
+													<div style="margin-bottom: 8px;">
+														<span style="display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px;">RECOMMENDED</span>
+													</div>
+													<div style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; font-weight: 700; color: #fff; letter-spacing: -0.01em;">CodePilot</div>
+												</th>
+
+												<th class="cp-th-copilot">
+													<div style="font-family: 'Inter', sans-serif; font-size: 0.9375rem; font-weight: 600; color: #94a3b8; letter-spacing: -0.01em;">GitHub Copilot</div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Full codebase context indexing</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><i class="fa-solid fa-xmark cp-cross"></i></td>
+											</tr>
+											<tr>
+												<td>Bug detection with fix suggestions</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><span class="cp-partial">Partial</span></td>
+											</tr>
+											<tr>
+												<td>PR code review automation</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><i class="fa-solid fa-xmark cp-cross"></i></td>
+											</tr>
+											<tr>
+												<td>Documentation generation</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><span class="cp-partial">Partial</span></td>
+											</tr>
+											<tr>
+												<td>Private self-hosted option</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><i class="fa-solid fa-xmark cp-cross"></i></td>
+											</tr>
+											<tr>
+												<td>JetBrains native plugin</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><span class="cp-partial">Partial</span></td>
+											</tr>
+											<tr>
+												<td>Team knowledge sharing</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><i class="fa-solid fa-xmark cp-cross"></i></td>
+											</tr>
+											<tr>
+												<td>Free individual tier</td>
+												<td class="cp-col-codepilot"><i class="fa-solid fa-check cp-check"></i></td>
+												<td><i class="fa-solid fa-check cp-check"></i></td>
+											</tr>
+											<tr>
+												<td>Price (team)</td>
+												<td class="cp-col-codepilot"><span class="cp-price-codepilot">$14 / user / mo</span></td>
+												<td><span class="cp-price-copilot">$19 / user / mo</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<p style="margin-top: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #4b5563; text-align: center; letter-spacing: 0.04em;">
+									Comparison based on public documentation, December 2024.
+								</p>
+
+							</div>
+						</div>
+
+					</div>
+				</section><!-- #compare end -->
+
+				<!-- Pricing
+				============================================= -->
+				<section id="pricing" class="section my-0 dark" style="background-color: #111827; padding: 100px 0;">
+
+					<div class="container">
+
+						<div class="text-center mb-5" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+							<span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6366f1; display: block; margin-bottom: 1rem;">// PRICING</span>
+							<h2 style="font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 700; color: #f1f5f9; letter-spacing: -0.02em; margin-bottom: 14px;">Simple, Developer-First Pricing</h2>
+							<p style="font-family: 'Inter', sans-serif; font-size: 1.0625rem; color: #94a3b8; line-height: 1.7; margin: 0;">No surprise bills. No feature gates for the essentials.</p>
+						</div>
+
+						<div class="row g-4 align-items-stretch justify-content-center mt-2">
+
+							<!-- Card 1: Individual -->
+							<div class="col-lg-4 col-md-6">
+								<div class="cp-price-card">
+									<span class="cp-plan-name">Individual</span>
+									<div class="cp-price-val">$0</div>
+									<span class="cp-price-sub">/ forever</span>
+									<ul class="cp-feature-list">
+										<li><i class="bi-check2 cp-check"></i>40+ language support</li>
+										<li><i class="bi-check2 cp-check"></i>VS Code + JetBrains plugin</li>
+										<li><i class="bi-check2 cp-check"></i>2,000 completions / month</li>
+										<li><i class="bi-check2 cp-check"></i>Basic bug detection</li>
+										<li><i class="bi-check2 cp-check"></i>Community support</li>
+									</ul>
+									<a href="#" class="cp-btn-outline">Install Free</a>
+								</div>
+							</div>
+
+							<!-- Card 2: Team (Featured) -->
+							<div class="col-lg-4 col-md-6">
+								<div class="cp-price-card featured">
+									<span class="cp-popular-badge">Most Popular</span>
+									<span class="cp-plan-name featured">Team</span>
+									<div class="cp-price-val">$15</div>
+									<span class="cp-price-sub">/ user / month — billed annually</span>
+									<ul class="cp-feature-list">
+										<li><i class="bi-check2 cp-check"></i>Everything in Individual</li>
+										<li><i class="bi-check2 cp-check"></i>Unlimited completions</li>
+										<li><i class="bi-check2 cp-check"></i>PR code review automation</li>
+										<li><i class="bi-check2 cp-check"></i>Doc generation</li>
+										<li><i class="bi-check2 cp-check"></i>Team knowledge base</li>
+										<li><i class="bi-check2 cp-check"></i>Priority support</li>
+										<li><i class="bi-check2 cp-check"></i>Usage analytics</li>
+									</ul>
+									<a href="#" class="cp-btn-filled">Start 14-Day Trial</a>
+								</div>
+							</div>
+
+							<!-- Card 3: Enterprise -->
+							<div class="col-lg-4 col-md-6">
+								<div class="cp-price-card">
+									<span class="cp-plan-name">Enterprise</span>
+									<div class="cp-price-val" style="font-size: 1.75rem;">Custom</div>
+									<span class="cp-price-sub">pricing tailored to your team</span>
+									<ul class="cp-feature-list">
+										<li><i class="bi-check2 cp-check"></i>Everything in Team</li>
+										<li><i class="bi-check2 cp-check"></i>Self-hosted deployment</li>
+										<li><i class="bi-check2 cp-check"></i>SSO + SCIM provisioning</li>
+										<li><i class="bi-check2 cp-check"></i>SLA guarantee</li>
+										<li><i class="bi-check2 cp-check"></i>Dedicated CSM</li>
+										<li><i class="bi-check2 cp-check"></i>Custom model fine-tuning</li>
+										<li><i class="bi-check2 cp-check"></i>Audit logs</li>
+									</ul>
+									<a href="#" class="cp-btn-outline">Contact Sales</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="cp-faq-strip">
+							Cancel anytime
+							<span>&middot;</span>
+							No credit card for free plan
+							<span>&middot;</span>
+							Volume discounts for 50+ seats
+						</div>
+
+					</div>
+				</section><!-- #pricing end -->
+
+				<!-- CTA
+				============================================= -->
+				<section id="cta" class="section my-0 dark" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); padding: 100px 0; position: relative; overflow: hidden;">
+
+					<div style="position: absolute; top: 20px; left: 40px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.06); line-height: 1.8; pointer-events: none; user-select: none;">
+						const pilot = new<br>CodePilot({ context:<br>'workspace', model:<br>'gpt-4-turbo' });
+					</div>
+
+					<div style="position: absolute; bottom: 24px; right: 48px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.06); line-height: 1.8; pointer-events: none; user-select: none; text-align: right;">
+						await pilot.suggest()<br>.then(r =&gt; apply(r))<br>.catch(handleErr);
+					</div>
+
+					<div style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: rgba(255,255,255,0.04); line-height: 2; pointer-events: none; user-select: none;">
+						import {<br>&nbsp;&nbsp;complete,<br>&nbsp;&nbsp;review<br>} from 'codepilot';
+					</div>
+
+					<div style="position: absolute; top: 30px; right: 200px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: rgba(255,255,255,0.05); pointer-events: none; user-select: none;">
+						// 98% confidence
+					</div>
+
+					<div style="position: absolute; bottom: 40px; left: 200px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: rgba(255,255,255,0.05); pointer-events: none; user-select: none;">
+						&lt;Tab&gt; to accept
+					</div>
+
+					<div class="container" style="position: relative; z-index: 1;">
+						<div class="row justify-content-center">
+							<div class="col-lg-7 text-center">
+
+								<span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 1.25rem;">// GET STARTED</span>
+
+								<h2 style="font-family: 'Inter', sans-serif; font-size: 2.75rem; font-weight: 800; color: #fff; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.25rem;">Your IDE is about to get<br>a lot smarter.</h2>
+
+								<p style="font-size: 1.125rem; color: rgba(255,255,255,0.8); line-height: 1.75; margin-bottom: 2.25rem; max-width: 480px; margin-left: auto; margin-right: auto;">Install the free plugin in under 60 seconds. No account required to start.</p>
+
+								<div class="d-flex gap-3 justify-content-center flex-wrap" style="margin-bottom: 2.5rem;">
+									<a href="#" class="button button-rounded button-large" style="background: #fff; border-color: #fff; color: #3730a3; font-family: 'Inter', sans-serif; font-weight: 700; padding: 14px 30px;">
+										<i class="fa-solid fa-code" style="margin-right: 8px; color: #007ACC;"></i>Install for VS Code
+									</a>
+									<a href="#" class="button button-rounded button-large button-border" style="border-color: rgba(255,255,255,0.6); color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; padding: 14px 30px;">
+										<i class="fa-solid fa-laptop-code" style="margin-right: 8px;"></i>Install for JetBrains
+									</a>
+								</div>
+
+								<div class="d-flex gap-4 justify-content-center flex-wrap">
+									<div style="display: flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.75);">
+										<i class="bi-shield-check" style="font-size: 0.9rem; color: rgba(255,255,255,0.9);"></i>
+										SOC 2 Type II
+									</div>
+									<div style="display: flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.75);">
+										<i class="bi-lock-fill" style="font-size: 0.9rem; color: rgba(255,255,255,0.9);"></i>
+										Your code stays private
+									</div>
+									<div style="display: flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.75);">
+										<i class="bi-star-fill" style="font-size: 0.9rem; color: #fbbf24;"></i>
+										4.9&#9733; on VS Code Marketplace
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</section><!-- #cta end -->
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row">
+						<div class="col-6 col-lg-4">
+							<img class="mb-5 footer-logo" src="images/logo-dark.png" alt="CodePilot Footer Logo" width="123">
+							<p class="text-white-50">CodePilot is your AI-powered code intelligence layer — autocomplete with context, catch bugs before runtime, and ship production-ready code 10x faster across 40+ languages.</p>
+							<div class="d-flex">
+								<a href="#" class="social-icon bg-white bg-opacity-25 border-transparent rounded-circle si-small h-bg-github" aria-label="GitHub">
+									<i class="fa-brands fa-github"></i>
+									<i class="fa-brands fa-github"></i>
+								</a>
+								<a href="#" class="social-icon bg-white bg-opacity-25 border-transparent rounded-circle si-small h-bg-x-twitter" aria-label="X (Twitter)">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+								<a href="#" class="social-icon bg-white bg-opacity-25 border-transparent rounded-circle si-small h-bg-linkedin" aria-label="LinkedIn">
+									<i class="fa-brands fa-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+								<a href="#" class="social-icon bg-white bg-opacity-25 border-transparent rounded-circle si-small h-bg-discord" aria-label="Discord">
+									<i class="fa-brands fa-discord"></i>
+									<i class="fa-brands fa-discord"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3">
+							<h4>Features</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a href="#features" class="text-light">40+ Language Support</a></li>
+								<li class="mb-2"><a href="#features" class="text-light">VS Code Plugin</a></li>
+								<li class="mb-2"><a href="#features" class="text-light">JetBrains Plugin</a></li>
+								<li class="mb-2"><a href="#features" class="text-light">Bug Detection</a></li>
+								<li class="mb-2"><a href="#features" class="text-light">Code Review</a></li>
+								<li><a href="#features" class="text-light">Doc Generation</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-3 mt-5 mt-lg-0">
+							<h4>Resources</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a href="#benchmarks" class="text-light">Benchmarks</a></li>
+								<li class="mb-2"><a href="#compare" class="text-light">Compare</a></li>
+								<li class="mb-2"><a href="#" class="text-light">Documentation</a></li>
+								<li><a href="#" class="text-light">API Reference</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-2 mt-5 mt-lg-0">
+							<h4>About</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a href="#" class="text-light">Team</a></li>
+								<li class="mb-2"><a href="#" class="text-light">Careers</a></li>
+								<li class="mb-2"><a href="#" class="text-light">Privacy</a></li>
+								<li><a class="text-light" href="#">Terms</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="dark">
+
+				<div class="container">
+
+					<div class="row align-items-center justify-content-between">
+						<div class="col-md-6 text-white-50">
+							Copyrights &copy; 2026 CodePilot. All Rights Reserved. Built using <a href="https://1.envato.market/c/1309643/480739/4415?u=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F9228123" target="_blank" rel="noopener" class="text-white-50">Canvas Template</a>.<br>
+							<div class="copyright-links"><a href="#" class="text-white-50">Terms of Use</a> / <a href="#" class="text-white-50">Privacy Policy</a></div>
+						</div>
+
+						<div class="col-md-6 d-flex justify-content-md-end mt-4 mt-md-0">
+							<div class="copyrights-menu copyright-links mb-0">
+								<a href="#home" class="text-white-50">Home</a>/<a href="#features" class="text-white-50">Features</a>/<a href="#benchmarks" class="text-white-50">Benchmarks</a>/<a href="#compare" class="text-white-50">Compare</a>/<a href="#pricing" class="text-white-50">Pricing</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

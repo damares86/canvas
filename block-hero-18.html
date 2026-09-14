@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore our split-screen fashion hero showcasing men's and women's collections. A bold, interactive full-screen section built for modern apparel stores.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Men & Women Fashion Split Hero | Canvas</title>
+
+	<style>
+
+		.section-split h1,
+		.section-split h2,
+		.section-split h3 { font-family: Playfair Display, serif !important; }
+
+		@media (min-width: 576px) {
+			.section-split {
+				--section-width: 50%;
+				--hover-width: 65%;
+				--less-width: calc(100% - var(--hover-width));
+				--hover-speed: 1s;
+				--bg-opacity: 0.7;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: var(--section-width);
+				background-repeat: no-repeat;
+	  			background-size: auto 100%;
+	  			background-position: center center;
+				transition: width var(--hover-speed) ease;
+			}
+
+			.section-split.split-right {
+				left: auto;
+				right: 0;
+			}
+
+			.section-split:hover ~ .section-split {
+				width: var(--less-width);
+			}
+
+			.section-split:hover {
+				width: var(--hover-width);
+			}
+		}
+
+
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-hero-18.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-hero-18.html">
+	<meta property="og:title" content="Men & Women Fashion Split Hero | Canvas">
+	<meta property="og:description" content="Explore our split-screen fashion hero showcasing men's and women's collections. A bold, interactive full-screen section built for modern apparel stores.">
+	<meta property="og:image" content="images/blocks/preview/hero-18/men.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Men & Women Fashion Split Hero | Canvas">
+	<meta name="twitter:description" content="Explore our split-screen fashion hero showcasing men's and women's collections. A bold, interactive full-screen section built for modern apparel stores.">
+	<meta name="twitter:image" content="images/blocks/preview/hero-18/men.jpg">
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@graph": [
+		    {
+		      "@type": "WebSite",
+		      "name": "Canvas",
+		      "url": "block-hero-18.html",
+		      "description": "Explore our split-screen fashion hero layout showcasing men's and women's collections. A bold, interactive full-screen section for apparel stores."
+		    },
+		    {
+		      "@type": "Organization",
+		      "name": "Canvas Fashion",
+		      "url": "block-hero-18.html",
+		      "image": "images/blocks/preview/hero-18/men.jpg",
+		      "description": "Premium fashion destination offering curated collections for men and women.",
+		      "address": {
+		        "@type": "PostalAddress",
+		        "streetAddress": "123 Example Avenue",
+		        "addressLocality": "New York",
+		        "addressRegion": "NY",
+		        "postalCode": "10001",
+		        "addressCountry": "US"
+		      },
+		      "telephone": "+1-555-123-4567"
+		    }
+		  ]
+		}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap min-vh-100 py-0">
+
+				<div class="section-split split-left dark d-flex flex-column justify-content-center text-center min-vh-sm-100 min-vh-50" style="background-image: linear-gradient(rgba(9,71,77,.6), rgba(9,71,77,.6)), url('images/blocks/preview/hero-18/men.jpg');">
+						<h2 class="display-3 fw-bold">Men</h2>
+						<a href="#"><i class="bi-arrow-right h4 icon-stacked text-center rounded-circle bg-white text-dark"></i></a>
+				</div>
+
+				<div class="section-split split-right dark d-flex flex-column justify-content-center text-center min-vh-sm-100 min-vh-50" style="background-image: linear-gradient(rgba(27,39,86,0.6), rgba(27,39,86,0.6)), url('images/blocks/preview/hero-18/women.jpg');">
+						<h2 class="display-3 fw-bold">Women</h2>
+						<a href="#"><i class="bi-arrow-right h4 icon-stacked text-center rounded-circle bg-white text-dark"></i></a>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore Canvas ticker block demos — scrolling news tickers with links, hover-pause, dark backgrounds, and speed controls for any Bootstrap 5 website.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Ticker | Canvas</title>
+
+	<style>
+		@-webkit-keyframes ticker {
+		  0% {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			visibility: visible;
+		  }
+
+		  100% {
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
+		  }
+		}
+
+		@keyframes ticker {
+		  0% {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			visibility: visible;
+		  }
+
+		  100% {
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
+		  }
+		}
+
+		.ticker-wrap {
+			--ticker-duration: 50s;
+
+			width: 100%;
+			overflow: hidden;
+			padding-left: 100%;
+			box-sizing: content-box;
+		}
+
+		.ticker-wrap .ticker {
+			display: inline-block;
+			white-space: nowrap;
+			padding-right: 100%;
+			box-sizing: content-box;
+			-webkit-animation: ticker var(--ticker-duration) linear infinite;
+			animation: ticker var(--ticker-duration) linear infinite;
+		}
+
+		.ticker-wrap .ticker-item {
+			display: inline-block;
+			padding: 0 2rem;
+			font-size: 1.5rem;
+
+		}
+
+		.ticker-wrap.pause-on-hover .ticker:hover {
+			animation-play-state: paused;
+		}
+
+		a.ticker-item:hover {
+			text-decoration: underline !important;
+		}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-misc-ticker.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-misc-ticker.html">
+	<meta property="og:title" content="Ticker | Canvas">
+	<meta property="og:description" content="Explore Canvas ticker block demos — scrolling news tickers with links, hover-pause, dark backgrounds, and speed controls for any Bootstrap 5 website.">
+	<meta property="og:image" content="images/logo-v7.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Ticker | Canvas">
+	<meta name="twitter:description" content="Explore Canvas ticker block demos — scrolling news tickers with links, hover-pause, dark backgrounds, and speed controls for any Bootstrap 5 website.">
+	<meta name="twitter:image" content="images/logo-v7.png">
+	<script type="application/ld+json">
+{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Ticker Block \u2014 Canvas",
+		"url": "block-misc-ticker.html",
+		"description": "Scrolling ticker block demonstrations including default, linked, hover-pause, dark background, and speed-controlled ticker variants for the Canvas Bootstrap 5 HTML template.",
+		"isPartOf": {
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "index.html"
+		}
+}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="section py-6 my-0">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Default Ticker</h1>
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker-item text-dark">New release!</div>
+							<div class="ticker-item text-dark">Canvas includes 50+ pre-built niche demos ready to deploy for any industry or business.</div>
+							<div class="ticker-item text-dark">Fully responsive across all modern devices.</div>
+							<div class="ticker-item text-dark">Powered by Bootstrap 5 with clean, semantic code.</div>
+							<div class="ticker-item text-dark">One-click demo import for fast, hassle-free setup.</div>
+							<div class="ticker-item text-dark">Regular updates included free.</div>
+							<div class="ticker-item text-dark">Hundreds of reusable content blocks make assembling complex layouts straightforward.</div>
+							<div class="ticker-item text-dark">WPML compatible for multilingual sites.</div>
+							<div class="ticker-item text-dark">Includes 300+ page templates for every use case.</div>
+							<div class="ticker-item text-dark">Advanced shortcodes and blocks for drag-and-drop page building.</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section py-6 my-0" style="background-color: #BCC2D7;">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Ticker with Link</h1>
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<a href="#" class="ticker-item text-dark">Furniture Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Real Estate Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">SEO Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Construction Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Travel Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Medical Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Hosting Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">App Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Shop Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">News/Magazine Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">CoWorking Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Finance Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Therapy Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Covid Care Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Forums/Community Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Blog Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Yoga Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Freelancer Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Cleaner Niche Demo</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="section py-6 my-0" style="background-color: #EDF4EA;">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Ticker Pause on Hover</h1>
+					<div class="ticker-wrap pause-on-hover">
+						<div class="ticker">
+							<a href="#" class="ticker-item text-dark">Furniture Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Real Estate Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">SEO Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Construction Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Travel Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Medical Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Hosting Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">App Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Shop Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">News/Magazine Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">CoWorking Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Finance Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Therapy Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Covid Care Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Forums/Community Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Blog Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Yoga Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Freelancer Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Cleaner Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Beauty Kit Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Store Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Hostel Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Crowd-Funding Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Burger Niche Demo</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-dark dark py-6 my-0">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Ticker on Dark BG</h1>
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker-item">Award-winning premium design.</div>
+							<div class="ticker-item">Trusted by over 50,000 creative professionals, agencies, and developers worldwide.</div>
+							<div class="ticker-item">Compatible with all major page builders.</div>
+							<div class="ticker-item">Over 200 five-star ratings from verified buyers.</div>
+							<div class="ticker-item">Continuously refined with customer-driven improvements.</div>
+							<div class="ticker-item">Top-selling template since 2015.</div>
+							<div class="ticker-item">Pixel-perfect design backed by detailed documentation and a knowledgeable support team.</div>
+							<div class="ticker-item">Lightning-fast performance out of the box.</div>
+							<div class="ticker-item">Semantic HTML5 and CSS3 for long-term stability.</div>
+							<div class="ticker-item">Modular architecture makes every section fully reusable.</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section py-6 my-0" style="background-color: #B5D3CE;">
+					<div class="text-center mb-5">
+						<h1 class="mb-2">Ticker Speed</h1>
+						<small class="text-center">--ticker-duration: 20s</small>
+					</div>
+					<div class="ticker-wrap" style="--ticker-duration: 20s;">
+						<div class="ticker">
+							<div class="ticker-item text-dark">Clean code, fully documented.</div>
+							<div class="ticker-item text-dark">Canvas ships with a dark mode, RTL support, and complete accessibility compliance built in.</div>
+							<div class="ticker-item text-dark">Retina-ready images for crisp displays.</div>
+							<div class="ticker-item text-dark">Pre-built contact forms ready for any project.</div>
+							<div class="ticker-item text-dark">Social media integrations available out of the box.</div>
+							<div class="ticker-item text-dark">Optimized for search engines.</div>
+							<div class="ticker-item text-dark">Advanced color options let you match any brand identity without touching a single line of code.</div>
+							<div class="ticker-item text-dark">Smooth CSS animations and transitions included.</div>
+							<div class="ticker-item text-dark">Google Fonts integration for beautiful typography.</div>
+							<div class="ticker-item text-dark">Lifetime updates and free support included with purchase.</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

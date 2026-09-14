@@ -1,0 +1,2068 @@
+/* Canvas: Fashion Store */
+
+/* ── Root Tokens ── */
+:root {
+  --cnvs-themecolor: #B5935A;
+  --cnvs-themecolor-rgb: 181,147,90;
+  --loom-black: #0F0F0F;
+  --loom-off-white: #FAFAF8;
+  --loom-sand: #F2EDE5;
+  --loom-camel: #B5935A;
+  --loom-camel-light: rgba(181,147,90,0.12);
+  --loom-muted: #6B6560;
+  --loom-border: rgba(15,15,15,0.10);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --cnvs-font-primary: 'Manrope', sans-serif;
+}
+
+/* ── Global Base ── */
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--loom-off-white);
+  color: var(--loom-black);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4 {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 5.5rem); font-weight: 500; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 500; }
+h3 { font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 500; }
+
+p { text-wrap: pretty; }
+
+a { color: var(--loom-black); }
+a:hover { color: var(--loom-camel); }
+
+/* ── Header ── */
+#header {
+  background: var(--loom-off-white) !important;
+  border-bottom: 1px solid var(--loom-border);
+}
+
+#header .logo-dark { display: block; }
+#header .logo-default { display: none; }
+
+.loom-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.75rem 0;
+}
+
+.loom-nav-links {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.loom-nav-links .menu-link {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--loom-black);
+  padding: 0.5rem 0.9rem;
+  transition: color 200ms var(--ease-out);
+}
+
+.loom-nav-links .menu-link:hover,
+.loom-nav-links .menu-item.current > .menu-link {
+  color: var(--loom-camel);
+}
+
+.loom-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loom-header-icons a {
+  font-size: 1.15rem;
+  color: var(--loom-black);
+  transition: color 200ms var(--ease-out);
+  position: relative;
+}
+
+.loom-header-icons a:hover {
+  color: var(--loom-camel);
+}
+
+.loom-cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--loom-camel);
+  color: white;
+  font-size: 0.6rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Buttons ── */
+.btn-loom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  background: var(--loom-black);
+  color: var(--loom-off-white);
+  border: 1.5px solid var(--loom-black);
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 220ms var(--ease-out), color 220ms var(--ease-out);
+}
+
+.btn-loom:hover {
+  background: var(--loom-camel);
+  border-color: var(--loom-camel);
+  color: white;
+}
+
+.btn-loom:active { transform: scale(0.98); }
+
+.btn-loom-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  background: transparent;
+  color: var(--loom-black);
+  border: 1.5px solid var(--loom-black);
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 220ms var(--ease-out), color 220ms var(--ease-out);
+}
+
+.btn-loom-outline:hover {
+  background: var(--loom-black);
+  color: white;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-loom:hover,
+  .btn-loom-outline:hover { opacity: 1; }
+}
+
+/* ── Hero Section ── */
+.loom-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--loom-sand);
+}
+
+.loom-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.loom-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(15,15,15,0.55) 0%, rgba(15,15,15,0.15) 60%, transparent 100%);
+}
+
+.loom-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  padding: 4rem 0;
+}
+
+.loom-hero-tag {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--loom-camel);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.loom-hero-content h1 {
+  color: white;
+  margin-bottom: 1.25rem;
+  line-height: 1.05;
+}
+
+.loom-hero-content p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+/* ── Category Grid ── */
+.loom-category-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loom-category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms var(--ease-out);
+}
+
+.loom-category-card:hover img {
+  transform: scale(1.04);
+}
+
+.loom-category-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(15,15,15,0.7) 0%, transparent 100%);
+  color: white;
+}
+
+.loom-category-card-label h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+}
+
+.loom-category-card-label span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ── Product Cards ── */
+.loom-product-card {
+  background: white;
+  transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .loom-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(15,15,15,0.08);
+  }
+}
+
+.loom-product-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--loom-sand);
+}
+
+.loom-product-img-wrap img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  transition: transform 500ms var(--ease-out);
+}
+
+.loom-product-card:hover .loom-product-img-wrap img {
+  transform: scale(1.04);
+}
+
+.loom-product-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  background: var(--loom-black);
+  color: white;
+}
+
+.loom-product-badge.new { background: var(--loom-camel); }
+.loom-product-badge.sale { background: #C8352A; }
+
+.loom-product-actions {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 250ms var(--ease-out), transform 250ms var(--ease-out);
+}
+
+.loom-product-card:hover .loom-product-actions {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.loom-product-action-btn {
+  width: 38px;
+  height: 38px;
+  background: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--loom-black);
+  transition: background 180ms var(--ease-out), color 180ms var(--ease-out);
+}
+
+.loom-product-action-btn:hover {
+  background: var(--loom-black);
+  color: white;
+}
+
+.loom-product-info {
+  padding: 0.875rem 0.875rem 1rem;
+}
+
+.loom-product-info h4 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  color: var(--loom-black);
+  text-wrap: balance;
+}
+
+.loom-product-info .loom-cat-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--loom-muted);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.loom-price {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--loom-black);
+}
+
+.loom-price-old {
+  text-decoration: line-through;
+  color: var(--loom-muted);
+  font-weight: 400;
+  margin-right: 0.4rem;
+  font-size: 0.825rem;
+}
+
+.loom-price-sale { color: #C8352A; }
+
+/* ── Section Labels ── */
+.loom-section-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--loom-camel);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.loom-section-heading {
+  margin-bottom: 3rem;
+}
+
+.loom-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--loom-camel);
+  margin: 1rem 0;
+}
+
+/* ── Promo Banner ── */
+.loom-promo-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.loom-promo-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loom-promo-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,15,15,0.5);
+}
+
+.loom-promo-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 4rem 0;
+}
+
+.loom-promo-content h2 {
+  color: white;
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.loom-promo-content p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loom-timer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.loom-timer-block {
+  text-align: center;
+}
+
+.loom-timer-block .loom-timer-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1;
+  display: block;
+}
+
+.loom-timer-block .loom-timer-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── Newsletter ── */
+.loom-newsletter {
+  background: var(--loom-sand);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.loom-newsletter h2 {
+  margin-bottom: 0.75rem;
+}
+
+.loom-newsletter p {
+  color: var(--loom-muted);
+  margin-bottom: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loom-newsletter-form {
+  display: flex;
+  max-width: 460px;
+  margin: 0 auto;
+  border: 1.5px solid var(--loom-black);
+}
+
+.loom-newsletter-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.9rem 1.25rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  outline: none;
+  color: var(--loom-black);
+}
+
+.loom-newsletter-form input::placeholder { color: var(--loom-muted); }
+
+.loom-newsletter-form button {
+  background: var(--loom-black);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 200ms var(--ease-out);
+}
+
+.loom-newsletter-form button:hover {
+  background: var(--loom-camel);
+}
+
+/* ── Shop Page ── */
+.loom-page-title {
+  background: var(--loom-sand);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--loom-border);
+}
+
+.loom-page-title h1 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin: 0;
+}
+
+.loom-breadcrumb {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--loom-muted);
+  margin-top: 0.5rem;
+}
+
+.loom-breadcrumb a {
+  color: var(--loom-muted);
+}
+
+.loom-breadcrumb a:hover {
+  color: var(--loom-camel);
+}
+
+/* ── Shop Filters ── */
+.loom-filters-panel {
+  background: white;
+  border: 1px solid var(--loom-border);
+  padding: 1.5rem;
+}
+
+.loom-filter-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--loom-black);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--loom-border);
+}
+
+.loom-filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.loom-filter-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--loom-muted);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.loom-filter-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.loom-filter-item input[type="checkbox"] {
+  accent-color: var(--loom-camel);
+  width: 15px;
+  height: 15px;
+}
+
+.loom-filter-item label {
+  font-size: 0.8125rem;
+  color: var(--loom-black);
+  cursor: pointer;
+}
+
+.loom-filter-item label small {
+  color: var(--loom-muted);
+}
+
+.loom-color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.loom-color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 150ms;
+}
+
+.loom-color-swatch.active,
+.loom-color-swatch:hover {
+  border-color: var(--loom-camel);
+}
+
+.loom-size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.loom-size-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1.5px solid var(--loom-border);
+  cursor: pointer;
+  transition: background 150ms, border-color 150ms, color 150ms;
+  background: transparent;
+  color: var(--loom-black);
+}
+
+.loom-size-btn:hover,
+.loom-size-btn.active {
+  background: var(--loom-black);
+  border-color: var(--loom-black);
+  color: white;
+}
+
+.loom-price-range {
+  accent-color: var(--loom-camel);
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.loom-price-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--loom-muted);
+}
+
+/* ── Shop toolbar ── */
+.loom-shop-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--loom-border);
+  margin-bottom: 1.5rem;
+}
+
+.loom-shop-count {
+  font-size: 0.8125rem;
+  color: var(--loom-muted);
+}
+
+.loom-sort-select {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  border: 1.5px solid var(--loom-border);
+  padding: 0.4rem 0.8rem;
+  background: white;
+  color: var(--loom-black);
+  cursor: pointer;
+  outline: none;
+}
+
+/* ── Single Product Page ── */
+.loom-product-gallery {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.loom-gallery-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.loom-gallery-thumb {
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 150ms;
+}
+
+.loom-gallery-thumb.active,
+.loom-gallery-thumb:hover {
+  border-color: var(--loom-camel);
+}
+
+.loom-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loom-gallery-main {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--loom-sand);
+}
+
+.loom-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loom-product-detail h1 {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.loom-product-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.loom-product-stars i {
+  color: var(--loom-camel);
+  font-size: 0.875rem;
+}
+
+.loom-product-stars span {
+  font-size: 0.8125rem;
+  color: var(--loom-muted);
+}
+
+.loom-product-price-lg {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--loom-black);
+  margin-bottom: 1.25rem;
+}
+
+.loom-product-desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--loom-muted);
+  border-top: 1px solid var(--loom-border);
+  border-bottom: 1px solid var(--loom-border);
+  padding: 1.25rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.loom-variant-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  display: block;
+  color: var(--loom-black);
+}
+
+.loom-qty-wrap {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--loom-border);
+  width: fit-content;
+}
+
+.loom-qty-wrap button {
+  width: 38px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--loom-black);
+  transition: background 150ms;
+}
+
+.loom-qty-wrap button:hover { background: var(--loom-sand); }
+
+.loom-qty-wrap input {
+  width: 50px;
+  height: 44px;
+  border: none;
+  border-left: 1.5px solid var(--loom-border);
+  border-right: 1.5px solid var(--loom-border);
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.loom-product-meta-item {
+  font-size: 0.8rem;
+  color: var(--loom-muted);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--loom-border);
+}
+
+.loom-product-meta-item strong {
+  color: var(--loom-black);
+  font-weight: 600;
+  min-width: 80px;
+  display: inline-block;
+}
+
+/* ── Reviews ── */
+.loom-review-card {
+  border-bottom: 1px solid var(--loom-border);
+  padding: 1.5rem 0;
+}
+
+.loom-review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.loom-reviewer {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--loom-black);
+}
+
+.loom-review-date {
+  font-size: 0.75rem;
+  color: var(--loom-muted);
+  margin-top: 0.15rem;
+}
+
+.loom-review-body {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--loom-muted);
+}
+
+/* ── Cart Page ── */
+.loom-cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.loom-cart-table th {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--loom-muted);
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--loom-border);
+  text-align: left;
+}
+
+.loom-cart-table td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--loom-border);
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+
+.loom-cart-item-img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  background: var(--loom-sand);
+}
+
+.loom-cart-remove {
+  background: none;
+  border: none;
+  color: var(--loom-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 150ms;
+}
+
+.loom-cart-remove:hover { color: #C8352A; }
+
+.loom-order-summary {
+  background: var(--loom-sand);
+  padding: 1.75rem;
+}
+
+.loom-order-summary h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--loom-border);
+}
+
+.loom-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+  color: var(--loom-muted);
+}
+
+.loom-summary-row.total {
+  color: var(--loom-black);
+  font-weight: 700;
+  font-size: 1rem;
+  border-top: 1.5px solid var(--loom-black);
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+
+.loom-checkout-form label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--loom-black);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.loom-checkout-form input,
+.loom-checkout-form select,
+.loom-checkout-form textarea {
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  border: 1.5px solid var(--loom-border);
+  padding: 0.75rem 1rem;
+  background: white;
+  color: var(--loom-black);
+  outline: none;
+  transition: border-color 180ms;
+  border-radius: 0;
+}
+
+.loom-checkout-form input:focus,
+.loom-checkout-form select:focus,
+.loom-checkout-form textarea:focus {
+  border-color: var(--loom-camel);
+}
+
+.loom-form-group { margin-bottom: 1.25rem; }
+
+.loom-shipping-calc {
+  background: white;
+  border: 1px solid var(--loom-border);
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* ── About Page ── */
+.loom-about-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.loom-about-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loom-about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15,15,15,0.6) 0%, transparent 60%);
+}
+
+.loom-about-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 4rem 0;
+}
+
+.loom-about-hero-content h1 {
+  color: white;
+  margin: 0;
+}
+
+.loom-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.loom-value-card {
+  border-top: 2px solid var(--loom-camel);
+  padding-top: 1.5rem;
+}
+
+.loom-value-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.loom-value-card p {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--loom-muted);
+  margin: 0;
+}
+
+.loom-story-pullquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--loom-black);
+  border-left: 3px solid var(--loom-camel);
+  padding-left: 2rem;
+  margin: 3rem 0;
+}
+
+.loom-sustain-stat {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+}
+
+.loom-sustain-stat .loom-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--loom-camel);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.loom-sustain-stat p {
+  font-size: 0.8rem;
+  color: var(--loom-muted);
+  margin: 0;
+}
+
+/* ── Trust Strip ── */
+.loom-trust-strip {
+  background: white;
+  border-top: 1px solid var(--loom-border);
+  border-bottom: 1px solid var(--loom-border);
+  padding: 1.5rem 0;
+}
+
+.loom-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.loom-trust-item i {
+  font-size: 1.25rem;
+  color: var(--loom-camel);
+}
+
+.loom-trust-item-text strong {
+  font-size: 0.8125rem;
+  display: block;
+  font-weight: 600;
+  color: var(--loom-black);
+}
+
+.loom-trust-item-text span {
+  font-size: 0.7rem;
+  color: var(--loom-muted);
+}
+
+/* ── Footer ── */
+#footer {
+  --cnvs-footer-bg: #1A1714;
+  --cnvs-footer-top-border: 1px solid rgba(255,255,255,0.08);
+  --cnvs-copyrights-link-color: rgba(255,255,255,0.8);
+}
+
+.loom-footer-brand h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.loom-footer-brand p {
+  font-size: 0.825rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1.25rem;
+}
+
+.loom-footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.loom-footer-social-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 200ms, color 200ms, border-color 200ms;
+}
+
+.loom-footer-social-link:hover {
+  background: var(--loom-camel);
+  border-color: var(--loom-camel);
+  color: white;
+}
+
+.loom-footer-nav-heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.25rem;
+}
+
+.loom-footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.loom-footer-nav ul li {
+  margin-bottom: 0.6rem;
+}
+
+.loom-footer-nav ul li a {
+  font-size: 0.825rem;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 180ms;
+}
+
+.loom-footer-nav ul li a:hover {
+  color: var(--loom-camel);
+}
+
+.loom-footer-newsletter p {
+  font-size: 0.825rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1rem;
+  line-height: 1.65;
+}
+
+.loom-footer-email-form {
+  display: flex;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 1.25rem;
+}
+
+.loom-footer-email-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  outline: none;
+}
+
+.loom-footer-email-form input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.loom-footer-email-form button {
+  background: var(--loom-camel);
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: background 180ms;
+}
+
+.loom-footer-email-form button:hover {
+  background: #C8A87A;
+}
+
+.loom-footer-contact {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 2;
+}
+
+.loom-footer-contact i {
+  color: var(--loom-camel);
+  margin-right: 0.5rem;
+  width: 16px;
+}
+
+/* ── Animations ── */
+@media (prefers-reduced-motion: no-preference) {
+  [data-animate] {
+    opacity: 0;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .loom-product-gallery {
+    grid-template-columns: 1fr;
+  }
+  .loom-gallery-thumbs {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .loom-gallery-thumb {
+    min-width: 70px;
+  }
+  .loom-cart-table th:nth-child(3),
+  .loom-cart-table td:nth-child(3) {
+    display: none;
+  }
+}
+
+/* Focus styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--loom-camel);
+  outline-offset: 2px;
+}
+
+/* ── Content area spacing (shop / product / cart only) ── */
+/* index.html and about.html use .section children which carry Canvas's own
+   margin: 4rem 0 — no extra padding needed there. Shop/product/cart pages
+   place a bare .container directly inside .content-wrap, so they need it. */
+#content > .content-wrap > .container:first-child {
+  padding-top: 3rem;
+}
+
+#content > .content-wrap > .container:last-child {
+  padding-bottom: 3rem;
+}
+
+/* ── Copyrights text + links ── */
+#copyrights {
+  color: rgba(255,255,255,0.65);
+}
+
+#copyrights a {
+  color: rgba(255,255,255,0.8) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#copyrights a:hover {
+  color: var(--loom-camel) !important;
+}
+
+/* ---- inline overrides ---- */
+/* ── cart page ── */
+
+  /* Stepper nav */
+  .loom-stepper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 3.5rem;
+    padding: 2rem 0 0;
+    position: relative;
+  }
+
+.loom-stepper-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    cursor: default;
+  }
+
+/* Connector line between steps */
+  .loom-stepper-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background: var(--loom-border);
+    z-index: 0;
+    transition: background 350ms ease;
+  }
+
+.loom-stepper-item.done:not(:last-child)::after,
+  .loom-stepper-item.active:not(:last-child)::after {
+    background: var(--loom-camel);
+  }
+
+.loom-stepper-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid var(--loom-border);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--loom-muted);
+    position: relative;
+    z-index: 1;
+    transition: background 250ms ease, border-color 250ms ease, color 250ms ease;
+  }
+
+.loom-stepper-item.active .loom-stepper-circle {
+    background: var(--loom-black);
+    border-color: var(--loom-black);
+    color: white;
+  }
+
+.loom-stepper-item.done .loom-stepper-circle {
+    background: var(--loom-camel);
+    border-color: var(--loom-camel);
+    color: white;
+  }
+
+.loom-stepper-label {
+    margin-top: 0.625rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--loom-muted);
+    transition: color 250ms ease;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+.loom-stepper-item.active .loom-stepper-label {
+    color: var(--loom-black);
+  }
+
+.loom-stepper-item.done .loom-stepper-label {
+    color: var(--loom-camel);
+  }
+
+.loom-step-content { display: none; }
+
+.loom-step-content.active { display: block; }
+
+.loom-coupon-input { display: flex; border: 1.5px solid var(--loom-border); }
+
+.loom-coupon-input input { flex: 1; border: none; background: transparent; padding: 0.75rem 1rem; font-family: 'Manrope',sans-serif; font-size: 0.875rem; outline: none; }
+
+.loom-coupon-input button { background: var(--loom-black); color: white; border: none; padding: 0.75rem 1rem; font-family: 'Manrope',sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
+
+.loom-payment-method { border: 1.5px solid var(--loom-border); padding: 1rem 1.25rem; cursor: pointer; transition: border-color 150ms; }
+
+.loom-payment-method.selected { border-color: var(--loom-camel); }
+
+.loom-payment-method label { cursor: pointer; font-size: 0.875rem; font-weight: 500; display: flex; align-items: center; gap: 0.75rem; margin: 0; }
+
+@media (max-width: 480px) {
+    .loom-stepper-label { display: none; }
+    .loom-stepper { padding-top: 1.25rem; margin-bottom: 2rem; }
+  }
+
+/* ── Checkbox rows ── */
+  .loom-check-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    user-select: none;
+  }
+
+.loom-check-row input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border: 1.5px solid var(--loom-border);
+    background: white;
+    cursor: pointer;
+    position: relative;
+    transition: background 150ms, border-color 150ms;
+    border-radius: 0;
+  }
+
+.loom-check-row input[type="checkbox"]:checked {
+    background: var(--loom-camel);
+    border-color: var(--loom-camel);
+  }
+
+.loom-check-row input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: 1.5px solid white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+  }
+
+.loom-check-row input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--loom-camel);
+    outline-offset: 2px;
+  }
+
+.loom-check-row span {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.825rem;
+    color: var(--loom-black);
+    line-height: 1.5;
+  }
+
+.loom-check-row span a {
+    color: var(--loom-camel);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+/* ── Save-shipping toggle card ── */
+  .loom-save-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1.5px solid var(--loom-border);
+    background: white;
+    cursor: pointer;
+    transition: border-color 220ms ease;
+  }
+
+.loom-save-card:hover {
+    border-color: var(--loom-camel);
+  }
+
+.loom-save-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+.loom-save-card-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--loom-black);
+    line-height: 1.3;
+  }
+
+.loom-save-card-sub {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    color: var(--loom-muted);
+    line-height: 1.4;
+  }
+
+/* Toggle switch */
+  .loom-toggle {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+.loom-toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+.loom-toggle-track {
+    display: block;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: #D9D4CD;
+    position: relative;
+    transition: background 220ms ease;
+    cursor: pointer;
+  }
+
+.loom-toggle input:checked + .loom-toggle-track {
+    background: var(--loom-camel);
+  }
+
+.loom-toggle-track::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    transition: transform 220ms ease;
+    box-shadow: 0 1px 3px rgba(15,15,15,0.2);
+  }
+
+.loom-toggle input:checked + .loom-toggle-track::after {
+    transform: translateX(20px);
+  }
+
+.loom-toggle input:focus-visible + .loom-toggle-track {
+    outline: 2px solid var(--loom-camel);
+    outline-offset: 2px;
+  }
+
+/* ── product page ── */
+
+  /* Product layout grid */
+  .loom-product-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 80vh;
+  }
+
+/* Gallery pane */
+  .loom-product-gallery-pane {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0.625rem;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    align-self: start;
+  }
+
+.loom-thumbs-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+.loom-thumb-btn {
+    width: 80px;
+    height: 100px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: var(--loom-sand);
+    padding: 0;
+    transition: border-color 180ms ease;
+    flex-shrink: 0;
+  }
+
+.loom-thumb-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 350ms ease;
+  }
+
+.loom-thumb-btn:hover img { transform: scale(1.05); }
+
+.loom-thumb-btn.active { border-color: var(--loom-camel); }
+
+.loom-main-img-wrap {
+    overflow: hidden;
+    background: var(--loom-sand);
+    height: 100%;
+    position: relative;
+  }
+
+.loom-main-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: opacity 280ms ease;
+  }
+
+.loom-img-zoom-hint {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid var(--loom-border);
+    padding: 0.35rem 0.65rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--loom-muted);
+    pointer-events: none;
+  }
+
+/* Detail pane */
+  .loom-detail-pane {
+    padding: 3rem 0 4rem 3rem;
+    border-left: 1px solid var(--loom-border);
+  }
+
+.loom-pdp-breadcrumb {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: var(--loom-muted);
+    margin-bottom: 2rem;
+  }
+
+.loom-pdp-breadcrumb a {
+    color: var(--loom-muted);
+    text-decoration: none;
+  }
+
+.loom-pdp-breadcrumb a:hover { color: var(--loom-camel); }
+
+.loom-pdp-brand-tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--loom-camel);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+.loom-pdp-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--loom-black);
+    margin: 0 0 0.75rem;
+    text-wrap: balance;
+  }
+
+.loom-pdp-rating-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+.loom-pdp-stars i { color: var(--loom-camel); font-size: 0.8rem; }
+
+.loom-pdp-rating-count {
+    font-size: 0.75rem;
+    color: var(--loom-muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+  }
+
+.loom-pdp-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--loom-border);
+    border-bottom: 1px solid var(--loom-border);
+    margin-bottom: 1.5rem;
+  }
+
+.loom-pdp-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--loom-black);
+    line-height: 1;
+  }
+
+.loom-pdp-price-note {
+    font-size: 0.75rem;
+    color: var(--loom-muted);
+  }
+
+/* Color swatch selector */
+  .loom-pdp-option-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--loom-black);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+.loom-pdp-option-label span {
+    font-weight: 400;
+    color: var(--loom-muted);
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 0.8rem;
+  }
+
+.loom-color-swatches-pdp {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+.loom-color-swatch-pdp {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    outline-offset: 3px;
+    cursor: pointer;
+    transition: outline-color 150ms;
+    position: relative;
+  }
+
+.loom-color-swatch-pdp.active,
+  .loom-color-swatch-pdp:hover {
+    outline-color: var(--loom-camel);
+  }
+
+/* Size buttons */
+  .loom-size-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.75rem;
+  }
+
+.loom-size-pdp {
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: 1.5px solid var(--loom-border);
+    background: white;
+    color: var(--loom-black);
+    cursor: pointer;
+    transition: background 150ms, border-color 150ms, color 150ms;
+  }
+
+.loom-size-pdp:hover { border-color: var(--loom-black); }
+
+.loom-size-pdp.active { background: var(--loom-black); border-color: var(--loom-black); color: white; }
+
+.loom-size-pdp.sold-out { opacity: 0.35; cursor: not-allowed; text-decoration: line-through; }
+
+/* Add to cart row */
+  .loom-pdp-atc-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+.loom-pdp-atc-row .btn-loom {
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+.loom-pdp-wishlist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--loom-muted);
+    background: transparent;
+    border: 1.5px solid var(--loom-border);
+    padding: 0.9rem;
+    cursor: pointer;
+    transition: color 200ms, border-color 200ms;
+    margin-bottom: 1.5rem;
+  }
+
+.loom-pdp-wishlist:hover { color: var(--loom-black); border-color: var(--loom-black); }
+
+/* Trust mini badges */
+  .loom-pdp-trust {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background: var(--loom-sand);
+    margin-bottom: 1.75rem;
+  }
+
+.loom-pdp-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.775rem;
+    color: var(--loom-black);
+  }
+
+.loom-pdp-trust-item i {
+    color: var(--loom-camel);
+    font-size: 0.9rem;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+/* Product detail accordion */
+  .loom-pdp-accordion {
+    border-top: 1px solid var(--loom-border);
+  }
+
+.loom-pdp-acc-item {
+    border-bottom: 1px solid var(--loom-border);
+  }
+
+.loom-pdp-acc-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--loom-black);
+    cursor: pointer;
+    text-align: left;
+  }
+
+.loom-pdp-acc-trigger i {
+    font-size: 0.75rem;
+    transition: transform 250ms ease;
+    color: var(--loom-muted);
+  }
+
+.loom-pdp-acc-item.open .loom-pdp-acc-trigger i { transform: rotate(45deg); }
+
+.loom-pdp-acc-body {
+    display: none;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: var(--loom-muted);
+  }
+
+.loom-pdp-acc-item.open .loom-pdp-acc-body { display: block; }
+
+.loom-pdp-acc-body ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+.loom-pdp-acc-body ul li { margin-bottom: 0.3rem; }
+
+/* Tab nav below product */
+  .loom-pdp-tabs-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--loom-border);
+    margin-bottom: 2.5rem;
+    overflow-x: auto;
+  }
+
+.loom-pdp-tab-btn {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    color: var(--loom-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 180ms, border-color 180ms;
+  }
+
+.loom-pdp-tab-btn.active {
+    color: var(--loom-black);
+    border-bottom-color: var(--loom-camel);
+  }
+
+.loom-pdp-tab-pane { display: none; }
+
+.loom-pdp-tab-pane.active { display: block; }
+
+/* Review rating bar */
+  .loom-rating-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+.loom-rating-bar-label {
+    font-size: 0.75rem;
+    color: var(--loom-black);
+    min-width: 12px;
+    text-align: right;
+  }
+
+.loom-rating-bar-track {
+    flex: 1;
+    height: 3px;
+    background: #E5DDD3;
+    position: relative;
+  }
+
+.loom-rating-bar-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--loom-camel);
+  }
+
+.loom-rating-bar-count {
+    font-size: 0.7rem;
+    color: var(--loom-muted);
+    min-width: 24px;
+  }
+
+/* Related products */
+  .loom-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+/* Responsive */
+  @media (max-width: 991px) {
+    .loom-product-wrap {
+      grid-template-columns: 1fr;
+    }
+    .loom-product-gallery-pane {
+      position: relative;
+      height: auto;
+      min-height: 70vw;
+      padding: 0 0 1rem;
+    }
+    .loom-detail-pane {
+      padding: 2rem 0 3rem;
+      border-left: none;
+      border-top: 1px solid var(--loom-border);
+    }
+    .loom-related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+@media (max-width: 575px) {
+    .loom-pdp-atc-row {
+      grid-template-columns: 110px 1fr;
+    }
+    .loom-related-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+/* ── shop page ── */
+  .loom-filter-toggle { display: none; }
+
+@media (max-width: 991px) {
+    .loom-filters-sidebar { display: none; }
+    .loom-filters-sidebar.open { display: block; }
+    .loom-filter-toggle { display: inline-flex; }
+  }
+
+.content-wrap {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.section {
+	margin-top: 0;
+	margin-bottom: 0;
+}

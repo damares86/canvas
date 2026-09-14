@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Interactive order tracking steps component for Canvas HTML template. Display shipping status from confirmed to delivered with light and dark themes.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Order Tracking Steps UI Component | Canvas</title>
+
+	<style>
+		.feature-box-border-vertical .feature-box { position: relative; }
+
+		.feature-box-border-vertical .feature-box:not(.noborder)::before,
+		.feature-box-border-vertical .fbox-active.feature-box:not(.noborder)::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 35px;
+			width: 3px;
+			height: 100%;
+			background-color: var(--bs-gray-200);
+		}
+
+		.feature-box-border-vertical .fbox-icon i,
+		.feature-box-border-vertical .fbox-border.fbox-light .fbox-icon i {
+            position: relative;
+			z-index: 5;
+			text-align: center;
+            box-shadow: 0 0 0 6px #FFF;
+			border: 1px solid #EEE;
+            background-color: #FFF !important;
+		}
+
+        .feature-box-border-vertical .fbox-active.feature-box .fbox-icon i,
+		.feature-box-border-vertical .fbox-active.feature-box .fbox-border.fbox-light .fbox-icon i,
+        .feature-box-border-vertical .fbox-active.feature-box:not(.noborder)::after {
+            background-color: var(--bs-primary) !important;
+			border-color: transparent !important;
+			color:#FFF;
+        }
+
+
+		.dark .feature-box-border-vertical .feature-box:not(.noborder)::before,
+		.dark .feature-box-border-vertical .fbox-active.feature-box:not(.noborder)::after {
+			background-color: var(--bs-gray-600);
+		}
+
+		.dark .feature-box-border-vertical .fbox-icon i,
+		.dark .feature-box-border-vertical .fbox-border.fbox-light .fbox-icon i {
+            box-shadow: 0 0 0 6px var(--bs-dark);
+            background-color: var(--bs-dark) !important;
+			color: var(--bs-gray-600);
+			border-color: var(--bs-gray-600);
+		}
+
+        .dark .feature-box-border-vertical .fbox-active.feature-box .fbox-icon i,
+		.dark .feature-box-border-vertical .fbox-active.feature-box .fbox-border.fbox-light .fbox-icon i,
+        .dark .feature-box-border-vertical .fbox-active.feature-box:not(.noborder)::after {
+            background-color: var(--bs-warning) !important;
+            color:var(--bs-dark);
+        }
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-content-steps-order-tracking.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-steps-order-tracking.html">
+	<meta property="og:title" content="Order Tracking Steps UI Component | Canvas">
+	<meta property="og:description" content="Interactive order tracking steps component for Canvas HTML template. Display shipping status from confirmed to delivered with light and dark themes.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Order Tracking Steps UI Component | Canvas">
+	<meta name="twitter:description" content="Interactive order tracking steps component for Canvas HTML template. Display shipping status from confirmed to delivered with light and dark themes.">
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "WebPage",
+		  "name": "Order Tracking Steps UI Component | Canvas",
+		  "url": "block-content-steps-order-tracking.html",
+		  "description": "Interactive order tracking steps component for Canvas HTML template. Display shipping status from confirmed to delivered with light and dark themes.",
+		  "isPartOf": {
+		    "@type": "WebSite",
+		    "name": "Canvas",
+		    "url": "index.html"
+		  }
+		}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="row min-vh-100">
+
+					<!-- .bg-white -->
+					<div class="col-lg-6 bg-white py-6">
+						<div class="container">
+
+							<h2 class="text-center mb-6">Light</h2>
+							<div class="row feature-box-border-vertical col-mb-50 justify-content-center align-items-center my-5">
+								<div class="col-md-8 feature-box fbox-active fbox-dark fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-2">Order Confirmed</h3>
+										<p>Mumbai, MH, IND - Sep 11th, 9:05am</p>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box fbox-active fbox-border fbox-light fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check border"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-2">Processing Order</h3>
+										<p>Mumbai, MH, IND - Sep 12th, 04:05pm</p>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box fbox-active fbox-border fbox-light fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check border"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-2">Package Shipped</h3>
+										<p>Mumbai, MH, IND - Sep 12th, 09:33pm</p>
+										<p class="mb-3">Your package has been handed to the courier and is en route to the delivery hub. Estimated arrival: Sep 14th.</p>
+										<a href="#" class="link-primary"><u>See more details</u></a>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box fbox-border fbox-light fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-2">Package will Dispatched</h3>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box pb-0 fbox-border fbox-light noborder fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-0">Out for Delivery</h3>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<!-- .bg-white -->
+					<div class="col-lg-6 bg-dark dark py-6">
+						<div class="container">
+							<h2 class="text-center mb-6">Dark</h2>
+
+							<div class="row feature-box-border-vertical col-mb-50 justify-content-center align-items-center my-5">
+								<div class="col-md-8 feature-box fbox-active fbox-dark fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-2">Order Confirmed</h3>
+										<p>Mumbai, MH, IND - Sep 11th, 9:05am</p>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box fbox-active fbox-border fbox-light fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check border"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-2">Processing Order</h3>
+										<p>Mumbai, MH, IND - Sep 12th, 04:05pm</p>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box fbox-active fbox-border fbox-light fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check border"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none mb-2">Package Shipped</h3>
+										<p>Mumbai, MH, IND - Sep 12th, 09:33pm</p>
+										<p class="mb-3">The package left our warehouse and is now in transit. Tracking updates will appear every 4-6 hours.</p>
+										<a href="#" class="link-warning"><u>See more details</u></a>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box fbox-border fbox-light fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none op-05 mb-2">Package will Dispatched</h3>
+									</div>
+								</div>
+
+								<div class="clear"></div>
+
+								<div class="col-md-8 feature-box pb-0 fbox-border fbox-light noborder fbox-sm">
+									<div class="fbox-icon">
+										<i class="fa-solid fa-check"></i>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none op-05 mb-0">Out for Delivery</h3>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

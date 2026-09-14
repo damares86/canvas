@@ -1,0 +1,805 @@
+/* ----------------------------------------------------------------
+	Canvas: Hr
+-----------------------------------------------------------------*/
+
+  /* ─── Fonts ─────────────────────────────────────────── */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,700;1,600&display=swap');
+
+  /* ─── Theme Tokens ───────────────────────────────────── */
+  :root {
+    --cnvs-themecolor: #1D4ED8;
+    --cnvs-themecolor-rgb: 29, 78, 216;
+    --pf-dark:        #0F172A;
+    --pf-dark-card:   #1E293B;
+    --pf-light-bg:    #EFF6FF;
+    --pf-gray-bg:     #F8FAFC;
+    --pf-sky:         #0EA5E9;
+    --pf-amber:       #F59E0B;
+    --pf-text:        #0F172A;
+    --pf-body:        #334155;
+    --pf-muted:       #64748B;
+    --pf-border:      #E2E8F0;
+    --pf-primary-dark: #1E3A8A;
+    --font-head:      'Fraunces', Georgia, serif;
+    --font-body:      'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* ─── Base ───────────────────────────────────────────── */
+  body { font-family: var(--font-body); color: var(--pf-body); }
+
+  /* ─── Eyebrow Labels ─────────────────────────────────── */
+  .pf-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cnvs-themecolor);
+    margin-bottom: 1rem;
+  }
+  .pf-label-white { color: rgba(255,255,255,0.7); }
+
+  /* ─── Headings ───────────────────────────────────────── */
+  h1.pf-hero-title {
+    font-family: var(--font-head);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+  }
+  h2.pf-section-title {
+    font-family: var(--font-body);
+    font-size: clamp(1.875rem, 4vw, 2.625rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--pf-text);
+    margin-bottom: 1.25rem;
+  }
+  h2.pf-section-title.text-white { color: #FFFFFF; }
+  h3.pf-card-title {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--pf-text);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ─── Section Spacing ────────────────────────────────── */
+  .pf-section { padding: 100px 0; }
+  .pf-section-sm { padding: 72px 0; }
+
+  /* ─── Buttons ────────────────────────────────────────── */
+  .pf-btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--cnvs-themecolor);
+    color: #fff !important;
+    font-family: var(--font-body);
+    font-weight: 600; font-size: 0.9375rem;
+    padding: 14px 28px; border-radius: 8px;
+    text-decoration: none; transition: background 0.2s, transform 0.15s;
+    border: none; cursor: pointer;
+  }
+  .pf-btn-primary:hover { background: var(--pf-primary-dark); transform: translateY(-1px); }
+
+  .pf-btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: #fff !important;
+    font-family: var(--font-body);
+    font-weight: 600; font-size: 0.9375rem;
+    padding: 14px 28px; border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.35);
+    text-decoration: none; transition: border-color 0.2s, background 0.2s;
+    cursor: pointer;
+  }
+  .pf-btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); }
+
+  .pf-btn-outline-blue {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--cnvs-themecolor) !important;
+    font-family: var(--font-body);
+    font-weight: 600; font-size: 0.9375rem;
+    padding: 13px 28px; border-radius: 8px;
+    border: 2px solid var(--cnvs-themecolor);
+    text-decoration: none; transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .pf-btn-outline-blue:hover { background: var(--cnvs-themecolor); color: #fff !important; }
+
+  /* ─── Cards ──────────────────────────────────────────── */
+  .pf-card {
+    background: #fff;
+    border: 1px solid var(--pf-border);
+    border-radius: 14px;
+    padding: 32px;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .pf-card:hover { box-shadow: 0 8px 40px rgba(29,78,216,0.10); transform: translateY(-3px); }
+
+  /* ─── Feature Icon Badge ─────────────────────────────── */
+  .pf-icon-wrap {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: #EFF6FF;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .pf-icon-wrap i { color: var(--cnvs-themecolor); font-size: 1.25rem; }
+
+  /* ─── Section Label Color Variants ──────────────────────*/
+  .dark .pf-label { color: var(--pf-sky); }
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  :root {
+    --cnvs-themecolor: #1D4ED8;
+    --cnvs-themecolor-rgb: 29, 78, 216;
+  }
+  #header {
+    --cnvs-header-bg: transparent;
+    --cnvs-header-sticky-bg: #ffffff;
+    --cnvs-primary-menu-font: 'Inter', system-ui, -apple-system, sans-serif;
+    --cnvs-primary-menu-font-weight: 600;
+    --cnvs-primary-menu-font-size: 0.9375rem;
+    --cnvs-primary-menu-tt: none;
+    --cnvs-primary-menu-ls: 0;
+    --cnvs-primary-menu-color: rgba(255, 255, 255, 0.85);
+    --cnvs-primary-menu-hover-color: #ffffff;
+  }
+
+
+    @media (max-width: 991px) {
+      .hero-screenshot-wrap .floating-badge { display: none !important; }
+      #hero h1 { font-size: 2.25rem !important; }
+    }
+    #hero a[style*="background:#1D4ED8"]:hover {
+      background: #1E3A8A !important;
+      transform: translateY(-1px);
+    }
+    #hero a[style*="border:2px solid rgba(255,255,255,0.28)"]:hover {
+      border-color: rgba(255,255,255,0.6) !important;
+      background: rgba(255,255,255,0.06) !important;
+    }
+  
+
+    #features .pf-card {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 36px 32px;
+      transition: box-shadow 0.25s, transform 0.25s;
+      height: 100%;
+    }
+    #features .pf-card:hover {
+      box-shadow: 0 8px 40px rgba(29,78,216,0.10);
+      transform: translateY(-3px);
+    }
+    #features .pf-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #EFF6FF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      transition: background 0.25s;
+    }
+    #features .pf-icon-wrap i {
+      color: var(--cnvs-themecolor);
+      font-size: 1.25rem;
+      transition: color 0.25s;
+    }
+    #features .pf-card:hover .pf-icon-wrap {
+      background: #DBEAFE;
+    }
+    #features .pf-card:hover .pf-icon-wrap i {
+      color: #1E3A8A;
+    }
+    #features .pf-card-title {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 0.5rem;
+    }
+    #features .pf-card-desc {
+      color: #334155;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    #features .pf-learn-more {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--cnvs-themecolor);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.2s;
+    }
+    #features .pf-learn-more:hover {
+      gap: 8px;
+    }
+    #features .pf-section-label {
+      display: inline-block;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cnvs-themecolor);
+      margin-bottom: 1rem;
+    }
+    #features .pf-section-title {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: clamp(1.875rem, 4vw, 2.625rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #0F172A;
+      margin-bottom: 0;
+    }
+  
+
+    #roi input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #DBEAFE;
+      border-radius: 3px;
+      outline: none;
+      margin: 10px 0 4px;
+      cursor: pointer;
+    }
+    #roi input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #1D4ED8;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(29,78,216,0.4);
+      cursor: pointer;
+    }
+    #roi input[type=range]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: #1D4ED8;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(29,78,216,0.4);
+      cursor: pointer;
+    }
+    #roi .result-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 28px;
+      border-left: 4px solid #1D4ED8;
+      box-shadow: 0 2px 12px rgba(29,78,216,0.07);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    #roi .result-card:hover {
+      box-shadow: 0 8px 32px rgba(29,78,216,0.13);
+      transform: translateX(4px);
+    }
+    #roi .result-number {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #1D4ED8;
+      line-height: 1;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    #roi .result-label {
+      font-size: 0.9375rem;
+      color: #334155;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    #roi .slider-group {
+      margin-bottom: 1.75rem;
+    }
+    #roi .slider-group:last-of-type {
+      margin-bottom: 0;
+    }
+    #roi .slider-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+    #roi .slider-label {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: #0F172A;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    #roi .slider-value {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: #1D4ED8;
+      font-family: 'Inter', system-ui, sans-serif;
+      min-width: 72px;
+      text-align: right;
+    }
+    #roi .slider-hint {
+      font-size: 0.8125rem;
+      color: #64748B;
+      margin-top: 2px;
+    }
+    @keyframes pf-countup {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    #roi .result-card {
+      animation: pf-countup 0.5s ease both;
+    }
+    #roi .result-card:nth-child(1) { animation-delay: 0.05s; }
+    #roi .result-card:nth-child(2) { animation-delay: 0.15s; }
+    #roi .result-card:nth-child(3) { animation-delay: 0.25s; }
+    #roi .result-card:nth-child(4) { animation-delay: 0.35s; }
+    #roi .roi-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+  
+
+    #casestudy .cs-company-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #F1F5F9;
+      border-radius: 8px;
+      padding: 8px 16px;
+      margin-bottom: 2rem;
+    }
+    #casestudy .cs-company-icon {
+      width: 32px;
+      height: 32px;
+      background: #1D4ED8;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    #casestudy .cs-company-name {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: #0F172A;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    #casestudy .cs-company-meta {
+      font-size: 0.8125rem;
+      color: #64748B;
+    }
+    #casestudy .cs-pull-quote {
+      border-left: 4px solid #1D4ED8;
+      padding-left: 28px;
+      margin-bottom: 2.5rem;
+    }
+    #casestudy .cs-pull-quote blockquote {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #0F172A;
+      margin: 0 0 1.5rem;
+    }
+    #casestudy .cs-attribution {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    #casestudy .cs-attribution img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #EFF6FF;
+      flex-shrink: 0;
+    }
+    #casestudy .cs-attribution-name {
+      font-weight: 700;
+      color: #0F172A;
+      font-size: 0.9375rem;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    #casestudy .cs-attribution-title {
+      color: #64748B;
+      font-size: 0.875rem;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    #casestudy .cs-metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    #casestudy .cs-metric-card {
+      background: #F8FAFC;
+      border-radius: 14px;
+      padding: 28px 24px;
+      border: 1px solid #E2E8F0;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    #casestudy .cs-metric-card:hover {
+      box-shadow: 0 4px 24px rgba(29,78,216,0.08);
+      transform: translateY(-2px);
+    }
+    #casestudy .cs-metric-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #1D4ED8;
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    #casestudy .cs-metric-desc {
+      font-size: 0.9375rem;
+      color: #334155;
+      font-weight: 500;
+      line-height: 1.4;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    @media (max-width: 575px) {
+      #casestudy .cs-metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      #casestudy .cs-pull-quote blockquote {
+        font-size: 1.25rem;
+      }
+    }
+  
+
+    /* ── Pricing Toggle ───────────────────────────────── */
+    #pricing .pf-toggle-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #1E293B;
+      border-radius: 50px;
+      padding: 6px 20px;
+      margin-bottom: 52px;
+    }
+    #pricing .pf-toggle-label {
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s;
+    }
+    #pricing .pf-toggle-label.active { color: #fff; }
+    #pricing .pf-toggle-switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      cursor: pointer;
+    }
+    #pricing .pf-toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+    #pricing .pf-toggle-track {
+      position: absolute;
+      inset: 0;
+      background: #1D4ED8;
+      border-radius: 50px;
+      transition: background 0.2s;
+    }
+    #pricing .pf-toggle-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    #pricing .pf-toggle-switch input:checked ~ .pf-toggle-track { background: #1D4ED8; }
+    #pricing .pf-toggle-switch input:checked ~ .pf-toggle-thumb { transform: translateX(20px); }
+    #pricing .pf-save-badge {
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0F172A;
+      background: #F59E0B;
+      border-radius: 50px;
+      padding: 3px 9px;
+      margin-left: 4px;
+    }
+
+    /* ── Pricing Cards ────────────────────────────────── */
+    #pricing .pf-price-card {
+      background: #1E293B;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 40px 36px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    #pricing .pf-price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    #pricing .pf-price-card.highlighted {
+      background: #fff;
+      border: 2px solid #1D4ED8;
+      box-shadow: 0 0 0 2px #1D4ED8, 0 24px 64px rgba(29,78,216,0.22);
+    }
+    #pricing .pf-price-card.highlighted:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 0 2px #1D4ED8, 0 32px 80px rgba(29,78,216,0.28);
+    }
+
+    /* Badge */
+    #pricing .pf-popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1D4ED8;
+      color: #fff;
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    /* Plan name */
+    #pricing .pf-plan-name {
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #0EA5E9;
+      margin-bottom: 12px;
+    }
+    #pricing .pf-price-card.highlighted .pf-plan-name { color: #1D4ED8; }
+
+    /* Price */
+    #pricing .pf-price-num {
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 0;
+    }
+    #pricing .pf-price-card.highlighted .pf-price-num { color: #0F172A; }
+    #pricing .pf-price-unit {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      margin-top: 4px;
+    }
+    #pricing .pf-price-card.highlighted .pf-price-unit { color: #64748B; }
+    #pricing .pf-price-custom {
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    /* Description */
+    #pricing .pf-plan-desc {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      margin-top: 8px;
+      margin-bottom: 28px;
+    }
+    #pricing .pf-price-card.highlighted .pf-plan-desc { color: #64748B; }
+
+    /* Divider */
+    #pricing .pf-card-hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 0 0 24px;
+    }
+    #pricing .pf-price-card.highlighted .pf-card-hr { border-color: #E2E8F0; }
+
+    /* Feature list */
+    #pricing .pf-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+      flex: 1;
+    }
+    #pricing .pf-feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.7);
+      padding: 6px 0;
+    }
+    #pricing .pf-price-card.highlighted .pf-feature-list li { color: #334155; }
+    #pricing .pf-feature-list li i {
+      color: #1D4ED8;
+      font-size: 0.875rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    #pricing .pf-price-card:not(.highlighted) .pf-feature-list li i { color: #0EA5E9; }
+
+    /* CTA Buttons */
+    #pricing .pf-card-btn-outline {
+      display: block;
+      text-align: center;
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.85) !important;
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 13px 24px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    #pricing .pf-card-btn-outline:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.45);
+      color: #fff !important;
+    }
+    #pricing .pf-card-btn-primary {
+      display: block;
+      text-align: center;
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: #fff !important;
+      background: #1D4ED8;
+      border: 2px solid #1D4ED8;
+      border-radius: 10px;
+      padding: 13px 24px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    #pricing .pf-card-btn-primary:hover {
+      background: #1E3A8A;
+      border-color: #1E3A8A;
+      transform: translateY(-1px);
+    }
+
+    /* Footer note */
+    #pricing .pf-footer-note {
+      font-family: var(--font-body, 'Inter', sans-serif);
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 48px;
+      text-align: center;
+    }
+    #pricing .pf-footer-note i { color: #0EA5E9; margin-right: 6px; }
+
+    /* Annual price data */
+    .pf-price-annual { display: none; }
+    .billing-annual .pf-price-monthly { display: none; }
+    .billing-annual .pf-price-annual { display: block; }
+  
+
+    @media (max-width: 767px) {
+      #security [style*="grid-template-columns:1fr 1fr 1fr"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+    @media (max-width: 479px) {
+      #security [style*="grid-template-columns:1fr 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  
+
+    #testimonials .pf-testi-card {
+      background: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 2px 16px rgba(29,78,216,0.055);
+      transition: box-shadow 0.25s, transform 0.25s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    #testimonials .pf-testi-card:hover {
+      box-shadow: 0 8px 40px rgba(29,78,216,0.11);
+      transform: translateY(-3px);
+    }
+    #testimonials .pf-testi-quote {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.9875rem;
+      line-height: 1.78;
+      color: #334155;
+      flex-grow: 1;
+      margin-bottom: 1.75rem;
+    }
+    #testimonials .pf-testi-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 1.25rem;
+    }
+    #testimonials .pf-testi-stars i {
+      font-size: 0.875rem;
+      color: #F59E0B;
+    }
+    #testimonials .pf-testi-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #EFF6FF;
+      flex-shrink: 0;
+    }
+    #testimonials .pf-testi-name {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 2px;
+    }
+    #testimonials .pf-testi-role {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.8125rem;
+      color: #64748B;
+      line-height: 1.4;
+    }
+    #testimonials .pf-logo-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      margin-bottom: 64px;
+      padding: 28px 0 32px;
+      border-top: 1px solid #E2E8F0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    #testimonials .pf-logo-item {
+      padding: 0 28px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #CBD5E1;
+      white-space: nowrap;
+      transition: color 0.2s;
+      border-right: 1px solid #E2E8F0;
+    }
+    #testimonials .pf-logo-item:last-child {
+      border-right: none;
+    }
+    #testimonials .pf-logo-item:hover {
+      color: #94A3B8;
+    }
+    @media (max-width: 767px) {
+      #testimonials .pf-logo-item {
+        border-right: none;
+        padding: 8px 16px;
+      }
+    }
+  

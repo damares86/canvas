@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore Canvas sticky section layout: fixed left headings, smooth-scroll one-page navigation, and responsive full-height content blocks for modern websites.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Sticky Section Layout Demo | Canvas</title>
+
+	<style>
+		.block-sticky-section .content-wrap,
+		.block-sticky-section .section {
+			overflow: visible;
+		}
+
+		@media (min-width: 992px) {
+			.block-sticky-section .sticky-section {
+				position: sticky;
+				z-index: 2;
+			}
+
+			.block-sticky-section .sticky-section h1 {
+				padding-bottom: 120px;
+			}
+
+			.block-sticky-section #header + #content .sticky-section.sticky-top {
+				top: 120px;
+			}
+
+			.block-sticky-section #header.no-sticky + #content .sticky-section.sticky-top {
+				top: 60px;
+			}
+
+			.block-sticky-section .sticky-bottom {
+				bottom: 50px;
+			}
+		}
+
+		.block-sticky-section .one-page-menu .nav-link {
+			position: relative;
+			display: block;
+			font-size: 12px;
+			padding: 4px 8px;
+			margin: 0;
+			color: #AAA;
+		}
+
+		.block-sticky-section .one-page-menu .nav-link::after {
+			content: '';
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			width: 40px;
+			height: 2px;
+			flex-grow: 1;
+			margin-left: 10px;
+			margin-top: -1px;
+			transform: translate3d( 25%, -1px, 0 );
+			transition: all .2s linear;
+			background-color: #000;
+		}
+
+		.block-sticky-section .one-page-menu .nav-link.active {
+			color: #000;
+			background-color: transparent;
+		}
+
+		.block-sticky-section .one-page-menu .nav-link.active::after {
+			opacity: 1;
+			transform: translate3d( 0, -1px, 0 );
+			background-color: #000;
+		}
+
+
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-misc-sticky-section.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-misc-sticky-section.html">
+	<meta property="og:title" content="Sticky Section Layout Demo | Canvas">
+	<meta property="og:description" content="Explore Canvas sticky section layout: fixed left headings, smooth-scroll one-page navigation, and responsive full-height content blocks for modern websites.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sticky Section Layout Demo | Canvas">
+	<meta name="twitter:description" content="Explore Canvas sticky section layout: fixed left headings, smooth-scroll one-page navigation, and responsive full-height content blocks for modern websites.">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "block-misc-sticky-section.html",
+				"description": "Canvas is a premium multi-purpose HTML5 Bootstrap template by SemiColonWeb, featuring hundreds of ready-made blocks and layouts."
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "Sticky Section Layout Demo",
+				"url": "block-misc-sticky-section.html",
+				"description": "A demonstration of Canvas sticky section blocks with fixed left navigation, smooth-scroll one-page menus, and full-height responsive content columns.",
+				"creator": {
+					"@type": "Organization",
+					"name": "SemiColonWeb",
+					"url": "https://themeforest.net/user/semicolonweb"
+				}
+			}
+		]
+	}
+	</script>
+</head>
+
+<body class="stretched block-sticky-section">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="images/logo.png, images/logo@2x.png 2x" src="images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="images/logo-dark.png, images/logo-dark@2x.png 2x" src="images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>Menu 1</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>Menu 2</div></a>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap py-0">
+
+				<div id="section-home" class="section m-0 page-section">
+
+					<div class="container-fluid">
+
+						<div class="row align-items-start">
+							<div class="col-lg-3 px-3 d-flex flex-column sticky-section sticky-top min-vh-100">
+								<h1 class="display-4 t600 mb-lg-auto sticky-section sticky-top">Home</h1>
+								<nav class="navbar sticky-section sticky-bottom d-none d-lg-flex">
+									<ul class="nav nav-pills flex-column one-page-menu" data-offset="120" aria-orientation="vertical" role="tablist" data-active-class="active" data-parent=".nav-link">
+										<li class="nav-item"><a class="nav-link" href="#" data-href="#section1">Item 1</a></li>
+										<li class="nav-item"><a class="nav-link" href="#" data-href="#section2">Item 2</a></li>
+										<li class="nav-item"><a class="nav-link" href="#" data-href="#section3">Item 3</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col-lg-9 scrolling-items">
+								<div id="section1" class="sub-section">
+									<h4>Item 1</h4>
+									<p class="lead">The sticky section layout is one of the most effective UI patterns for long-form content. As users scroll through the page, the left-side heading remains anchored in view, providing continuous context without requiring the reader to scroll back up. This approach is particularly useful for product documentation, portfolio overviews, and feature breakdowns. The implementation uses CSS position: sticky combined with a minimum viewport height constraint to ensure the heading stays visible throughout the full length of its sibling content block. Navigation links in the bottom-left corner also remain sticky, automatically highlighting the currently visible sub-section as you scroll. This makes it easy for visitors to track their position within a long page. Canvas provides this component as a ready-to-use block, fully responsive and tested across all modern browsers. On mobile devices the sticky behavior is disabled and the layout reflows to a standard single-column stack, keeping content readable on smaller screens without any JavaScript overrides. The smooth-scroll behavior between sections is handled automatically by the built-in one-page menu plugin, requiring only data attributes to configure offset and active-class behavior. Drop this block into any Canvas page, set your section IDs, and the navigation wires itself up instantly.</p>
+								</div>
+								<div class="line"></div>
+								<div id="section2" class="sub-section">
+									<h4>Item 2</h4>
+									<p class="lead">Building with sticky sections gives your long-form pages a polished, editorial quality that keeps readers oriented no matter how deeply they scroll. Each content block occupies its own full-height viewport region, allowing rich text, images, or media to breathe without feeling cramped. The left column serves as an always-visible chapter marker, so visitors always know which topic they are reading. Because the sticky behavior is implemented in pure CSS, it carries no performance overhead and degrades gracefully in older browsers by simply scrolling with the rest of the page. Canvas ships multiple pre-built sticky section demos covering portfolios, service showcases, case studies, and editorial layouts. Each demo is independently customizable through the same familiar Canvas utility classes and section options, so you can mix and match sticky headers with dark backgrounds, full-width images, and parallax effects. Sticky offset values are managed through a single CSS variable, making it straightforward to adjust the top position whenever you change the header height. This flexibility lets you create distinctive, brand-aligned experiences with minimal effort and without writing custom JavaScript, keeping your codebase lean and easy to maintain over time. The component is thoroughly tested across Chrome, Firefox, Safari, and Edge to ensure consistent rendering in every environment your visitors may use to browse your site.</p>
+								</div>
+								<div class="line"></div>
+								<div id="section3" class="sub-section">
+									<h4>Item 3</h4>
+									<p class="lead">Sticky sections pair especially well with narrative-driven websites where the story unfolds progressively as the user scrolls. By anchoring category labels or chapter numbers on the left, you create an implicit table of contents that guides readers through complex material. This component is also popular for portfolio sites that present multiple project case studies on a single page: each project gets its own sticky title while the right column displays screenshots, process notes, and outcomes in a flowing layout. The one-page navigation widget at the bottom of the sticky column provides quick jump links with smooth-scroll animation, so visitors can navigate directly to any section. Canvas components handle all accessibility concerns automatically, including proper ARIA roles, keyboard navigation support, and sufficient color contrast for the active-link indicator line. The result is a component that looks great in design reviews and performs reliably in production across desktop, tablet, and mobile viewports, requiring no custom JavaScript from the developer implementing it. Whether you are building a one-page portfolio, a detailed service overview, or a long-form editorial piece, this block adapts to your content naturally and presents it in a clear, structured, and visually compelling way for every visitor.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="line m-0"></div>
+
+				<div id="section-about" class="section m-0 page-section">
+
+					<div class="container-fluid">
+
+						<div class="row align-items-start">
+							<div class="col-lg-3 sticky-section sticky-top">
+								<h1 class="display-4 t600 px-3">About</h1>
+							</div>
+							<div class="col-lg-9">
+								<p class="lead mb-0">Canvas is a premium multi-purpose HTML5 template built by SemiColonWeb and sold exclusively on ThemeForest. It combines an extensive component library with a flexible page-building system, giving designers and developers everything they need to create professional websites without writing repetitive boilerplate code. The template ships with hundreds of ready-made blocks covering headers, heroes, features, portfolios, blogs, shops, forms, and more, all built on Bootstrap 5 and styled with a consistent, modern aesthetic. Canvas is engineered for performance: assets are optimized, critical CSS is inlined, and JavaScript is bundled and deferred to achieve fast load times out of the box. Regular updates introduce new components, bug fixes, and compatibility improvements, ensuring the template stays current with evolving web standards. Whether you are building a corporate site, a creative portfolio, a restaurant landing page, or a SaaS product site, Canvas provides the blocks and utilities to get from idea to launch faster than starting from scratch. Every component is documented with clear usage examples, and the dedicated support team is available to answer questions and help customers achieve their goals throughout the entire lifetime of their project, with priority support offered to Elite buyers.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="line m-0"></div>
+
+				<div id="section-works" class="section m-0 page-section">
+
+					<div class="container-fluid">
+
+						<div class="row align-items-start">
+							<div class="col-lg-3 sticky-section sticky-top">
+								<h1 class="display-4 t600 px-3">Works</h1>
+							</div>
+							<div class="col-lg-9">
+								<p class="lead mb-0">The Canvas component library spans dozens of categories, from basic typography and grid layouts to advanced interactive elements like sliders, counters, countdowns, progress bars, and chart widgets. Portfolio and works sections are available in grid, masonry, justified, and carousel formats, each with configurable hover effects, filter tabs, and lightbox integration. Testimonial blocks support star ratings, author photos, and company logos, making it easy to build credible social-proof sections. Pricing tables come with feature lists, toggle switches for monthly and annual billing, and prominent call-to-action buttons. Contact forms are pre-wired to a PHP mail handler and include validation feedback for every required field. The sticky section demo you are viewing showcases how Canvas handles long-form single-page layouts with elegance. Every block in this library is built with the same underlying markup conventions, so switching between layouts or combining blocks from different demos is straightforward and reliable. Canvas gives you the creative freedom to mix components from any demo into a unique final product, all within a stable, well-tested technical foundation that handles the tricky cross-browser edge cases automatically, so you can focus entirely on design and content rather than debugging compatibility issues.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row col-mb-50">
+						<div class="col-lg-8">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4">
+
+									<div class="widget">
+
+										<img src="images/footer-widget-logo@2x.png" alt="Canvas footer logo" class="footer-logo" width="123" height="22">
+
+										<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+
+										<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+											<address>
+												<strong>Headquarters:</strong><br>
+												795 Folsom Ave, Suite 600<br>
+												San Francisco, CA 94107<br>
+											</address>
+											<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+											<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+											<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget widget_links">
+
+										<h4>Blogroll</h4>
+
+										<ul>
+											<li><a href="https://codex.wordpress.org/">Documentation</a></li>
+											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+											<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
+											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
+											<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
+											<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
+										</ul>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget">
+										<h4>Recent Posts</h4>
+
+										<div class="posts-sm row col-mb-30" id="post-list-footer">
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">How Sticky Sections Improve Page Navigation</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Responsive Layouts with CSS Position Sticky</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Building One-Page Sites with Canvas Blocks</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+												<h5 class="mb-0">Total Downloads</h5>
+											</div>
+
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+												<h5 class="mb-0">Clients</h5>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="col-md-5 col-lg-12">
+									<div class="widget subscribe-widget">
+										<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group mx-auto">
+												<div class="input-group-text"><i class="bi-envelope-plus"></i></div>
+												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+												<button class="btn btn-success" type="submit">Subscribe</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="col-md-3 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-facebook me-2 mb-0 float-none">
+													<i class="fa-brands fa-facebook-f"></i>
+													<i class="fa-brands fa-facebook-f"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Like Us</strong><br>on Facebook</small></a>
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-rss me-2 mb-0 float-none">
+													<i class="fa-solid fa-rss"></i>
+													<i class="fa-solid fa-rss"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+
+					<div class="row col-mb-30">
+
+						<div class="col-md-6 text-center text-md-start">
+							Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						</div>
+
+						<div class="col-md-6 text-center text-md-end">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="#" class="social-icon si-small border-transparent h-bg-facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-x-twitter">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-google">
+									<i class="fa-brands fa-google"></i>
+									<i class="fa-brands fa-google"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-pinterest">
+									<i class="fa-brands fa-pinterest-p"></i>
+									<i class="fa-brands fa-pinterest-p"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-vimeo">
+									<i class="fa-brands fa-vimeo-v"></i>
+									<i class="fa-brands fa-vimeo-v"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-github">
+									<i class="fa-brands fa-github"></i>
+									<i class="fa-brands fa-github"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-yahoo">
+									<i class="fa-brands fa-yahoo"></i>
+									<i class="fa-brands fa-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-linkedin">
+									<i class="fa-brands fa-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+
+							<div class="clear"></div>
+
+							<i class="bi-envelope"></i> info@canvas.com <span class="middot">&middot;</span> <i class="fa-solid fa-phone"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="bi-skype"></i> CanvasOnSkype
+						</div>
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery(document).ready(function(){
+			var $header = jQuery('#header');
+			var $header_clone = jQuery('.header-wrap-clone');
+			if( $header.hasClass('no-sticky') ) {
+				var offsetHeight = 60;
+			} else {
+				var offsetHeight = $header_clone.outerHeight();
+			}
+
+			jQuery('#nav-spy .nav-link').on('click', function(event) {
+				jQuery('#nav-spy .nav-link').removeClass('active');
+				if (this.hash !== "") {
+					var hash = this.hash;
+					var scrollPos = jQuery('.scrolling-items').find(jQuery(this).attr('href')).offset().top - (offsetHeight);
+					jQuery('body,html').animate({
+						scrollTop: scrollPos
+					}, 500, function(){
+						jQuery(this).addClass('active');
+						window.location.hash = hash;
+					  });
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

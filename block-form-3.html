@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Access your Canvas dashboard with a clean, secure login form. Enter your email and password or sign in with Google for fast, streamlined account access.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Login Form - Secure Dashboard Access | Canvas</title>
+
+	<style>
+        .form-control {
+            /* border-width: 2px; */
+        }
+
+        label {
+            font-size: .925rem;
+            font-weight: 500;
+            font-family: var(--cnvs-primary-font);
+            text-transform: none;
+            letter-spacing: 0;
+            color: #777;
+            margin-bottom: 4px;
+        }
+
+		.form-control::-moz-placeholder {
+            opacity: .4;
+            font-weight: 400;
+        }
+            .form-control::placeholder {
+            opacity: .4;
+            font-weight: 400;
+        }
+
+        .form-control:active,
+        .form-control:focus {
+            border: 1px solid var(--bs-primary);
+            box-shadow: 0px 0px 0px 1px var(--bs-primary);
+        }
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-form-3.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-form-3.html">
+	<meta property="og:title" content="Login Form - Secure Dashboard Access | Canvas">
+	<meta property="og:description" content="Access your Canvas dashboard with a clean, secure login form. Enter your email and password or sign in with Google for fast, streamlined account access.">
+	<meta property="og:image" content="images/blocks/preview/form-3/1.svg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Login Form - Secure Dashboard Access | Canvas">
+	<meta name="twitter:description" content="Access your Canvas dashboard with a clean, secure login form. Enter your email and password or sign in with Google for fast, streamlined account access.">
+	<meta name="twitter:image" content="images/blocks/preview/form-3/1.svg">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebPage",
+				"name": "Login Form - Secure Dashboard Access",
+				"url": "block-form-3.html",
+				"description": "Access your Canvas dashboard with a clean, secure login form. Enter your email and password or sign in with Google for fast, streamlined account access.",
+				"image": "images/blocks/preview/form-3/1.svg",
+				"inLanguage": "en-US"
+			},
+			{
+				"@type": "Organization",
+				"name": "Canvas",
+				"url": "block-form-3.html",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "123 Example Avenue",
+					"addressLocality": "San Francisco",
+					"addressRegion": "CA",
+					"postalCode": "94105",
+					"addressCountry": "US"
+				},
+				"telephone": "+1-555-123-4567"
+			}
+		]
+	}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="row align-items-stretch justify-content-between block-contact-1 g-0">
+
+					<div class="col-md-6">
+						<div class="h-100 min-vh-md-100 d-flex flex-column justify-content-center align-items-center p-5 bg-primary dark">
+                            <h2 class="mb-1 fw-semibold text-white text-capitalize">Login to access our dashboard</h2>
+                            <p class=" text-white-50 mb-5">Get in Touch with Us. Our Team will reply your query within 24hrs.</p>
+                            <img src="images/blocks/preview/form-3/1.svg" alt="Dashboard login illustration">
+						</div>
+					</div>
+
+					<div class="col-md-6 p-5 px-lg-6 d-flex flex-column align-self-center">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6">
+                                <h2 class="mb-1 fw-bold">Welcome Back</h2>
+                                <p class="op-07 mb-5">Please enter your details to complete.</p>
+                                <form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
+                                    <div class="col-12 form-group">
+                                        <label for="login-form-username">Email Address:</label>
+                                        <input type="text" id="login-form-username" class="form-control" placeholder="Enter your Email">
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-12 form-group">
+                                        <label for="login-form-password">Password:</label>
+                                        <div class="input-group">
+                                            <input id="login-form-password" type="password" class="form-control" placeholder="******">
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-12 d-flex justify-content-between align-items-center form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                            <label class="form-check-label m-0 position-relative" style="top: -2px" for="inlineCheckbox2">Remember me</label>
+                                        </div>
+                                        <a href="#" class="text-smaller fw-medium link-primary">Forgot Password?</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-12">
+                                        <button class="btn rounded btn-primary w-100 py-2" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-outline-dark rounded w-100 mt-3 py-2 border-default" id="login-form-submit" name="login-form-submit" value="login"><img src="images/blocks/preview/google-login.png" alt="canvas login" width="15" height="15" style="position: relative; bottom: 2px;"> Login with Google</button>
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <span class="op-06">Don't have an Account?</span> <a href="#" class="link-primary"><u>Sign Up</u></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

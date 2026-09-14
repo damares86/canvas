@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All — CanvasLoom | Canvas</title>
+  <meta name="description" content="Browse the full CanvasLoom collection. Filter by category, price, color, and size to find your perfect piece. Women, Men, Accessories.">
+  <meta name="author" content="SemiColonWeb">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#B5935A">
+  <link rel="canonical" href="demo-fashion-store-shop.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Canvas">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Shop All — CanvasLoom | Canvas">
+  <meta property="og:description" content="Browse the full CanvasLoom collection.">
+  <meta property="og:image" content="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/5489ad5a14a8527b.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shop All — CanvasLoom | Canvas">
+  <meta name="twitter:image" content="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/5489ad5a14a8527b.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Shop All",
+      "url": "demo-fashion-store-shop.html",
+      "description": "Browse CanvasLoom's full clothing and accessories collection.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "demo-fashion-store.html"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Shop"
+        }]
+      }
+    }
+
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-icons.css">
+  <link rel="stylesheet" href="demos/fashion-store/fashion-store.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="stretched">
+  <div id="wrapper">
+
+    <header id="header" class="full-header">
+      <div id="header-wrap">
+        <div class="container">
+          <div class="header-row">
+            <div id="logo">
+              <a href="demo-fashion-store.html">
+                <img class="logo-default" srcset="demos/fashion-store/images/logo.png, demos/fashion-store/images/logo@2x.png 2x" src="demos/fashion-store/images/logo@2x.png" alt="CanvasLoom">
+                <img class="logo-dark" srcset="demos/fashion-store/images/logo-dark.png, demos/fashion-store/images/logo-dark@2x.png 2x" src="demos/fashion-store/images/logo-dark@2x.png" alt="CanvasLoom">
+              </a>
+            </div>
+            <div class="primary-menu-trigger">
+              <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+              </button>
+            </div>
+            <div class="header-misc">
+              <div class="header-misc-icon">
+                <a href="#" title="Wishlist" aria-label="Wishlist"><i class="bi-heart"></i></a>
+              </div>
+              <div class="header-misc-icon ms-3">
+                <a href="demo-fashion-store-cart.html" title="Shopping Cart" style="position:relative;">
+                  <i class="uil uil-shopping-bag"></i>
+                  <span class="loom-cart-badge">3</span>
+                </a>
+              </div>
+            </div>
+            <nav class="primary-menu">
+              <ul class="menu-container">
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store.html">
+                    <div>Home</div>
+                  </a></li>
+                <li class="menu-item current"><a class="menu-link" href="demo-fashion-store-shop.html">
+                    <div>Shop</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store-product.html">
+                    <div>New In</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store-about.html">
+                    <div>About</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store-cart.html">
+                    <div>Cart</div>
+                  </a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header-wrap-clone"></div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="loom-page-title">
+      <div class="container">
+        <h1>Shop All</h1>
+        <div class="loom-breadcrumb">
+          <a href="demo-fashion-store.html">Home</a> &rsaquo; Shop
+        </div>
+      </div>
+    </div>
+
+    <section id="content">
+      <div class="content-wrap">
+        <div class="container">
+
+          <!-- Category Tabs -->
+          <div class="d-flex gap-2 flex-wrap py-4 border-bottom" style="border-color:var(--loom-border)!important;">
+            <button onclick="filterCat(this,'all')" class="loom-cat-tab active">All</button>
+            <button onclick="filterCat(this,'women')" class="loom-cat-tab">Women</button>
+            <button onclick="filterCat(this,'men')" class="loom-cat-tab">Men</button>
+            <button onclick="filterCat(this,'accessories')" class="loom-cat-tab">Accessories</button>
+            <button onclick="filterCat(this,'sale')" class="loom-cat-tab">Sale</button>
+          </div>
+
+          <div class="row mt-4">
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3 mb-4">
+              <div class="d-flex align-items-center justify-content-between mb-3 d-lg-none">
+                <strong style="font-size:0.875rem;">Filters</strong>
+                <button class="btn-loom-outline loom-filter-toggle" onclick="document.querySelector('.loom-filters-sidebar').classList.toggle('open')" style="padding:0.5rem 1rem;font-size:0.7rem;">
+                  <i class="bi-sliders"></i> Toggle Filters
+                </button>
+              </div>
+              <div class="loom-filters-sidebar loom-filters-panel d-lg-block">
+                <div class="loom-filter-title">Filters</div>
+
+                <!-- Category -->
+                <div class="loom-filter-group">
+                  <span class="loom-filter-label">Category</span>
+                  <div class="loom-filter-item"><input type="checkbox" id="cat-women" checked><label for="cat-women">Women <small>(142)</small></label></div>
+                  <div class="loom-filter-item"><input type="checkbox" id="cat-men" checked><label for="cat-men">Men <small>(98)</small></label></div>
+                  <div class="loom-filter-item"><input type="checkbox" id="cat-acc" checked><label for="cat-acc">Accessories <small>(64)</small></label></div>
+                  <div class="loom-filter-item"><input type="checkbox" id="cat-kids"><label for="cat-kids">Kids <small>(37)</small></label></div>
+                </div>
+
+                <!-- Price Range -->
+                <div class="loom-filter-group">
+                  <span class="loom-filter-label">Price Range</span>
+                  <input type="range" min="0" max="500" value="350" class="loom-price-range" oninput="document.getElementById('price-max').textContent='$'+this.value">
+                  <div class="loom-price-range-labels">
+                    <span>$0</span>
+                    <span>Up to <span id="price-max">$350</span></span>
+                  </div>
+                </div>
+
+                <!-- Color -->
+                <div class="loom-filter-group">
+                  <span class="loom-filter-label">Color</span>
+                  <div class="loom-color-swatches">
+                    <div class="loom-color-swatch active" style="background:#F5F0E8;" title="Ivory"></div>
+                    <div class="loom-color-swatch" style="background:#1A1A1A;" title="Black"></div>
+                    <div class="loom-color-swatch" style="background:#8B7355;" title="Camel"></div>
+                    <div class="loom-color-swatch" style="background:#5B7FA6;" title="Slate Blue"></div>
+                    <div class="loom-color-swatch" style="background:#A8B5A0;" title="Sage"></div>
+                    <div class="loom-color-swatch" style="background:#C4A882;" title="Sand"></div>
+                    <div class="loom-color-swatch" style="background:#7A3E3E;" title="Burgundy"></div>
+                    <div class="loom-color-swatch" style="background:#E8D5C4;" title="Blush"></div>
+                  </div>
+                </div>
+
+                <!-- Size -->
+                <div class="loom-filter-group">
+                  <span class="loom-filter-label">Size</span>
+                  <div class="loom-size-options">
+                    <button class="loom-size-btn">XS</button>
+                    <button class="loom-size-btn active">S</button>
+                    <button class="loom-size-btn active">M</button>
+                    <button class="loom-size-btn">L</button>
+                    <button class="loom-size-btn">XL</button>
+                    <button class="loom-size-btn">XXL</button>
+                  </div>
+                </div>
+
+                <!-- Availability -->
+                <div class="loom-filter-group">
+                  <span class="loom-filter-label">Availability</span>
+                  <div class="loom-filter-item"><input type="checkbox" id="av-in" checked><label for="av-in">In Stock</label></div>
+                  <div class="loom-filter-item"><input type="checkbox" id="av-pre"><label for="av-pre">Pre-Order</label></div>
+                  <div class="loom-filter-item"><input type="checkbox" id="av-sale"><label for="av-sale">On Sale</label></div>
+                </div>
+
+                <button class="btn-loom w-100" style="font-size:0.75rem;padding:0.7rem;">Apply Filters</button>
+                <button class="btn-loom-outline w-100 mt-2" style="font-size:0.75rem;padding:0.65rem;">Clear All</button>
+              </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="col-lg-9">
+              <!-- Toolbar -->
+              <div class="loom-shop-toolbar">
+                <span class="loom-shop-count">Showing 1-12 of <strong>304</strong> products</span>
+                <div class="d-flex align-items-center gap-3">
+                  <select class="loom-sort-select" aria-label="Sort products">
+                    <option>Sort: Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest First</option>
+                    <option>Best Selling</option>
+                    <option>Rating</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row row-cols-2 row-cols-md-3 g-3" id="shop-grid">
+                <!-- 12 product cards -->
+                <div class="col loom-grid-item" data-cat="women">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <span class="loom-product-badge new">New</span>
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/e2becdb0fed9f19a.webp" alt="Ivory Linen Blazer" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Women / Outerwear</span>
+                      <h4><a href="demo-fashion-store-product.html">Ivory Linen Blazer</a></h4>
+                      <span class="loom-price">$215.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="accessories">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <span class="loom-product-badge sale">Sale</span>
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/9abfddb1a0357e76.webp" alt="Natural Canvas Tote" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Accessories / Bags</span>
+                      <h4><a href="demo-fashion-store-product.html">Natural Canvas Tote</a></h4>
+                      <span class="loom-price-old">$85.00</span>
+                      <span class="loom-price loom-price-sale">$59.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="men">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/a7f163431cc09cfd.webp" alt="Slim Leather Wallet" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Men / Accessories</span>
+                      <h4><a href="demo-fashion-store-product.html">Slim Leather Wallet</a></h4>
+                      <span class="loom-price">$95.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="women">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <span class="loom-product-badge new">New</span>
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/c6d48b8814e8f510.webp" alt="Tailored Wool Blazer" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Women / Outerwear</span>
+                      <h4><a href="demo-fashion-store-product.html">Tailored Wool Blazer</a></h4>
+                      <span class="loom-price">$345.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="men">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/200d5867ae9d0aad.webp" alt="Classic Chino Trousers" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Men / Trousers</span>
+                      <h4><a href="demo-fashion-store-product.html">Classic Chino Trousers</a></h4>
+                      <span class="loom-price">$145.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="women">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <span class="loom-product-badge sale">Sale</span>
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/8622bdbef29ccf63.webp" alt="Cashmere Crew Neck" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Women / Knitwear</span>
+                      <h4><a href="demo-fashion-store-product.html">Cashmere Crew Neck</a></h4>
+                      <span class="loom-price-old">$285.00</span>
+                      <span class="loom-price loom-price-sale">$199.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="accessories">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <span class="loom-product-badge new">New</span>
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/5ea8b1d7d13a0ace.webp" alt="Leather Crossbody Bag" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Accessories / Bags</span>
+                      <h4><a href="demo-fashion-store-product.html">Leather Crossbody Bag</a></h4>
+                      <span class="loom-price">$310.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="women">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/e2becdb0fed9f19a.webp" alt="Linen Wide Trousers" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Women / Trousers</span>
+                      <h4><a href="demo-fashion-store-product.html">Linen Wide Trousers</a></h4>
+                      <span class="loom-price">$175.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="men">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/a7f163431cc09cfd.webp" alt="Merino Roll-Neck" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Men / Knitwear</span>
+                      <h4><a href="demo-fashion-store-product.html">Merino Roll-Neck</a></h4>
+                      <span class="loom-price">$220.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="accessories">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <span class="loom-product-badge sale">Sale</span>
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/9abfddb1a0357e76.webp" alt="Woven Belt" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Accessories / Belts</span>
+                      <h4><a href="demo-fashion-store-product.html">Woven Leather Belt</a></h4>
+                      <span class="loom-price-old">$95.00</span>
+                      <span class="loom-price loom-price-sale">$65.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="women">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/8622bdbef29ccf63.webp" alt="Silk Midi Dress" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Women / Dresses</span>
+                      <h4><a href="demo-fashion-store-product.html">Silk Slip Midi Dress</a></h4>
+                      <span class="loom-price">$265.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col loom-grid-item" data-cat="men">
+                  <div class="loom-product-card">
+                    <div class="loom-product-img-wrap">
+                      <span class="loom-product-badge new">New</span>
+                      <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/200d5867ae9d0aad.webp" alt="Oxford Button-Down" loading="lazy" aspect-ratio="3/4">
+                      <div class="loom-product-actions">
+                        <button class="loom-product-action-btn"><i class="bi-heart"></i></button>
+                        <button class="loom-product-action-btn" onclick="location.href='demo-fashion-store-product.html'"><i class="bi-eye"></i></button>
+                      </div>
+                    </div>
+                    <div class="loom-product-info">
+                      <span class="loom-cat-tag">Men / Shirts</span>
+                      <h4><a href="demo-fashion-store-product.html">Oxford Button-Down</a></h4>
+                      <span class="loom-price">$135.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination -->
+              <div class="d-flex justify-content-center align-items-center gap-2 mt-5 pt-3 border-top" style="border-color:var(--loom-border)!important;">
+                <button class="loom-page-btn active">1</button>
+                <button class="loom-page-btn">2</button>
+                <button class="loom-page-btn">3</button>
+                <span style="color:var(--loom-muted);">...</span>
+                <button class="loom-page-btn">26</button>
+                <button class="loom-page-btn" style="gap:0.3rem;"><i class="bi-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="dark">
+      <div class="container">
+        <div class="footer-widgets-wrap">
+          <div class="row col-mb-50">
+            <div class="col-lg-4 col-md-6">
+              <div class="widget loom-footer-brand">
+                <img class="footer-logo mb-3" src="demos/fashion-store/images/logo-dark@2x.png" srcset="demos/fashion-store/images/logo-dark.png, demos/fashion-store/images/logo-dark@2x.png 2x" alt="CanvasLoom">
+                <h4>CanvasLoom</h4>
+                <p>Thoughtfully designed pieces for people who believe clothing is more than fabric. Crafted slowly, worn often, built to last beyond seasons.</p>
+                <div class="loom-footer-socials">
+                  <a href="#" class="loom-footer-social-link" aria-label="Instagram"><i class="bi-instagram"></i></a>
+                  <a href="#" class="loom-footer-social-link" aria-label="TikTok"><i class="bi-tiktok"></i></a>
+                  <a href="#" class="loom-footer-social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                  <a href="#" class="loom-footer-social-link" aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+              <div class="widget loom-footer-nav">
+                <p class="loom-footer-nav-heading">Shop</p>
+                <ul>
+                  <li><a href="demo-fashion-store-shop.html">New Arrivals</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Women</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Men</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Accessories</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Sale</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Gift Cards</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+              <div class="widget loom-footer-nav">
+                <p class="loom-footer-nav-heading">Help</p>
+                <ul>
+                  <li><a href="#">Sizing Guide</a></li>
+                  <li><a href="#">Shipping &amp; Returns</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Order Tracking</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="demo-fashion-store-about.html">Sustainability</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="widget loom-footer-newsletter">
+                <p class="loom-footer-nav-heading">Stay In The Loop</p>
+                <p>New arrivals, style notes, and restocks. No noise, just what matters. Join 28,000 people who love getting dressed.</p>
+                <form class="loom-footer-email-form" onsubmit="return false;">
+                  <input type="email" placeholder="Your email address">
+                  <button type="submit">Join</button>
+                </form>
+                <div class="loom-footer-contact">
+                  <div><i class="bi-envelope"></i> hello@canvasloom.co</div>
+                  <div><i class="bi-telephone"></i> +1 (415) 840-2295</div>
+                  <div><i class="bi-geo-alt"></i> 318 Grove St, San Francisco, CA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="copyrights">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md text-center text-md-start">
+              Copyrights &copy; 2026 CanvasLoom.
+            </div>
+            <div class="col-12 col-md-auto text-center text-md-end mt-2 mt-md-0">
+              <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Use</a> &nbsp;&middot;&nbsp; <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/plugins.min.js"></script>
+  <script src="js/functions.bundle.js"></script>
+  <script>
+    var catTabs = document.querySelectorAll('.loom-cat-tab');
+    catTabs.forEach(function(t) {
+      t.style.cssText = 'font-family:Manrope,sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.5rem 1.25rem;border:1.5px solid var(--loom-border);background:transparent;cursor:pointer;transition:all 180ms;color:var(--loom-black)';
+      t.classList.contains('active') && (t.style.background = 'var(--loom-black)', t.style.color = 'white', t.style.borderColor = 'var(--loom-black)');
+    });
+
+    function filterCat(btn, cat) {
+      catTabs.forEach(function(t) {
+        t.style.background = 'transparent';
+        t.style.color = 'var(--loom-black)';
+        t.style.borderColor = 'var(--loom-border)';
+      });
+      btn.style.background = 'var(--loom-black)';
+      btn.style.color = 'white';
+      btn.style.borderColor = 'var(--loom-black)';
+      document.querySelectorAll('.loom-grid-item').forEach(function(item) {
+        item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+    var pageBtns = document.querySelectorAll('.loom-page-btn');
+    pageBtns.forEach(function(b) {
+      b.style.cssText = 'width:36px;height:36px;border:1.5px solid var(--loom-border);background:transparent;font-size:.8rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:all 150ms;font-family:Manrope,sans-serif;color:var(--loom-black)';
+      b.classList.contains('active') && (b.style.background = 'var(--loom-black)', b.style.color = 'white', b.style.borderColor = 'var(--loom-black)');
+    });
+
+  </script>
+</body>
+</html>

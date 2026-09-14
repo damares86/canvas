@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Add sticky site-wide alerts to your Canvas site. Fully responsive and dismissible notification bars with customizable colors, text, and call-to-action buttons.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Sticky Alert Block | Canvas</title>
+
+	<style>
+		@media (min-width: 992px) {
+			#header:not(.no-sticky) + .sticky-top {
+				top: 100px !important;
+				transition: top .4s ease;
+			}
+
+			#header.sticky-header-shrink + .sticky-top {
+				top: 60px !important;
+			}
+		}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-content-alert-sticky.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-alert-sticky.html">
+	<meta property="og:title" content="Sticky Alert Block | Canvas">
+	<meta property="og:description" content="Add sticky site-wide alerts to your Canvas site. Fully responsive and dismissible notification bars with customizable colors, text, and call-to-action buttons.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sticky Alert Block | Canvas">
+	<meta name="twitter:description" content="Add sticky site-wide alerts to your Canvas site. Fully responsive and dismissible notification bars with customizable colors, text, and call-to-action buttons.">
+	<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "name": "Canvas",
+            "url": "block-content-alert-sticky.html"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "block-content-alert-sticky.html",
+            "name": "Sticky Alert Block | Canvas",
+            "description": "Add sticky site-wide alerts to your Canvas site. Fully responsive and dismissible notification bars with customizable colors, text, and call-to-action buttons.",
+            "url": "block-content-alert-sticky.html",
+            "inLanguage": "en-US"
+        }
+    ]
+}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between">
+
+						<h3 class="mb-0">Header</h3>
+
+						<!-- Primary Navigation icon in mobile
+						============================================= -->
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+							<ul class="menu-container justify-content-center">
+								<li class="menu-item current">
+									<a class="menu-link" href="#">
+										<div>Menu 1</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
+										<div>Menu 2</div>
+									</a>
+								</li>
+							</ul>
+						</nav><!-- #primary-menu end -->
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header>
+
+		<div class="alert alert-primary sticky-top m-0">
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-lg-auto">
+						<strong><i class="bi-boxes"></i> Good News!</strong> Back to the future of Awesome Templates: Introducing Our <a href="#" class="alert-link"><u>Canvas</u></a> Template.
+					</div>
+					<div class="col-lg-auto mt-3 mt-lg-0">
+						<a href="#" class="btn btn-primary">Shop Now</a>
+						<button type="button" class="btn btn-close btn-sm float-lg-none text-dark ms-md-3" data-bs-dismiss="alert" aria-hidden="true"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap bg-dark dark">
+
+				<div class="container">
+					<div class="row justify-content-center align-items-center text-center min-vh-50 mb-5">
+						<div class="col-12">
+							<h1 class="display-3">Content <br><span class="text-white-50">...</span></h1>
+							<a href="block-content-alert.html" class="btn btn-sm btn-light me-2">Default</a>
+							<a href="block-content-alert-sticky.html" class="btn btn-sm btn-light me-2">Sticky</a>
+							<a href="block-content-alert-float.html" class="btn btn-sm btn-light me-2">Float</a>
+							<a href="block-content-alert-top.html" class="btn btn-sm btn-light me-2">Top</a>
+							<a href="block-content-alert-bottom-fixed.html" class="btn btn-sm btn-light me-2">Bottom Fixed</a>
+							<a href="block-content-alert-custom-width.html" class="btn btn-sm btn-light">Custom Width</a>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>More Content</h4>
+							<p>Canvas is a highly customizable Bootstrap template built for developers and designers who demand performance and flexibility. With an extensive, robust component library, pixel-perfect design elements, and lifetime free updates, it significantly accelerates your project delivery without compromising quality or code standards. Whether you are building a corporate website, a startup landing page, a creative portfolio, or an e-commerce storefront, Canvas provides the solid, scalable foundation you need to get it done right. Each block is thoughtfully crafted for real-world use cases, making design integration straightforward and ensuring your final product is polished, professional, and built to last.</p>
+						</div>
+						<div class="col-sm-6">
+							<h4>More Content</h4>
+							<p>Sticky alerts are an effective way to surface important announcements, promotions, or site-wide notices that remain fully visible as users scroll through your content. The Canvas sticky alert block is lightweight, easily dismissible, and fully responsive across all screen sizes and mobile devices. You can customize the alert color scheme, call-to-action button style, text content, and overall messaging to perfectly match your brand identity. Use it to highlight a new product launch, a limited-time promotional offer, a critical maintenance update, or any key message you want every visitor to see without disrupting their overall browsing experience on your site.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

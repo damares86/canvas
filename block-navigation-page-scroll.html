@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Add smooth scrolling and an auto-highlighting dotted page menu to one-page sites with the Canvas page scroll navigation block. Easy to set up and responsive.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=PT+Serif:ital,wght@1,400&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Page Scroll Navigation Block | Canvas</title>
+
+	<style>
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	body {
+		font-family: 'Inter', sans-serif !important;
+	}
+
+	.section {
+		background-color: #f4fbf9;
+	}
+
+	@media (min-width: 992px) {
+		.is-expanded-pagemenu #page-menu.dots-menu {
+			background: #fff;
+			box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 15%);
+			border-radius: 7px;
+			-webkit-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			width: 34px;
+			overflow: hidden;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu:hover {
+			width: 160px;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu .page-menu-item {
+			margin: 13px 0;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu .page-menu-nav .page-menu-container {
+			-ms-flex-align: flex-end;
+			align-items: flex-end;
+			-ms-flex-pack: flex-end;
+			padding: 12px;
+			-webkit-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu:hover .page-menu-nav .page-menu-container {
+			padding: 12px 20px;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu .page-menu-item > a div {
+			right: 15px;
+			background-color: transparent;
+			color: #888;
+			text-shadow: none;
+			text-transform: none;
+			letter-spacing: 0;
+			font-size: 15px;
+			padding: 0;
+			border-radius: 0;
+			pointer-events: auto;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu:hover .page-menu-item > a div {
+			opacity: 1;
+			transition: opacity .2s .1s ease;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu .page-menu-item.current > a div,
+		.is-expanded-pagemenu #page-menu.dots-menu .page-menu-item:hover > a div {
+			color: #1ABC9D;
+			font-weight: 500;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu .page-menu-item > a:hover div {
+			right: 15px;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu .page-menu-item div::after {
+			content: none;
+		}
+
+
+		/* .pos-left */
+		.is-expanded-pagemenu #page-menu.dots-menu.pos-left {
+			right: auto;
+			left: 25px;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu.pos-left .page-menu-nav .page-menu-container {
+			 -ms-flex-align: flex-start;
+			align-items: flex-start;
+			-ms-flex-pack: flex-start;
+		}
+
+		.is-expanded-pagemenu #page-menu.dots-menu.pos-left .page-menu-item > a div {
+			position: relative;
+			right: auto;
+			left: 22px;
+			margin-left: 0;
+		}
+	}
+
+	</style>
+
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-navigation-page-scroll.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-navigation-page-scroll.html">
+	<meta property="og:title" content="Page Scroll Navigation Block | Canvas">
+	<meta property="og:description" content="Add smooth scrolling and an auto-highlighting dotted page menu to one-page sites with the Canvas page scroll navigation block. Easy to set up and responsive.">
+	<meta property="og:image" content="images/footer-widget-logo@2x.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Page Scroll Navigation Block | Canvas">
+	<meta name="twitter:description" content="Add smooth scrolling and an auto-highlighting dotted page menu to one-page sites with the Canvas page scroll navigation block. Easy to set up and responsive.">
+	<meta name="twitter:image" content="images/footer-widget-logo@2x.png">
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Page Scroll Navigation Block | Canvas",
+  "url": "block-navigation-page-scroll.html",
+  "image": "images/footer-widget-logo@2x.png",
+  "description": "Add smooth scrolling and an auto-highlighting dotted page menu to one-page sites with the Canvas page scroll navigation block. Easy to set up and responsive.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Canvas",
+    "url": "index.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Canvas",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "images/footer-widget-logo@2x.png"
+    }
+  }
+}
+	</script>
+</head>
+
+<body class="stretched block-sticky-section">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="d-none">
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap py-0">
+
+				<div id="page-menu" class="dots-menu pos-left">
+					<div id="page-menu-wrap">
+						<div class="page-menu-row">
+
+							<nav class="page-menu-nav">
+								<ul class="page-menu-container one-page-menu" data-easing="easeInOutExpo" data-offset="0">
+									<li class="page-menu-item"><a href="#" data-href="#section-1"><div>Section 1</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-2"><div>Section 2</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-3"><div>Section 3</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-4"><div>Section 4</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-5"><div>Section 5</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-6"><div>Section 6</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-7"><div>Section 7</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-8"><div>Section 8</div></a></li>
+								</ul>
+							</nav>
+
+							<div id="page-menu-trigger"><i class="bi-list"></i></div>
+
+						</div>
+					</div>
+				</div><!-- #page-menu end -->
+
+				<div id="section-1" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 1</h1>
+						<p class="lead">Welcome to the page-scroll navigation demo, where smooth anchored jumps turn a long page into an effortless, continuous journey. The dotted menu fixed to the side of the viewport tracks your position as you scroll, highlighting the active section in real time so visitors always know exactly where they are in the story. Each menu dot expands on hover to reveal its descriptive label, keeping the overall layout clean and uncluttered while staying instantly readable when you need it. Click any item and the page glides to the matching section using a configurable easing curve, with an adjustable offset that accounts for any sticky header sitting at the top. This pattern is ideal for one-page portfolios, product launches, marketing landing pages, and storytelling layouts that benefit from a single, uninterrupted narrative. Because every section shares one URL with hash fragments, links remain shareable and bookmarkable, and the browser back button behaves exactly as users expect it to. Built entirely with native Canvas components, the scroll menu requires no extra plugins and inherits your chosen theme color automatically. You can position it on the left or right, switch freely between dotted and labelled styles, and fine-tune the animation speed to match your brand. The result is a navigation experience that feels modern, intuitive, and genuinely polished across desktop and mobile screens alike.</p>
+					</div>
+				</div>
+
+
+				<div id="section-2" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 2</h1>
+						<p class="lead mb-0">Scroll-driven page menus solve a common problem for long pages: keeping orientation simple without forcing visitors to hunt for a traditional top navigation bar. As the reader moves steadily down the page, the active section indicator updates automatically, giving constant visual feedback about progress through the content. The menu sits unobtrusively against the very edge of the viewport, expanding only when it is hovered so it never competes with the rest of your design. Smooth scrolling replaces abrupt jumps, and the easing option lets you choose anything from a gentle, gradual slide to a snappy, energetic transition. An offset value keeps target headings clear of any fixed header, so anchored sections always land in a comfortable, readable position on screen. This approach pairs beautifully with full-height hero blocks, feature grids, pricing tables, testimonials, and call-to-action panels arranged in a logical sequence. Everything is responsive by default, collapsing gracefully on smaller devices where a compact trigger icon quietly takes over. Because it is part of the Canvas framework, the component integrates seamlessly with everything else, sharing typography, spacing, and color tokens for a consistent look throughout. Setting it up takes only a data attribute or two, leaving you free to focus on writing great content rather than wiring up scripts.</p>
+					</div>
+
+				</div>
+
+
+				<div id="section-3" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 3</h1>
+						<p class="lead mb-0">A one-page layout works best when wayfinding stays quietly invisible until the visitor actually needs it, and that is exactly what this scroll menu is designed to deliver. The dotted indicator gently mirrors your scroll position, brightening the dot for whichever section currently fills the screen so your place is never in question. Hovering expands the entire menu to show clear, descriptive labels, then it collapses smoothly again to preserve your carefully minimalist aesthetic. Selecting an item animates the page to the right anchor with a customizable easing function and a header-aware offset, so nothing important ever ends up hidden behind a sticky bar. Designers love this pattern for in-depth case studies, agency showcases, event microsites, and app landing pages where forward momentum genuinely matters. Since the navigation lives inside the page itself, it loads instantly and adds no perceptible weight to the document at all. Canvas handles the heavy lifting, wiring the click handlers, the active-state tracking, and the smooth animation through clean, thoroughly documented markup. You control placement, style, and timing without editing a single line of JavaScript, and the menu respects your theme color straight out of the box. The outcome is a refined, distraction-free way to move through content that keeps readers engaged from the first section all the way to the last.</p>
+					</div>
+				</div>
+
+				<div id="section-3" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 3</h1>
+						<p class="lead mb-0">Smooth page scrolling transforms a dense single-page document into a guided, enjoyable tour, and the side menu is the steady compass that keeps everyone on course. Each anchor link is tied directly to a section, and as you scroll the corresponding indicator activates so the reader's exact place is never in doubt for a moment. The compact dotted form keeps the interface tidy and discreet, while a simple hover reveals the full set of labels for quick navigation between any two points on the page. Clicking glides the viewport to the chosen section with adjustable easing and a precise offset that clears fixed headers cleanly every time. This is a natural fit for product features, onboarding flows, marketing stories, and portfolios that gradually unfold as one continuous, scrolling experience. Because it is native to Canvas, the menu shares the framework's responsive grid, spacing scale, and color system for a truly seamless, integrated result. Implementation is refreshingly simple, relying on data attributes rather than custom code, which makes ongoing maintenance painless for any future edits you might need. You can flip the menu to the left or right edge, choose dotted or labelled styling, and tune the scroll speed precisely to taste. The finished effect is elegant and dependable, giving visitors a smooth, confident path through every single section of your page.</p>
+					</div>
+				</div>
+
+				<div id="section-4" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 4</h1>
+						<p class="lead mb-0">Anchored navigation paired with smooth scrolling is the dependable backbone of any great one-page site, and this demo shows the technique working at its very best. The fixed menu observes your scroll position continuously, lighting up the dot that matches the section currently in view so orientation feels completely effortless. In its resting state the menu is just a slim column of dots; hover over it and the labels slide neatly into view, then tuck away again to keep the design uncluttered. A single click animates the page to the selected anchor using your chosen easing curve and a configurable offset that allows for sticky headers. Use it for feature tours, restaurant menus, conference schedules, photo essays, or any layout that reads naturally from top to bottom. The component is fully responsive, swapping to a tidy trigger button on phones where every pixel of screen space is precious. As part of the Canvas framework it inherits your fonts, colors, and spacing automatically, so it always looks like it genuinely belongs. Configuration is handled entirely through clean attributes, meaning you rarely need to touch a line of script to get exactly the behavior you want. The end result is a navigation system that feels both effortless and intentional, guiding readers smoothly through the whole story from start to finish.</p>
+					</div>
+				</div>
+
+				<div id="section-5" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 5</h1>
+						<p class="lead mb-0">Page-scroll menus give long-form layouts a genuine sense of structure that visitors can feel intuitively rather than have to read about. As content rolls past, the active section indicator follows steadily along, providing quiet reassurance about how far the reader has come and how much still remains ahead. The dotted style keeps the menu discreet and out of the way, expanding on hover to surface section names and then shrinking back to protect your clean, considered composition. Each link triggers a smooth animated scroll to its anchor, complete with adjustable easing and a precise offset tuned to your particular header height. This makes it perfect for marketing landing pages, single-scroll resumes, product showcases, and editorial features arranged as one flowing narrative. Everything adapts to smaller screens automatically, collapsing into a compact toggle so mobile users keep full access to every section without any clutter. Because the menu is a true Canvas component, it draws on the framework's shared styles for consistent typography, spacing, and theme color throughout. You configure placement and behavior with simple data attributes, sidestepping the need for any bespoke scripting entirely. The payoff is a confident, polished navigation experience that helps readers stay oriented and engaged from the opening section right through to the final call to action.</p>
+					</div>
+				</div>
+
+				<div id="section-6" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 6</h1>
+						<p class="lead mb-0">Great one-page design depends on letting people move around freely without ever once losing their place, and that is precisely the promise of this scroll navigation. The side menu watches the viewport closely and highlights the indicator for whatever section is currently on screen, updating live and instantly as the reader scrolls. Its dotted resting state stays politely out of the way, then expands on hover to reveal clear, readable labels before collapsing again to keep everything minimal. Clicking any entry animates the page smoothly to the matching anchor, with easing and offset options that carefully respect sticky headers and overall reading comfort. Designers reach for this pattern on agency sites, app launches, event pages, and storytelling layouts that genuinely reward a long, continuous scroll. The whole system is responsive by nature, folding into a neat trigger icon on mobile so smaller screens stay clean, focused, and usable. As a Canvas component it automatically matches your theme color, fonts, and spacing for a unified, cohesive appearance across the board. You set it up with just a couple of attributes instead of hand-written scripts, which keeps the build fast and the maintenance pleasantly light. The result is a smooth, reliable way to navigate a long page that feels thoroughly modern and keeps visitors comfortably in control.</p>
+					</div>
+				</div>
+
+				<div id="section-7" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 7</h1>
+						<p class="lead mb-0">Section seven shows just how versatile a scrolling page menu can be when the content runs long, detailed, and varied. The active indicator keeps steady pace with your reading, so you always know which part of the page is currently in view and roughly how much further the story still goes. While it rests, the menu is nothing more than a slim, unobtrusive row of dots; a quick hover brings the descriptive labels forward, then they slip away again to keep the interface calm and genuinely uncluttered. Each entry triggers a smooth animated scroll straight to its anchor, with easing and offset settings you can adjust freely to suit any sticky header or particular design. This works wonderfully for product walkthroughs, service overviews, team pages, and long-form editorial features that read best as a single, continuous flow. The menu is responsive right from the start, collapsing neatly into a compact trigger on smaller screens so phones stay clean and effortless to use. Because it is woven directly into the Canvas framework, it picks up your theme color, fonts, and spacing automatically for a thoroughly unified feel. You configure the whole thing with simple data attributes rather than fiddly custom scripting, which keeps everything quick to build and painless to maintain later. The result is a smooth, dependable way to guide visitors through even the very longest of pages with real, lasting confidence.</p>
+					</div>
+				</div>
+
+				<div id="section-8" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 8</h1>
+						<p class="lead mb-0">To wrap up the demo, this final section underlines exactly why smooth page scrolling has become such a staple of contemporary web design. The fixed dotted menu provides constant, gentle wayfinding, lighting the indicator for the section in view and updating instantly the moment the reader scrolls. It stays compact by default and only widens on hover to expose its labels, striking a thoughtful balance between clarity and true minimalism. Every link animates the page to its anchor with configurable easing and a header-aware offset, ensuring each section arrives in a comfortable, readable position. The technique suits portfolios, product pages, marketing stories, photo galleries, and any layout best experienced as one uninterrupted scroll. Responsiveness is built in from the ground up, so the menu collapses to a tidy toggle on phones without ever sacrificing access to a single section. Because it ships as part of Canvas, it inherits your theme color, typography, and spacing for a cohesive finish across the whole site. Configuration relies on straightforward data attributes rather than custom code, keeping the initial setup quick and any later edits genuinely painless. Taken together, these small touches create a navigation experience that is smooth, intuitive, and truly enjoyable, guiding visitors confidently from the very first section all the way down to the last.</p>
+					</div>
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row col-mb-50">
+						<div class="col-lg-8">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4">
+
+									<div class="widget">
+
+										<img src="images/footer-widget-logo@2x.png" alt="Canvas footer logo" class="footer-logo" width="123" height="22">
+
+										<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+
+										<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+											<address>
+												<strong>Headquarters:</strong><br>
+												795 Folsom Ave, Suite 600<br>
+												San Francisco, CA 94107<br>
+											</address>
+											<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+											<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+											<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget widget_links">
+
+										<h4>Blogroll</h4>
+
+										<ul>
+											<li><a href="https://codex.wordpress.org/">Documentation</a></li>
+											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+											<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
+											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
+											<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
+											<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
+										</ul>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget">
+										<h4>Recent Posts</h4>
+
+										<div class="posts-sm row col-mb-30" id="post-list-footer">
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Building a one-page site with smooth scroll</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">How anchored menus boost reader engagement</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Tuning scroll easing for a polished feel</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+												<h5 class="mb-0">Total Downloads</h5>
+											</div>
+
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+												<h5 class="mb-0">Clients</h5>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="col-md-5 col-lg-12">
+									<div class="widget subscribe-widget">
+										<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group mx-auto">
+												<div class="input-group-text"><i class="bi-envelope-plus"></i></div>
+												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+												<button class="btn btn-success" type="submit">Subscribe</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="col-md-3 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-facebook me-2 mb-0 float-none">
+													<i class="fa-brands fa-facebook-f"></i>
+													<i class="fa-brands fa-facebook-f"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Like Us</strong><br>on Facebook</small></a>
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-rss me-2 mb-0 float-none">
+													<i class="fa-solid fa-rss"></i>
+													<i class="fa-solid fa-rss"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+
+					<div class="row col-mb-30">
+
+						<div class="col-md-6 text-center text-md-start">
+							Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						</div>
+
+						<div class="col-md-6 text-center text-md-end">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="#" class="social-icon si-small border-transparent h-bg-facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-x-twitter">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-google">
+									<i class="fa-brands fa-google"></i>
+									<i class="fa-brands fa-google"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-pinterest">
+									<i class="fa-brands fa-pinterest-p"></i>
+									<i class="fa-brands fa-pinterest-p"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-vimeo">
+									<i class="fa-brands fa-vimeo-v"></i>
+									<i class="fa-brands fa-vimeo-v"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-github">
+									<i class="fa-brands fa-github"></i>
+									<i class="fa-brands fa-github"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-yahoo">
+									<i class="fa-brands fa-yahoo"></i>
+									<i class="fa-brands fa-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-linkedin">
+									<i class="fa-brands fa-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+
+							<div class="clear"></div>
+
+							<i class="bi-envelope"></i> info@canvas.com <span class="middot">&middot;</span> <i class="fa-solid fa-phone"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="bi-skype"></i> CanvasOnSkype
+						</div>
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery(document).ready(function(){
+			var $header = jQuery('#header');
+			var $header_clone = jQuery('.header-wrap-clone');
+			if( $header.hasClass('no-sticky') ) {
+				var offsetHeight = 60;
+			} else {
+				var offsetHeight = $header_clone.outerHeight();
+			}
+
+			jQuery('#nav-spy .nav-link').on('click', function(event) {
+				jQuery('#nav-spy .nav-link').removeClass('active');
+				if (this.hash !== "") {
+		   			var hash = this.hash;
+					var scrollPos = jQuery('.scrolling-items').find(jQuery(this).attr('href')).offset().top - (offsetHeight);
+					jQuery('body,html').animate({
+						scrollTop: scrollPos
+					}, 500, function(){
+						jQuery(this).addClass('active');
+						window.location.hash = hash;
+					});
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

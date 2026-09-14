@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FORM // 2026 is the most anticipated design conference of the year. Three days, 2,000 designers, one city. October 14-16, Berlin.">
+  <meta name="author" content="SemiColonWeb">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="FORM // 2026 - Annual Design Conference | Canvas">
+  <meta property="og:description" content="Three days. 2,000 designers. One city. The annual gathering that shapes visual culture.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Canvas">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="demo-event-conference.html">
+  <meta property="og:image" content="demos/event-conference/images/creative-001-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FORM // 2026 - Annual Design Conference | Canvas">
+  <meta name="twitter:description" content="Three days. 2,000 designers. One city.">
+  <meta name="twitter:image" content="demos/event-conference/images/creative-001-hero.webp">
+  <meta name="theme-color" content="#D4FF00">
+  <link rel="canonical" href="demo-event-conference.html">
+  <title>FORM // 2026 - Annual Design Conference | Canvas</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "FORM // 2026",
+      "description": "The annual gathering that shapes visual culture. Three days, 2,000 designers, world-class speakers.",
+      "url": "demo-event-conference.html",
+      "image": "demos/event-conference/images/creative-001-hero.webp",
+      "startDate": "2026-08-31T09:00:00+02:00",
+      "endDate": "2026-09-02T22:00:00+02:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Berlin Exhibition Centre",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Messedamm 22",
+          "addressLocality": "Berlin",
+          "postalCode": "14055",
+          "addressCountry": "DE"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "FORM Conference",
+        "url": "demo-event-conference.html"
+      },
+      "offers": [{
+        "@type": "Offer",
+        "name": "General Pass",
+        "price": "890",
+        "priceCurrency": "USD",
+        "url": "demo-event-conference.html#tickets",
+        "availability": "https://schema.org/InStock"
+      }]
+    }
+
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-icons.css">
+  <link rel="stylesheet" href="demos/event-conference/event-conference.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="stretched">
+
+  <!-- Custom Cursor -->
+  <div id="form-cursor"></div>
+
+  <div id="wrapper">
+
+    <!-- HEADER -->
+    <header id="header" class="transparent-header dark" data-sticky-class="not-dark" data-responsive-class="not-dark">
+      <div id="header-wrap">
+        <div class="container">
+          <div class="header-row justify-content-between">
+
+            <div id="logo">
+              <a href="index.html">
+                <img class="logo-default" srcset="demos/event-conference/images/logo.png, demos/event-conference/images/logo@2x.png 2x" src="demos/event-conference/images/logo@2x.png" alt="FORM 2026">
+                <img class="logo-dark" srcset="demos/event-conference/images/logo-dark.png, demos/event-conference/images/logo-dark@2x.png 2x" src="demos/event-conference/images/logo-dark@2x.png" alt="FORM 2026">
+              </a>
+            </div>
+
+            <div class="primary-menu-trigger">
+              <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+              </button>
+            </div>
+
+            <div class="header-misc">
+              <a href="#tickets" class="form-header-cta">Get Tickets</a>
+            </div>
+
+            <nav class="primary-menu" aria-label="Main navigation">
+              <ul class="menu-container">
+                <li class="menu-item"><a class="menu-link" href="#speakers">
+                    <div>Speakers</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#schedule">
+                    <div>Schedule</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#venue">
+                    <div>Venue</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#highlights">
+                    <div>Past Editions</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#contact">
+                    <div>Contact</div>
+                  </a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+      <div class="header-wrap-clone"></div>
+    </header>
+
+    <!-- HERO: FULL VIEWPORT + THREE.JS WebGL BACKGROUND -->
+    <section id="home" class="form-hero include-header">
+
+      <!-- WebGL Canvas — fills hero background -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- Content -->
+      <div class="form-hero__content">
+
+        <!-- Top info bar -->
+        <div class="form-hero__topbar">
+          <span class="form-hero__pill">
+            <i class="bi-geo-alt-fill"></i>
+            Aug 31 - Sep 2, 2026 — Berlin
+          </span>
+          <span class="form-hero__edition-tag">5th Annual Edition</span>
+        </div>
+
+        <!-- Giant title -->
+        <h1 class="form-hero__title" aria-label="FORM // 2026">
+          <span class="form-hero__title-line">FORM</span>
+          <span class="form-hero__title-line">//</span>
+          <span class="form-hero__title-line">2026</span>
+        </h1>
+
+        <p class="form-hero__tagline">The Annual Gathering That Shapes Visual Culture</p>
+
+        <!-- Live countdown -->
+        <div class="form-countdown" id="countdown" aria-label="Countdown to conference">
+          <div class="form-countdown__unit">
+            <span class="form-countdown__num" id="cd-days">107</span>
+            <span class="form-countdown__label">Days</span>
+          </div>
+          <div class="form-countdown__unit">
+            <span class="form-countdown__num" id="cd-hours">14</span>
+            <span class="form-countdown__label">Hours</span>
+          </div>
+          <div class="form-countdown__unit">
+            <span class="form-countdown__num" id="cd-mins">33</span>
+            <span class="form-countdown__label">Mins</span>
+          </div>
+          <div class="form-countdown__unit">
+            <span class="form-countdown__num" id="cd-secs">47</span>
+            <span class="form-countdown__label">Secs</span>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="form-hero__cta-row">
+          <a href="#tickets" class="form-btn-primary">Register Now — Early Bird</a>
+          <a href="#speakers" class="form-btn-outline">View Speakers <i class="bi-arrow-right"></i></a>
+        </div>
+
+        <!-- Stats -->
+        <div class="form-hero__stats">
+          <div class="form-hero__stat">
+            <span class="form-hero__stat-num">2,000</span>
+            <span class="form-hero__stat-label">Designers</span>
+          </div>
+          <div class="form-hero__stat">
+            <span class="form-hero__stat-num">60+</span>
+            <span class="form-hero__stat-label">Speakers</span>
+          </div>
+          <div class="form-hero__stat">
+            <span class="form-hero__stat-num">3</span>
+            <span class="form-hero__stat-label">Days</span>
+          </div>
+          <div class="form-hero__stat">
+            <span class="form-hero__stat-num">3</span>
+            <span class="form-hero__stat-label">Stages</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="form-hero__scroll" aria-hidden="true">
+        <div class="form-hero__scroll-line"></div>
+        Scroll
+      </div>
+
+      <!-- Mouse move hint -->
+      <div class="form-hero__mouse-hint" aria-hidden="true">
+        <div class="form-hero__mouse-dot"></div>
+        Move
+      </div>
+
+      <!-- Speaker marquee ticker -->
+      <div class="form-hero__ticker" aria-hidden="true">
+        <div class="form-hero__ticker-track">
+          <span class="form-hero__ticker-item">Elena Voss <span class="form-hero__ticker-sep">/</span> Pentagram</span>
+          <span class="form-hero__ticker-item">Marcus Okafor <span class="form-hero__ticker-sep">/</span> Figma</span>
+          <span class="form-hero__ticker-item">Soo-Yeon Park <span class="form-hero__ticker-sep">/</span> Colophon Foundry</span>
+          <span class="form-hero__ticker-item">Javier Morales <span class="form-hero__ticker-sep">/</span> IDEO</span>
+          <span class="form-hero__ticker-item">Amara Diallo <span class="form-hero__ticker-sep">/</span> Wolff Olins</span>
+          <span class="form-hero__ticker-item">Tobias Ruf <span class="form-hero__ticker-sep">/</span> Stink Studios</span>
+          <span class="form-hero__ticker-item">Nadine Grobe <span class="form-hero__ticker-sep">/</span> Commercial Type</span>
+          <span class="form-hero__ticker-item">Lars Eriksen <span class="form-hero__ticker-sep">/</span> Adobe Firefly</span>
+          <!-- duplicate for seamless loop -->
+          <span class="form-hero__ticker-item">Elena Voss <span class="form-hero__ticker-sep">/</span> Pentagram</span>
+          <span class="form-hero__ticker-item">Marcus Okafor <span class="form-hero__ticker-sep">/</span> Figma</span>
+          <span class="form-hero__ticker-item">Soo-Yeon Park <span class="form-hero__ticker-sep">/</span> Colophon Foundry</span>
+          <span class="form-hero__ticker-item">Javier Morales <span class="form-hero__ticker-sep">/</span> IDEO</span>
+          <span class="form-hero__ticker-item">Amara Diallo <span class="form-hero__ticker-sep">/</span> Wolff Olins</span>
+          <span class="form-hero__ticker-item">Tobias Ruf <span class="form-hero__ticker-sep">/</span> Stink Studios</span>
+          <span class="form-hero__ticker-item">Nadine Grobe <span class="form-hero__ticker-sep">/</span> Commercial Type</span>
+          <span class="form-hero__ticker-item">Lars Eriksen <span class="form-hero__ticker-sep">/</span> Adobe Firefly</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="content">
+      <div class="content-wrap">
+
+        <!-- KEYNOTE SPEAKERS -->
+        <section id="speakers" class="section form-section">
+          <div class="container">
+            <p class="form-section-label">Keynote Speakers</p>
+            <h2 class="form-section-heading">Voices that<br>move culture</h2>
+            <p class="form-section-sub">Sixty of the world's most influential designers, typographers, art directors, and visual thinkers share three stages.</p>
+          </div>
+          <div class="container-fluid px-0">
+            <div class="form-speakers-grid">
+
+              <div class="form-speaker-card" tabindex="0">
+                <span class="form-speaker-tag">Opening Keynote</span>
+                <img src="demos/event-conference/images/creative-005-medium.webp" alt="Elena Voss" loading="lazy" aspect-ratio="3/4">
+                <div class="form-speaker-card__base">
+                  <p class="form-speaker-card__name">Elena Voss</p>
+                  <p class="form-speaker-card__role">Global Creative Director, Pentagram</p>
+                </div>
+                <div class="form-speaker-card__overlay">
+                  <p class="form-speaker-card__overlay-company">Pentagram / Berlin</p>
+                  <p class="form-speaker-card__overlay-name">Elena Voss</p>
+                  <p class="form-speaker-card__overlay-bio">Elena has defined brand identities for over 200 global companies, from Fortune 500s to cultural institutions. Her work sits at the intersection of radical simplicity and cultural resonance.</p>
+                  <span class="form-speaker-card__overlay-topic">The Semiotics of Simplicity</span>
+                </div>
+              </div>
+
+              <div class="form-speaker-card" tabindex="0">
+                <img src="demos/event-conference/images/creative-008-medium.webp" alt="Marcus Okafor" loading="lazy" aspect-ratio="3/4">
+                <div class="form-speaker-card__base">
+                  <p class="form-speaker-card__name">Marcus Okafor</p>
+                  <p class="form-speaker-card__role">Design Systems Lead, Figma</p>
+                </div>
+                <div class="form-speaker-card__overlay">
+                  <p class="form-speaker-card__overlay-company">Figma / San Francisco</p>
+                  <p class="form-speaker-card__overlay-name">Marcus Okafor</p>
+                  <p class="form-speaker-card__overlay-bio">The architect of Figma's own design language, Marcus has shaped how designers worldwide think about systems, tokens, and the language of interfaces at scale.</p>
+                  <span class="form-speaker-card__overlay-topic">Systems Thinking at Scale</span>
+                </div>
+              </div>
+
+              <div class="form-speaker-card" tabindex="0">
+                <img src="demos/event-conference/images/creative-010-medium.webp" alt="Soo-Yeon Park" loading="lazy" aspect-ratio="3/4">
+                <div class="form-speaker-card__base">
+                  <p class="form-speaker-card__name">Soo-Yeon Park</p>
+                  <p class="form-speaker-card__role">Type Director, Colophon Foundry</p>
+                </div>
+                <div class="form-speaker-card__overlay">
+                  <p class="form-speaker-card__overlay-company">Colophon Foundry / London</p>
+                  <p class="form-speaker-card__overlay-name">Soo-Yeon Park</p>
+                  <p class="form-speaker-card__overlay-bio">A type designer whose variable fonts have been downloaded 40 million times. Soo-Yeon is rewriting the rules of legibility for a multilingual, high-DPI world.</p>
+                  <span class="form-speaker-card__overlay-topic">Variable Futures</span>
+                </div>
+              </div>
+
+              <div class="form-speaker-card" tabindex="0">
+                <img src="demos/event-conference/images/creative-017-medium.webp" alt="Javier Morales" loading="lazy" aspect-ratio="3/4">
+                <div class="form-speaker-card__base">
+                  <p class="form-speaker-card__name">Javier Morales</p>
+                  <p class="form-speaker-card__role">Creative Director, IDEO</p>
+                </div>
+                <div class="form-speaker-card__overlay">
+                  <p class="form-speaker-card__overlay-company">IDEO / New York</p>
+                  <p class="form-speaker-card__overlay-name">Javier Morales</p>
+                  <p class="form-speaker-card__overlay-bio">Javier's human-centred design practice has transformed public health campaigns, civic platforms, and financial services in 32 countries across five continents.</p>
+                  <span class="form-speaker-card__overlay-topic">Design for Systemic Change</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- SCHEDULE -->
+        <section id="schedule" class="section form-section form-section--ruled">
+          <div class="container">
+            <p class="form-section-label">Conference Schedule</p>
+            <h2 class="form-section-heading">Three days,<br>60 sessions</h2>
+            <p class="form-section-sub">Filter by track or browse the full day-by-day programme across three simultaneous stages.</p>
+
+            <div class="form-day-tabs" role="tablist">
+              <button class="form-day-tab active" data-day="1" role="tab" aria-selected="true">Day 01 / Aug 31</button>
+              <button class="form-day-tab" data-day="2" role="tab" aria-selected="false">Day 02 / Sep 01</button>
+              <button class="form-day-tab" data-day="3" role="tab" aria-selected="false">Day 03 / Sep 02</button>
+            </div>
+
+            <div class="form-track-filters">
+              <button class="form-track-pill active" data-track="all">All Tracks</button>
+              <button class="form-track-pill" data-track="A">Track A / Brand Identity</button>
+              <button class="form-track-pill" data-track="B">Track B / Motion + Code</button>
+              <button class="form-track-pill" data-track="C">Track C / Typography</button>
+            </div>
+
+            <!-- DAY 1 -->
+            <div class="form-day-panel active" data-panel="1">
+              <div class="form-agenda-row" data-track="A">
+                <p class="form-agenda-time">09:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Opening Keynote: The Semiotics of Simplicity</p>
+                  <p class="form-agenda-speaker">Elena Voss, Pentagram</p>
+                </div>
+                <span class="form-agenda-track" data-track="A" title="Brand Identity"></span>
+              </div>
+              <div class="form-agenda-row" data-track="B">
+                <p class="form-agenda-time">10:30</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Generative Identity: When Code Becomes Brand</p>
+                  <p class="form-agenda-speaker">Rita Chen, Google Brand Studio</p>
+                </div>
+                <span class="form-agenda-track" data-track="B" title="Motion + Code"></span>
+              </div>
+              <div class="form-agenda-row" data-track="C">
+                <p class="form-agenda-time">12:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Variable Futures: Type That Thinks</p>
+                  <p class="form-agenda-speaker">Soo-Yeon Park, Colophon Foundry</p>
+                </div>
+                <span class="form-agenda-track" data-track="C" title="Typography"></span>
+              </div>
+              <div class="form-agenda-row" data-track="A">
+                <p class="form-agenda-time">14:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Rebranding at Speed: Lessons from Nike's 12-Month Rebrand</p>
+                  <p class="form-agenda-speaker">Amara Diallo, Wolff Olins</p>
+                </div>
+                <span class="form-agenda-track" data-track="A" title="Brand Identity"></span>
+              </div>
+              <div class="form-agenda-row" data-track="B">
+                <p class="form-agenda-time">15:30</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Motion as Meaning: When Animation Has Intent</p>
+                  <p class="form-agenda-speaker">Tobias Ruf, Stink Studios</p>
+                </div>
+                <span class="form-agenda-track" data-track="B" title="Motion + Code"></span>
+              </div>
+              <div class="form-agenda-row" data-track="C">
+                <p class="form-agenda-time">17:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Display Type in the Age of Infinite Screens</p>
+                  <p class="form-agenda-speaker">Nadine Grobe, Commercial Type</p>
+                </div>
+                <span class="form-agenda-track" data-track="C" title="Typography"></span>
+              </div>
+              <div class="form-agenda-row" data-track="A">
+                <p class="form-agenda-time">19:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Day 1 Closing Panel: What Does Good Actually Mean?</p>
+                  <p class="form-agenda-speaker">All Day 1 Speakers</p>
+                </div>
+                <span class="form-agenda-track" data-track="A" title="Brand Identity"></span>
+              </div>
+            </div>
+
+            <!-- DAY 2 -->
+            <div class="form-day-panel" data-panel="2">
+              <div class="form-agenda-row" data-track="B">
+                <p class="form-agenda-time">09:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Systems Thinking at Scale</p>
+                  <p class="form-agenda-speaker">Marcus Okafor, Figma</p>
+                </div>
+                <span class="form-agenda-track" data-track="B" title="Motion + Code"></span>
+              </div>
+              <div class="form-agenda-row" data-track="A">
+                <p class="form-agenda-time">10:45</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Cultural Authenticity in Global Campaigns</p>
+                  <p class="form-agenda-speaker">Yemi Adeyemi, Ogilvy</p>
+                </div>
+                <span class="form-agenda-track" data-track="A" title="Brand Identity"></span>
+              </div>
+              <div class="form-agenda-row" data-track="C">
+                <p class="form-agenda-time">12:30</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Lettering and the Return of the Hand</p>
+                  <p class="form-agenda-speaker">Mirela Santos, House Industries</p>
+                </div>
+                <span class="form-agenda-track" data-track="C" title="Typography"></span>
+              </div>
+              <div class="form-agenda-row" data-track="B">
+                <p class="form-agenda-time">14:15</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">AI as Creative Partner: Tools, Not Replacements</p>
+                  <p class="form-agenda-speaker">Lars Eriksen, Adobe Firefly</p>
+                </div>
+                <span class="form-agenda-track" data-track="B" title="Motion + Code"></span>
+              </div>
+              <div class="form-agenda-row" data-track="A">
+                <p class="form-agenda-time">16:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Packaging Design and Ecological Responsibility</p>
+                  <p class="form-agenda-speaker">Chiara Fabbri, Sagmeister and Walsh</p>
+                </div>
+                <span class="form-agenda-track" data-track="A" title="Brand Identity"></span>
+              </div>
+            </div>
+
+            <!-- DAY 3 -->
+            <div class="form-day-panel" data-panel="3">
+              <div class="form-agenda-row" data-track="A">
+                <p class="form-agenda-time">09:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Design for Systemic Change</p>
+                  <p class="form-agenda-speaker">Javier Morales, IDEO</p>
+                </div>
+                <span class="form-agenda-track" data-track="A" title="Brand Identity"></span>
+              </div>
+              <div class="form-agenda-row" data-track="C">
+                <p class="form-agenda-time">10:30</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Multilingual Design: Designing Across Scripts</p>
+                  <p class="form-agenda-speaker">Humaira Noor, Google Fonts</p>
+                </div>
+                <span class="form-agenda-track" data-track="C" title="Typography"></span>
+              </div>
+              <div class="form-agenda-row" data-track="B">
+                <p class="form-agenda-time">12:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Designing in Public: The Open-Source Brand</p>
+                  <p class="form-agenda-speaker">Sofia Lindqvist, Fontsmith</p>
+                </div>
+                <span class="form-agenda-track" data-track="B" title="Motion + Code"></span>
+              </div>
+              <div class="form-agenda-row" data-track="A">
+                <p class="form-agenda-time">14:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">Closing Keynote: The Future of Visual Language</p>
+                  <p class="form-agenda-speaker">Elena Voss + Marcus Okafor + Javier Morales</p>
+                </div>
+                <span class="form-agenda-track" data-track="A" title="Brand Identity"></span>
+              </div>
+              <div class="form-agenda-row" data-track="B">
+                <p class="form-agenda-time">16:00</p>
+                <div class="form-agenda-main">
+                  <p class="form-agenda-session">FORM // 2026 Award Ceremony</p>
+                  <p class="form-agenda-speaker">Hosted by the FORM Jury</p>
+                </div>
+                <span class="form-agenda-track" data-track="B" title="Motion + Code"></span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- VENUE -->
+        <section id="venue" class="section form-section form-section--dark p-0">
+          <div class="container py-5 pb-4">
+            <p class="form-section-label">Venue and City</p>
+            <h2 class="form-section-heading">Berlin<br>Exhibition<br>Centre</h2>
+            <p class="form-section-sub">Three purpose-built halls in Berlin's cultural west, minutes from Charlottenburg Palace and the city's most legendary clubs.</p>
+          </div>
+          <div class="form-venue-layout">
+            <div class="form-venue-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.4!2d13.279!3d52.507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851032c4ef96f%3A0x1000!2sBerlin+Exhibition+Centre!5e0!3m2!1sen!2sde!4v1698765432100!5m2!1sen!2sde" loading="lazy" title="Berlin Exhibition Centre Map" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="form-venue-info">
+              <div class="form-venue-address">
+                <strong style="color:#fff;">Berlin Exhibition Centre</strong><br>
+                Messedamm 22<br>
+                14055 Berlin, Germany<br><br>
+                Halls 1, 2 and 3 / 28,000 sqm<br>
+                October 14-16, 2025
+              </div>
+
+              <p class="form-hotels__heading">Partner Hotels Nearby</p>
+              <div class="form-hotels">
+                <div class="form-hotel-item">
+                  <div class="form-hotel-item__dist">0.4<br>km</div>
+                  <div>
+                    <p class="form-hotel-item__name">Sheraton Grand Berlin</p>
+                    <p class="form-hotel-item__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                  </div>
+                </div>
+                <div class="form-hotel-item">
+                  <div class="form-hotel-item__dist">0.9<br>km</div>
+                  <div>
+                    <p class="form-hotel-item__name">Hotel Steigenberger am Kanzleramt</p>
+                    <p class="form-hotel-item__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                  </div>
+                </div>
+                <div class="form-hotel-item">
+                  <div class="form-hotel-item__dist">1.2<br>km</div>
+                  <div>
+                    <p class="form-hotel-item__name">25hours Hotel Bikini Berlin</p>
+                    <p class="form-hotel-item__stars">&#9733;&#9733;&#9733;&#9733;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SPONSORS -->
+        <section id="sponsors" class="section form-sponsors">
+          <div class="container">
+            <p class="form-section-label">Partners and Sponsors</p>
+            <h2 class="form-section-heading">The brands<br>behind FORM</h2>
+
+            <div class="form-sponsor-tier">
+              <p class="form-sponsor-tier-label">Platinum</p>
+              <div class="form-sponsor-logos form-sponsor-logos--platinum">
+                <div class="form-sponsor-logo-item"><span>Figma</span></div>
+                <div class="form-sponsor-logo-item"><span>Adobe</span></div>
+                <div class="form-sponsor-logo-item"><span>Google Fonts</span></div>
+              </div>
+            </div>
+
+            <div class="form-sponsor-tier">
+              <p class="form-sponsor-tier-label">Gold</p>
+              <div class="form-sponsor-logos">
+                <div class="form-sponsor-logo-item"><span>Monotype</span></div>
+                <div class="form-sponsor-logo-item"><span>Behance</span></div>
+                <div class="form-sponsor-logo-item"><span>Pentagram</span></div>
+                <div class="form-sponsor-logo-item"><span>Dribbble</span></div>
+                <div class="form-sponsor-logo-item"><span>Lottiefiles</span></div>
+              </div>
+            </div>
+
+            <div class="form-sponsor-tier">
+              <p class="form-sponsor-tier-label">Bronze</p>
+              <div class="form-sponsor-logos form-sponsor-logos--bronze">
+                <div class="form-sponsor-logo-item"><span>Typekit</span></div>
+                <div class="form-sponsor-logo-item"><span>Framer</span></div>
+                <div class="form-sponsor-logo-item"><span>Canva</span></div>
+                <div class="form-sponsor-logo-item"><span>Webflow</span></div>
+                <div class="form-sponsor-logo-item"><span>Abstract</span></div>
+                <div class="form-sponsor-logo-item"><span>Zeplin</span></div>
+                <div class="form-sponsor-logo-item"><span>Readymag</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAST HIGHLIGHTS MASONRY GALLERY -->
+        <section id="highlights" class="section form-section form-highlights pb-0">
+          <div class="container">
+            <p class="form-section-label" style="color: var(--f-accent);">Past Edition Highlights</p>
+            <h2 class="form-section-heading" style="color:var(--f-white);">Four years<br>of Form</h2>
+            <p class="form-section-sub" style="color:rgba(255,255,255,0.4); margin-bottom:48px;">Relive the talks, workshops, and moments that defined FORM 2021 through 2024.</p>
+          </div>
+          <div class="container-fluid px-0">
+            <div class="form-gallery-masonry">
+
+              <div class="form-gallery-item">
+                <span class="form-gallery-item__year">FORM // 2024</span>
+                <img src="demos/event-conference/images/creative-001-hero.webp" alt="FORM 2024 Main Stage" loading="lazy" aspect-ratio="16/9">
+                <div class="form-gallery-item__play">
+                  <a href="#" class="form-gallery-item__play-btn" aria-label="Play video"><i class="bi-play-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="form-gallery-item">
+                <span class="form-gallery-item__year">FORM // 2024</span>
+                <img src="demos/event-conference/images/creative-019-medium.webp" alt="Workshop session 2024" loading="lazy" aspect-ratio="16/9">
+                <div class="form-gallery-item__play">
+                  <a href="#" class="form-gallery-item__play-btn" aria-label="Play video"><i class="bi-play-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="form-gallery-item">
+                <span class="form-gallery-item__year">FORM // 2023</span>
+                <img src="demos/event-conference/images/creative-022-medium.webp" alt="Keynote 2023" loading="lazy" aspect-ratio="16/9">
+                <div class="form-gallery-item__play">
+                  <a href="#" class="form-gallery-item__play-btn" aria-label="Play video"><i class="bi-play-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="form-gallery-item">
+                <span class="form-gallery-item__year">FORM // 2023</span>
+                <img src="demos/event-conference/images/creative-003-medium.webp" alt="Panel discussion 2023" loading="lazy" aspect-ratio="16/9">
+                <div class="form-gallery-item__play">
+                  <a href="#" class="form-gallery-item__play-btn" aria-label="Play video"><i class="bi-play-fill"></i></a>
+                </div>
+              </div>
+
+              <div class="form-gallery-item">
+                <span class="form-gallery-item__year">FORM // 2022</span>
+                <img src="demos/event-conference/images/creative-009-medium.webp" alt="FORM 2022 award ceremony" loading="lazy" aspect-ratio="16/9">
+                <div class="form-gallery-item__play">
+                  <a href="#" class="form-gallery-item__play-btn" aria-label="Play video"><i class="bi-play-fill"></i></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- TICKETS -->
+        <section id="tickets" class="section form-tickets">
+          <div class="container">
+            <p class="form-section-label">Get Your Pass</p>
+            <h2 class="form-section-heading">Three ways<br>to attend</h2>
+            <p class="form-section-sub">Join 2,000 designers in Berlin. All passes include access to all three stages, workshops, and the FORM social programme.</p>
+
+            <div class="form-urgency-strip">
+              <i class="bi-clock"></i>
+              Early Bird pricing ends in <strong id="eb-days">18</strong> days. Save up to $400 before July 17.
+            </div>
+
+            <div class="form-ticket-grid">
+
+              <!-- Starter -->
+              <div class="form-ticket-card">
+                <span class="form-ticket-badge">Standard</span>
+                <p class="form-ticket-type">General Pass</p>
+                <div class="form-ticket-price">
+                  <span class="form-ticket-currency">$</span>
+                  <span class="form-ticket-amount">890</span>
+                  <span class="form-ticket-period">/person</span>
+                </div>
+                <hr class="form-ticket-divider">
+                <ul class="form-ticket-features">
+                  <li><i class="bi-check-circle-fill"></i> All three days of talks</li>
+                  <li><i class="bi-check-circle-fill"></i> Access to Tracks A, B, and C</li>
+                  <li><i class="bi-check-circle-fill"></i> Workshop access (first-come)</li>
+                  <li><i class="bi-check-circle-fill"></i> Conference bag and materials</li>
+                  <li><i class="bi-check-circle-fill"></i> Opening night reception</li>
+                </ul>
+                <a href="#" class="form-ticket-cta">Buy General Pass</a>
+              </div>
+
+              <!-- Professional - Featured -->
+              <div class="form-ticket-card form-ticket-card--featured">
+                <span class="form-ticket-badge">Most Popular</span>
+                <p class="form-ticket-type">Pro Pass</p>
+                <div class="form-ticket-price">
+                  <span class="form-ticket-currency">$</span>
+                  <span class="form-ticket-amount">1,490</span>
+                  <span class="form-ticket-period">/person</span>
+                </div>
+                <hr class="form-ticket-divider">
+                <ul class="form-ticket-features">
+                  <li><i class="bi-check-circle-fill"></i> Everything in General</li>
+                  <li><i class="bi-check-circle-fill"></i> Reserved workshop seats</li>
+                  <li><i class="bi-check-circle-fill"></i> Speaker networking dinner</li>
+                  <li><i class="bi-check-circle-fill"></i> Digital recordings library</li>
+                  <li><i class="bi-check-circle-fill"></i> FORM community platform</li>
+                  <li><i class="bi-check-circle-fill"></i> Award ceremony tickets</li>
+                </ul>
+                <a href="#" class="form-ticket-cta">Buy Pro Pass</a>
+              </div>
+
+              <!-- Studio / Team -->
+              <div class="form-ticket-card">
+                <span class="form-ticket-badge">Teams</span>
+                <p class="form-ticket-type">Studio Pass</p>
+                <div class="form-ticket-price">
+                  <span class="form-ticket-currency">$</span>
+                  <span class="form-ticket-amount">3,900</span>
+                  <span class="form-ticket-period">/5 people</span>
+                </div>
+                <hr class="form-ticket-divider">
+                <ul class="form-ticket-features">
+                  <li><i class="bi-check-circle-fill"></i> Five Pro Passes bundled</li>
+                  <li><i class="bi-check-circle-fill"></i> Private studio meetup space</li>
+                  <li><i class="bi-check-circle-fill"></i> Brand placement in program</li>
+                  <li><i class="bi-check-circle-fill"></i> Pre-conference speaker Q&A</li>
+                  <li><i class="bi-check-circle-fill"></i> Dedicated concierge service</li>
+                </ul>
+                <a href="#" class="form-ticket-cta">Buy Studio Pass</a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- CONTACT / PRESS ENQUIRY -->
+    <section id="contact" class="section form-section form-contact form-section--dark">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+
+          <!-- Left: info -->
+          <div class="col-lg-5 d-flex flex-column">
+            <p class="form-section-label">Contact and Press</p>
+            <h2 class="form-section-heading">Let's talk<br>about FORM</h2>
+            <p class="form-section-sub">Whether you're a journalist, a potential sponsor, or just want to say hello — we read every message.</p>
+
+            <div class="form-contact-cards mt-auto">
+              <div class="form-contact-card">
+                <span class="form-contact-card__icon"><i class="bi-envelope-fill"></i></span>
+                <div>
+                  <p class="form-contact-card__label">General</p>
+                  <a href="mailto:hello@formconference.com" class="form-contact-card__value">hello@formconference.com</a>
+                </div>
+              </div>
+              <div class="form-contact-card">
+                <span class="form-contact-card__icon"><i class="bi-camera-fill"></i></span>
+                <div>
+                  <p class="form-contact-card__label">Press and Media</p>
+                  <a href="mailto:press@formconference.com" class="form-contact-card__value">press@formconference.com</a>
+                </div>
+              </div>
+              <div class="form-contact-card">
+                <span class="form-contact-card__icon"><i class="bi-briefcase-fill"></i></span>
+                <div>
+                  <p class="form-contact-card__label">Sponsorship</p>
+                  <a href="mailto:partners@formconference.com" class="form-contact-card__value">partners@formconference.com</a>
+                </div>
+              </div>
+              <div class="form-contact-card">
+                <span class="form-contact-card__icon"><i class="bi-mic-fill"></i></span>
+                <div>
+                  <p class="form-contact-card__label">Speaker Submissions</p>
+                  <a href="mailto:speakers@formconference.com" class="form-contact-card__value">speakers@formconference.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="col-lg-7 d-flex flex-column justify-content-end">
+            <div class="form-widget">
+              <div class="form-result"></div>
+              <form class="form-contact-form mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+                <div class="form-process">
+                  <div class="css3-spinner">
+                    <div class="css3-spinner-scaler"></div>
+                  </div>
+                </div>
+
+                <div class="form-cf-row">
+                  <div class="form-cf-field">
+                    <label class="form-cf-label" for="template-contactform-name">Full Name <span aria-hidden="true">*</span></label>
+                    <input class="form-cf-input required" type="text" id="template-contactform-name" name="template-contactform-name" value="" placeholder="Elena Voss" autocomplete="name">
+                  </div>
+                  <div class="form-cf-field">
+                    <label class="form-cf-label" for="template-contactform-email">Email Address <span aria-hidden="true">*</span></label>
+                    <input class="form-cf-input required email" type="email" id="template-contactform-email" name="template-contactform-email" value="" placeholder="elena@studio.com" autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="form-cf-row">
+                  <div class="form-cf-field">
+                    <label class="form-cf-label" for="template-contactform-org">Organisation</label>
+                    <input class="form-cf-input" type="text" id="template-contactform-org" name="template-contactform-org" value="" placeholder="Pentagram" autocomplete="organization">
+                  </div>
+                  <div class="form-cf-field">
+                    <label class="form-cf-label" for="template-contactform-type">Enquiry Type <span aria-hidden="true">*</span></label>
+                    <div class="form-cf-select-wrap">
+                      <select class="form-cf-input form-cf-select required" id="template-contactform-type" name="template-contactform-type">
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="general">General</option>
+                        <option value="press">Press and Media</option>
+                        <option value="sponsorship">Sponsorship</option>
+                        <option value="speaker">Speaker Submission</option>
+                        <option value="ticket">Tickets and Passes</option>
+                        <option value="accessibility">Accessibility Request</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <i class="bi-chevron-down form-cf-chevron" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-cf-field">
+                  <label class="form-cf-label" for="template-contactform-message">Message <span aria-hidden="true">*</span></label>
+                  <textarea class="form-cf-input form-cf-textarea required" id="template-contactform-message" name="template-contactform-message" rows="5" placeholder="Tell us what's on your mind..."></textarea>
+                </div>
+
+                <div class="form-cf-field d-none">
+                  <input class="form-cf-input" type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="">
+                </div>
+
+                <div class="form-cf-footer">
+                  <p class="form-cf-privacy">By submitting you agree to our <a href="#">Privacy Policy</a>. We aim to reply within 2 business days.</p>
+                  <button type="submit" class="form-btn-primary form-cf-submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">
+                    Send Message <i class="bi-arrow-right"></i>
+                  </button>
+                </div>
+
+                <input type="hidden" name="prefix" value="template-contactform-">
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section form-section form-faq">
+      <div class="container">
+        <div class="row align-items-start g-5">
+
+          <div class="col-lg-4">
+            <p class="form-section-label">FAQ</p>
+            <h2 class="form-section-heading">Questions,<br>answered</h2>
+            <p class="form-section-sub" style="margin-bottom:32px;">Can't find what you're looking for? Email us at <a href="mailto:hello@formconference.com" style="color:var(--cnvs-themecolor);">hello@formconference.com</a></p>
+            <a href="#tickets" class="form-btn-primary" style="display:inline-flex;">Get Your Pass</a>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="form-faq-list">
+
+              <div class="form-faq-item">
+                <button class="form-faq-trigger" aria-expanded="false">
+                  <span>When and where is FORM // 2026?</span>
+                  <span class="form-faq-icon" aria-hidden="true"><i class="bi-plus-lg"></i></span>
+                </button>
+                <div class="form-faq-body">
+                  <p>FORM // 2026 takes place August 31 to September 2, 2026 at the Berlin Exhibition Centre (Messe Berlin), Messedamm 22, 14055 Berlin, Germany. Doors open at 09:00 each day.</p>
+                </div>
+              </div>
+
+              <div class="form-faq-item">
+                <button class="form-faq-trigger" aria-expanded="false">
+                  <span>What does my pass include?</span>
+                  <span class="form-faq-icon" aria-hidden="true"><i class="bi-plus-lg"></i></span>
+                </button>
+                <div class="form-faq-body">
+                  <p>All passes grant full three-day access to every talk across Tracks A, B, and C, plus the Opening Night reception, conference materials, and the networking app. Pro and Studio passes add reserved workshop seats, the Speaker Dinner, digital recordings, and the Award Ceremony. See the Tickets section for a full breakdown.</p>
+                </div>
+              </div>
+
+              <div class="form-faq-item">
+                <button class="form-faq-trigger" aria-expanded="false">
+                  <span>When does Early Bird pricing end?</span>
+                  <span class="form-faq-icon" aria-hidden="true"><i class="bi-plus-lg"></i></span>
+                </button>
+                <div class="form-faq-body">
+                  <p>Early Bird rates are available until July 17, 2026. After that date, all passes revert to standard pricing. We strongly recommend booking early as the 2,000 capacity sells out every year.</p>
+                </div>
+              </div>
+
+              <div class="form-faq-item">
+                <button class="form-faq-trigger" aria-expanded="false">
+                  <span>Can I transfer or refund my ticket?</span>
+                  <span class="form-faq-icon" aria-hidden="true"><i class="bi-plus-lg"></i></span>
+                </button>
+                <div class="form-faq-body">
+                  <p>Tickets are fully transferable at no cost up to 14 days before the event. Refunds (minus a 10% handling fee) are available until June 30, 2026. After that date, transfers only. Studio passes can reassign individual attendees within the same organization at any time.</p>
+                </div>
+              </div>
+
+              <div class="form-faq-item">
+                <button class="form-faq-trigger" aria-expanded="false">
+                  <span>Is there a student or group discount?</span>
+                  <span class="form-faq-icon" aria-hidden="true"><i class="bi-plus-lg"></i></span>
+                </button>
+                <div class="form-faq-body">
+                  <p>Yes. Students with a valid university ID receive 40% off the General Pass. Groups of 10 or more qualify for a 20% discount on any pass type. Email <a href="mailto:hello@formconference.com" style="color:var(--cnvs-themecolor);">hello@formconference.com</a> to request discount codes before purchasing.</p>
+                </div>
+              </div>
+
+              <div class="form-faq-item">
+                <button class="form-faq-trigger" aria-expanded="false">
+                  <span>Will sessions be recorded and available online?</span>
+                  <span class="form-faq-icon" aria-hidden="true"><i class="bi-plus-lg"></i></span>
+                </button>
+                <div class="form-faq-body">
+                  <p>Pro and Studio pass holders receive access to the full digital recordings library within four weeks of the event. Individual sessions may be released publicly on a rolling basis six months after the conference. General pass holders can purchase recordings separately.</p>
+                </div>
+              </div>
+
+              <div class="form-faq-item">
+                <button class="form-faq-trigger" aria-expanded="false">
+                  <span>How do I get to the venue from the city centre?</span>
+                  <span class="form-faq-icon" aria-hidden="true"><i class="bi-plus-lg"></i></span>
+                </button>
+                <div class="form-faq-body">
+                  <p>The Berlin Exhibition Centre is served directly by the U2 subway line (Kaiserdamm station, 3-minute walk). From Berlin Hauptbahnhof, take the S-Bahn to Zoologischer Garten then transfer to the U2. A shuttle bus runs between the three partner hotels and the venue every 30 minutes from 08:00 each conference day.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="dark">
+      <div class="form-footer-inner">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="form-footer-title">FORM<br><span>//</span> 2026</p>
+              <p class="form-footer-tagline">The annual gathering that shapes visual culture</p>
+              <p style="font-size:13px; color:rgba(255,255,255,0.38); line-height:1.7; margin-bottom:0;">August 31 - September 2, 2026. Berlin Exhibition Centre. Three days, sixty sessions, 2,000 designers from 60 countries.</p>
+              <div class="form-footer-socials">
+                <a href="#" aria-label="Instagram"><i class="bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi-twitter-x"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-2">
+              <p class="form-footer-nav-heading">Conference</p>
+              <ul class="form-footer-nav-list">
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#venue">Venue</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#highlights">Past Editions</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <p class="form-footer-nav-heading">Info</p>
+              <ul class="form-footer-nav-list">
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Press Kit</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Become a Sponsor</a></li>
+                <li><a href="#">Code of Conduct</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4">
+              <p class="form-footer-nav-heading">Get the Brief</p>
+              <p class="form-footer-nl-text">Speaker announcements, workshop drops, and field notes from the FORM team. Emailed monthly, never spammed.</p>
+              <div class="form-footer-nl-form">
+                <input type="email" class="form-footer-nl-input" placeholder="your@studio.com" aria-label="Email address">
+                <button class="form-footer-nl-btn" aria-label="Subscribe">
+                  <i class="bi-arrow-right" style="color:var(--f-black);"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="copyrights">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md text-center text-md-start">
+              Copyrights &copy; 2026 FORM Conference.
+            </div>
+            <div class="col-12 col-md-auto text-center text-md-end mt-2 mt-md-0">
+              <a href="#" style="color:rgba(255,255,255,0.3); font-size:11px; margin:0 12px; letter-spacing:0.08em;">Privacy</a>
+              <a href="#" style="color:rgba(255,255,255,0.3); font-size:11px; margin:0 12px; letter-spacing:0.08em;">Terms</a>
+              <a href="#" style="color:rgba(255,255,255,0.3); font-size:11px; margin:0 12px; letter-spacing:0.08em;">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+  </div><!-- #wrapper end -->
+
+  <script src="js/plugins.min.js"></script>
+  <script src="js/functions.bundle.js"></script>
+  <!-- Three.js for WebGL hero background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <script>
+    (function() {
+      'use strict';
+      /* ===================================================
+         THREE.JS WEBGL HERO ANIMATION
+         Bauhaus grid: chartreuse wave-field, mouse parallax
+         =================================================== */
+      (function initHeroGL() {
+        if (typeof THREE === 'undefined') return;
+        var canvas = document.getElementById('hero-canvas');
+        if (!canvas) return;
+        var W = document.documentElement.clientWidth || window.innerWidth;
+        var H = window.innerHeight;
+        var renderer = new THREE.WebGLRenderer({
+          canvas: canvas,
+          antialias: false,
+          alpha: false
+        });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+        renderer.setSize(W, H, false); /* false = don't set canvas CSS size (let CSS control it) */
+        renderer.setClearColor(0x111111, 1);
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(60, W / H, 1, 4000);
+        camera.position.set(0, 100, 960);
+        camera.lookAt(0, 0, 0);
+        /* --- Grid of chartreuse dots --- */
+        var COLS = 55,
+          ROWS = 35,
+          SPACE = 36;
+        var COUNT = COLS * ROWS;
+        var dotPositions = new Float32Array(COUNT * 3);
+        var dotSizes = new Float32Array(COUNT);
+        for (var r = 0; r < ROWS; r++) {
+          for (var c = 0; c < COLS; c++) {
+            var idx = (r * COLS + c);
+            dotPositions[idx * 3] = (c - COLS / 2) * SPACE;
+            dotPositions[idx * 3 + 1] = (r - ROWS / 2) * SPACE;
+            dotPositions[idx * 3 + 2] = 0;
+            dotSizes[idx] = 2.5 + Math.random() * 2;
+          }
+        }
+        var dotGeo = new THREE.BufferGeometry();
+        dotGeo.setAttribute('position', new THREE.BufferAttribute(dotPositions, 3));
+        dotGeo.setAttribute('size', new THREE.BufferAttribute(dotSizes, 1));
+        var dotMat = new THREE.PointsMaterial({
+          color: 0xD4FF00,
+          size: 3,
+          transparent: true,
+          opacity: 0.85,
+          sizeAttenuation: true
+        });
+        var dotMesh = new THREE.Points(dotGeo, dotMat);
+        scene.add(dotMesh);
+        /* --- Faint grid lines (horizontal + vertical) --- */
+        var lineVerts = [];
+        for (var r2 = 0; r2 < ROWS; r2++) {
+          for (var c2 = 0; c2 < COLS - 1; c2++) {
+            var x1 = (c2 - COLS / 2) * SPACE,
+              y1 = (r2 - ROWS / 2) * SPACE;
+            var x2 = (c2 + 1 - COLS / 2) * SPACE;
+            lineVerts.push(x1, y1, 0, x2, y1, 0);
+          }
+        }
+        for (var r3 = 0; r3 < ROWS - 1; r3++) {
+          for (var c3 = 0; c3 < COLS; c3++) {
+            var xl = (c3 - COLS / 2) * SPACE;
+            var yt = (r3 - ROWS / 2) * SPACE;
+            var yb = (r3 + 1 - ROWS / 2) * SPACE;
+            lineVerts.push(xl, yt, 0, xl, yb, 0);
+          }
+        }
+        var lineArr = new Float32Array(lineVerts);
+        var lineGeo = new THREE.BufferGeometry();
+        lineGeo.setAttribute('position', new THREE.BufferAttribute(lineArr, 3));
+        var lineMesh = new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({
+          color: 0xD4FF00,
+          transparent: true,
+          opacity: 0.07
+        }));
+        scene.add(lineMesh);
+        /* --- Mouse tracking --- */
+        var mouseX = 0,
+          mouseY = 0;
+        var camTargetX = 0,
+          camTargetY = 100;
+        document.addEventListener('mousemove', function(e) {
+          mouseX = (e.clientX / W - 0.5) * 2; /* -1 to +1 */
+          mouseY = -(e.clientY / H - 0.5) * 2; /* -1 to +1 */
+          camTargetX = mouseX * 90;
+          camTargetY = 100 + mouseY * 40;
+        });
+        /* --- Animate --- */
+        var clock = new THREE.Clock();
+        var heroEl = document.getElementById('home');
+
+        function animate() {
+          requestAnimationFrame(animate);
+          /* Pause update when hero scrolled away (perf) */
+          var scrolled = window.scrollY > H * 1.5;
+          if (!scrolled) {
+            var t = clock.getElapsedTime();
+            /* Wave each dot's Z */
+            var posAttr = dotGeo.attributes.position;
+            for (var i = 0; i < COUNT; i++) {
+              var col = i % COLS;
+              var row = Math.floor(i / COLS);
+              var wave = Math.sin(col * 0.28 + t * 1.6) * Math.cos(row * 0.35 + t * 1.1) * 32;
+              var ripple = (mouseX * 20 * Math.cos(row * 0.18)) + (mouseY * 14 * Math.sin(col * 0.18));
+              posAttr.array[i * 3 + 2] = wave + ripple * 0.5;
+            }
+            posAttr.needsUpdate = true;
+            /* Gentle camera parallax */
+            camera.position.x += (camTargetX - camera.position.x) * 0.04;
+            camera.position.y += (camTargetY - camera.position.y) * 0.04;
+            camera.lookAt(0, 0, 0);
+            /* Slowly rotate entire grid */
+            dotMesh.rotation.z = Math.sin(t * 0.08) * 0.04;
+            lineMesh.rotation.z = dotMesh.rotation.z;
+          }
+          renderer.render(scene, camera);
+        }
+        animate();
+        /* Resize */
+        window.addEventListener('resize', function() {
+          W = document.documentElement.clientWidth || window.innerWidth;
+          H = window.innerHeight;
+          camera.aspect = W / H;
+          camera.updateProjectionMatrix();
+          renderer.setSize(W, H, false);
+        });
+      })();
+      /* ===================================================
+         CUSTOM CURSOR
+         =================================================== */
+      var cursor = document.getElementById('form-cursor');
+      var cursorX = -100,
+        cursorY = -100;
+      var rafCursor;
+      document.addEventListener('mousemove', function(e) {
+        cursorX = e.clientX;
+        cursorY = e.clientY;
+        cursor.style.left = cursorX + 'px';
+        cursor.style.top = cursorY + 'px';
+      });
+      document.querySelectorAll('a, button, [tabindex="0"], .form-speaker-card, .form-ticket-card, .form-hotel-item, .form-gallery-item, .form-day-tab, .form-track-pill, .form-sponsor-logo-item').forEach(function(el) {
+        el.addEventListener('mouseenter', function() {
+          cursor.classList.add('expanded');
+        });
+        el.addEventListener('mouseleave', function() {
+          cursor.classList.remove('expanded');
+        });
+      });
+      /* ===================================================
+         LIVE COUNTDOWN TIMER
+         =================================================== */
+      var cdTarget = new Date('2026-08-31T09:00:00+02:00').getTime();
+      var cdDays = document.getElementById('cd-days');
+      var cdHours = document.getElementById('cd-hours');
+      var cdMins = document.getElementById('cd-mins');
+      var cdSecs = document.getElementById('cd-secs');
+
+      function tickCountdown() {
+        var diff = cdTarget - Date.now();
+        if (diff <= 0) {
+          cdDays.textContent = cdHours.textContent = cdMins.textContent = cdSecs.textContent = '00';
+          return;
+        }
+        cdDays.textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+        cdHours.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+        cdMins.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        cdSecs.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+      }
+      tickCountdown();
+      setInterval(tickCountdown, 1000);
+      /* ===================================================
+         EARLY BIRD DAYS REMAINING
+         =================================================== */
+      var ebEl = document.getElementById('eb-days');
+      if (ebEl) {
+        var ebDiff = new Date('2025-07-17T23:59:59').getTime() - Date.now();
+        ebEl.textContent = Math.max(0, Math.floor(ebDiff / 86400000));
+      }
+      /* ===================================================
+         SCHEDULE: DAY TABS
+         =================================================== */
+      document.querySelectorAll('.form-day-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          var day = this.dataset.day;
+          document.querySelectorAll('.form-day-tab').forEach(function(t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+          document.querySelectorAll('.form-day-panel').forEach(function(p) {
+            p.classList.remove('active');
+          });
+          var panel = document.querySelector('.form-day-panel[data-panel="' + day + '"]');
+          if (panel) {
+            panel.classList.add('active');
+            /* restart animation */
+            panel.classList.remove('panel-wipe-enter');
+            void panel.offsetWidth; /* reflow */
+            panel.classList.add('panel-wipe-enter');
+            setTimeout(function() {
+              panel.classList.remove('panel-wipe-enter');
+            }, 450);
+          }
+        });
+      });
+      /* ===================================================
+         SCHEDULE: TRACK FILTERS
+         =================================================== */
+      document.querySelectorAll('.form-track-pill').forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          var track = this.dataset.track;
+          document.querySelectorAll('.form-track-pill').forEach(function(p) {
+            p.classList.remove('active');
+          });
+          this.classList.add('active');
+          document.querySelectorAll('.form-agenda-row').forEach(function(row) {
+            row.classList.toggle('hidden', track !== 'all' && row.dataset.track !== track);
+          });
+        });
+      });
+      /* ===================================================
+         SCROLL REVEAL (IntersectionObserver)
+         Adds .is-visible to .form-section when 10% in view
+         =================================================== */
+      if ('IntersectionObserver' in window) {
+        var revealIO = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealIO.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+        document.querySelectorAll('.form-section').forEach(function(s) {
+          /* Skip if already in viewport on load (e.g. first content section) */
+          var rect = s.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.85) {
+            s.classList.add('is-visible');
+          } else {
+            revealIO.observe(s);
+          }
+        });
+      }
+      /* ===================================================
+         FAQ ACCORDION
+         =================================================== */
+      (function() {
+        var triggers = document.querySelectorAll('.form-faq-trigger');
+        triggers.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var isOpen = this.getAttribute('aria-expanded') === 'true';
+            /* Close ALL items first */
+            triggers.forEach(function(other) {
+              other.setAttribute('aria-expanded', 'false');
+              var ob = other.parentNode.querySelector('.form-faq-body');
+              if (ob) ob.classList.remove('open');
+            });
+            /* If it wasn't open, open it now */
+            if (!isOpen) {
+              this.setAttribute('aria-expanded', 'true');
+              var body = this.parentNode.querySelector('.form-faq-body');
+              if (body) body.classList.add('open');
+            }
+          });
+        });
+      })();
+    })();
+
+  </script>
+
+</body>
+</html>

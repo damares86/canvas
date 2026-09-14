@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore the Canvas carousel tabs block—responsive tabbed navigation with carousel overflow, covering Marketing, Design, Development, SEO, E-Commerce, and UI/UX.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Carousel Tabs Block | Canvas</title>
+
+	<style>
+		#carousel-tabs.tabs,
+		#carousel-tabs .tab-content {
+			--cnvs-tab-padding-width: 0;
+			--bs-nav-link-padding-y: .75rem;
+			--bs-nav-link-font-size: .9125rem;
+			--bs-nav-link-font-weight:	400;
+			--bs-nav-tabs-border-width: 0;
+			--bs-nav-link-color: var(--cnvs-contrast-1000);
+			--bs-nav-link-hover-color: var(--cnvs-contrast-900);
+			--bs-nav-tabs-link-active-bg: rgba(var(--bs-danger-rgb), 0.1);
+			--bs-nav-tabs-link-active-color: var(--bs-danger);
+			--cnvs-tabs-bg-color:rgba(var(--cnvs-contrast-rgb), 0.04);
+		}
+
+		.dark #carousel-tabs.tabs,
+		.dark #carousel-tabs .tab-content {
+			--bs-nav-tabs-link-active-bg: rgba(var(--bs-danger-rgb),1);
+			--bs-nav-tabs-link-active-color: var(--bs-light);
+		}
+
+		#carousel-tabs .nav-link:not(.active) {
+			background-color: rgba(var(--cnvs-contrast-rgb), 0.04);
+		}
+
+		#carousel-tabs .nav-link {
+			border-radius: var(--bs-border-radius);
+			font-weight: 500;
+		}
+
+		#carousel-tabs .nav-link.active {
+			font-weight: 600;
+		}
+
+		.carousel-blur-left::before,
+		.carousel-blur-right::after {
+			--cnvs-carousel-blur-size: 70px;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: auto;
+			width: var(--cnvs-carousel-blur-size);
+			height: 100%;
+			z-index: 1;
+			background: linear-gradient(to right, var(--cnvs-body-bg) 50%, transparent);
+		}
+
+		.carousel-blur-right::after {
+			left: auto;
+			right: 0;
+			background: linear-gradient(to left, var(--cnvs-body-bg) 50%, transparent);
+		}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-carousel-tabs.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-carousel-tabs.html">
+	<meta property="og:title" content="Carousel Tabs Block | Canvas">
+	<meta property="og:description" content="Explore the Canvas carousel tabs block—responsive tabbed navigation with carousel overflow, covering Marketing, Design, Development, SEO, E-Commerce, and UI/UX.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Carousel Tabs Block | Canvas">
+	<meta name="twitter:description" content="Explore the Canvas carousel tabs block—responsive tabbed navigation with carousel overflow, covering Marketing, Design, Development, SEO, E-Commerce, and UI/UX.">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Carousel Tabs Block | Canvas",
+		"url": "block-carousel-tabs.html",
+		"description": "Explore the Canvas carousel tabs block—responsive tabbed navigation with carousel overflow, covering Marketing, Design, Development, SEO, E-Commerce, and UI/UX.",
+		"isPartOf": {
+			"@type": "WebSite",
+			"name": "Canvas",
+			"url": "index.html"
+		}
+	}
+	</script>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap min-vh-100">
+
+				<div class="container mw-md pt-6">
+
+					<div id="carousel-tabs" class="owl-carousel owl-nav-hover-fixed carousel-widget nav tabs nav-tabs mb-3 carousel-blur-right nav-fill" data-pagi="false" data-nav="false" role="tablist">
+
+						<div class="nav-item">
+							<button class="nav-link active" id="canvas-marketing-tab" data-bs-toggle="pill" data-bs-target="#marketing" type="button" role="tab" aria-controls="canvas-marketing" aria-selected="true">Marketing</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-design-tab" data-bs-toggle="pill" data-bs-target="#design" type="button" role="tab" aria-controls="canvas-design" aria-selected="false">Design</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-development-tab" data-bs-toggle="pill" data-bs-target="#development" type="button" role="tab" aria-controls="canvas-development" aria-selected="false">Development</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-brands-tab" data-bs-toggle="pill" data-bs-target="#brands" type="button" role="tab" aria-controls="canvas-brands" aria-selected="false">Brands</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-seo-tab" data-bs-toggle="pill" data-bs-target="#seo" type="button" role="tab" aria-controls="canvas-seo" aria-selected="false">SEO</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-ecommerce-tab" data-bs-toggle="pill" data-bs-target="#ecommerce" type="button" role="tab" aria-controls="canvas-ecommerce" aria-selected="false">E-Commerce</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-uiux-tab" data-bs-toggle="pill" data-bs-target="#uiux" type="button" role="tab" aria-controls="canvas-uiux" aria-selected="false">UI/UX</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-events-tab" data-bs-toggle="pill" data-bs-target="#events" type="button" role="tab" aria-controls="canvas-events" aria-selected="false">Events</button>
+						</div>
+
+					</div>
+
+					<div id="canvas-TabContent" class="tab-content mt-3 bg-secondary rounded-6 py-4 px-5" style="--bs-bg-opacity: 0.06">
+						<div class="tab-pane fade show active" id="marketing" role="tabpanel" aria-labelledby="canvas-marketing-tab"
+							tabindex="0">
+							<h2 class="mb-4">Marketing</h2>
+							<p class="mb-0">Canvas makes digital marketing simple and effective. Build campaign landing pages, email capture forms, and conversion-focused layouts using drag-and-drop blocks. With built-in analytics-ready markup, A/B-test-friendly structure, and SEO-optimized output, every page you launch is primed to generate leads and drive real measurable results for your business.</p>
+						</div>
+						<div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="canvas-design-tab" tabindex="0">
+							<h2 class="mb-4">Design</h2>
+							<p class="mb-0">Canvas gives designers a flexible foundation for building pixel-perfect interfaces without writing code from scratch. Choose from hundreds of pre-built UI components—grids, cards, modals, galleries, and typography systems—that integrate seamlessly with your design workflow. Every block is fully editable, responsive by default, and aligned with modern design standards, letting your creative vision take center stage while the framework handles all the technical complexity. Collaborate faster, iterate confidently, and deliver stunning digital products that impress clients and delight end users equally.</p>
+						</div>
+						<div class="tab-pane fade" id="development" role="tabpanel" aria-labelledby="canvas-development-tab" tabindex="0">
+							<h2 class="mb-4">Development</h2>
+							<p class="mb-0">Built on a clean, modular codebase, Canvas gives developers a solid head start on any project. The HTML is semantic and well-structured, JavaScript is organized into reusable plugins, and every component follows Bootstrap conventions so onboarding is fast. Whether you are building a custom CMS theme, a SaaS dashboard, or a corporate portal, Canvas cuts development time significantly while shipping with consistent, maintainable patterns throughout the entire codebase, making long-term project maintenance straightforward and efficient.</p>
+						</div>
+						<div class="tab-pane fade" id="brands" role="tabpanel" aria-labelledby="pills-brands-tab" tabindex="0">
+							<h2 class="mb-4">Brands</h2>
+							<p class="mb-0">Canvas is the trusted foundation for brands that demand consistent, polished web presence across every touchpoint and channel. From global enterprise rollouts to boutique agency clients, the template system scales effortlessly to match any brand identity with ease. Swap colors, fonts, and logo assets in minutes using the centralized CSS variable system, ensuring every page reflects your brand guidelines precisely and professionally from day one of launch. The flexible grid and component library means your creative team can move quickly without ever compromising the visual integrity that defines your brand in a competitive marketplace.</p>
+						</div>
+						<div class="tab-pane fade" id="seo" role="tabpanel" aria-labelledby="pills-seo-tab" tabindex="0">
+							<h2 class="mb-4">SEO</h2>
+							<p class="mb-0">Every Canvas page is engineered with SEO best practices baked in from the ground up, so your content ranks where it belongs. Clean semantic HTML5 markup, structured data support, fast-loading optimized assets, and mobile-first responsive design all contribute to stronger search engine rankings and better crawlability. Canonical tags, Open Graph meta, and JSON-LD schema blocks are straightforward to configure, giving your content maximum visibility in organic search results across Google, Bing, and beyond. With accessible markup and well-organized heading hierarchies, Canvas pages communicate clearly to both search engines and the real users they are trying to reach.</p>
+						</div>
+						<div class="tab-pane fade" id="ecommerce" role="tabpanel" aria-labelledby="pills-ecommerce-tab" tabindex="0">
+							<h2 class="mb-4">Ecommerce</h2>
+							<p class="mb-0">Canvas gives online stores a competitive edge with conversion-optimized product page templates, streamlined checkout flows, and visually compelling category layouts that keep shoppers engaged throughout their journey. Built to integrate smoothly with popular ecommerce platforms, the template supports product carousels, customer review sections, trust badges, and promotional banners out of the box. Designed for speed and usability, it guides shoppers seamlessly from initial discovery through to final purchase, helping merchants maximize revenue on every single visit while building lasting customer loyalty through a consistently excellent shopping experience.</p>
+						</div>
+						<div class="tab-pane fade" id="uiux" role="tabpanel" aria-labelledby="pills-uiux-tab" tabindex="0">
+							<h2 class="mb-4">UIUX</h2>
+							<p class="mb-0">Canvas elevates user experience through thoughtful interface design and intuitive interaction patterns grounded in established UX principles and real-world usability research. Every component—from navigation menus to form inputs and modal dialogs—is crafted to reduce friction and improve task completion rates for end users. Consistent visual hierarchy, accessible color contrast ratios, and clear affordances make Canvas interfaces easy and genuinely enjoyable to navigate, resulting in higher engagement metrics, stronger satisfaction scores, and measurable improvements to the core product performance indicators that matter most to your team.</p>
+						</div>
+						<div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="pills-events-tab" tabindex="0">
+							<h2 class="mb-4">Events</h2>
+							<p class="mb-0">Canvas provides a complete, professional toolkit for promoting events, conferences, and workshops online with style and clarity. Showcase speaker lineups, countdown timers, schedule grids, ticket purchase call-to-actions, and venue maps—all within a cohesive, beautifully designed layout that reflects the prestige of your event. Whether you are organizing an intimate local workshop or a large international conference spanning multiple days and tracks, Canvas gives event organizers the polished digital presence needed to drive registrations, build audience anticipation, and communicate event value clearly to potential attendees, speakers, and sponsors.</p>
+						</div>
+					</div>
+
+					<div class="text-center mt-5">
+						<a href="block-carousel-tabs-dark.html" class="btn btn-dark">Dark Mode</a>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery('#carousel-tabs').owlCarousel({
+			loop: false,
+			items: 6,
+			margin: 15,
+			dots: false,
+			nav: false,
+			responsiveClass: true,
+			autoplay: false,
+			responsive: {
+				0: {
+					items: 2
+
+				},
+				576: {
+					items: 2
+
+				},
+				768: {
+					items: 3
+
+				},
+				992: {
+					items: 5
+
+				},
+				1200: {
+					items: 6
+
+				}
+			}, onDragged: onChangedCallback
+		});
+
+		function onChangedCallback(event) {
+			if (jQuery(".owl-carousel .owl-item:nth-child(1)").hasClass("active")) {
+				jQuery("#carousel-tabs").removeClass("carousel-blur-left");
+			} else if (jQuery(".owl-carousel .owl-item:last-child").hasClass("active")) {
+				jQuery("#carousel-tabs").removeClass("carousel-blur-right");
+			} else {
+				jQuery('#carousel-tabs').addClass("carousel-blur-right");
+				jQuery('#carousel-tabs').addClass("carousel-blur-left");
+			}
+		}
+	</script>
+
+</body>
+</html>

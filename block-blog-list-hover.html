@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore Canvas blog posts with an elegant list-on-hover layout. Preview images appear on cursor hover, delivering a clean, interactive reading experience.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Blog: List on Hover | Canvas</title>
+
+	<style>
+
+		/* Image Hover */
+		.hover-reveal {
+			position: fixed;
+			width: 230px;
+			height: 150px;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		.hover-reveal__inner,
+		.hover-reveal__img {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		.hover-reveal__img {
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+
+		.entry-meta i {
+			width: 20px;
+			height: 20px;
+		}
+
+	</style>
+
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-blog-list-hover.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-blog-list-hover.html">
+	<meta property="og:title" content="Blog: List on Hover | Canvas">
+	<meta property="og:description" content="Explore Canvas blog posts with an elegant list-on-hover layout. Preview images appear on cursor hover, delivering a clean, interactive reading experience.">
+	<meta property="og:image" content="images/blog/grid/1.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Blog: List on Hover | Canvas">
+	<meta name="twitter:description" content="Explore Canvas blog posts with an elegant list-on-hover layout. Preview images appear on cursor hover, delivering a clean, interactive reading experience.">
+	<meta name="twitter:image" content="images/blog/grid/1.jpg">
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@graph": [
+	    {
+	      "@type": "Blog",
+	      "name": "Canvas Blog \u2013 List on Hover",
+	      "url": "block-blog-list-hover.html",
+	      "image": "images/blog/grid/1.jpg",
+	      "description": "Explore Canvas blog posts with an elegant list-on-hover layout. Preview images appear on cursor hover, delivering a clean, interactive reading experience.",
+	      "publisher": {
+	        "@type": "Organization",
+	        "name": "Canvas",
+	        "url": "index.html"
+	      }
+	    },
+	    {
+	      "@type": "WebSite",
+	      "name": "Canvas",
+	      "url": "index.html"
+	    }
+	  ]
+	}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<!-- Posts
+					============================================= -->
+					<div id="posts" class="row gutter-40">
+
+						<div class="entry col-12 mb-0 pb-0 img-hover-block hover-img-lg" data-img="images/blog/grid/1.jpg">
+							<div class="grid-inner row g-0">
+								<!-- Entry Meta
+								============================================= -->
+								<div class="col-md-3">
+									<ul class="d-flex flex-column entry-meta no-separator">
+										<li class="me-0"><i class="uil uil-schedule"></i> 10th July 2021</li>
+										<li class="me-0"><a href="#"><i class="uil uil-user"></i> admin</a></li>
+										<li class="me-0"><i class="uil uil-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
+										<li class="me-0"><a href="#"><i class="uil uil-comments-alt"></i> 43 Comments</a></li>
+									</ul>
+								</div><!-- .entry-meta end -->
+								<div class="col-md-9">
+									<div class="entry-title title-sm">
+										<h2><a href="blog-single.html">This is a Standard post with a Preview Image</a></h2>
+									</div>
+									<div class="entry-content">
+										<p>Whether you're launching a new product or sharing company news, visual storytelling sets your content apart. This post explores how a carefully chosen preview image can draw readers in, establish tone at a glance, and boost click-through rates significantly. Strong imagery paired with a compelling headline is one of the most reliable ways to grow a loyal, engaged audience.</p>
+										<a href="blog-single.html" class="more-link">Read More</a> <i class="bi-arrow-right color"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="line"></div>
+
+						<div class="entry col-12 mb-0 pb-0 img-hover-block hover-img-lg" data-img="images/blog/grid/2.jpg">
+							<div class="grid-inner row g-0">
+								<!-- Entry Meta
+								============================================= -->
+								<div class="col-md-3">
+									<ul class="d-flex flex-column entry-meta no-separator">
+										<li class="me-0"><i class="uil uil-folder-open"></i> <a href="#">General</a></li>
+										<li class="me-0"><i class="uil uil-schedule"></i> 10th July 2021</li>
+										<li class="me-0"><a href="#"><i class="uil uil-user"></i> admin</a></li>
+										<li class="me-0"><a href="#"><i class="uil uil-comments-alt"></i> 43 Comments</a></li>
+									</ul>
+								</div><!-- .entry-meta end -->
+								<div class="col-md-9">
+									<div class="entry-title title-sm">
+										<h2><a href="blog-single.html">This is a Standard post with a Preview Galllery</a></h2>
+									</div>
+									<div class="entry-content">
+										<p>A gallery-style post lets you tell a richer story than a single image ever could. From event recaps to product showcases, multiple photos give readers a fuller picture and encourage them to spend more time on the page. We walk through best practices for organizing, optimizing, and captioning a gallery so every image earns its place in the narrative.</p>
+										<a href="blog-single.html" class="more-link">Read More</a> <i class="bi-arrow-right color"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="line"></div>
+
+						<div class="entry col-12 mb-0 pb-0 img-hover-block hover-img-lg" data-img="images/blog/grid/3.jpg">
+							<div class="grid-inner row g-0">
+								<!-- Entry Meta
+								============================================= -->
+								<div class="col-md-3">
+									<ul class="d-flex flex-column entry-meta no-separator">
+										<li class="me-0"><i class="uil uil-folder-open"></i> <a href="#">General</a></li>
+										<li class="me-0"><i class="uil uil-schedule"></i> 10th July 2021</li>
+										<li class="me-0"><a href="#"><i class="uil uil-user"></i> admin</a></li>
+										<li class="me-0"><a href="#"><i class="uil uil-comments-alt"></i> 21 Comments</a></li>
+									</ul>
+								</div><!-- .entry-meta end -->
+								<div class="col-md-9">
+									<div class="entry-title title-sm">
+										<h2><a href="blog-single.html">This is a Standard post with a Preview Image</a></h2>
+									</div>
+									<div class="entry-content">
+										<p>First impressions matter, and in an age of endless scrolling, a strong preview image is often the deciding factor between a click and a pass. This post covers image selection, cropping, and file-size optimization — practical steps that ensure your featured photo looks crisp across every device and keeps page load times well within reader expectations.</p>
+										<a href="blog-single.html" class="more-link">Read More</a> <i class="bi-arrow-right color"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<!-- Hover Image Animate -->
+	<script src="demos/burger/js/hover-animate.js"></script>
+
+</body>
+</html>

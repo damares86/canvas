@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Discover, collect, and trade extraordinary NFTs on NiftVault — the premier dark-mode marketplace for digital art, rare collectibles, and crypto-native creators.">
+
+	<!-- Open Graph
+	============================================= -->
+	<meta property="og:title" content="NiftVault — NFT Marketplace | Canvas">
+	<meta property="og:description" content="Discover, collect, and trade extraordinary NFTs on NiftVault — the premier dark-mode marketplace for digital art, rare collectibles, and crypto-native creators.">
+	<meta property="og:type" content="website">
+
+	<!-- Twitter Card
+	============================================= -->
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Niche Demo -->
+	<link rel="stylesheet" href="demos/nft-marketplace-3/nft-marketplace-3.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Document Title
+	============================================= -->
+	<title>NiftVault — NFT Marketplace | Canvas</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#7C3AED">
+	<link rel="canonical" href="demo-nft-marketplace-3.html">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="demo-nft-marketplace-3.html">
+	<meta property="og:image" content="https://picsum.photos/seed/abstract-nft-art/600/600">
+	<meta name="twitter:title" content="NiftVault — NFT Marketplace | Canvas">
+	<meta name="twitter:description" content="Discover, collect, and trade extraordinary NFTs on NiftVault — the premier dark-mode marketplace for digital art, rare collectibles, and crypto-native creators.">
+	<meta name="twitter:image" content="https://picsum.photos/seed/abstract-nft-art/600/600">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+				{
+						"@type": "WebSite",
+						"name": "NiftVault",
+						"url": "demo-nft-marketplace-3.html",
+						"description": "Discover, collect, and trade extraordinary NFTs on NiftVault — the premier dark-mode marketplace for digital art, rare collectibles, and crypto-native creators."
+				},
+				{
+						"@type": "Organization",
+						"name": "NiftVault",
+						"url": "demo-nft-marketplace-3.html",
+						"logo": "images/logo.png",
+						"image": "https://picsum.photos/seed/abstract-nft-art/600/600",
+						"description": "Premier NFT marketplace for digital art, rare collectibles, and crypto-native creators.",
+						"address": {
+								"@type": "PostalAddress",
+								"streetAddress": "Level 12, 120 Spencer Street",
+								"addressLocality": "Melbourne",
+								"addressRegion": "VIC",
+								"postalCode": "3000",
+								"addressCountry": "AU"
+						},
+						"contactPoint": {
+								"@type": "ContactPoint",
+								"telephone": "+61-3-9012-4873",
+								"contactType": "customer support",
+								"email": "hello@niftvault.io"
+						},
+						"sameAs": []
+				}
+		]
+}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header dark">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" src="images/logo.png" alt="NiftVault Logo">
+								<img class="logo-dark" src="images/logo-dark.png" alt="NiftVault Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+							<a href="#" class="button button-small button-rounded ms-2 niftvault-btn-wallet">Connect Wallet</a>
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" aria-label="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Nav
+						============================================= -->
+						<nav class="primary-menu" aria-label="Primary Navigation">
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="#explore"><div>Explore</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#collections"><div>Collections</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#creators"><div>Creators</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#stats"><div>Stats</div></a></li>
+							</ul>
+						</nav><!-- .primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Hero Section
+		============================================= -->
+		<section id="hero" class="include-header dark mb-0" style="position:relative;overflow:hidden;background:#0D0D0F;min-height:100vh;display:flex;align-items:center;">
+			<canvas id="hero-canvas"></canvas>
+			<div class="hero-glow"></div>
+			<div class="hero-glow-left"></div>
+
+			<div class="container" style="position:relative;z-index:2;padding-top:120px;padding-bottom:100px;">
+				<div class="row align-items-center g-5">
+
+					<!-- LEFT: Copy -->
+					<div class="col-lg-6">
+						<div class="niftvault-wordmark">NiftVault</div>
+						<h1 class="hero-headline">
+							Discover &amp; Collect<br>
+							<span class="grad-word">Extraordinary</span><br>
+							Digital Art
+						</h1>
+						<p class="hero-subhead">
+							The premier marketplace for NFTs, digital art, and rare collectibles. Join 50K+ creators and collectors building the future of ownership.
+						</p>
+						<div class="hero-cta-group">
+							<a href="#" class="btn-hero-primary">
+								<i class="bi-grid-1x2-fill" style="font-size:0.9rem;"></i>
+								Explore Collections
+							</a>
+							<a href="#" class="btn-hero-gold">
+								<i class="bi-plus-circle" style="font-size:0.9rem;"></i>
+								Create &amp; Sell
+							</a>
+						</div>
+						<div class="hero-stats">
+							<div class="hero-stat-item">
+								<span class="hero-stat-num">50K+</span>
+								<span class="hero-stat-label">NFTs Listed</span>
+							</div>
+							<div class="hero-stat-item">
+								<span class="hero-stat-num">12K</span>
+								<span class="hero-stat-label">Creators</span>
+							</div>
+							<div class="hero-stat-item">
+								<span class="hero-stat-num">$42M</span>
+								<span class="hero-stat-label">Total Volume</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- RIGHT: Featured NFT Card -->
+					<div class="col-lg-6">
+						<div class="nft-hero-card-wrap">
+							<div class="nft-hero-card">
+								<div class="nft-hero-img-wrap">
+									<img src="https://picsum.photos/seed/abstract-nft-art/600/600" alt="Neon Genesis #007 abstract NFT artwork">
+									<div class="nft-hero-img-overlay"></div>
+									<span class="nft-hero-img-badge">Featured</span>
+								</div>
+								<div class="nft-hero-body">
+									<div class="nft-hero-creator-row">
+										<img src="https://i.pravatar.cc/150?img=47" class="nft-hero-avatar w-auto" alt="Axiom Studio creator avatar">
+										<div>
+											<div class="nft-hero-creator-name">Axiom Studio</div>
+											<div class="nft-hero-creator-handle">@axiom.eth</div>
+										</div>
+										<div class="nft-hero-creator-verified">
+											<i class="bi-check" style="font-size:0.7rem;color:#0D0D0F;font-weight:900;"></i>
+										</div>
+									</div>
+									<div class="nft-hero-title-row">
+										<div class="nft-hero-title">Neon Genesis #007</div>
+										<div class="nft-hero-edition">1 of 1 &nbsp;·&nbsp; Abstract Series</div>
+									</div>
+									<div class="nft-hero-bid-row">
+										<div>
+											<div class="nft-hero-bid-label">Current Bid</div>
+											<div class="nft-hero-bid-eth">4.85 ETH</div>
+											<div class="nft-hero-bid-usd">≈ $14,220 USD</div>
+										</div>
+										<a href="#" class="btn-place-bid">
+											<i class="bi-lightning-charge-fill" style="font-size:0.8rem;"></i>
+											Place Bid
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="hero-bottom-fade"></div>
+
+			<script>
+			(function(){
+				var c=document.getElementById('hero-canvas');
+				if(!c)return;
+				var ctx=c.getContext('2d');
+				var stars=[];
+				var W,H;
+				function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+				function mkStars(){
+					stars=[];
+					for(var i=0;i<160;i++){
+						stars.push({
+							x:Math.random()*W,y:Math.random()*H,
+							r:Math.random()*1.2+0.2,
+							o:Math.random()*0.6+0.1,
+							sp:Math.random()*0.004+0.002,
+							ph:Math.random()*Math.PI*2
+						});
+					}
+				}
+				var raf;
+				function draw(t){
+					ctx.clearRect(0,0,W,H);
+					stars.forEach(function(s){
+						var pulse=s.o*(0.6+0.4*Math.sin(t*s.sp*1000+s.ph));
+						ctx.beginPath();
+						ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+						ctx.fillStyle='rgba(255,255,255,'+pulse+')';
+						ctx.fill();
+					});
+					raf=requestAnimationFrame(draw);
+				}
+				resize();mkStars();
+				window.addEventListener('resize',function(){resize();mkStars();});
+				requestAnimationFrame(draw);
+			})();
+			</script>
+
+		</section><!-- #hero end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<!-- Collections Section
+				============================================= -->
+				<section id="collections" class="section my-0 dark" style="background: #12111A; padding: 100px 0;">
+					<div class="container">
+
+						<div class="text-center mb-5">
+							<span class="section-label">Trending Now</span>
+							<h2 class="fw-bold mb-0" style="color: #fff; font-size: 2.25rem; letter-spacing: -0.03em;">Top Collections This Week</h2>
+						</div>
+
+						<div class="row g-4">
+
+							<!-- Card 1 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="collection-card">
+									<div class="cover-wrap">
+										<span class="rank-badge">#1</span>
+										<img src="https://picsum.photos/seed/cosmicbeings/600/600" alt="Cosmic Beings NFT collection cover">
+									</div>
+									<div class="card-body">
+										<h3 class="collection-name">Cosmic Beings</h3>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=11" alt="stellarforge creator avatar">
+											<span class="creator-name">@stellarforge</span>
+											<span class="verified-badge"><i class="bi-check-lg"></i></span>
+										</div>
+										<div class="stats-row">
+											<div class="stat-item">
+												<div class="stat-label">Floor Price</div>
+												<div class="stat-value gold">2.48 ETH</div>
+											</div>
+											<div class="stat-item">
+												<div class="stat-label">7d Volume</div>
+												<div class="stat-value white">1,204 ETH</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 2 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="collection-card">
+									<div class="cover-wrap">
+										<span class="rank-badge">#2</span>
+										<img src="https://picsum.photos/seed/neondystopia/600/600" alt="Neon Dystopia NFT collection cover">
+									</div>
+									<div class="card-body">
+										<h3 class="collection-name">Neon Dystopia</h3>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=17" alt="glitchpunk creator avatar">
+											<span class="creator-name">@glitchpunk</span>
+											<span class="verified-badge"><i class="bi-check-lg"></i></span>
+										</div>
+										<div class="stats-row">
+											<div class="stat-item">
+												<div class="stat-label">Floor Price</div>
+												<div class="stat-value gold">1.92 ETH</div>
+											</div>
+											<div class="stat-item">
+												<div class="stat-label">7d Volume</div>
+												<div class="stat-value white">987 ETH</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 3 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="collection-card">
+									<div class="cover-wrap">
+										<span class="rank-badge">#3</span>
+										<img src="https://picsum.photos/seed/etherealfragments/600/600" alt="Ethereal Fragments NFT collection cover">
+									</div>
+									<div class="card-body">
+										<h3 class="collection-name">Ethereal Fragments</h3>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=23" alt="voidminter creator avatar">
+											<span class="creator-name">@voidminter</span>
+											<span class="verified-badge"><i class="bi-check-lg"></i></span>
+										</div>
+										<div class="stats-row">
+											<div class="stat-item">
+												<div class="stat-label">Floor Price</div>
+												<div class="stat-value gold">1.15 ETH</div>
+											</div>
+											<div class="stat-item">
+												<div class="stat-label">7d Volume</div>
+												<div class="stat-value white">742 ETH</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 4 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="collection-card">
+									<div class="cover-wrap">
+										<span class="rank-badge">#4</span>
+										<img src="https://picsum.photos/seed/voidwalkers/600/600" alt="Void Walkers NFT collection cover">
+									</div>
+									<div class="card-body">
+										<h3 class="collection-name">Void Walkers</h3>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=35" alt="darkcanvas_eth creator avatar">
+											<span class="creator-name">@darkcanvas_eth</span>
+											<span class="verified-badge"><i class="bi-check-lg"></i></span>
+										</div>
+										<div class="stats-row">
+											<div class="stat-item">
+												<div class="stat-label">Floor Price</div>
+												<div class="stat-value gold">0.87 ETH</div>
+											</div>
+											<div class="stat-item">
+												<div class="stat-label">7d Volume</div>
+												<div class="stat-value white">618 ETH</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 5 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="collection-card">
+									<div class="cover-wrap">
+										<span class="rank-badge">#5</span>
+										<img src="https://picsum.photos/seed/digitalrelics/600/600" alt="Digital Relics NFT collection cover">
+									</div>
+									<div class="card-body">
+										<h3 class="collection-name">Digital Relics</h3>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=42" alt="relichaus creator avatar">
+											<span class="creator-name">@relichaus</span>
+											<span class="verified-badge"><i class="bi-check-lg"></i></span>
+										</div>
+										<div class="stats-row">
+											<div class="stat-item">
+												<div class="stat-label">Floor Price</div>
+												<div class="stat-value gold">0.64 ETH</div>
+											</div>
+											<div class="stat-item">
+												<div class="stat-label">7d Volume</div>
+												<div class="stat-value white">451 ETH</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 6 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="collection-card">
+									<div class="cover-wrap">
+										<span class="rank-badge">#6</span>
+										<img src="https://picsum.photos/seed/phantomgrid/600/600" alt="Phantom Grid NFT collection cover">
+									</div>
+									<div class="card-body">
+										<h3 class="collection-name">Phantom Grid</h3>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=58" alt="spectre_labs creator avatar">
+											<span class="creator-name">@spectre_labs</span>
+											<span class="verified-badge"><i class="bi-check-lg"></i></span>
+										</div>
+										<div class="stats-row">
+											<div class="stat-item">
+												<div class="stat-label">Floor Price</div>
+												<div class="stat-value gold">0.39 ETH</div>
+											</div>
+											<div class="stat-item">
+												<div class="stat-label">7d Volume</div>
+												<div class="stat-value white">298 ETH</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section><!-- #collections end -->
+
+				<!-- Stats Section
+				============================================= -->
+				<section id="stats" class="section my-0 dark" style="background: linear-gradient(135deg, #12111A 0%, #1E0A3C 100%); position: relative; overflow: hidden;">
+					<div class="grid-overlay"></div>
+					<div class="glow-orb" style="width:400px;height:400px;background:rgba(124,58,237,0.18);top:-120px;left:-80px;"></div>
+					<div class="glow-orb" style="width:300px;height:300px;background:rgba(201,168,76,0.08);bottom:-80px;right:5%;"></div>
+
+					<div class="container" style="position:relative;z-index:1;">
+						<div class="row g-0 align-items-center" style="padding: 2rem 0;">
+
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="stat-col">
+									<span class="stat-number">
+										<span data-from="0" data-to="142" data-speed="2200" data-prefix="$" data-suffix="M+">$142M+</span>
+									</span>
+									<span class="stat-label">Total Sales Volume</span>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="stat-col">
+									<span class="stat-number">
+										<span data-from="0" data-to="89400" data-speed="2200" data-suffix="+">89,400+</span>
+									</span>
+									<span class="stat-label">Verified Creators</span>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="stat-col">
+									<span class="stat-number">
+										<span data-from="0" data-to="52000" data-speed="2200" data-suffix="+">52,000+</span>
+									</span>
+									<span class="stat-label">Active Buyers</span>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6 col-lg-3">
+								<div class="stat-col">
+									<span class="stat-number">
+										<span data-from="0" data-to="310000" data-speed="2200" data-suffix="+">310,000+</span>
+									</span>
+									<span class="stat-label">NFTs Minted</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section><!-- #stats end -->
+
+				<!-- How It Works Section
+				============================================= -->
+				<section id="how-it-works" class="section my-0 dark" style="background: #0D0D0F; position: relative; overflow: hidden;">
+					<div class="hiw-radial"></div>
+
+					<div class="container" style="position: relative; z-index: 1; padding-top: 6rem; padding-bottom: 6rem;">
+
+						<!-- Header -->
+						<div class="row justify-content-center text-center mb-5">
+							<div class="col-lg-7">
+								<span class="hiw-label">Get Started</span>
+								<h2 class="hiw-heading">Three Steps to the Future of Ownership</h2>
+								<p style="color: rgba(255,255,255,0.45); font-size: 1rem; margin-top: 1rem; line-height: 1.75;">No experience required. Start collecting, creating, and earning in minutes.</p>
+							</div>
+						</div>
+
+						<!-- Steps Row -->
+						<div class="row hiw-steps-row g-0 justify-content-center align-items-start">
+
+							<!-- Step 01 -->
+							<div class="col-lg col-md-12 col-12 mb-4 mb-lg-0">
+								<div class="hiw-step-card">
+									<span class="hiw-step-num">01</span>
+									<div class="hiw-icon-wrap">
+										<i class="uil uil-wallet"></i>
+									</div>
+									<h3 class="hiw-step-title">Connect Your Wallet</h3>
+									<p class="hiw-step-desc">Link your existing crypto wallet in seconds. NiftVault works seamlessly with the wallets you already trust — no new accounts required.</p>
+									<div class="hiw-wallet-badges">
+										<span class="hiw-badge">MetaMask</span>
+										<span class="hiw-badge">Coinbase Wallet</span>
+										<span class="hiw-badge">WalletConnect</span>
+									</div>
+									<a href="#" class="hiw-cta-link">
+										Connect Wallet <i class="uil uil-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<!-- Connector 1 -->
+							<div class="hiw-connector px-2">
+								<div class="hiw-connector-dots">
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<i class="uil uil-angle-right hiw-arrow-icon"></i>
+								</div>
+							</div>
+
+							<!-- Step 02 -->
+							<div class="col-lg col-md-12 col-12 mb-4 mb-lg-0">
+								<div class="hiw-step-card">
+									<span class="hiw-step-num">02</span>
+									<div class="hiw-icon-wrap">
+										<i class="uil uil-brush-alt"></i>
+									</div>
+									<h3 class="hiw-step-title">Create or Browse</h3>
+									<p class="hiw-step-desc">Mint your first NFT in under a minute — no coding needed. Or dive into curated collections, trending drops, and rare 1-of-1s from artists worldwide.</p>
+									<ul style="list-style: none; padding: 0; margin-bottom: 1.5rem;">
+										<li style="font-size: 0.875rem; color: rgba(255,255,255,0.5); margin-bottom: 0.45rem;">
+											<i class="bi-check2-circle me-2" style="color: #7C3AED;"></i>Single &amp; multi-edition minting
+										</li>
+										<li style="font-size: 0.875rem; color: rgba(255,255,255,0.5); margin-bottom: 0.45rem;">
+											<i class="bi-check2-circle me-2" style="color: #7C3AED;"></i>Curated collections &amp; trending drops
+										</li>
+										<li style="font-size: 0.875rem; color: rgba(255,255,255,0.5);">
+											<i class="bi-check2-circle me-2" style="color: #7C3AED;"></i>Verified creators &amp; rare 1-of-1s
+										</li>
+									</ul>
+									<a href="#" class="hiw-cta-link">
+										Explore Marketplace <i class="uil uil-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+							<!-- Connector 2 -->
+							<div class="hiw-connector px-2">
+								<div class="hiw-connector-dots">
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<div class="hiw-dot"></div>
+									<i class="uil uil-angle-right hiw-arrow-icon"></i>
+								</div>
+							</div>
+
+							<!-- Step 03 -->
+							<div class="col-lg col-md-12 col-12 mb-4 mb-lg-0">
+								<div class="hiw-step-card">
+									<span class="hiw-step-num">03</span>
+									<div class="hiw-icon-wrap">
+										<i class="uil uil-chart-line"></i>
+									</div>
+									<h3 class="hiw-step-title">Buy, Sell &amp; Earn</h3>
+									<p class="hiw-step-desc">List your NFTs at a fixed price or open them to auction. Earn royalties on every secondary sale — automatically, forever. Withdraw your earnings in ETH or SOL.</p>
+									<div style="background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.2); border-radius: 10px; padding: 0.875rem 1rem; margin-bottom: 1.5rem;">
+										<div style="font-size: 0.8rem; color: #C9A84C; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.25rem;">Royalty on resale</div>
+										<div style="font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;">Up to 10%</div>
+										<div style="font-size: 0.8rem; color: rgba(255,255,255,0.4);">Paid automatically on every trade</div>
+									</div>
+									<a href="#" class="hiw-cta-link hiw-cta-link-gold">
+										Start Selling <i class="uil uil-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</section><!-- #how-it-works end -->
+
+				<!-- Creators Section
+				============================================= -->
+				<section id="creators" class="section my-0 dark" style="background: #12111A; padding: 80px 0;">
+					<div class="container">
+
+						<div class="row mb-5">
+							<div class="col-12 text-center">
+								<span class="section-label">Featured Artists</span>
+								<h2 class="fw-bold mb-0" style="color: #fff; font-size: 2.25rem; letter-spacing: -0.03em;">Top Creators This Month</h2>
+							</div>
+						</div>
+
+						<div class="creators-scroll-row">
+
+							<div class="creator-card">
+								<div class="creator-avatar-wrap">
+									<img src="https://i.pravatar.cc/150?img=11" alt="Nora Vance creator avatar">
+								</div>
+								<div class="creator-name">
+									Nora Vance
+									<span class="badge-verified"><i class="bi-check"></i></span>
+								</div>
+								<div class="creator-username">@noravance.eth</div>
+								<div class="creator-volume">Vol: 142 ETH</div>
+								<div class="creator-followers">12,840 followers</div>
+								<a href="#" class="btn-follow">Follow</a>
+							</div>
+
+							<div class="creator-card">
+								<div class="creator-avatar-wrap">
+									<img src="https://i.pravatar.cc/150?img=33" alt="Marcus Osei creator avatar">
+								</div>
+								<div class="creator-name">
+									Marcus Osei
+									<span class="badge-verified"><i class="bi-check"></i></span>
+								</div>
+								<div class="creator-username">@marcosei.eth</div>
+								<div class="creator-volume">Vol: 98 ETH</div>
+								<div class="creator-followers">9,310 followers</div>
+								<a href="#" class="btn-follow">Follow</a>
+							</div>
+
+							<div class="creator-card">
+								<div class="creator-avatar-wrap">
+									<img src="https://i.pravatar.cc/150?img=47" alt="Zara Linden creator avatar">
+								</div>
+								<div class="creator-name">
+									Zara Linden
+									<span class="badge-verified"><i class="bi-check"></i></span>
+								</div>
+								<div class="creator-username">@zaralinden.eth</div>
+								<div class="creator-volume">Vol: 207 ETH</div>
+								<div class="creator-followers">24,560 followers</div>
+								<a href="#" class="btn-follow">Follow</a>
+							</div>
+
+							<div class="creator-card">
+								<div class="creator-avatar-wrap">
+									<img src="https://i.pravatar.cc/150?img=59" alt="Dante Cruz creator avatar">
+								</div>
+								<div class="creator-name">
+									Dante Cruz
+									<span class="badge-verified"><i class="bi-check"></i></span>
+								</div>
+								<div class="creator-username">@dantecruz.eth</div>
+								<div class="creator-volume">Vol: 74 ETH</div>
+								<div class="creator-followers">6,190 followers</div>
+								<a href="#" class="btn-follow">Follow</a>
+							</div>
+
+						</div>
+
+						<div class="row mt-5">
+							<div class="col-12 text-center">
+								<a href="#" class="view-all-link">
+									View All Creators
+									<i class="bi-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</section><!-- #creators end -->
+
+				<!-- Recently Listed Section
+				============================================= -->
+				<section id="recent" class="section my-0 dark" style="background: #0D0D0F; padding: 80px 0;">
+					<div class="container">
+
+						<div class="row align-items-end mb-5">
+							<div class="col-lg-6">
+								<span class="section-label">Just Dropped</span>
+								<h2 class="section-heading">Recently Listed</h2>
+							</div>
+							<div class="col-lg-6 text-lg-end mt-3 mt-lg-0">
+								<p style="color: rgba(255,255,255,0.35); font-size: 0.875rem; margin-bottom: 0;">Fresh drops from verified creators — updated in real time.</p>
+							</div>
+						</div>
+
+						<div class="row g-4">
+
+							<!-- Card 1 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="nft-card">
+									<div class="nft-img-wrap">
+										<img src="https://picsum.photos/seed/nft-cosmos/600/600" loading="lazy" alt="Cosmic Drift #004 NFT artwork">
+										<span class="time-badge">2 min ago</span>
+									</div>
+									<div class="nft-body">
+										<div class="nft-name">Cosmic Drift #004</div>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=11" alt="nova_labs creator avatar">
+											<span class="creator-name">by <span>@nova_labs</span></span>
+										</div>
+										<div class="price-row">
+											<span class="eth-price">2.48 ETH</span>
+											<span class="usd-price">≈ $4,312 USD</span>
+										</div>
+										<div class="action-row">
+											<a href="#" class="btn-buy">Buy Now</a>
+											<a href="#" class="btn-fav" title="Add to favorites"><i class="bi-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 2 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="nft-card">
+									<div class="nft-img-wrap">
+										<img src="https://picsum.photos/seed/nft-void/600/600" loading="lazy" alt="Void Bloom #019 NFT artwork">
+										<span class="time-badge">7 min ago</span>
+									</div>
+									<div class="nft-body">
+										<div class="nft-name">Void Bloom #019</div>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=24" alt="etheralux creator avatar">
+											<span class="creator-name">by <span>@etheralux</span></span>
+										</div>
+										<div class="price-row">
+											<span class="eth-price">1.10 ETH</span>
+											<span class="usd-price">≈ $1,911 USD</span>
+										</div>
+										<div class="action-row">
+											<a href="#" class="btn-buy">Buy Now</a>
+											<a href="#" class="btn-fav" title="Add to favorites"><i class="bi-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 3 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="nft-card">
+									<div class="nft-img-wrap">
+										<img src="https://picsum.photos/seed/nft-prism/600/600" loading="lazy" alt="Prism Entity #7 NFT artwork">
+										<span class="time-badge">14 min ago</span>
+									</div>
+									<div class="nft-body">
+										<div class="nft-name">Prism Entity #7</div>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=33" alt="fractaldream creator avatar">
+											<span class="creator-name">by <span>@fractaldream</span></span>
+										</div>
+										<div class="price-row">
+											<span class="eth-price">0.75 ETH</span>
+											<span class="usd-price">≈ $1,303 USD</span>
+										</div>
+										<div class="action-row">
+											<a href="#" class="btn-buy">Buy Now</a>
+											<a href="#" class="btn-fav" title="Add to favorites"><i class="bi-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 4 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="nft-card">
+									<div class="nft-img-wrap">
+										<img src="https://picsum.photos/seed/nft-abyss/600/600" loading="lazy" alt="Abyss Walker #022 NFT artwork">
+										<span class="time-badge">23 min ago</span>
+									</div>
+									<div class="nft-body">
+										<div class="nft-name">Abyss Walker #022</div>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=47" alt="darkpixel_co creator avatar">
+											<span class="creator-name">by <span>@darkpixel_co</span></span>
+										</div>
+										<div class="price-row">
+											<span class="eth-price">3.60 ETH</span>
+											<span class="usd-price">≈ $6,255 USD</span>
+										</div>
+										<div class="action-row">
+											<a href="#" class="btn-buy">Buy Now</a>
+											<a href="#" class="btn-fav" title="Add to favorites"><i class="bi-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 5 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="nft-card">
+									<div class="nft-img-wrap">
+										<img src="https://picsum.photos/seed/nft-stellar/600/600" loading="lazy" alt="Stellar Relic #088 NFT artwork">
+										<span class="time-badge">31 min ago</span>
+									</div>
+									<div class="nft-body">
+										<div class="nft-name">Stellar Relic #088</div>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=56" alt="orion_works creator avatar">
+											<span class="creator-name">by <span>@orion_works</span></span>
+										</div>
+										<div class="price-row">
+											<span class="eth-price">0.92 ETH</span>
+											<span class="usd-price">≈ $1,598 USD</span>
+										</div>
+										<div class="action-row">
+											<a href="#" class="btn-buy">Buy Now</a>
+											<a href="#" class="btn-fav" title="Add to favorites"><i class="bi-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card 6 -->
+							<div class="col-lg-4 col-md-6">
+								<div class="nft-card">
+									<div class="nft-img-wrap">
+										<img src="https://picsum.photos/seed/nft-glitch/600/600" loading="lazy" alt="Glitch Specter #3 NFT artwork">
+										<span class="time-badge">48 min ago</span>
+									</div>
+									<div class="nft-body">
+										<div class="nft-name">Glitch Specter #3</div>
+										<div class="creator-row">
+											<img src="https://i.pravatar.cc/150?img=62" alt="zerox_studio creator avatar">
+											<span class="creator-name">by <span>@zerox_studio</span></span>
+										</div>
+										<div class="price-row">
+											<span class="eth-price">5.05 ETH</span>
+											<span class="usd-price">≈ $8,772 USD</span>
+										</div>
+										<div class="action-row">
+											<a href="#" class="btn-buy">Buy Now</a>
+											<a href="#" class="btn-fav" title="Add to favorites"><i class="bi-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="text-center mt-5 pt-2">
+							<a href="#" class="btn-load-more">Load More</a>
+						</div>
+
+					</div>
+				</section><!-- #recent end -->
+
+				<!-- Wallets Section
+				============================================= -->
+				<section id="wallets" class="section my-0 dark" style="background: #080808; border-top: 1px solid rgba(124,58,237,0.35); border-bottom: 1px solid rgba(124,58,237,0.35); padding: 56px 0;">
+					<div class="container">
+
+						<div class="text-center">
+							<p class="wallets-heading mb-0">Works With Your Wallet</p>
+						</div>
+
+						<div class="wallet-row mt-4">
+
+							<!-- MetaMask -->
+							<div class="wallet-pill">
+								<svg class="wallet-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="40" height="40" rx="8" fill="#F6851B"/>
+									<path d="M31 9L22.1 15.6L23.8 11.5L31 9Z" fill="#E2761B" stroke="#E2761B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M9 9L17.8 15.7L16.2 11.5L9 9Z" fill="#E4761B" stroke="#E4761B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M27.9 25.8L25.5 29.6L30.5 31L31.9 25.9L27.9 25.8Z" fill="#E4761B" stroke="#E4761B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M8.1 25.9L9.5 31L14.5 29.6L12.1 25.8L8.1 25.9Z" fill="#E4761B" stroke="#E4761B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M14.2 19.3L12.8 21.4L17.7 21.6L17.5 16.3L14.2 19.3Z" fill="#F6851B" stroke="#F6851B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M25.8 19.3L22.4 16.2L22.3 21.6L27.2 21.4L25.8 19.3Z" fill="#F6851B" stroke="#F6851B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M14.5 29.6L17.4 28.1L14.9 25.9L14.5 29.6Z" fill="#E4761B" stroke="#E4761B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M22.6 28.1L25.5 29.6L25.1 25.9L22.6 28.1Z" fill="#E4761B" stroke="#E4761B" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+									<circle cx="20" cy="20" r="3.5" fill="#fff" opacity="0.15"/>
+								</svg>
+								<span class="wallet-name">MetaMask</span>
+							</div>
+
+							<!-- Coinbase Wallet -->
+							<div class="wallet-pill">
+								<svg class="wallet-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="40" height="40" rx="8" fill="#0052FF"/>
+									<circle cx="20" cy="20" r="11" fill="#fff"/>
+									<rect x="16" y="17" width="8" height="6" rx="2" fill="#0052FF"/>
+								</svg>
+								<span class="wallet-name">Coinbase Wallet</span>
+							</div>
+
+							<!-- WalletConnect -->
+							<div class="wallet-pill">
+								<svg class="wallet-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="40" height="40" rx="8" fill="#3B99FC"/>
+									<path d="M12.5 17.8c4.1-4.1 10.9-4.1 15 0l0.5 0.5c0.2 0.2 0.2 0.6 0 0.8l-1.7 1.7c-0.1 0.1-0.3 0.1-0.4 0l-0.7-0.7c-2.9-2.9-7.5-2.9-10.4 0l-0.7 0.7c-0.1 0.1-0.3 0.1-0.4 0l-1.7-1.7c-0.2-0.2-0.2-0.6 0-0.8l0.5-0.5z" fill="#fff"/>
+									<path d="M19.1 21.4l1.5 1.5c0.2 0.2 0.6 0.2 0.8 0l1.5-1.5c0.2-0.2 0.2-0.6 0-0.8l-1.5-1.5c-0.2-0.2-0.6-0.2-0.8 0l-1.5 1.5c-0.2 0.2-0.2 0.6 0 0.8z" fill="#fff"/>
+								</svg>
+								<span class="wallet-name">WalletConnect</span>
+							</div>
+
+							<!-- Phantom -->
+							<div class="wallet-pill">
+								<svg class="wallet-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="40" height="40" rx="8" fill="#AB9FF2"/>
+									<path d="M20 10c-5.5 0-10 4.5-10 10 0 3.5 2.2 6.5 5 8.2 0.5 0.3 0.7 0.9 0.5 1.4l-0.5 1.6c-0.1 0.4 0.2 0.8 0.6 0.8 0.1 0 0.3 0 0.4-0.1l2-1.2c0.3-0.2 0.7-0.2 1 0 0.6 0.2 1.3 0.3 2 0.3 5.5 0 10-4.5 10-10S25.5 10 20 10z" fill="#fff"/>
+									<circle cx="17" cy="20" r="1.5" fill="#AB9FF2"/>
+									<circle cx="23" cy="20" r="1.5" fill="#AB9FF2"/>
+								</svg>
+								<span class="wallet-name">Phantom</span>
+							</div>
+
+							<!-- Trust Wallet -->
+							<div class="wallet-pill">
+								<svg class="wallet-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="40" height="40" rx="8" fill="#3375BB"/>
+									<path d="M20 9l-9 4v7c0 5.25 3.84 10.17 9 11.37C26.16 30.17 29 25.25 29 20v-7l-9-4z" fill="#fff"/>
+									<path d="M20 12l-6 2.67V20c0 3.5 2.56 6.78 6 7.58C23.44 26.78 26 23.5 26 20v-5.33L20 12z" fill="#3375BB"/>
+								</svg>
+								<span class="wallet-name">Trust Wallet</span>
+							</div>
+
+							<!-- Ledger -->
+							<div class="wallet-pill">
+								<svg class="wallet-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="40" height="40" rx="8" fill="#111"/>
+									<rect x="8" y="11" width="24" height="18" rx="3" fill="#fff" opacity="0.08"/>
+									<rect x="8" y="11" width="24" height="18" rx="3" stroke="#fff" stroke-width="1.5"/>
+									<path d="M13 20h8M13 24h14" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+									<rect x="21" y="16" width="6" height="5" rx="1.5" fill="#fff"/>
+								</svg>
+								<span class="wallet-name">Ledger</span>
+							</div>
+
+						</div>
+
+						<div class="text-center wallets-assurance">
+							<i class="bi-lock-fill"></i>
+							Non-custodial &nbsp;·&nbsp; Your keys, your NFTs &nbsp;·&nbsp; 256-bit encryption
+						</div>
+
+					</div>
+				</section><!-- #wallets end -->
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="page-section bg-color dark border-0 p-0">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap" style="padding: 80px 0">
+					<div class="row col-mb-50">
+
+						<div class="col-lg-3">
+							<div class="footer-logo">
+								<img src="images/logo-dark.png" alt="NiftVault Logo" style="max-height: 60px;"><br>
+								<small class="ls-3 text-uppercase" style="color: rgba(255,255,255,0.2);">&copy; 2026 NiftVault.</small>
+							</div>
+						</div>
+
+						<div class="col-lg-9">
+							<div class="row col-mb-50">
+
+								<div class="col-sm-6 col-md-4">
+									<div class="widget">
+										<h4>Contact Us</h4>
+										<div class="footer-content">
+											<abbr title="Phone Number"><strong>Phone:</strong></abbr> (03) 9012 4873<br>
+											<abbr title="Support"><strong>Support:</strong></abbr> (03) 9012 4800<br>
+											<abbr title="Email Address"><strong>Email:</strong></abbr> hello@niftvault.io
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-4">
+									<div class="widget">
+										<h4>Location</h4>
+										<div class="footer-content">
+											<address class="mb-0">
+												<strong>Headquarters:</strong><br>
+												Level 12, 120 Spencer Street<br>
+												Melbourne, VIC 3000<br>
+											</address>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-4">
+									<div class="widget">
+										<h4>Follow NiftVault</h4>
+										<div class="d-flex">
+											<a href="#" class="social-icon si-small bg-white bg-opacity-10 h-bg-x-twitter" aria-label="Follow NiftVault on X (Twitter)">
+												<i class="fa-brands fa-x-twitter"></i>
+												<i class="fa-brands fa-x-twitter"></i>
+											</a>
+											<a href="#" class="social-icon si-small bg-white bg-opacity-10 h-bg-instagram" aria-label="Follow NiftVault on Instagram">
+												<i class="bi-instagram"></i>
+												<i class="bi-instagram"></i>
+											</a>
+											<a href="#" class="social-icon si-small bg-white bg-opacity-10 h-bg-discord" aria-label="Join NiftVault on Discord">
+												<i class="fa-brands fa-discord"></i>
+												<i class="fa-brands fa-discord"></i>
+											</a>
+											<a href="#" class="social-icon si-small bg-white bg-opacity-10 h-bg-reddit" aria-label="Follow NiftVault on Reddit">
+												<i class="fa-brands fa-reddit-alien"></i>
+												<i class="fa-brands fa-reddit-alien"></i>
+											</a>
+											<a href="#" class="social-icon si-small bg-white bg-opacity-10 h-bg-youtube" aria-label="Subscribe to NiftVault on YouTube">
+												<i class="fa-brands fa-youtube"></i>
+												<i class="fa-brands fa-youtube"></i>
+											</a>
+											<a href="#" class="social-icon si-small bg-white bg-opacity-10 h-bg-telegram" aria-label="Join NiftVault on Telegram">
+												<i class="fa-brands fa-telegram"></i>
+												<i class="fa-brands fa-telegram"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+					<div class="w-100 text-center">
+						<p class="mb-3">&copy; 2026 NiftVault. All Rights Reserved. Built using <a class="text-white" href="https://1.envato.market/c/1309643/480739/4415?u=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F9228123" target="_blank" rel="noopener">Canvas Template</a></p>
+						<div class="copyright-links"><a href="#">Explore</a> / <a href="#">Collections</a> / <a href="#">Creators</a> / <a href="#">Stats</a> / <a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+					</div>
+				</div>
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

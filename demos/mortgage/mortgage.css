@@ -1,0 +1,590 @@
+/* ----------------------------------------------------------------
+	Canvas: Mortgage
+-----------------------------------------------------------------*/
+
+    :root { --cnvs-themecolor: #1a56db; --cnvs-themecolor-rgb: 26, 86, 219; }
+  
+
+          #header .trust-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #f0f7ff;
+            border: 1px solid #c7dff7;
+            border-radius: 20px;
+            padding: 5px 12px 5px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e6faf;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+          }
+          #header .trust-pill i {
+            font-size: 0.875rem;
+            color: #2a9d5c;
+          }
+          #header .header-misc-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            line-height: 1.2;
+          }
+          #header .header-misc-contact span {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+          }
+          #header .header-misc-contact a {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: #1e293b;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+          }
+          #header .header-misc-contact a:hover { color: #1e6faf; }
+          #header .btn-prequalify {
+            background: linear-gradient(135deg, #1e6faf 0%, #1557a0 100%);
+            color: #fff !important;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            padding: 9px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            white-space: nowrap;
+            letter-spacing: 0.02em;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(30,111,175,0.28);
+          }
+          #header .btn-prequalify:hover {
+            background: linear-gradient(135deg, #1557a0 0%, #0d3f7a 100%);
+            box-shadow: 0 4px 14px rgba(30,111,175,0.38);
+            transform: translateY(-1px);
+          }
+          .primary-menu > ul > li > a > div::after { display: none; }
+          @media (max-width: 991.98px) {
+            #header .trust-pill,
+            #header .header-misc-contact { display: none !important; }
+          }
+        
+
+    #hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+    #hero .hero-badge span.dot {
+      width: 7px;
+      height: 7px;
+      background: #4ade80;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    #hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    #hero .hero-sub {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+    #hero .btn-primary-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--cnvs-themecolor);
+      font-weight: 700;
+      font-size: 0.9375rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    #hero .btn-primary-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+      color: var(--cnvs-themecolor);
+    }
+    #hero .btn-outline-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    #hero .btn-outline-cta:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.85);
+      color: #fff;
+    }
+    #hero .trust-badges {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 2.25rem;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    #hero .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 10px 18px;
+    }
+    #hero .trust-badge-item .tbadge-icon {
+      font-size: 1.2rem;
+      color: #facc15;
+    }
+    #hero .trust-badge-item .tbadge-icon.blue {
+      color: #93c5fd;
+    }
+    #hero .trust-badge-item .tbadge-icon.green {
+      color: #4ade80;
+    }
+    #hero .trust-badge-item strong {
+      display: block;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    #hero .trust-badge-item span {
+      display: block;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.72rem;
+      font-weight: 500;
+    }
+    #hero .hero-image-wrap {
+      position: relative;
+    }
+    #hero .hero-image-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      display: block;
+    }
+    #hero .rate-card {
+      position: absolute;
+      bottom: -20px;
+      left: -24px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+      min-width: 230px;
+    }
+    #hero .rate-card .rate-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cnvs-contrast-500);
+      margin-bottom: 4px;
+    }
+    #hero .rate-card .rate-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--cnvs-contrast-900);
+      line-height: 1;
+    }
+    #hero .rate-card .rate-desc {
+      font-size: 0.78rem;
+      color: var(--cnvs-contrast-600);
+      margin-top: 3px;
+    }
+    #hero .rate-card .rate-trend {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #dcfce7;
+      color: #16a34a;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 50px;
+      margin-top: 10px;
+    }
+    #hero .rate-card .rate-trend svg {
+      width: 13px;
+      height: 13px;
+    }
+    @media (max-width: 991px) {
+      #hero { padding: 80px 0 60px; }
+      #hero .rate-card { left: 12px; bottom: 12px; }
+      #hero .hero-image-wrap { margin-top: 3rem; }
+    }
+  
+
+    .loan-card:hover {
+      border-top-color: var(--cnvs-themecolor) !important;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10) !important;
+    }
+    .loan-card:hover a i.bi-arrow-right {
+      transform: translateX(3px);
+      transition: transform 0.2s ease;
+    }
+  
+
+    #calculator .calc-card {
+      background: var(--cnvs-contrast-0);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+    #calculator .input-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--cnvs-contrast-600);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    #calculator .range-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    #calculator .calc-range {
+      flex: 1;
+      -webkit-appearance: none;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--cnvs-contrast-200);
+      outline: none;
+      cursor: pointer;
+    }
+    #calculator .calc-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--cnvs-themecolor);
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(var(--cnvs-themecolor-rgb), 0.4);
+    }
+    #calculator .calc-range::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--cnvs-themecolor);
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(var(--cnvs-themecolor-rgb), 0.4);
+    }
+    #calculator .calc-text-input {
+      border: 1.5px solid var(--cnvs-contrast-300);
+      border-radius: 8px;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--cnvs-contrast-900);
+      width: 110px;
+      text-align: right;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #calculator .calc-text-input:focus {
+      border-color: var(--cnvs-themecolor);
+    }
+    #calculator .calc-number-input {
+      border: 1.5px solid var(--cnvs-contrast-300);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--cnvs-contrast-900);
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #calculator .calc-number-input:focus {
+      border-color: var(--cnvs-themecolor);
+    }
+    #calculator .term-btn-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+    #calculator .term-btn {
+      flex: 1;
+      padding: 0.5rem 0;
+      border: 1.5px solid var(--cnvs-contrast-300);
+      border-radius: 8px;
+      background: var(--cnvs-contrast-0);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--cnvs-contrast-600);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    #calculator .term-btn:hover {
+      border-color: var(--cnvs-themecolor);
+      color: var(--cnvs-themecolor);
+    }
+    #calculator .term-btn.active {
+      background: var(--cnvs-themecolor);
+      border-color: var(--cnvs-themecolor);
+      color: #fff;
+    }
+    #calculator .result-card {
+      background: linear-gradient(135deg, rgba(var(--cnvs-themecolor-rgb), 0.06) 0%, rgba(var(--cnvs-themecolor-rgb), 0.02) 100%);
+      border: 1.5px solid rgba(var(--cnvs-themecolor-rgb), 0.2);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+    #calculator .payment-amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--cnvs-themecolor);
+      line-height: 1.1;
+    }
+    #calculator .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.35rem 0;
+      border-bottom: 1px dashed var(--cnvs-contrast-200);
+      font-size: 0.875rem;
+    }
+    #calculator .breakdown-row:last-child {
+      border-bottom: none;
+    }
+    #calculator .breakdown-label {
+      color: var(--cnvs-contrast-600);
+    }
+    #calculator .breakdown-value {
+      font-weight: 700;
+      color: var(--cnvs-contrast-900);
+    }
+    #calculator .donut-wrap {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      margin: 0 auto;
+    }
+    #calculator .donut-chart {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: conic-gradient(
+        var(--cnvs-themecolor) 0deg var(--donut-principal, 180deg),
+        #93c5fd var(--donut-principal, 180deg) var(--donut-interest, 270deg),
+        #94a3b8 var(--donut-interest, 270deg) var(--donut-tax, 315deg),
+        #cbd5e1 var(--donut-tax, 315deg) 360deg
+      );
+      transition: all 0.5s ease;
+    }
+    #calculator .donut-hole {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130px;
+      height: 130px;
+      background: var(--cnvs-contrast-0);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    #calculator .donut-center-label {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--cnvs-contrast-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    #calculator .donut-center-value {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--cnvs-contrast-900);
+      line-height: 1.2;
+    }
+    #calculator .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    #calculator .amort-table {
+      width: 100%;
+      font-size: 0.8125rem;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    #calculator .amort-table thead th {
+      font-weight: 700;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--cnvs-contrast-500);
+      padding: 0.5rem 0.75rem;
+      border-bottom: 2px solid var(--cnvs-contrast-200);
+      background: var(--cnvs-contrast-0);
+    }
+    #calculator .amort-table tbody td {
+      padding: 0.5rem 0.75rem;
+      color: var(--cnvs-contrast-700);
+      border-bottom: 1px solid var(--cnvs-contrast-100);
+    }
+    #calculator .amort-table tbody tr:hover td {
+      background: rgba(var(--cnvs-themecolor-rgb), 0.03);
+    }
+    #calculator .amort-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--cnvs-themecolor);
+    }
+    #calculator .amort-table tbody td:last-child {
+      font-weight: 600;
+      color: var(--cnvs-contrast-900);
+    }
+    #calculator .right-card {
+      background: var(--cnvs-contrast-0);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+    #calculator .section-sub-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cnvs-themecolor);
+    }
+  
+
+      .process-timeline {
+        position: relative;
+      }
+      .process-timeline::before {
+        content: '';
+        position: absolute;
+        top: 44px;
+        left: calc(12.5% - 1px);
+        right: calc(12.5% - 1px);
+        height: 2px;
+        border-top: 2px dashed var(--cnvs-themecolor);
+        opacity: 0.45;
+        z-index: 0;
+      }
+      .process-step {
+        position: relative;
+        z-index: 1;
+      }
+      .process-number {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: var(--cnvs-themecolor);
+        color: #fff;
+        font-size: 1.875rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.25rem;
+        box-shadow: 0 8px 24px rgba(var(--cnvs-themecolor-rgb), 0.28);
+        flex-shrink: 0;
+      }
+      .process-step-title {
+        font-size: 1.0625rem;
+        font-weight: 700;
+        color: var(--cnvs-contrast-900);
+        margin-bottom: 0.75rem;
+      }
+      .process-step-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .process-step-list li {
+        font-size: 0.9rem;
+        color: var(--cnvs-contrast-600);
+        padding: 0.25rem 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        line-height: 1.45;
+      }
+      .process-step-list li::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--cnvs-themecolor);
+        margin-top: 0.45em;
+        flex-shrink: 0;
+      }
+      .process-step-card {
+        background: var(--cnvs-contrast-100);
+        border-radius: 14px;
+        padding: 1.5rem 1.25rem;
+        border: 1px solid var(--cnvs-contrast-200);
+        height: 100%;
+      }
+      .process-cta-banner {
+        background: var(--cnvs-themecolor);
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+      }
+      @media (max-width: 991.98px) {
+        .process-timeline::before {
+          display: none;
+        }
+        .process-step + .process-step {
+          margin-top: 1.5rem;
+        }
+        .process-step-card-inner {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.25rem;
+        }
+        .process-number {
+          width: 60px;
+          height: 60px;
+          font-size: 1.375rem;
+          margin: 0;
+          flex-shrink: 0;
+        }
+      }
+      @media (min-width: 992px) {
+        .process-step-card-inner {
+          text-align: center;
+        }
+        .process-step-list li {
+          text-align: left;
+        }
+      }
+    

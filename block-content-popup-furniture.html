@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Preview the Canvas furniture popup banner block — a modern onload modal showcasing premium furniture with elegant typography and custom animations.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&family=Playfair+Display&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Furniture Popup Banner Demo | Canvas</title>
+
+    <style>
+
+        :root {
+            --cnvs-themecolor: #b68973;
+            --color-1: #faf3e0;
+            --color-2: #1e212d;
+            --color-3: #eabf9f;
+        }
+
+        .mfp-fade.mfp-bg.mfp-ready {
+            opacity: 0.85;
+        }
+
+        .font-display {
+            font-family: 'PlayFair Display', Serif !important;
+        }
+
+        .button-half::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background-color: var(--color-3);
+            z-index: 0;
+            transition: width .3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        }
+
+        .button-half:hover::before {
+            width: 100%;
+        }
+
+        .button-half span {
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            color: var(--color-2);
+        }
+
+        .border-center-right::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-2);
+            z-index: 0;
+        }
+
+        .contact-info a i {
+            --cnvs-square-size: 1.625rem;
+            line-height: var(--cnvs-square-size);
+        }
+    </style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#b68973">
+	<link rel="canonical" href="block-content-popup-furniture.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-popup-furniture.html">
+	<meta property="og:title" content="Furniture Popup Banner Demo | Canvas">
+	<meta property="og:description" content="Preview the Canvas furniture popup banner block — a modern onload modal showcasing premium furniture with elegant typography and custom animations.">
+	<meta property="og:image" content="images/blocks/preview/popups/furniture/bg.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Furniture Popup Banner Demo | Canvas">
+	<meta name="twitter:description" content="Preview the Canvas furniture popup banner block — a modern onload modal showcasing premium furniture with elegant typography and custom animations.">
+	<meta name="twitter:image" content="images/blocks/preview/popups/furniture/bg.jpg">
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Canvas",
+      "url": "block-content-popup-furniture.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Furniture Popup Banner Demo | Canvas",
+      "url": "block-content-popup-furniture.html",
+      "description": "Preview the Canvas furniture popup banner block \u2014 a modern onload modal showcasing premium furniture with elegant typography and custom animations.",
+      "image": "images/blocks/preview/popups/furniture/bg.jpg"
+    }
+  ]
+}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+                <div class="container mw-md">
+
+					<h2 class="fw-bold display-5 mb-5">Furniture Banner</h2>
+
+                    <p class="text-larger mb-0">Our furniture collection brings together timeless craftsmanship and contemporary design to transform any living space into a refined environment. Each item is selected for durability, comfort, and visual harmony. From statement sofas to understated accent tables, every detail reflects our commitment to quality. Discover how elegant living begins with the right foundations.<br><br>
+
+                    Natural materials sit at the heart of everything we craft — from solid oak dining tables to hand-stitched leather armchairs that develop character over time. We partner with skilled artisans and responsible suppliers so every piece meets our exacting standards. Sustainability guides our sourcing, with reclaimed wood and low-VOC finishes used throughout.<br><br>
+
+                    Our showroom is designed to inspire, inviting you to touch, sit, and imagine each piece in your own space. Knowledgeable consultants help you build a cohesive interior scheme, whether you are starting fresh or refreshing a single room. We offer complimentary design consultations and 3D planning tools to simplify decorating.<br><br>
+
+                    Our bedroom range pairs upholstered bed frames with smart wardrobes and versatile bedside tables. In the living room, modular sofa systems adapt to any layout, and our dining collection ranges from intimate bistro tables to grand eight-person centrepieces. Every product can be customized in fabric, finish, and configuration to suit your style.<br><br>
+
+                    Seasonal collections debut each spring and autumn, featuring limited-edition colorways and exclusive collaborations with leading European designers. Join our newsletter for early access, private previews, and event invitations. Our loyalty program rewards repeat customers with priority delivery and exclusive discounts.<br><br>
+
+                    Browse the full catalogue online, where product pages include material specs, care guides, and room photography. We accept all major payment methods including interest-free installment plans. Standard delivery is complimentary, and our returns policy ensures that if a piece does not fit your space, we collect it and issue a full refund.</p>
+
+				</div>
+
+				<div class="d-flex align-items-center justify-content-center min-vh-100">
+					<a href="#block-modal-food" data-lightbox="inline" class="button button-xlarge rounded-pill text-dark bg-color text-transform-none ls-0 px-6 py-3">Onload Popup</a>
+				</div>
+
+				<div class="modal-on-load" data-target="#block-modal-food"></div>
+
+				<!-- Modal -->
+				<div class="modal1 mfp-hide" id="block-modal-food">
+					<div class="modal-dialog modal-dialog-centered mw-lg" style="max-width: 100%;">
+						<div class="modal-content border-0" style="background: url('images/blocks/preview/popups/furniture/bg.jpg') no-repeat 35% 50%; background-size: cover;">
+
+							<div class="row align-items-center p-5">
+                                <div class="col-lg-5 col-md-6 col-sm-9">
+                                    <h3 class="font-display mb-0 border-center-right position-relative"><span class="nocolor z-1 position-relative pe-2" style="background-color: var(--color-1);">Simple &amp; Modern</span></h3>
+                                    <h3 class="display-2 fw-bold font-display">Furniture</h3>
+                                    <p>Handcrafted from premium materials, our furniture range effortlessly blends timeless style with everyday practicality.</p>
+
+                                    <a href="#" class="button text-uppercase ls-1 button-half bg-transparent py-3 ms-0 mb-3"><span>Order Now <i class="bi-arrow-right m-0"></i></span></a>
+
+                                    <div class="d-flex flex-column mt-4 contact-info">
+                                        <a href="#" class="text-smaller"><i class="bi-telephone-outbound square text-center rounded bg-color text-white me-2 mb-1"></i> 00 123 456 789</a>
+                                        <a href="#" class="text-smaller"><i class="bi-globe square text-center rounded bg-color text-white me-2"></i> semicolonweb.com</a>
+                                    </div>
+                                </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+
+</body>
+</html>

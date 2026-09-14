@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Browse the Canvas video gallery featuring hover-activated and autoplay video blocks. Discover stunning, responsive video layouts for engaging modern websites.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="one-page/onepage.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Video Gallery | Canvas</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-content-gallery-6.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-gallery-6.html">
+	<meta property="og:title" content="Video Gallery | Canvas">
+	<meta property="og:description" content="Browse the Canvas video gallery featuring hover-activated and autoplay video blocks. Discover stunning, responsive video layouts for engaging modern websites.">
+	<meta property="og:image" content="one-page/images/videos/1.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Video Gallery | Canvas">
+	<meta name="twitter:description" content="Browse the Canvas video gallery featuring hover-activated and autoplay video blocks. Discover stunning, responsive video layouts for engaging modern websites.">
+	<meta name="twitter:image" content="one-page/images/videos/1.jpg">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "block-content-gallery-6.html"
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "Video Gallery",
+				"url": "block-content-gallery-6.html",
+				"image": "one-page/images/videos/1.jpg",
+				"description": "Browse the Canvas video gallery featuring hover-activated and autoplay video blocks. Discover stunning, responsive video layouts for engaging modern websites.",
+				"creator": {
+					"@type": "Organization",
+					"name": "Canvas",
+					"address": "123 Example Avenue",
+					"telephone": "+1-555-123-4567"
+				}
+			}
+		]
+	}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="row justify-content-center mb-6">
+						<div class="col-xl-6 col-lg-8 text-center">
+							<h3 class="h1 fw-bold mb-4">Video Gallery</h3>
+							<p>Explore our curated video gallery showcasing stunning visual content across multiple formats. From immersive hover-activated previews to autoplay showcases, each video is crafted to engage and inspire your audience.</p>
+						</div>
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="row align-items-stretch text-center dark mx-0">
+
+						<div class="col-md-6 videoplay-on-hover overflow-hidden rounded-3 mb-3 mb-md-0" style="min-height: 500px;">
+							<div class="vertical-middle text-center">
+								<h3 class="mb-0 ls-1 font-body h2">Play Video On Hover</h3>
+							</div>
+							<div class="video-wrap no-placeholder position-absolute w-100 h-100 rounded-3 mx-md-3" style="top: 0; left:0;">
+								<video id="slide-video" poster="one-page/images/videos/1.jpg" preload="auto" loop muted playsinline>
+									<source src='one-page/images/videos/1.webm' type='video/webm'>
+									<source src='one-page/images/videos/1.mp4' type='video/mp4'>
+								</video>
+								<div class="video-overlay" style="background: rgba(0,0,0,0.2);"></div>
+							</div>
+						</div>
+						<div class="col-md-6 overflow-hidden rounded-3" style="min-height: 500px;">
+							<div class="vertical-middle text-center">
+								<h3 class="mb-0 ls-1 font-body h2">Play Video On Load</h3>
+							</div>
+							<div class="video-wrap no-placeholder position-absolute w-100 h-100 rounded-3 mx-md-3" style="top: 0; left:0;">
+								<video id="slide-video" poster="one-page/images/videos/3.jpg" autoplay preload="auto" loop muted playsinline>
+									<source src='one-page/images/videos/3.webm' type='video/webm'>
+									<source src='one-page/images/videos/3.mp4' type='video/mp4'>
+								</video>
+								<div class="video-overlay" style="background: rgba(0,0,0,0.3);"></div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('.videoplay-on-hover').hover( function(){
+				if( jQuery(this).find('video').length > 0 ) {
+					jQuery(this).find('video').get(0).play();
+				}
+			}, function(){
+				if( jQuery(this).find('video').length > 0 ) {
+					jQuery(this).find('video').get(0).pause();
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

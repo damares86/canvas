@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore Canvas carousel tab components in dark mode — scrollable navigation with smooth tab switching for modern, responsive web layouts.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Carousel Tabs Dark | Canvas</title>
+
+	<style>
+		#carousel-tabs-dark.tabs,
+		#carousel-tabs-dark .tab-content {
+			--cnvs-tab-padding-width: 0;
+			--bs-nav-link-padding-y: .75rem;
+			--bs-nav-link-font-size: .9125rem;
+			--bs-nav-link-font-weight:	400;
+			--bs-nav-tabs-border-width: 0;
+			--bs-nav-link-color: var(--cnvs-contrast-1000);
+			--bs-nav-link-hover-color: var(--cnvs-contrast-900);
+			--bs-nav-tabs-link-active-bg: rgba(var(--bs-danger-rgb), 1);
+			--bs-nav-tabs-link-active-color: var(--bs-light);
+			--cnvs-tabs-bg-color:rgba(var(--cnvs-contrast-rgb), 0.04);
+		}
+
+		#carousel-tabs-dark .nav-link:not(.active) {
+			background-color: rgba(var(--cnvs-contrast-rgb), 0.04);
+		}
+
+		#carousel-tabs-dark .nav-link {
+			border-radius: var(--bs-border-radius);
+			font-weight: 500;
+		}
+
+		#carousel-tabs-dark .nav-link.active {
+			font-weight: 600;
+		}
+
+		.carousel-blur-left::before,
+		.carousel-blur-right::after {
+			--cnvs-carousel-blur-size: 80px;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: auto;
+			width: var(--cnvs-carousel-blur-size);
+			height: 100%;
+			z-index: 1;
+			background: linear-gradient(to right, var(--cnvs-body-bg) 50%, transparent);
+		}
+
+		.carousel-blur-right::after {
+			left: auto;
+			right: 0;
+			background: linear-gradient(to left, var(--cnvs-body-bg) 50%, transparent);
+		}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-carousel-tabs-dark.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-carousel-tabs-dark.html">
+	<meta property="og:title" content="Carousel Tabs Dark | Canvas">
+	<meta property="og:description" content="Explore Canvas carousel tab components in dark mode — scrollable navigation with smooth tab switching for modern, responsive web layouts.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Carousel Tabs Dark | Canvas">
+	<meta name="twitter:description" content="Explore Canvas carousel tab components in dark mode — scrollable navigation with smooth tab switching for modern, responsive web layouts.">
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Canvas",
+      "url": "block-carousel-tabs-dark.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Carousel Tabs Dark | Canvas",
+      "url": "block-carousel-tabs-dark.html",
+      "description": "Explore Canvas carousel tab components in dark mode \u2014 scrollable navigation with smooth tab switching for modern, responsive web layouts.",
+      "inLanguage": "en-US"
+    }
+  ]
+}
+	</script>
+</head>
+
+<body class="stretched dark">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap min-vh-100">
+
+				<div class="container mw-md pt-6">
+
+					<div id="carousel-tabs-dark" class="owl-carousel owl-nav-hover-fixed carousel-widget nav tabs nav-tabs mb-3 carousel-blur-right nav-fill" data-pagi="false" data-nav="false" role="tablist">
+
+						<div class="nav-item">
+							<button class="nav-link active" id="canvas-marketing-tab" data-bs-toggle="pill" data-bs-target="#marketing" type="button" role="tab" aria-controls="canvas-marketing" aria-selected="true">Marketing</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-design-tab" data-bs-toggle="pill" data-bs-target="#design" type="button" role="tab" aria-controls="canvas-design" aria-selected="false">Design</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-development-tab" data-bs-toggle="pill" data-bs-target="#development" type="button" role="tab" aria-controls="canvas-development" aria-selected="false">Development</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-brands-tab" data-bs-toggle="pill" data-bs-target="#brands" type="button" role="tab" aria-controls="canvas-brands" aria-selected="false">Brands</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-seo-tab" data-bs-toggle="pill" data-bs-target="#seo" type="button" role="tab" aria-controls="canvas-seo" aria-selected="false">SEO</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-ecommerce-tab" data-bs-toggle="pill" data-bs-target="#ecommerce" type="button" role="tab" aria-controls="canvas-ecommerce" aria-selected="false">E-Commerce</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-uiux-tab" data-bs-toggle="pill" data-bs-target="#uiux" type="button" role="tab" aria-controls="canvas-uiux" aria-selected="false">UI/UX</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-events-tab" data-bs-toggle="pill" data-bs-target="#events" type="button" role="tab" aria-controls="canvas-events" aria-selected="false">Events</button>
+						</div>
+
+					</div>
+
+					<div id="canvas-TabContent" class="tab-content mt-3 bg-secondary rounded-6 py-4 px-5" style="--bs-bg-opacity: 0.06">
+						<div class="tab-pane fade show active" id="marketing" role="tabpanel" aria-labelledby="canvas-marketing-tab"
+							tabindex="0">
+							<h2 class="mb-4">Marketing</h2>
+							<p class="mb-0">Our marketing solutions help businesses reach the right audience at the right time. From targeted campaigns and content strategy to analytics and conversion optimization, we provide data-driven results. Whether you're launching a new product or scaling an existing brand, our team crafts compelling strategies that drive measurable growth and long-term customer engagement.</p>
+						</div>
+						<div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="canvas-design-tab" tabindex="0">
+							<h2 class="mb-4">Design</h2>
+							<p class="mb-0">Great design is the foundation of every successful brand. Our design team combines creativity with strategic thinking to produce visuals that communicate clearly and resonate with your target audience. From brand identity systems and UI components to landing pages, marketing collateral, and motion graphics, every pixel is crafted with intent. We follow a collaborative process — discovery, ideation, prototyping, and refinement — ensuring the final output aligns with your goals and timeline. Our designers stay current with the latest trends while building timeless assets that stand out in a crowded and competitive market.</p>
+						</div>
+						<div class="tab-pane fade" id="development" role="tabpanel" aria-labelledby="canvas-development-tab" tabindex="0">
+							<h2 class="mb-4">Development</h2>
+							<p class="mb-0">Our development practice bridges the gap between design and functionality. We build fast, accessible, and scalable web applications using modern frameworks and best practices. Whether you need a custom CMS integration, a complex API-driven interface, or a fully responsive front-end, our engineers deliver clean code that performs under real-world conditions. Performance optimization, cross-browser compatibility, security, and long-term maintainability are core priorities in every project we ship.</p>
+						</div>
+						<div class="tab-pane fade" id="brands" role="tabpanel" aria-labelledby="pills-brands-tab" tabindex="0">
+							<h2 class="mb-4">Brands</h2>
+							<p class="mb-0">Building a strong brand means establishing trust, recognition, and emotional connection with your audience. We work with companies at every stage — from early-stage startups defining their identity to established organizations refreshing their visual presence. Our brand strategy process includes competitive analysis, audience research, messaging frameworks, and visual identity design. The result is a cohesive brand system with clear guidelines that empower your team to communicate consistently across every channel — from digital campaigns and social media to print materials and packaging — ensuring a unified impression wherever customers encounter your business.</p>
+						</div>
+						<div class="tab-pane fade" id="seo" role="tabpanel" aria-labelledby="pills-seo-tab" tabindex="0">
+							<h2 class="mb-4">SEO</h2>
+							<p class="mb-0">Search engine optimization is a long-term investment in organic visibility and sustainable traffic growth. Our SEO services cover technical audits, keyword research, on-page optimization, link building, and content strategy — all tailored to your industry and competitive landscape. We use proven methodologies and fully transparent reporting to help you rank for the terms that matter most to your business. Whether you're targeting local customers or a global audience, our team builds a customized strategy grounded in data and continuously refined as search algorithms evolve and your competitive market conditions change over time.</p>
+						</div>
+						<div class="tab-pane fade" id="ecommerce" role="tabpanel" aria-labelledby="pills-ecommerce-tab" tabindex="0">
+							<h2 class="mb-4">Ecommerce</h2>
+							<p class="mb-0">A successful e-commerce presence goes beyond a product catalog. It requires intuitive navigation, fast load times, seamless checkout flows, and trust signals that convert browsers into buyers. Our e-commerce expertise spans platform selection, custom theme development, payment gateway integration, and post-launch optimization. We analyze user behavior, reduce cart abandonment, and implement merchandising strategies that increase average order value. From small boutiques to high-volume online retailers, we help brands build online stores that perform reliably and scale with their growth plans and evolving inventory needs.</p>
+						</div>
+						<div class="tab-pane fade" id="uiux" role="tabpanel" aria-labelledby="pills-uiux-tab" tabindex="0">
+							<h2 class="mb-4">UIUX</h2>
+							<p class="mb-0">Exceptional user experiences are built on a foundation of research, empathy, and iteration. Our UI/UX practice begins with understanding your users' needs, goals, and pain points through interviews, usability testing, and behavioral analysis. We translate those insights into clear information architectures, wireframes, and interactive prototypes before a single line of code is written. The result is an interface that feels effortless to use — reducing friction, building confidence, and encouraging users to take meaningful actions that advance both their needs and your business objectives across web and mobile platforms.</p>
+						</div>
+						<div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="pills-events-tab" tabindex="0">
+							<h2 class="mb-4">Events</h2>
+							<p class="mb-0">From intimate client workshops to large-scale industry conferences, we help brands create events that leave a lasting impression on every attendee. Our dedicated events team manages every aspect of the planning process — venue selection, speaker coordination, registration systems, digital promotion, and on-site logistics. We integrate live streaming and hybrid formats to significantly extend your reach beyond the physical room. Whether your goal is thought leadership, community building, or qualified lead generation, we design event experiences that genuinely reflect your brand values and deliver measurable outcomes for sponsors, attendees, and organizers alike.</p>
+						</div>
+					</div>
+
+					<div class="text-center mt-5">
+						<a href="block-carousel-tabs.html" class="btn btn-light">Light Mode</a>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery('#carousel-tabs-dark').owlCarousel({
+			loop: false,
+			items: 6,
+			margin: 15,
+			dots: false,
+			nav: false,
+			responsiveClass: true,
+			autoplay: false,
+			responsive: {
+				0: {
+					items: 2
+
+				},
+				576: {
+					items: 2
+
+				},
+				768: {
+					items: 3
+
+				},
+				992: {
+					items: 5
+
+				},
+				1200: {
+					items: 6
+
+				}
+			}, onDragged: onChangedCallback
+		});
+
+		function onChangedCallback(event) {
+			if (jQuery(".owl-carousel .owl-item:nth-child(1)").hasClass("active")) {
+				jQuery("#carousel-tabs-dark").removeClass("carousel-blur-left");
+			} else if (jQuery(".owl-carousel .owl-item:last-child").hasClass("active")) {
+				jQuery("#carousel-tabs-dark").removeClass("carousel-blur-right");
+			} else {
+				jQuery('#carousel-tabs-dark').addClass("carousel-blur-right");
+				jQuery('#carousel-tabs-dark').addClass("carousel-blur-left");
+			}
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore Canvas's rotate-on-scroll demo featuring circular typography that animates as users scroll, built with the Bootstrap Canvas template.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Rotate onScroll | Canvas</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-misc-rotate-text.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-misc-rotate-text.html">
+	<meta property="og:title" content="Rotate onScroll | Canvas">
+	<meta property="og:description" content="Explore Canvas's rotate-on-scroll demo featuring circular typography that animates as users scroll, built with the Bootstrap Canvas template.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Rotate onScroll | Canvas">
+	<meta name="twitter:description" content="Explore Canvas's rotate-on-scroll demo featuring circular typography that animates as users scroll, built with the Bootstrap Canvas template.">
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "CreativeWork",
+	  "name": "Rotate onScroll Circular Text Effect",
+	  "url": "block-misc-rotate-text.html",
+	  "description": "A circular text element that rotates as the user scrolls, powered by the CircleType library and Canvas scroll-percent CSS variable.",
+	  "creator": {
+	    "@type": "Organization",
+	    "name": "Canvas",
+	    "url": "index.html"
+	  }
+	}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap bg-light overflow-visible scroll-detect">
+				<div class="container">
+
+					<div class="min-vh-25"></div>
+
+					<h3>Rotate Circular Text On Scroll Effect</h3>
+
+					<div class="circular-text position-fixed" style="min-width: 300px; max-height: 300px; top: 20px; right: 20px;">
+						<div>
+							<h4 class="rotated-text text-uppercase m-0 all-ts" style="--cnvs-transitions:.1s linear; transform:rotate(calc(3.6deg * var(--cnvs-scroll-percent)));">
+								&nbsp;Corporate | Portfolio | Business | Real Estate | Medical | Construction |&nbsp;
+							</h4>
+							<h2 class="position-absolute top-50 start-50 translate-middle mb-0">Demos</h2>
+						</div>
+					</div>
+
+					<div style="height: 1000px;"></div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		var circularText = document.getElementsByClassName("rotated-text");
+
+		[].forEach.call( circularText, function(element) {
+			var circleType = new CircleType( element ).radius(80);
+		});
+	</script>
+
+</body>
+</html>

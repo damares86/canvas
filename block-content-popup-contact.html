@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Canvas contact popup block: a stylish lightbox modal with an inline contact form, designed to capture leads and convert visitors without page redirects.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Contact Popup Block | Canvas</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-content-popup-contact.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-popup-contact.html">
+	<meta property="og:title" content="Contact Popup Block | Canvas">
+	<meta property="og:description" content="Canvas contact popup block: a stylish lightbox modal with an inline contact form, designed to capture leads and convert visitors without page redirects.">
+	<meta property="og:image" content="images/blocks/preview/popups/popup-contact.svg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Contact Popup Block | Canvas">
+	<meta name="twitter:description" content="Canvas contact popup block: a stylish lightbox modal with an inline contact form, designed to capture leads and convert visitors without page redirects.">
+	<meta name="twitter:image" content="images/blocks/preview/popups/popup-contact.svg">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Contact Popup Block | Canvas",
+		"url": "block-content-popup-contact.html",
+		"description": "Canvas contact popup block — a lightbox modal with an inline contact form, ideal for converting visitors into leads without leaving the page.",
+		"image": "images/blocks/preview/popups/popup-contact.svg",
+		"isPartOf": {
+			"@type": "WebSite",
+			"name": "Canvas",
+			"url": "."
+		}
+	}
+	</script>
+</head>
+
+<body class="stretched ">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="d-flex align-items-center justify-content-center min-vh-100">
+					<a href="#block-modal-contact" data-lightbox="inline" class="button button-xlarge rounded-pill bg-primary text-transform-none ls-0 px-6 py-3">Contact Us</a>
+				</div>
+
+				<div class="modal-on-load" data-target="#block-modal-contact"></div>
+
+				<!-- Modal -->
+				<div class="modal1 mfp-hide" id="block-modal-contact">
+					<div class="modal-dialog modal-dialog-centered modal-lg">
+						<div class="modal-content bg-white rounded">
+
+							<div class="row m-0">
+								<div class="col-lg-6 d-flex align-items-center bg-light">
+									<img src="images/blocks/preview/popups/popup-contact.svg" alt="Contact us illustration for the popup contact form" class="">
+								</div>
+								<div class="col-lg-6 p-5">
+									<h3 class="mb-3">Do you want to Contact with us?</h3>
+									<p class="mb-4 op-07">We're happy to help. Send us your message.</p>
+									<div class="form-widget">
+
+										<div class="form-result"></div>
+
+										<form class="mb-0" id="block-contactform" name="block-contactform" action="include/form.php" method="post">
+
+											<div class="form-process">
+												<div class="css3-spinner">
+													<div class="css3-spinner-scaler"></div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-12 form-group">
+													<label class="text-transform-none ls-0 fw-medium mb-1" for="block-contactform-name">Name <small>*</small></label>
+													<input type="text" id="block-contactform-name" name="block-contactform-name" value="" class="form-control required">
+												</div>
+
+												<div class="col-12 form-group">
+													<label class="text-transform-none ls-0 fw-medium mb-1" for="block-contactform-email">Email <small>*</small></label>
+													<input type="email" id="block-contactform-email" name="block-contactform-email" value="" class="required email form-control">
+												</div>
+
+												<div class="col-12 form-group">
+													<label class="text-transform-none ls-0 fw-medium mb-1" for="block-contactform-message">Message <small>*</small></label>
+													<textarea class="required form-control" id="block-contactform-message" name="block-contactform-message" rows="3" cols="30"></textarea>
+												</div>
+
+												<div class="col-12 form-group d-none">
+													<input type="text" id="block-contactform-botcheck" name="block-contactform-botcheck" value="" class="form-control">
+												</div>
+
+												<div class="col-12 d-flex justify-content-end">
+													<button class="btn w-100 btn-primary py-2 mx-0" type="submit" id="block-contactform-submit" name="block-contactform-submit" value="submit">Send Message</button>
+												</div>
+											</div>
+
+											<input type="hidden" name="prefix" value="block-contactform-">
+
+										</form>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery(document).ready( function(){
+			jQuery('#block-contactform').on( 'formSubmitSuccess', function(){
+				setTimeout(function(){
+ 					jQuery('#block-modal-contact').magnificPopup('close');
+  				}, 500);
+			});
+		});
+	</script>
+
+</body>
+</html>

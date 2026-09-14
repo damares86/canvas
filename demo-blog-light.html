@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore featured stories, travel guides, and trending topics on the Canvas Blog Light demo, a clean, responsive Bootstrap layout for modern editorial websites.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Bitter:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+    <!-- Niche Demos -->
+	<link rel="stylesheet" href="demos/blog-light/blog-light.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Blog Light - Latest Stories & Guides | Canvas</title>
+
+	<style>
+	body.device-touch {
+		background-attachment: scroll !important;
+	}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="demo-blog-light.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="demo-blog-light.html">
+	<meta property="og:title" content="Blog Light - Latest Stories &amp; Guides | Canvas">
+	<meta property="og:description" content="Explore featured stories, travel guides, and trending topics on the Canvas Blog Light demo, a clean, responsive Bootstrap layout for modern editorial websites.">
+	<meta property="og:image" content="demos/blog-editorial/images/gallery/1.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Blog Light - Latest Stories &amp; Guides | Canvas">
+	<meta name="twitter:description" content="Explore featured stories, travel guides, and trending topics on the Canvas Blog Light demo, a clean, responsive Bootstrap layout for modern editorial websites.">
+	<meta name="twitter:image" content="demos/blog-editorial/images/gallery/1.jpg">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"@id": "demo-blog-light.html#website",
+				"url": "demo-blog-light.html",
+				"name": "Canvas",
+				"description": "Explore featured stories, travel guides, and trending topics on the Canvas Blog Light demo, a clean, responsive Bootstrap layout for modern editorial websites."
+			},
+			{
+				"@type": "Blog",
+				"@id": "demo-blog-light.html#blog",
+				"url": "demo-blog-light.html",
+				"name": "Blog Light - Latest Stories & Guides",
+				"description": "Explore featured stories, travel guides, and trending topics on the Canvas Blog Light demo, a clean, responsive Bootstrap layout for modern editorial websites.",
+				"image": "demos/blog-editorial/images/gallery/1.jpg",
+				"publisher": {
+					"@type": "Organization",
+					"name": "Canvas",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "images/logo.png"
+					}
+				},
+				"blogPost": [
+					{
+						"@type": "BlogPosting",
+						"headline": "The Best Destinations in Asia for Solo Travel",
+						"image": "demos/blog-editorial/images/gallery/1.jpg",
+						"url": "blog-single.html"
+					},
+					{
+						"@type": "BlogPosting",
+						"headline": "A Teeming Manila Slum Chafes Under Lockdown",
+						"image": "demos/blog-editorial/images/gallery/2.jpg",
+						"url": "blog-single.html"
+					},
+					{
+						"@type": "BlogPosting",
+						"headline": "Believe In Your Travel Skills But Never Stop Improving",
+						"image": "demos/blog-editorial/images/gallery/3.jpg",
+						"url": "blog-single.html"
+					}
+				]
+			}
+		]
+	}
+	</script>
+</head>
+
+<body style="background: url('images/blocks/preview/schedule.jpg') repeat top center / cover; background-attachment: fixed;">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="border-0 header-size-custom no-sticky" data-sticky-shrink="false">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="col col-sm-auto">
+							<a href="index.html">
+								<img class="logo-default" srcset="images/logo.png, images/logo@2x.png 2x" src="images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="images/logo-dark.png, images/logo-dark@2x.png 2x" src="images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<div class="header-misc header-misc-search">
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div class="header-misc d-none d-sm-block">
+							<a href="#" class="button button-small button-border button-dark button-black border-default rounded-pill m-0">Contact Us</a>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container border-end-0 me-0">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-hostel.html"><div>Home</div></a>
+								</li>
+
+								<li class="menu-item">
+									<a class="menu-link" href="demo-hostel-about.html"><div>About Us</div></a>
+								</li>
+
+								<li class="menu-item">
+									<a class="menu-link" href="demo-hostel-tour.html"><div>Catageroies</div></a>
+								</li>
+
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap pb-0 pt-4">
+
+				<div class="container">
+					<nav class="navbar navbar-expand-lg w-100 mb-4">
+						<button class="navbar-toggler button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<i class="bi-menu-app"></i> Popular Tags
+						</button>
+						<div class="collapse navbar-collapse align-items-end" id="navbarNav">
+							<ul class="nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#">#world</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#tech</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#lifestyle</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#business</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#finance</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#food</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#uiux</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#fashion</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#sports</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">#politics</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<h3 class="display-6 fw-bold">Featured Posts</h3>
+
+					<!-- Posts
+					============================================= -->
+					<div id="posts" class="post-grid row">
+
+						<div class="entry col-lg-6 col-md-12">
+							<div class="grid-inner rounded-5">
+								<div class="entry-image mb-3">
+									<a href="demos/blog-editorial/images/gallery/1.jpg" data-lightbox="image">
+										<img src="demos/blog-editorial/images/gallery/1.jpg" alt="Featured solo travel post about the best destinations in Asia" class="rounded-5">
+									</a>
+								</div>
+								<div class="entry-meta align-icon-baseline no-separator w-100 mb-1">
+									<ul>
+										<li><a href="#">#travel</a></li>
+									</ul>
+								</div>
+								<div class="entry-title">
+									<h2 class="fs-4"><a href="blog-single.html">The Best Destinations in Asia for Solo Travel</a></h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="col-sm-6 entry">
+									<div class="grid-inner">
+										<div class="entry-image mb-3">
+											<a href="demos/blog-editorial/images/gallery/2.jpg" data-lightbox="image">
+												<img src="demos/blog-editorial/images/gallery/2.jpg" alt="Standard Post with Image" class="rounded-4">
+											</a>
+										</div>
+										<div class="entry-meta mb-1">
+											<ul>
+												<li><a href="#">#fashion</a></li>
+											</ul>
+										</div>
+										<div class="entry-title">
+											<h2><a href="blog-single.html">A Teeming Manila Slum Chafes Under Lockdown</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 entry">
+									<div class="grid-inner">
+										<div class="entry-image mb-3">
+											<a href="demos/blog-editorial/images/gallery/3.jpg" data-lightbox="image">
+												<img src="demos/blog-editorial/images/gallery/3.jpg" alt="Standard Post with Image" class="rounded-4">
+											</a>
+										</div>
+										<div class="entry-meta mb-1">
+											<ul>
+												<li><a href="#">#fashion</a></li>
+											</ul>
+										</div>
+										<div class="entry-title">
+											<h2><a href="blog-single.html">Believe In Your Travel Skills But Never Stop Improving</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 entry">
+									<div class="grid-inner">
+										<div class="entry-image mb-3">
+											<a href="demos/blog-editorial/images/gallery/4.jpg" data-lightbox="image">
+												<img src="demos/blog-editorial/images/gallery/4.jpg" alt="Standard Post with Image" class="rounded-4">
+											</a>
+										</div>
+										<div class="entry-meta mb-1">
+											<ul>
+												<li><a href="#">#fashion</a></li>
+											</ul>
+										</div>
+										<div class="entry-title">
+											<h2><a href="blog-single.html">How I Improved My Travel In One Easy Lesson</a></h2>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 entry">
+									<div class="grid-inner">
+										<div class="entry-image mb-3">
+											<a href="demos/blog-editorial/images/gallery/5.jpg" data-lightbox="image">
+												<img src="demos/blog-editorial/images/gallery/5.jpg" alt="Standard Post with Image" class="rounded-4">
+											</a>
+										</div>
+										<div class="entry-meta mb-1">
+											<ul>
+												<li><a href="#">#fashion</a></li>
+											</ul>
+										</div>
+										<div class="entry-title">
+											<h2><a href="blog-single.html">Top 10 Tips To Grow Your Fashion</a></h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- #posts end -->
+				</div>
+
+				<div class="section mb-0" style="background-color: #edeff1;">
+					<div class="container">
+
+						<div class="hstack justify-content-between mb-4">
+							<h3 class="fs-2 mb-0 fw-semibold">This Week Cases</h3>
+							<a href="#" class="btn btn-link text-dark fs-5 fw-semibold m-0"><u>View All</u></a>
+						</div>
+						<div class="row gx-4">
+							<div class="entry col-lg-9 col-md-12">
+								<div class="grid-inner rounded-5">
+									<div class="entry-image">
+										<a href="demos/blog-editorial/images/gallery/6.jpg" data-lightbox="image">
+											<img src="demos/blog-editorial/images/gallery/6.jpg" alt="This week feature on solo travel destinations in Asia" class="rounded-5">
+										</a>
+									</div>
+									<div class="entry-meta mb-1">
+										<ul>
+											<li><a href="#">#travel</a></li>
+											<li><a href="#">4 mins read</a></li>
+										</ul>
+									</div>
+									<div class="entry-title">
+										<h2 class="fs-3"><a href="blog-single.html">The Best Destinations in Asia for Solo Travel</a></h2>
+									</div>
+									<div class="entry-content mt-3">
+										<p>Solo travel across Asia rewards the curious with quiet temples at dawn, bustling night markets, and warm welcomes from strangers. From the beaches of Thailand to the highlands of Vietnam, every route invites discovery and affordable adventure.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-3">
+								<h4 class="font-secondary fw-semibold">This Week</h4>
+
+								<ul class="week-posts list-unstyled posts-sm row col-mb-30">
+									<li class="entry col-12">
+										<div class="grid-inner">
+											<div class="entry-title">
+												<h4><a href="demo-blog-single.html" class="color-underline stretched-link">The Best Destinations in Asia for Solo Travel</a></h4>
+											</div>
+											<div class="entry-meta">
+												<ul>
+													<li><a href="#">4 mins read</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+
+									<li class="entry col-12">
+										<div class="grid-inner">
+											<div class="entry-title">
+												<h4><a href="demo-blog-single.html" class="color-underline stretched-link">We Need a COVID-19 Phase 4 Relief Package. Here’s What Should Be In It.</a></h4>
+											</div>
+											<div class="entry-meta">
+												<ul>
+													<li><a href="#">2 mins read</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+
+									<li class="entry col-12">
+										<div class="grid-inner">
+											<div class="entry-title">
+												<h4><a href="demo-blog-single.html" class="color-underline stretched-link">UK government weighs Tesla's Model.</a></h4>
+											</div>
+											<div class="entry-meta">
+												<ul>
+													<li><a href="#">10 mins read</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+
+									<li class="entry col-12">
+										<div class="grid-inner">
+											<div class="entry-title">
+												<h4><a href="demo-blog-single.html" class="color-underline stretched-link">How Colleges Can Get Online Education Right</a></h4>
+											</div>
+											<div class="entry-meta">
+												<ul>
+													<li><a href="#">9 mins read</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+
+									<li class="entry col-12">
+										<div class="grid-inner">
+											<div class="entry-title">
+												<h4><a href="demo-blog-single.html" class="color-underline stretched-link">From Behind the Scenes to the Forefront: Canada’s Public Health Officers</a></h4>
+											</div>
+											<div class="entry-meta">
+												<ul>
+													<li><a href="#">7 mins read</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-white text-dark">
+					<div class="container">
+						<div class="row justify-content-center g-4">
+							<div class="col-lg-5 col-md-8 text-center">
+								<h2 class="text-dark">Don't want to miss anything?</h2>
+								<p>Get our best travel stories, destination guides, and reading picks delivered weekly. Join thousands of curious readers and never miss a fresh post.</p>
+
+								<div class="widget subscribe-widget" data-loader="button">
+
+									<div class="widget-subscribe-form-result"></div>
+									<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0 d-flex">
+										<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control form-control-lg rounded-pill not-dark required email" placeholder="Your Email Address">
+										<button class="button button-large bg-color rounded-pill m-0 ms-3" type="submit">Subscribe Now</button>
+									</form>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+
+							<div class="col-lg-5 col-md-8 text-center">
+								<div class="card border-0 bg-primary bg-opacity-10">
+									<div class="card-body">
+										<div class="d-flex justify-content-between align-items-center p-4">
+											<h3 class="mb-0 lh-base fw-semibold text-start">We are in <br>Social Media</h3>
+											<div>
+												<a href="https://facebook.com/semicolonweb" target="_blank" class="bi-facebook display-5 color-facebook h-scale all-ts me-3"></a>
+												<a href="https://twitter.com/__semiColon" target="_blank" class="bi-twitter display-5 color-twitter h-scale all-ts me-3"></a>
+												<a href="https://instagram.com/semicolonweb" target="_blank" class="bi-instagram display-5 color-instagram h-scale all-ts"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="border-0 bg-light">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap pb-5">
+
+					<div class="row align-items-center">
+						<h3>Popular Tags:</h3>
+						<div class="col-md-1">
+							<h5 class="mb-0 text-uppercase fw-bold">Fashion:</h5>
+						</div>
+
+						<div class="col">
+							<a href="#" class="btn h-color">#model</a>
+							<a href="#" class="btn h-color">#shop</a>
+							<a href="#" class="btn h-color">#ecommerce</a>
+							<a href="#" class="btn h-color">#girls</a>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-1">
+							<h5 class="mb-0 text-uppercase fw-bold">UIUX:</h5>
+						</div>
+
+						<div class="col">
+							<a href="#" class="btn h-color">#graphics</a>
+							<a href="#" class="btn h-color">#development</a>
+							<a href="#" class="btn h-color">#app</a>
+							<a href="#" class="btn h-color">#website</a>
+							<a href="#" class="btn h-color">#illustration</a>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-1">
+							<h5 class="mb-0 text-uppercase fw-bold">Travel:</h5>
+						</div>
+
+						<div class="col">
+							<a href="#" class="btn h-color">#city</a>
+							<a href="#" class="btn h-color">#vlog</a>
+							<a href="#" class="btn h-color">#food</a>
+							<a href="#" class="btn h-color">#tour</a>
+							<a href="#" class="btn h-color">#vacation</a>
+							<a href="#" class="btn h-color">#holiday</a>
+						</div>
+
+						<div class="col-12"><div class="line border-dark op-01"></div></div>
+
+						<div class="col-12 my-4">
+							<div class="row justify-content-between col-mb-80">
+
+								<div class="col-lg-6">
+
+									<div class="row gutter-30">
+										<div class="col-6">
+
+											<div class="widget widget_links">
+												<h3 class="fs-5 fw-semibold">Help &amp; Supports</h3>
+												<ul>
+													<li><a href="#">Documentation</a></li>
+													<li><a href="#">Feedback</a></li>
+													<li><a href="#">Plugins</a></li>
+													<li><a href="#">Support Forums</a></li>
+												</ul>
+											</div>
+
+										</div>
+
+										<div class="col-6">
+
+											<div class="widget widget_links">
+
+												<h3 class="fs-5 fw-semibold">Blogroll</h3>
+
+												<ul>
+													<li><a href="#">Feedback</a></li>
+													<li><a href="#">Documentation</a></li>
+													<li><a href="#">Themes</a></li>
+													<li><a href="#">Contact Us</a></li>
+												</ul>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="col-12 col-lg-auto d-flex flex-column align-items-center align-items-lg-end">
+									<h3 class="fs-5 mb-3 mb-lg-auto fw-semibold">Connect with Us</h3>
+									<div class="mt-auto text-md-end">
+										<h3 class="mb-0">+00 111 333 22</h3>
+										<h3 class="mb-0">no-reply@canvas.com</h3>
+									</div>
+								</div>
+
+								<div class="col-12 col-lg-auto d-flex flex-column align-items-center align-items-lg-end">
+									<h3 class="fs-5 mb-3 mb-lg-auto fw-semibold">Social Media</h3>
+									<div class="mt-auto">
+										<a href="#" class="social-icon rounded-circle h-bg-facebook mb-xl-0 me-3">
+											<i class="fa-brands fa-facebook-f"></i>
+											<i class="fa-brands fa-facebook-f color-dark-green"></i>
+										</a>
+
+										<a href="#" class="social-icon rounded-circle h-bg-x-twitter mb-xl-0 me-3">
+											<i class="fa-brands fa-x-twitter"></i>
+											<i class="fa-brands fa-twitter color-dark-green"></i>
+										</a>
+
+										<a href="#" class="social-icon rounded-circle h-bg-instagram mb-xl-0 me-0">
+											<i class="bi-instagram"></i>
+											<i class="bi-instagram color-dark-green"></i>
+										</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-12 mt-5">
+							<p class="text-center text-black-50 small mt-3 mb-0">Copyrights &copy; 2023. All Rights Reserved by Canvas Inc.</p>
+						</div>
+
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<div id="gotoTop" class="uil uil-angle-up bg-white bg-opacity-10"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

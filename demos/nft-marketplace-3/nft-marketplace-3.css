@@ -1,0 +1,972 @@
+/* ----------------------------------------------------------------
+	Canvas: Nft Marketplace 3
+-----------------------------------------------------------------*/
+
+    :root { --cnvs-themecolor: #7C3AED; --cnvs-themecolor-rgb: 124, 58, 237; }
+  
+
+  #header {
+    --cnvs-primary-menu-font-weight: 600;
+    --cnvs-primary-menu-font-size: 0.875rem;
+    --cnvs-primary-menu-tt: uppercase;
+    --cnvs-primary-menu-ls: 0.08em;
+    --cnvs-primary-menu-color: rgba(255,255,255,0.75);
+    --cnvs-primary-menu-hover-color: #C9A84C;
+  }
+  .niftvault-btn-wallet {
+    background: #7C3AED;
+    color: #fff !important;
+    border: none;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    box-shadow: 0 0 18px rgba(124,58,237,0.45);
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  .niftvault-btn-wallet:hover {
+    background: #6D28D9 !important;
+    box-shadow: 0 0 28px rgba(124,58,237,0.7);
+    transform: translateY(-1px);
+    color: #fff !important;
+  }
+
+
+    #hero-canvas {
+      position:absolute;inset:0;pointer-events:none;z-index:0;
+    }
+    .hero-glow {
+      position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+      width:900px;height:900px;
+      background:radial-gradient(ellipse at center, rgba(124,58,237,0.18) 0%, rgba(124,58,237,0.06) 40%, transparent 70%);
+      pointer-events:none;z-index:0;
+    }
+    .hero-glow-left {
+      position:absolute;top:30%;left:-10%;
+      width:500px;height:500px;
+      background:radial-gradient(ellipse at center, rgba(124,58,237,0.10) 0%, transparent 65%);
+      pointer-events:none;z-index:0;
+    }
+    .niftvault-wordmark {
+      font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+      color:#7C3AED;margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:8px;
+    }
+    .niftvault-wordmark::before {
+      content:'';display:inline-block;width:24px;height:2px;background:#7C3AED;border-radius:2px;
+    }
+    .hero-headline {
+      font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;line-height:1.1;
+      letter-spacing:-0.03em;color:#fff;margin-bottom:1.5rem;
+    }
+    .hero-headline .grad-word {
+      background:linear-gradient(135deg,#7C3AED 0%,#a78bfa 50%,#C9A84C 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .hero-subhead {
+      font-size:1.0625rem;color:rgba(255,255,255,0.55);line-height:1.7;
+      max-width:480px;margin-bottom:2.25rem;
+    }
+    .hero-cta-group {
+      display:flex;flex-wrap:wrap;gap:12px;margin-bottom:2.5rem;
+    }
+    .btn-hero-primary {
+      display:inline-flex;align-items:center;gap:8px;
+      padding:14px 28px;border-radius:50px;font-weight:700;font-size:0.9375rem;
+      background:#7C3AED;color:#fff;border:none;cursor:pointer;
+      text-decoration:none;transition:transform 0.2s ease,box-shadow 0.2s ease;
+      box-shadow:0 0 24px rgba(124,58,237,0.45);
+    }
+    .btn-hero-primary:hover {
+      transform:translateY(-2px) scale(1.03);
+      box-shadow:0 0 36px rgba(124,58,237,0.65);color:#fff;
+    }
+    .btn-hero-gold {
+      display:inline-flex;align-items:center;gap:8px;
+      padding:13px 28px;border-radius:50px;font-weight:700;font-size:0.9375rem;
+      background:transparent;color:#C9A84C;
+      border:1.5px solid #C9A84C;cursor:pointer;text-decoration:none;
+      transition:transform 0.2s ease,background 0.2s ease,box-shadow 0.2s ease;
+    }
+    .btn-hero-gold:hover {
+      transform:translateY(-2px) scale(1.03);
+      background:rgba(201,168,76,0.1);
+      box-shadow:0 0 20px rgba(201,168,76,0.3);color:#C9A84C;
+    }
+    .hero-stats {
+      display:flex;align-items:center;gap:0;flex-wrap:wrap;
+    }
+    .hero-stat-item {
+      display:flex;flex-direction:column;padding:0 20px 0 0;
+    }
+    .hero-stat-item:first-child { padding-left:0; }
+    .hero-stat-item + .hero-stat-item {
+      border-left:1px solid rgba(255,255,255,0.1);padding-left:20px;
+    }
+    .hero-stat-num {
+      font-size:1.1875rem;font-weight:800;color:#C9A84C;
+      font-family:'Courier New',monospace;letter-spacing:-0.02em;line-height:1.2;
+    }
+    .hero-stat-label {
+      font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:0.06em;text-transform:uppercase;margin-top:2px;
+    }
+    /* NFT Card */
+    .nft-hero-card-wrap {
+      position:relative;display:flex;justify-content:center;align-items:center;
+      padding:20px;
+    }
+    .nft-hero-card-wrap::before {
+      content:'';position:absolute;inset:-30px;
+      background:radial-gradient(ellipse at center,rgba(124,58,237,0.22) 0%,transparent 68%);
+      pointer-events:none;
+    }
+    .nft-hero-card {
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(201,168,76,0.45);
+      border-radius:20px;
+      overflow:hidden;
+      width:100%;max-width:400px;
+      box-shadow:0 0 40px rgba(201,168,76,0.18),0 0 80px rgba(124,58,237,0.2);
+      position:relative;z-index:2;
+      animation:nft-float 5s ease-in-out infinite;
+    }
+    @keyframes nft-float {
+      0%,100% { transform:translateY(0px); }
+      50%      { transform:translateY(-12px); }
+    }
+    .nft-hero-img-wrap {
+      position:relative;overflow:hidden;
+      aspect-ratio:1/1;
+    }
+    .nft-hero-img-wrap img {
+      width:100%;height:100%;object-fit:cover;display:block;
+      transition:transform 0.5s ease;
+    }
+    .nft-hero-card:hover .nft-hero-img-wrap img {
+      transform:scale(1.04);
+    }
+    .nft-hero-img-overlay {
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(13,13,15,0.7) 0%,transparent 50%);
+      pointer-events:none;
+    }
+    .nft-hero-img-badge {
+      position:absolute;top:14px;right:14px;
+      background:rgba(13,13,15,0.75);backdrop-filter:blur(8px);
+      border:1px solid rgba(201,168,76,0.4);border-radius:30px;
+      padding:5px 12px;font-size:0.75rem;font-weight:700;
+      color:#C9A84C;letter-spacing:0.08em;text-transform:uppercase;
+    }
+    .nft-hero-body {
+      padding:18px 20px 20px;
+    }
+    .nft-hero-creator-row {
+      display:flex;align-items:center;gap:10px;margin-bottom:14px;
+    }
+    .nft-hero-avatar {
+      width:36px;height:36px;border-radius:50%;
+      border:2px solid #7C3AED;object-fit:cover;flex-shrink:0;
+    }
+    .nft-hero-creator-name {
+      font-size:0.8125rem;font-weight:700;color:#fff;line-height:1.2;
+    }
+    .nft-hero-creator-handle {
+      font-size:0.75rem;color:rgba(255,255,255,0.4);
+    }
+    .nft-hero-creator-verified {
+      margin-left:auto;width:20px;height:20px;border-radius:50%;
+      background:#C9A84C;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    }
+    .nft-hero-title-row {
+      margin-bottom:16px;
+    }
+    .nft-hero-title {
+      font-size:1.125rem;font-weight:800;color:#fff;letter-spacing:-0.02em;
+      margin-bottom:2px;
+    }
+    .nft-hero-edition {
+      font-size:0.75rem;color:rgba(255,255,255,0.35);letter-spacing:0.05em;
+    }
+    .nft-hero-bid-row {
+      display:flex;align-items:center;justify-content:space-between;
+      background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);
+      border-radius:12px;padding:12px 14px;
+    }
+    .nft-hero-bid-label {
+      font-size:0.6875rem;color:rgba(255,255,255,0.4);text-transform:uppercase;
+      letter-spacing:0.1em;margin-bottom:2px;
+    }
+    .nft-hero-bid-eth {
+      font-size:1.25rem;font-weight:800;color:#C9A84C;
+      font-family:'Courier New',monospace;letter-spacing:-0.02em;
+    }
+    .nft-hero-bid-usd {
+      font-size:0.75rem;color:rgba(255,255,255,0.35);
+    }
+    .btn-place-bid {
+      display:inline-flex;align-items:center;justify-content:center;gap:6px;
+      padding:10px 20px;border-radius:30px;font-weight:700;font-size:0.875rem;
+      background:#7C3AED;color:#fff;border:none;cursor:pointer;
+      text-decoration:none;transition:transform 0.15s,box-shadow 0.15s;
+      box-shadow:0 0 16px rgba(124,58,237,0.5);
+    }
+    .btn-place-bid:hover {
+      transform:translateY(-1px);box-shadow:0 0 24px rgba(124,58,237,0.7);color:#fff;
+    }
+    /* Bottom fade */
+    .hero-bottom-fade {
+      position:absolute;bottom:0;left:0;right:0;height:100px;
+      background:linear-gradient(to bottom, transparent 0%, #0D0D0F 100%);
+      pointer-events:none;z-index:1;
+    }
+  
+
+    #collections .section-label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 1rem;
+    }
+    #collections .collection-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    #collections .collection-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 32px rgba(124, 58, 237, 0.45), 0 12px 40px rgba(0, 0, 0, 0.5);
+      border-color: rgba(124, 58, 237, 0.7);
+    }
+    #collections .collection-card .cover-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+    #collections .collection-card .cover-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    #collections .collection-card:hover .cover-wrap img {
+      transform: scale(1.05);
+    }
+    #collections .rank-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #7C3AED;
+      color: #fff;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 2px 10px rgba(124, 58, 237, 0.6);
+    }
+    #collections .card-body {
+      padding: 16px 18px 20px;
+    }
+    #collections .collection-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+    #collections .creator-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    #collections .creator-row img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(124, 58, 237, 0.4);
+      flex-shrink: 0;
+    }
+    #collections .creator-name {
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 500;
+    }
+    #collections .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      background: #7C3AED;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    #collections .verified-badge i {
+      font-size: 0.5rem;
+      color: #fff;
+      line-height: 1;
+    }
+    #collections .stats-row {
+      display: flex;
+      gap: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 14px;
+    }
+    #collections .stat-item {
+      flex: 1;
+    }
+    #collections .stat-item + .stat-item {
+      border-left: 1px solid rgba(255, 255, 255, 0.06);
+      padding-left: 14px;
+    }
+    #collections .stat-label {
+      font-size: 0.6875rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    #collections .stat-value {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    #collections .stat-value.gold {
+      color: #C9A84C;
+    }
+    #collections .stat-value.white {
+      color: #fff;
+    }
+    @media (max-width: 991.98px) {
+      #collections { padding: 72px 0; }
+    }
+  
+
+    #stats .stat-number {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 700;
+      color: #C9A84C;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      display: block;
+    }
+    #stats .stat-label {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.75rem;
+      display: block;
+    }
+    #stats .stat-col {
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    #stats .stat-col + .stat-col::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 60%;
+      background: linear-gradient(to bottom, transparent, rgba(124,58,237,0.6), transparent);
+    }
+    #stats .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(124,58,237,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,58,237,0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    #stats .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    @media (max-width: 767px) {
+      #stats .stat-col + .stat-col::before { display: none; }
+      #stats .stat-col { border-top: 1px solid rgba(124,58,237,0.25); }
+      #stats .stat-col:first-child { border-top: none; }
+    }
+  
+
+    #how-it-works .hiw-radial {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+      height: 600px;
+      background: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #how-it-works .hiw-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    #how-it-works .hiw-heading {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+    #how-it-works .hiw-step-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 16px;
+      padding: 2.25rem 2rem;
+      position: relative;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+      height: 100%;
+    }
+    #how-it-works .hiw-step-card:hover {
+      box-shadow: 0 0 32px rgba(124, 58, 237, 0.35);
+      border-color: rgba(124, 58, 237, 0.65);
+      transform: translateY(-4px);
+    }
+    #how-it-works .hiw-step-num {
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      -webkit-text-stroke: 2px rgba(124, 58, 237, 0.45);
+      color: transparent;
+      display: block;
+      margin-bottom: 1.25rem;
+      font-variant-numeric: tabular-nums;
+    }
+    #how-it-works .hiw-icon-wrap {
+      width: 52px;
+      height: 52px;
+      background: rgba(124, 58, 237, 0.15);
+      border: 1px solid rgba(124, 58, 237, 0.35);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    #how-it-works .hiw-icon-wrap i {
+      font-size: 1.375rem;
+      color: #7C3AED;
+    }
+    #how-it-works .hiw-step-title {
+      font-size: 1.1875rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    #how-it-works .hiw-step-desc {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 1.25rem;
+    }
+    #how-it-works .hiw-wallet-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    #how-it-works .hiw-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 0.25rem 0.625rem;
+      letter-spacing: 0.02em;
+    }
+    #how-it-works .hiw-cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #7C3AED;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: gap 0.25s ease, color 0.25s ease;
+    }
+    #how-it-works .hiw-cta-link:hover {
+      color: #9B6EF3;
+      gap: 0.65rem;
+    }
+    #how-it-works .hiw-cta-link-gold {
+      color: #C9A84C;
+    }
+    #how-it-works .hiw-cta-link-gold:hover {
+      color: #DFC06A;
+    }
+    #how-it-works .hiw-connector {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 48px;
+      position: relative;
+      top: -2.5rem;
+    }
+    @media (min-width: 992px) {
+      #how-it-works .hiw-connector {
+        display: flex;
+      }
+      #how-it-works .hiw-steps-row {
+        align-items: stretch;
+      }
+    }
+    #how-it-works .hiw-connector-line {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    #how-it-works .hiw-connector-dots {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    #how-it-works .hiw-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(124, 58, 237, 0.5);
+    }
+    #how-it-works .hiw-arrow-icon {
+      font-size: 1rem;
+      color: rgba(124, 58, 237, 0.6);
+      margin-top: 4px;
+    }
+  
+
+    #creators .creator-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(124,58,237,0.2);
+      border-radius: 16px;
+      padding: 32px 20px 24px;
+      text-align: center;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    #creators .creator-card:hover {
+      border-color: rgba(201,168,76,0.6);
+      box-shadow: 0 8px 40px rgba(201,168,76,0.12), 0 0 0 1px rgba(201,168,76,0.2);
+      transform: translateY(-4px);
+    }
+    #creators .creator-avatar-wrap {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #7C3AED, #5B21B6);
+      margin: 0 auto 16px;
+      box-shadow: 0 0 20px rgba(124,58,237,0.4);
+    }
+    #creators .creator-avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid #12111A;
+    }
+    #creators .creator-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    #creators .badge-verified {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: #7C3AED;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    #creators .badge-verified i {
+      font-size: 0.6rem;
+      color: #fff;
+    }
+    #creators .creator-username {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 12px;
+      font-family: 'Courier New', monospace;
+    }
+    #creators .creator-volume {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #C9A84C;
+      letter-spacing: 0.03em;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 6px;
+    }
+    #creators .creator-followers {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+    #creators .btn-follow {
+      display: inline-block;
+      padding: 8px 28px;
+      border: 1px solid rgba(124,58,237,0.7);
+      border-radius: 50px;
+      color: #a78bfa;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    #creators .btn-follow:hover {
+      background: #7C3AED;
+      color: #fff;
+      border-color: #7C3AED;
+      box-shadow: 0 0 16px rgba(124,58,237,0.5);
+    }
+    #creators .creators-scroll-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 991px) {
+      #creators .creators-scroll-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 575px) {
+      #creators .creators-scroll-row {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+    #creators .view-all-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #C9A84C;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: gap 0.25s ease, opacity 0.25s ease;
+    }
+    #creators .view-all-link:hover {
+      opacity: 0.8;
+      gap: 12px;
+    }
+    #creators .section-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      display: block;
+      margin-bottom: 12px;
+    }
+  
+
+    #recent .section-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      display: block;
+      margin-bottom: 12px;
+    }
+    #recent .section-heading {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 0;
+    }
+    #recent .nft-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    #recent .nft-card:hover {
+      border-color: rgba(124, 58, 237, 0.7);
+      box-shadow: 0 0 28px rgba(124, 58, 237, 0.35);
+      transform: translateY(-4px);
+    }
+    #recent .nft-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+    #recent .nft-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    #recent .nft-card:hover .nft-img-wrap img {
+      transform: scale(1.06);
+    }
+    #recent .time-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      pointer-events: none;
+    }
+    #recent .nft-body {
+      padding: 16px;
+    }
+    #recent .nft-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #recent .creator-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    #recent .creator-row img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid rgba(124, 58, 237, 0.5);
+      flex-shrink: 0;
+    }
+    #recent .creator-name {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #recent .creator-name span {
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+    }
+    #recent .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    #recent .eth-price {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #C9A84C;
+      letter-spacing: -0.01em;
+    }
+    #recent .usd-price {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      font-weight: 400;
+    }
+    #recent .action-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #recent .btn-buy {
+      flex: 1;
+      background: #7C3AED;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 9px 16px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    #recent .btn-buy:hover {
+      background: #6D28D9;
+      box-shadow: 0 0 16px rgba(124, 58, 237, 0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+      transform: scale(1.02);
+      color: #fff;
+    }
+    #recent .btn-fav {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      color: rgba(255,255,255,0.4);
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    #recent .btn-fav:hover {
+      background: rgba(201, 168, 76, 0.12);
+      border-color: rgba(201, 168, 76, 0.4);
+      color: #C9A84C;
+    }
+    #recent .btn-load-more {
+      background: transparent;
+      color: #7C3AED;
+      border: 1.5px solid #7C3AED;
+      border-radius: 50px;
+      padding: 13px 40px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+    #recent .btn-load-more:hover {
+      background: rgba(124, 58, 237, 0.15);
+      color: #a78bfa;
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+    }
+  
+
+    #wallets .wallets-heading {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 2.25rem;
+    }
+    #wallets .wallet-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+    }
+    #wallets .wallet-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(124,58,237,0.22);
+      border-radius: 40px;
+      padding: 10px 20px 10px 14px;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+      cursor: default;
+      opacity: 0;
+      animation: walletFadeIn 0.6s ease forwards;
+    }
+    #wallets .wallet-pill:hover {
+      background: rgba(124,58,237,0.12);
+      border-color: rgba(124,58,237,0.6);
+      transform: translateY(-2px);
+    }
+    #wallets .wallet-pill:nth-child(1) { animation-delay: 0.08s; }
+    #wallets .wallet-pill:nth-child(2) { animation-delay: 0.16s; }
+    #wallets .wallet-pill:nth-child(3) { animation-delay: 0.24s; }
+    #wallets .wallet-pill:nth-child(4) { animation-delay: 0.32s; }
+    #wallets .wallet-pill:nth-child(5) { animation-delay: 0.40s; }
+    #wallets .wallet-pill:nth-child(6) { animation-delay: 0.48s; }
+    @keyframes walletFadeIn {
+      from { opacity: 0; transform: translateY(10px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0)   scale(1); }
+    }
+    #wallets .wallet-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      filter: grayscale(1) brightness(0.65);
+      transition: filter 0.3s ease;
+    }
+    #wallets .wallet-pill:hover .wallet-icon {
+      filter: grayscale(0) brightness(1);
+    }
+    #wallets .wallet-name {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      white-space: nowrap;
+      transition: color 0.3s ease;
+      letter-spacing: 0.01em;
+    }
+    #wallets .wallet-pill:hover .wallet-name {
+      color: rgba(255,255,255,0.9);
+    }
+    #wallets .wallets-assurance {
+      margin-top: 2rem;
+      font-size: 0.78125rem;
+      color: rgba(255,255,255,0.28);
+      letter-spacing: 0.03em;
+    }
+    #wallets .wallets-assurance i {
+      color: rgba(124,58,237,0.7);
+      margin-right: 6px;
+    }
+  

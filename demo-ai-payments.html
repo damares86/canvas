@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CanvasOrbit — AI Agent Infrastructure for Autonomous Payments | Canvas</title>
+  <meta name="description" content="CanvasOrbit gives your AI agents a virtual card to purchase, transact and operate autonomously. Single-use cards, budget controls, and real-time fraud detection built for agentic workflows.">
+  <meta name="author" content="SemiColonWeb">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Canvas">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="CanvasOrbit — AI Agent Infrastructure | Canvas">
+  <meta property="og:description" content="Give your AI agents a virtual card. Issue controlled cards funded from your wallet with a fixed budget. Accepted everywhere.">
+  <meta property="og:image" content="https://canvas-builder.nyc3.cdn.digitaloceanspaces.com/images/saas/001/hero.webp">
+  <meta property="og:url" content="demo-ai-payments.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CanvasOrbit — AI Agent Infrastructure | Canvas">
+  <meta name="twitter:description" content="Give your AI agents a virtual card to purchase and operate autonomously.">
+  <meta name="twitter:image" content="https://canvas-builder.nyc3.cdn.digitaloceanspaces.com/images/saas/001/hero.webp">
+  <link rel="canonical" href="demo-ai-payments.html">
+  <meta name="theme-color" content="#277aff">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CanvasOrbit",
+      "url": "demo-ai-payments.html",
+      "description": "AI agent infrastructure for autonomous payments and agentic commerce.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Francisco",
+        "addressCountry": "US"
+      }
+    }
+
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-icons.css">
+  <link rel="stylesheet" href="demos/ai-payments/ai-payments.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="stretched dark">
+  <div class="co-cursor-glow" id="co-cursor-glow"></div>
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="transparent-header dark" data-sticky-shrink="false">
+      <div id="header-wrap">
+        <div class="container">
+          <div class="header-row">
+
+            <div id="logo">
+              <a href="index.html">
+                <img class="logo-default" src="demos/ai-payments/images/logo@2x.png" srcset="demos/ai-payments/images/logo.png, demos/ai-payments/images/logo@2x.png 2x" alt="CanvasOrbit">
+                <img class="logo-dark" src="demos/ai-payments/images/logo-dark@2x.png" srcset="demos/ai-payments/images/logo-dark.png, demos/ai-payments/images/logo-dark@2x.png 2x" alt="CanvasOrbit">
+              </a>
+            </div>
+
+            <div class="primary-menu-trigger">
+              <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+              </button>
+            </div>
+
+            <div class="header-misc">
+              <a href="#" class="co-nav-cta">Get Started <i class="bi-arrow-right"></i></a>
+            </div>
+
+            <nav class="primary-menu on-click">
+              <ul class="menu-container">
+                <li class="menu-item"><a class="menu-link" href="#">
+                    <div>Updates</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">
+                    <div>Docs</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">
+                    <div>Pricing</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">
+                    <div>About</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#">
+                    <div>Schedule a call</div>
+                  </a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+      <div class="header-wrap-clone"></div>
+    </header>
+
+    <!-- Hero -->
+    <section id="co-hero" class="co-hero include-header">
+      <div class="co-hero-noise"></div>
+      <div class="co-hero-glow"></div>
+      <div class="container position-relative" style="z-index:2;">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="co-hero-badge">
+              <span class="co-dot"></span>
+              Now in public beta
+            </div>
+            <div class="co-ticker-chip mb-4">
+              <span class="co-widget-dot"></span>
+              <span>Live:</span>
+              <span id="co-ticker-amount" class="co-ticker-num in">$12,847</span>
+              <span>spent by agents today</span>
+            </div>
+            <h1 class="co-hero h1" style="font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,7vw,6.5rem); line-height:1.02; font-weight:300; letter-spacing:-0.03em; color:#fff; margin-bottom:1.5rem;">Give a card<br>to your <em style="font-style:italic; color:rgba(255,255,255,0.45);">AI</em><br>agent.</h1>
+            <p class="co-hero-sub">Issue virtual cards your agents can use today. Single-use, budget-capped, and accepted everywhere. Your agents purchase. You stay in control.</p>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <a href="#" class="co-btn-primary">Get Started Now <i class="bi-arrow-right ms-1"></i></a>
+              <a href="#" class="co-btn-ghost"><i class="bi-play-circle me-1"></i> Watch the demo</a>
+            </div>
+            <p style="font-family:'Space Grotesk',sans-serif; font-size:0.75rem; color:rgba(255,255,255,0.25); margin-top:1.25rem;">No credit card required. Free to start.</p>
+          </div>
+
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div class="co-card-visual">
+              <div class="co-virtual-card" data-animate="fadeInUp" data-delay="200">
+                <div class="co-card-accent-line"></div>
+                <div class="co-card-chip"></div>
+                <div class="co-card-logo-row">
+                  <div class="co-card-logo">CanvasOrbit</div>
+                  <div class="co-card-badge-stack">
+                    <div class="co-card-badge">VIRTUAL</div>
+                  </div>
+                </div>
+                <div class="co-card-number">4532 •••• •••• 8821</div>
+                <div class="co-card-name">AI AGENT / GPT-INSTANCE</div>
+                <div class="co-card-expiry">12/27</div>
+              </div>
+              <div class="co-float-widget co-float-1" data-animate="fadeInRight" data-delay="600">
+                <div class="co-widget-label">Transaction Status</div>
+                <div class="co-widget-value">
+                  <span class="co-widget-dot"></span>
+                  Approved $49.00
+                </div>
+              </div>
+              <div class="co-float-widget co-float-2" data-animate="fadeInLeft" data-delay="800">
+                <div class="co-widget-label">Budget Remaining</div>
+                <div class="co-widget-value" style="color:var(--cnvs-themecolor);">$451.00 / $500</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted by marquee -->
+    <div class="co-logos-strip" style="overflow:hidden;">
+      <div class="container-fluid px-0">
+        <div style="display:flex; align-items:center; gap:2rem; padding-left:2rem;">
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:0.72rem; color:rgba(255,255,255,0.25); text-transform:uppercase; letter-spacing:0.1em; white-space:nowrap; flex-shrink:0;">Trusted by teams building with</span>
+          <div style="flex:1; overflow:hidden;">
+            <div class="co-marquee-track">
+              <span class="co-logo-item">OpenAI</span>
+              <span class="co-logo-item">Anthropic</span>
+              <span class="co-logo-item">LangChain</span>
+              <span class="co-logo-item">Vertex AI</span>
+              <span class="co-logo-item">AutoGPT</span>
+              <span class="co-logo-item">CrewAI</span>
+              <span class="co-logo-item">Replicate</span>
+              <span class="co-logo-item">Hugging Face</span>
+              <span class="co-logo-item">Pinecone</span>
+              <span class="co-logo-item">OpenAI</span>
+              <span class="co-logo-item">Anthropic</span>
+              <span class="co-logo-item">LangChain</span>
+              <span class="co-logo-item">Vertex AI</span>
+              <span class="co-logo-item">AutoGPT</span>
+              <span class="co-logo-item">CrewAI</span>
+              <span class="co-logo-item">Replicate</span>
+              <span class="co-logo-item">Hugging Face</span>
+              <span class="co-logo-item">Pinecone</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="content">
+      <div class="content-wrap py-0">
+
+        <!-- Payment method section -->
+        <div class="co-section">
+          <div class="container">
+            <div class="row align-items-end mb-3">
+              <div class="col-lg-7">
+                <p class="co-section-label">Infrastructure</p>
+                <h2 class="co-section-heading">A payment method your<br>agents can <em>use today</em></h2>
+              </div>
+              <div class="col-lg-5">
+                <p style="color:rgba(255,255,255,0.4); font-size:0.9rem; line-height:1.7;">Give agents a way to pay for things done on behalf of users. Virtual cards stay under your control while your agents act autonomously in the world.</p>
+              </div>
+            </div>
+
+            <div class="co-feature-grid">
+
+              <!-- One-time cards -->
+              <div class="co-feature-card">
+                <div class="co-feature-icon"><i class="bi-credit-card-2-front"></i></div>
+                <div class="co-feature-title">One-time cards</div>
+                <p class="co-feature-desc">Single-use virtual cards that self-destruct after one payment. Card credentials never touch your production systems.</p>
+                <div class="co-code-block">
+                  <div><span class="co-code-key">"type"</span>: <span class="co-code-str">"single_use"</span>,</div>
+                  <div><span class="co-code-key">"budget"</span>: <span class="co-code-num">$500</span>,</div>
+                  <div><span class="co-code-key">"expires"</span>: <span class="co-code-str">"after_use"</span>,</div>
+                  <div><span class="co-code-key">"merchant_lock"</span>: <span class="co-code-bool">true</span></div>
+                </div>
+              </div>
+
+              <!-- Human auth -->
+              <div class="co-feature-card">
+                <div class="co-feature-icon"><i class="bi-shield-check"></i></div>
+                <div class="co-feature-title">Human authorization</div>
+                <p class="co-feature-desc">Set budgets, per-transaction limits, and approval thresholds for your agents. You stay in control of what your agents can spend.</p>
+                <div class="co-auth-widget">
+                  <div class="co-auth-prompt" style="color:rgba(255,255,255,0.35); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">Hey human :</div>
+                  <div class="co-auth-question">Approve this transaction for $124.00?</div>
+                  <div class="co-auth-btns">
+                    <button class="co-auth-btn-yes">Yes, approve</button>
+                    <button class="co-auth-btn-no">No</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fraud detection -->
+              <div class="co-feature-card">
+                <div class="co-feature-icon"><i class="bi-eye"></i></div>
+                <div class="co-feature-title">Fraud detection</div>
+                <p class="co-feature-desc">Monitor suspicious patterns and protect your users with built-in fraud controls. Unusual spending gets blocked in real time.</p>
+                <div class="co-fraud-alert">
+                  <div class="co-fraud-header"><i class="bi-exclamation-triangle-fill"></i> Suspicious transaction</div>
+                  <div class="co-fraud-row"><span>Unknown merchant</span><span>$4,200.00</span></div>
+                  <div class="co-fraud-row"><span>Unusual spend pattern</span><span class="co-fraud-blocked"><i class="bi-x-circle-fill"></i> Blocked</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <hr class="co-divider">
+
+        <!-- Glow CTA section -->
+        <div class="co-glow-section">
+          <div class="container text-center">
+            <p class="co-section-label">Card issuing</p>
+            <h2 class="co-section-heading">What agentic card<br>issuing <em>looks like</em></h2>
+            <p style="color:rgba(255,255,255,0.4); font-size:0.95rem; max-width:480px; margin:1.5rem auto 0; line-height:1.7;">From zero to a working virtual card in minutes. Agents request a card, it gets issued, used, and destroyed. All logged. All auditable.</p>
+          </div>
+        </div>
+
+        <hr class="co-divider">
+
+        <!-- Implementation section -->
+        <div class="co-impl-section">
+          <div class="container">
+            <div class="row g-5 align-items-start">
+              <div class="col-lg-5">
+                <p class="co-section-label">Developer first</p>
+                <h2 class="co-section-heading" style="font-size:clamp(2.5rem,4vw,3.5rem);">AI implementation <i class="bi-lightning-charge-fill" style="color:var(--cnvs-themecolor); font-size:0.6em;"></i></h2>
+                <p style="color:rgba(255,255,255,0.4); font-size:0.9rem; line-height:1.7; margin-bottom:2rem;">Copy the instructions, hand them to your AI and it implements CanvasOrbit in about 15 minutes. Works with any agent framework.</p>
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex align-items-center gap-2" style="font-size:0.85rem; color:rgba(255,255,255,0.5);">
+                    <i class="bi-check-circle-fill" style="color:var(--cnvs-themecolor);"></i>
+                    Works with LangChain, AutoGPT, CrewAI
+                  </div>
+                  <div class="d-flex align-items-center gap-2" style="font-size:0.85rem; color:rgba(255,255,255,0.5);">
+                    <i class="bi-check-circle-fill" style="color:var(--cnvs-themecolor);"></i>
+                    REST API + official SDKs (Node, Python)
+                  </div>
+                  <div class="d-flex align-items-center gap-2" style="font-size:0.85rem; color:rgba(255,255,255,0.5);">
+                    <i class="bi-check-circle-fill" style="color:var(--cnvs-themecolor);"></i>
+                    Webhooks for every card event
+                  </div>
+                  <div class="d-flex align-items-center gap-2" style="font-size:0.85rem; color:rgba(255,255,255,0.5);">
+                    <i class="bi-check-circle-fill" style="color:var(--cnvs-themecolor);"></i>
+                    Full audit logs and compliance exports
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <a href="#" class="co-btn-primary">Read the docs <i class="bi-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="co-impl-tab">
+                  <i class="bi-code-slash"></i> Python SDK &nbsp;&mdash;&nbsp; Quick start
+                </div>
+                <div class="co-impl-terminal">
+                  <div class="co-terminal-bar">
+                    <div class="co-terminal-dot" style="background:#ff5f57;"></div>
+                    <div class="co-terminal-dot" style="background:#febc2e;"></div>
+                    <div class="co-terminal-dot" style="background:#28c840;"></div>
+                    <span style="font-family:'Space Grotesk',sans-serif; font-size:0.72rem; color:rgba(255,255,255,0.25); margin-left:auto;">canvasorbit_agent.py</span>
+                  </div>
+                  <div class="co-terminal-body">
+                    <div><span class="co-terminal-comment"># Install: pip install canvasorbit</span></div>
+                    <div></div>
+                    <div><span class="co-terminal-key">import</span> <span class="co-terminal-val">canvasorbit</span> <span class="co-terminal-key">as</span> <span class="co-terminal-val">co</span></div>
+                    <div></div>
+                    <div><span class="co-terminal-comment"># Initialize with your API key</span></div>
+                    <div><span class="co-terminal-val">client</span> = <span class="co-terminal-fn">co.Client</span>(<span class="co-terminal-str">"co_live_sk_••••••••"</span>)</div>
+                    <div></div>
+                    <div><span class="co-terminal-comment"># Issue a virtual card for your agent</span></div>
+                    <div><span class="co-terminal-val">card</span> = <span class="co-terminal-val">client</span>.<span class="co-terminal-fn">cards.issue</span>({</div>
+                    <div>&nbsp;&nbsp;<span class="co-terminal-str">"agent_id"</span>: <span class="co-terminal-str">"agent_gpt4_prod_01"</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="co-terminal-str">"budget_usd"</span>: <span class="co-terminal-num">500</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="co-terminal-str">"type"</span>: <span class="co-terminal-str">"single_use"</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="co-terminal-str">"require_human_approval"</span>: <span class="co-terminal-bool">True</span>,</div>
+                    <div>&nbsp;&nbsp;<span class="co-terminal-str">"allowed_categories"</span>: [<span class="co-terminal-str">"software"</span>, <span class="co-terminal-str">"apis"</span>]</div>
+                    <div>})</div>
+                    <div></div>
+                    <div><span class="co-terminal-comment"># Card is ready to use</span></div>
+                    <div><span class="co-terminal-key">print</span>(<span class="co-terminal-val">card</span>.<span class="co-terminal-fn">number</span>) <span class="co-terminal-comment"># 4532 8821 ...</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="co-divider">
+
+        <!-- Automated purchases section -->
+        <div class="co-auto-section">
+          <div class="container">
+            <div class="row g-5 align-items-center">
+              <div class="col-lg-6">
+                <p class="co-section-label">Autonomous commerce</p>
+                <h2 class="co-section-heading">Automated purchases<br>on behalf of <em>your users</em></h2>
+                <p style="color:rgba(255,255,255,0.4); font-size:0.9rem; line-height:1.7; margin-bottom:2rem;">Let agents procure services, subscribe to APIs, and transact in the world while you maintain full oversight. Real-time controls, not after-the-fact alerts.</p>
+                <a href="#" class="co-btn-primary">See how it works <i class="bi-arrow-right ms-1"></i></a>
+              </div>
+              <div class="col-lg-6">
+                <div class="row g-3">
+
+                  <div class="col-12">
+                    <div class="co-auto-card">
+                      <div class="co-auto-card-label">Monthly budget</div>
+                      <div class="co-auto-card-title">GPT-4 Research Agent</div>
+                      <div class="co-limit-row"><span>Spent</span><span>$312 of $500</span></div>
+                      <div class="co-limit-bar-wrap">
+                        <div class="co-limit-bar" style="width:62%;"></div>
+                      </div>
+                      <div class="co-limit-row"><span>38% remaining</span><span>Resets in 18 days</span></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="co-auto-card">
+                      <div class="co-auto-card-label">Last purchase</div>
+                      <div class="co-auto-card-title">Serper API</div>
+                      <div style="font-size:1.2rem; font-family:'Cormorant Garamond',serif; color:var(--cnvs-themecolor); font-weight:400;">$29.00</div>
+                      <div style="font-size:0.72rem; color:rgba(255,255,255,0.3); margin-top:0.25rem;">3 minutes ago</div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="co-auto-card">
+                      <div class="co-auto-card-label">Active cards</div>
+                      <div class="co-auto-card-title">This month</div>
+                      <div style="font-size:1.2rem; font-family:'Cormorant Garamond',serif; color:#fff; font-weight:400;">47 cards</div>
+                      <div style="font-size:0.72rem; color:rgba(255,255,255,0.3); margin-top:0.25rem;">12 pending approval</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="co-auto-card" style="display:flex; align-items:center; gap:1rem;">
+                      <div style="width:36px; height:36px; background:rgba(40,200,64,0.1); border:1px solid rgba(40,200,64,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <i class="bi-check-lg" style="color:var(--co-green);"></i>
+                      </div>
+                      <div>
+                        <div class="co-auto-card-label" style="margin:0 0 0.1rem;">Transaction approved</div>
+                        <div style="font-size:0.85rem; color:#fff; font-weight:500;">Browserless.io subscription <span style="color:rgba(255,255,255,0.35); font-weight:400;">$49/mo</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="co-divider">
+
+        <!-- Live transaction feed -->
+        <div class="co-feed-section">
+          <div class="container">
+            <div class="row align-items-end mb-4">
+              <div class="col-lg-7">
+                <p class="co-section-label">Live now</p>
+                <h2 class="co-section-heading">Watch agents<br>spend <em>in real time</em></h2>
+              </div>
+              <div class="col-lg-5">
+                <p style="color:rgba(255,255,255,0.4); font-size:0.9rem; line-height:1.7;">Every card purchase, every API call, every subscription paid by an autonomous agent. Streamed live from the CanvasOrbit network.</p>
+              </div>
+            </div>
+
+            <div class="co-feed-stats">
+              <div class="co-feed-stat">
+                <div class="co-feed-stat-label">Today</div>
+                <div class="co-feed-stat-value" id="co-stat-today">$0</div>
+              </div>
+              <div class="co-feed-stat">
+                <div class="co-feed-stat-label">Transactions</div>
+                <div class="co-feed-stat-value" id="co-stat-tx">0</div>
+              </div>
+              <div class="co-feed-stat">
+                <div class="co-feed-stat-label">Active agents</div>
+                <div class="co-feed-stat-value" id="co-stat-agents">0</div>
+              </div>
+              <div class="co-feed-stat">
+                <div class="co-feed-stat-label">Avg latency</div>
+                <div class="co-feed-stat-value">42<span class="co-feed-stat-unit">ms</span></div>
+              </div>
+            </div>
+
+            <div class="co-feed-panel">
+              <div class="co-feed-panel-header">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="co-feed-live-dot"></span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:0.78rem; color:rgba(255,255,255,0.7); font-weight:500; letter-spacing:0.04em;">LIVE TRANSACTION FEED</span>
+                </div>
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:0.72rem; color:rgba(255,255,255,0.3);">Filter:</span>
+                  <button class="co-feed-filter active" data-filter="all">All</button>
+                  <button class="co-feed-filter" data-filter="approved">Approved</button>
+                  <button class="co-feed-filter" data-filter="blocked">Blocked</button>
+                </div>
+              </div>
+
+              <div class="co-feed-table-head">
+                <div>Status</div>
+                <div>Agent</div>
+                <div>Merchant</div>
+                <div>Category</div>
+                <div class="text-end">Amount</div>
+                <div class="text-end">Time</div>
+              </div>
+
+              <div class="co-feed-list" id="co-feed-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="co-divider">
+
+        <!-- Testimonials -->
+        <div class="co-testimonials">
+          <div class="container">
+            <div class="co-testimonials-head text-center">
+              <p class="co-section-label">What humans are saying</p>
+              <h2 class="co-section-heading mb-5">Builders love<br><em>CanvasOrbit</em></h2>
+            </div>
+            <div class="row g-4">
+
+              <div class="col-md-4">
+                <div class="co-testi-card">
+                  <div class="co-testi-quote">"The moment our agent could actually buy its own tools and APIs, everything changed. CanvasOrbit made that real in a weekend."</div>
+                  <div class="co-testi-author">
+                    <div class="co-testi-avatar" style="background:#277aff;">SR</div>
+                    <div>
+                      <div class="co-testi-name">Sarah R.</div>
+                      <div class="co-testi-role">Founder, Orbit Labs</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="co-testi-card">
+                  <div class="co-testi-quote">"We needed agents that could operate independently without a human approving every $10 API call. CanvasOrbit got the balance exactly right."</div>
+                  <div class="co-testi-author">
+                    <div class="co-testi-avatar" style="background:#6c47d4;">MK</div>
+                    <div>
+                      <div class="co-testi-name">Marcus K.</div>
+                      <div class="co-testi-role">CTO, AgentStack</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="co-testi-card">
+                  <div class="co-testi-quote">"Finally, a payment layer built for AI. Not retrofitted. Not a workaround. Actual card infrastructure designed for how agents work."</div>
+                  <div class="co-testi-author">
+                    <div class="co-testi-avatar" style="background:#f26522;">PL</div>
+                    <div>
+                      <div class="co-testi-name">Priya L.</div>
+                      <div class="co-testi-role">Head of AI, Streamline</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <hr class="co-divider">
+
+        <!-- FAQ -->
+        <div class="co-faq-section">
+          <div class="container">
+            <div class="row align-items-start g-5">
+              <div class="col-lg-4">
+                <p class="co-section-label">Questions</p>
+                <h2 class="co-section-heading">Everything<br>you might <em>ask</em></h2>
+                <p style="color:rgba(255,255,255,0.4); font-size:0.9rem; line-height:1.7; margin-bottom:2rem;">Common questions about agentic payments, security, and how CanvasOrbit works under the hood. Still curious? Email <a href="mailto:hello@canvasorbit.io" style="color:var(--cnvs-themecolor); text-decoration:none;">hello@canvasorbit.io</a>.</p>
+                <div class="co-faq-badges">
+                  <span class="co-faq-badge"><i class="bi-shield-check"></i> SOC 2 Type II</span>
+                  <span class="co-faq-badge"><i class="bi-lock"></i> PCI DSS Level 1</span>
+                  <span class="co-faq-badge"><i class="bi-globe"></i> Visa network</span>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="co-faq-list" id="co-faq-list">
+
+                  <div class="co-faq-item">
+                    <button class="co-faq-trigger" type="button">
+                      <span class="co-faq-q">How is CanvasOrbit different from a regular card issuer?</span>
+                      <span class="co-faq-icon"><i class="bi-plus"></i></span>
+                    </button>
+                    <div class="co-faq-answer">
+                      <div class="co-faq-answer-inner">Regular issuers hand out cards and disappear. CanvasOrbit is built for autonomous software. Every card has programmatic controls, real-time webhooks, and policies that your agent reads as configuration. Your agent does not need to know about the banking rails.</div>
+                    </div>
+                  </div>
+
+                  <div class="co-faq-item">
+                    <button class="co-faq-trigger" type="button">
+                      <span class="co-faq-q">Can I set hard limits on what an agent can spend?</span>
+                      <span class="co-faq-icon"><i class="bi-plus"></i></span>
+                    </button>
+                    <div class="co-faq-answer">
+                      <div class="co-faq-answer-inner">Yes. You set per-card budgets, per-transaction caps, merchant category locks, single-use mode, expiry windows, and approval thresholds. When a card hits a limit it declines instantly, no manual review required.</div>
+                    </div>
+                  </div>
+
+                  <div class="co-faq-item">
+                    <button class="co-faq-trigger" type="button">
+                      <span class="co-faq-q">Where is my money held and who has access to it?</span>
+                      <span class="co-faq-icon"><i class="bi-plus"></i></span>
+                    </button>
+                    <div class="co-faq-answer">
+                      <div class="co-faq-answer-inner">Funds sit in a segregated custodial account at our partner bank, FDIC-insured up to $250,000 per account. CanvasOrbit never has access to your wallet funds for our own use. Only authorized API keys tied to your account can issue cards or move money.</div>
+                    </div>
+                  </div>
+
+                  <div class="co-faq-item">
+                    <button class="co-faq-trigger" type="button">
+                      <span class="co-faq-q">How does the human authorization flow work?</span>
+                      <span class="co-faq-icon"><i class="bi-plus"></i></span>
+                    </button>
+                    <div class="co-faq-answer">
+                      <div class="co-faq-answer-inner">When an agent triggers a transaction that exceeds your approval threshold, CanvasOrbit pings the human approver via Slack, email, SMS, or a custom webhook. The approver taps approve or deny and the agent gets the answer in under 200ms on average.</div>
+                    </div>
+                  </div>
+
+                  <div class="co-faq-item">
+                    <button class="co-faq-trigger" type="button">
+                      <span class="co-faq-q">Which AI frameworks and tools does CanvasOrbit integrate with?</span>
+                      <span class="co-faq-icon"><i class="bi-plus"></i></span>
+                    </button>
+                    <div class="co-faq-answer">
+                      <div class="co-faq-answer-inner">Out of the box: LangChain, AutoGPT, CrewAI, LangGraph, OpenAI Assistants, Anthropic Claude Tools, Replicate, Hugging Face. Plus a vanilla REST API and Node + Python SDKs for any custom agent framework.</div>
+                    </div>
+                  </div>
+
+                  <div class="co-faq-item">
+                    <button class="co-faq-trigger" type="button">
+                      <span class="co-faq-q">What happens if an agent misbehaves or gets compromised?</span>
+                      <span class="co-faq-icon"><i class="bi-plus"></i></span>
+                    </button>
+                    <div class="co-faq-answer">
+                      <div class="co-faq-answer-inner">Freeze any card instantly via API or dashboard. Single-use cards self-destruct after one transaction. Velocity checks and anomaly detection block unusual merchant patterns, geographies, and amounts in real time. Every action is logged for audit.</div>
+                    </div>
+                  </div>
+
+                  <div class="co-faq-item">
+                    <button class="co-faq-trigger" type="button">
+                      <span class="co-faq-q">Is there a free tier for developers?</span>
+                      <span class="co-faq-icon"><i class="bi-plus"></i></span>
+                    </button>
+                    <div class="co-faq-answer">
+                      <div class="co-faq-answer-inner">Yes. 100 virtual cards per month, $5,000 in total transaction volume, and unlimited API calls are free forever. No credit card to start. Paid plans begin at $49/month for production workloads.</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="co-divider">
+
+        <!-- CTA section -->
+        <div class="co-cta-section">
+          <div class="container position-relative" style="z-index:1;">
+            <p class="co-section-label">Get started</p>
+            <h2 class="co-section-heading">What will your<br><em>AI agent</em><br>buy first?</h2>
+            <p style="color:rgba(255,255,255,0.4); font-size:0.95rem; max-width:420px; margin:0 auto 2.5rem; line-height:1.7;">Issue your first virtual card in minutes. No sales call required. Works with every major agent framework.</p>
+            <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
+              <a href="#" class="co-btn-primary" style="padding:0.85rem 2.25rem; font-size:1rem;">Start for free <i class="bi-arrow-right ms-1"></i></a>
+              <a href="#" class="co-btn-ghost">Schedule a call</a>
+            </div>
+            <p style="font-family:'Space Grotesk',sans-serif; font-size:0.75rem; color:rgba(255,255,255,0.2); margin-top:1.5rem;">100 free cards on signup. No credit card needed.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="dark">
+      <div class="container py-6">
+        <div class="row g-5">
+
+          <div class="col-lg-4">
+            <div class="co-footer-brand">CanvasOrbit</div>
+            <p class="co-footer-desc">AI agent infrastructure for autonomous commerce. Issue virtual cards, set budgets, and let your agents act in the world.</p>
+            <div class="co-social-row">
+              <a class="co-social-btn" href="#" title="Twitter/X" aria-label="Follow us on X"><i class="bi-twitter-x"></i></a>
+              <a class="co-social-btn" href="#" title="LinkedIn" aria-label="Follow us on LinkedIn"><i class="bi-linkedin"></i></a>
+              <a class="co-social-btn" href="#" title="GitHub" aria-label="View our GitHub"><i class="bi-github"></i></a>
+              <a class="co-social-btn" href="#" title="Discord" aria-label="Join our Discord"><i class="bi-discord"></i></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="co-footer-heading">Product</div>
+            <a class="co-footer-link" href="#">Features</a>
+            <a class="co-footer-link" href="#">Pricing</a>
+            <a class="co-footer-link" href="#">Changelog</a>
+            <a class="co-footer-link" href="#">Roadmap</a>
+            <a class="co-footer-link" href="#">Security</a>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="co-footer-heading">Developers</div>
+            <a class="co-footer-link" href="#">Documentation</a>
+            <a class="co-footer-link" href="#">API Reference</a>
+            <a class="co-footer-link" href="#">SDKs</a>
+            <a class="co-footer-link" href="#">Webhooks</a>
+            <a class="co-footer-link" href="#">Status</a>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="co-footer-heading">Company</div>
+            <a class="co-footer-link" href="#">About</a>
+            <a class="co-footer-link" href="#">Blog</a>
+            <a class="co-footer-link" href="#">Careers</a>
+            <a class="co-footer-link" href="#">Contact</a>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <div class="co-footer-heading">Legal</div>
+            <a class="co-footer-link" href="#">Privacy</a>
+            <a class="co-footer-link" href="#">Terms</a>
+            <a class="co-footer-link" href="#">Compliance</a>
+            <a class="co-footer-link" href="#">Cookies</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="copyrights">
+        Copyrights &copy; 2026 CanvasOrbit.
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- WebGL hero particle field -->
+  <div id="co-webgl-hero" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;">
+    <canvas id="co-hero-gl" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
+  </div>
+
+  <script src="js/plugins.min.js"></script>
+  <script src="js/functions.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+  <script>
+    (function() {
+      // ---- LIVE TRANSACTION FEED ----
+      (function() {
+        var list = document.getElementById('co-feed-list');
+        var sToday = document.getElementById('co-stat-today');
+        var sTx = document.getElementById('co-stat-tx');
+        var sAgents = document.getElementById('co-stat-agents');
+        if (!list) return;
+        var AGENTS = [{
+            id: 'agent_gpt4_research_01',
+            name: 'GPT-4 Research',
+            avatar: 'GR',
+            status: 'research'
+          },
+          {
+            id: 'agent_claude_writer_03',
+            name: 'Claude Writer',
+            avatar: 'CW',
+            status: 'writing'
+          },
+          {
+            id: 'agent_autogpt_scout',
+            name: 'AutoGPT Scout',
+            avatar: 'AS',
+            status: 'browsing'
+          },
+          {
+            id: 'agent_crewai_analyst',
+            name: 'CrewAI Analyst',
+            avatar: 'CA',
+            status: 'analyst'
+          },
+          {
+            id: 'agent_replicate_dev',
+            name: 'Replicate Dev',
+            avatar: 'RD',
+            status: 'dev'
+          },
+          {
+            id: 'agent_langchain_pm',
+            name: 'LangChain PM',
+            avatar: 'LP',
+            status: 'ops'
+          },
+          {
+            id: 'agent_vertex_support',
+            name: 'Vertex Support',
+            avatar: 'VS',
+            status: 'support'
+          },
+          {
+            id: 'agent_pinecone_index',
+            name: 'Pinecone Index',
+            avatar: 'PI',
+            status: 'data'
+          },
+          {
+            id: 'agent_hf_finetune',
+            name: 'HF Fine-Tune',
+            avatar: 'HF',
+            status: 'ml'
+          },
+          {
+            id: 'agent_openai_codex',
+            name: 'Codex Builder',
+            avatar: 'CB',
+            status: 'dev'
+          }
+        ];
+        var MERCHANTS = [{
+            name: 'OpenAI API',
+            domain: 'openai.com',
+            cat: 'apis',
+            min: 12,
+            max: 180
+          },
+          {
+            name: 'Anthropic Console',
+            domain: 'console.anthropic.com',
+            cat: 'apis',
+            min: 20,
+            max: 240
+          },
+          {
+            name: 'Serper',
+            domain: 'serper.dev',
+            cat: 'search',
+            min: 5,
+            max: 60
+          },
+          {
+            name: 'Browserless',
+            domain: 'browserless.io',
+            cat: 'software',
+            min: 49,
+            max: 199
+          },
+          {
+            name: 'Stripe',
+            domain: 'stripe.com',
+            cat: 'payments',
+            min: 30,
+            max: 300
+          },
+          {
+            name: 'Pinecone',
+            domain: 'pinecone.io',
+            cat: 'databases',
+            min: 25,
+            max: 150
+          },
+          {
+            name: 'Replicate',
+            domain: 'replicate.com',
+            cat: 'compute',
+            min: 10,
+            max: 120
+          },
+          {
+            name: 'GitHub',
+            domain: 'github.com',
+            cat: 'developer',
+            min: 4,
+            max: 25
+          },
+          {
+            name: 'Vercel',
+            domain: 'vercel.com',
+            cat: 'hosting',
+            min: 20,
+            max: 250
+          },
+          {
+            name: 'AWS S3',
+            domain: 'aws.amazon.com',
+            cat: 'cloud',
+            min: 8,
+            max: 400
+          },
+          {
+            name: 'Hugging Face',
+            domain: 'huggingface.co',
+            cat: 'ml',
+            min: 9,
+            max: 95
+          },
+          {
+            name: 'LangChain Cloud',
+            domain: 'langchain.com',
+            cat: 'developer',
+            min: 15,
+            max: 145
+          },
+          {
+            name: 'Notion',
+            domain: 'notion.so',
+            cat: 'productivity',
+            min: 10,
+            max: 48
+          },
+          {
+            name: 'Zapier',
+            domain: 'zapier.com',
+            cat: 'automation',
+            min: 19,
+            max: 73
+          },
+          {
+            name: 'Airtable',
+            domain: 'airtable.com',
+            cat: 'productivity',
+            min: 20,
+            max: 54
+          },
+          {
+            name: 'Linear',
+            domain: 'linear.app',
+            cat: 'productivity',
+            min: 8,
+            max: 32
+          }
+        ];
+        var STATES = ['approved', 'approved', 'approved', 'approved', 'pending', 'blocked'];
+
+        function pad(n) {
+          return n < 10 ? '0' + n : '' + n;
+        }
+
+        function fmtTime(d) {
+          var h = d.getHours(),
+            m = d.getMinutes(),
+            s = d.getSeconds();
+          return pad(h) + ':' + pad(m) + ':' + pad(s);
+        }
+
+        function fmtMoney(v) {
+          return '$' + v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+        var totalToday = 12847.43;
+        var txCount = 247;
+        var activeAgents = 38;
+        var maxRows = 14;
+        var rows = [];
+
+        function pick(arr) {
+          return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function renderRow(r) {
+          var blocked = r.status === 'blocked';
+          var statusHtml = '<span class="co-feed-status ' + r.status + '">' + r.status + '</span>';
+          var amountClass = blocked ? 'co-feed-amount blocked' : 'co-feed-amount';
+          return '<div class="co-feed-row">' +
+            '<div>' + statusHtml + '</div>' +
+            '<div><div class="co-feed-agent"><div class="co-feed-agent-avatar">' + r.agent.avatar + '</div><div><div class="co-feed-agent-name">' + r.agent.name + '</div><div class="co-feed-agent-id">' + r.agent.id + '</div></div></div></div>' +
+            '<div><div class="co-feed-merchant"><span class="co-feed-merchant-name">' + r.merchant.name + '</span><span class="co-feed-merchant-domain">' + r.merchant.domain + '</span></div></div>' +
+            '<div><span class="co-feed-cat">' + r.merchant.cat + '</span></div>' +
+            '<div class="' + amountClass + '">' + (blocked ? '−' : '') + fmtMoney(r.amount) + '</div>' +
+            '<div class="co-feed-time">' + r.time + '</div>' +
+            '</div>';
+        }
+
+        function pushRow() {
+          var agent = pick(AGENTS);
+          var merchant = pick(MERCHANTS);
+          var status = pick(STATES);
+          var amount = merchant.min + Math.random() * (merchant.max - merchant.min);
+          var r = {
+            agent: agent,
+            merchant: merchant,
+            amount: amount,
+            status: status,
+            time: fmtTime(new Date())
+          };
+          if (status !== 'blocked') {
+            totalToday += amount;
+            txCount++;
+          }
+          rows.unshift(r);
+          if (rows.length > maxRows) rows.length = maxRows;
+          list.innerHTML = rows.map(renderRow).join('');
+          if (sToday) sToday.textContent = fmtMoney(totalToday);
+          if (sTx) sTx.textContent = txCount.toLocaleString();
+          if (sAgents) sAgents.textContent = (38 + Math.floor(Math.random() * 6));
+        }
+        // Initial seed — 8 historical rows
+        var now = new Date();
+        for (var i = 0; i < 8; i++) {
+          var t = new Date(now.getTime() - (i + 1) * 7000 - Math.random() * 3000);
+          var agent = pick(AGENTS);
+          var merchant = pick(MERCHANTS);
+          var status = pick(STATES);
+          var amount = merchant.min + Math.random() * (merchant.max - merchant.min);
+          rows.push({
+            agent: agent,
+            merchant: merchant,
+            amount: amount,
+            status: status,
+            time: fmtTime(t)
+          });
+        }
+        list.innerHTML = rows.map(renderRow).join('');
+        if (sToday) sToday.textContent = fmtMoney(totalToday);
+        if (sTx) sTx.textContent = txCount.toLocaleString();
+        if (sAgents) sAgents.textContent = activeAgents;
+        // Live updates
+        setInterval(pushRow, 2600);
+        // Filter buttons
+        var filters = document.querySelectorAll('.co-feed-filter');
+        filters.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            filters.forEach(function(b) {
+              b.classList.remove('active');
+            });
+            btn.classList.add('active');
+            var f = btn.getAttribute('data-filter');
+            var filtered = f === 'all' ? rows : rows.filter(function(r) {
+              return r.status === f;
+            });
+            list.innerHTML = (filtered.length ? filtered : [{
+              empty: 1
+            }]).map(function(r) {
+              return r.empty ? '<div class="co-feed-row" style="grid-template-columns:1fr; text-align:center; color:rgba(255,255,255,0.3); padding:2rem;">No transactions match this filter yet.</div>' : renderRow(r);
+            }).join('');
+          });
+        });
+      })();
+      // ---- FAQ ACCORDION ----
+      (function() {
+        var items = document.querySelectorAll('.co-faq-item');
+        items.forEach(function(item) {
+          var trig = item.querySelector('.co-faq-trigger');
+          trig.addEventListener('click', function() {
+            var isOpen = item.classList.contains('open');
+            items.forEach(function(i) {
+              i.classList.remove('open');
+            });
+            if (!isOpen) item.classList.add('open');
+          });
+        });
+      })();
+      // ---- LIVE TICKER (CSS-only animated counter chip) ----
+      (function() {
+        var el = document.getElementById('co-ticker-amount');
+        if (!el) return;
+        var amount = 12847;
+        setInterval(function() {
+          amount += Math.floor(Math.random() * 23) + 4;
+          var text = '$' + amount.toLocaleString('en-US');
+          el.classList.add('up');
+          setTimeout(function() {
+            el.textContent = text;
+            el.classList.remove('up');
+            el.classList.add('in');
+            setTimeout(function() {
+              el.classList.remove('in');
+            }, 500);
+          }, 250);
+        }, 2200);
+      })();
+      // ---- CURSOR FOLLOW GLOW (subtle accent blob) ----
+      (function() {
+        var glow = document.getElementById('co-cursor-glow');
+        if (!glow || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var tx = window.innerWidth / 2,
+          ty = window.innerHeight / 2;
+        var cx = tx,
+          cy = ty;
+        document.addEventListener('pointermove', function(e) {
+          tx = e.clientX;
+          ty = e.clientY;
+        });
+        var raf;
+
+        function loop() {
+          cx += (tx - cx) * 0.12;
+          cy += (ty - cy) * 0.12;
+          glow.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%, -50%)';
+          raf = requestAnimationFrame(loop);
+        }
+        loop();
+        document.addEventListener('pointerleave', function() {
+          glow.style.opacity = '0';
+        });
+        document.addEventListener('pointerenter', function() {
+          glow.style.opacity = '1';
+        });
+      })();
+      // ---- THREE.JS WEBGL HERO SCENE (particle network) ----
+      if (window.THREE && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var host = document.getElementById('co-webgl-hero');
+        var hero = document.getElementById('co-hero');
+        if (host && hero) {
+          host.style.position = 'absolute';
+          host.style.top = '0';
+          host.style.left = '0';
+          host.style.width = '100%';
+          host.style.height = '100%';
+          hero.style.position = 'relative';
+          hero.appendChild(host);
+          var canvas = document.getElementById('co-hero-gl');
+          var renderer;
+          try {
+            renderer = new THREE.WebGLRenderer({
+              canvas: canvas,
+              alpha: true,
+              antialias: true
+            });
+          } catch (e) {
+            return;
+          }
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+          renderer.setClearColor(0x000000, 0);
+          var scene = new THREE.Scene();
+          var camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+          camera.position.z = 7;
+          var COUNT = 380;
+          var pos = new Float32Array(COUNT * 3);
+          var seeds = new Float32Array(COUNT);
+          for (var i = 0; i < COUNT; i++) {
+            var r = Math.pow(Math.random(), 0.5) * 5.5;
+            var theta = Math.random() * Math.PI * 2;
+            var phi = Math.acos(2 * Math.random() - 1);
+            pos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+            pos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta) * 0.45;
+            pos[i * 3 + 2] = r * Math.cos(phi);
+            seeds[i] = Math.random() * Math.PI * 2;
+          }
+          var geo = new THREE.BufferGeometry();
+          geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+          var accent = new THREE.Color(getComputedStyle(document.documentElement).getPropertyValue('--cnvs-themecolor').trim() || '#277aff');
+          var mat = new THREE.PointsMaterial({
+            size: 0.045,
+            transparent: true,
+            opacity: 0.7,
+            color: accent,
+            sizeAttenuation: true
+          });
+          var points = new THREE.Points(geo, mat);
+          scene.add(points);
+          // Line network — connect nearby points
+          var linkGeo = new THREE.BufferGeometry();
+          var linkPos = [];
+          var LINK_DIST = 1.1;
+          for (var i = 0; i < COUNT; i++) {
+            for (var j = i + 1; j < COUNT; j++) {
+              var dx = pos[i * 3] - pos[j * 3];
+              var dy = pos[i * 3 + 1] - pos[j * 3 + 1];
+              var dz = pos[i * 3 + 2] - pos[j * 3 + 2];
+              var d = Math.sqrt(dx * dx + dy * dy + dz * dz);
+              if (d < LINK_DIST) {
+                linkPos.push(pos[i * 3], pos[i * 3 + 1], pos[i * 3 + 2]);
+                linkPos.push(pos[j * 3], pos[j * 3 + 1], pos[j * 3 + 2]);
+              }
+            }
+          }
+          linkGeo.setAttribute('position', new THREE.Float32BufferAttribute(linkPos, 3));
+          var linkMat = new THREE.LineBasicMaterial({
+            color: accent,
+            transparent: true,
+            opacity: 0.12
+          });
+          var lines = new THREE.LineSegments(linkGeo, linkMat);
+          scene.add(lines);
+          // Wireframe icosahedron at center
+          var ico = new THREE.Mesh(
+            new THREE.IcosahedronGeometry(1.6, 1),
+            new THREE.MeshBasicMaterial({
+              color: accent,
+              wireframe: true,
+              transparent: true,
+              opacity: 0.18
+            })
+          );
+          scene.add(ico);
+
+          function resize() {
+            var w = host.clientWidth,
+              h = host.clientHeight;
+            renderer.setSize(w, h, false);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+          }
+          resize();
+          window.addEventListener('resize', resize);
+          var mx = 0,
+            my = 0;
+          hero.addEventListener('pointermove', function(e) {
+            var r = hero.getBoundingClientRect();
+            mx = (e.clientX - r.left) / r.width - 0.5;
+            my = (e.clientY - r.top) / r.height - 0.5;
+          });
+          var raf, running = true,
+            t = 0;
+          new IntersectionObserver(function(entries) {
+            running = entries[0].isIntersecting;
+            if (running && !raf) loop();
+          }, {
+            threshold: 0
+          }).observe(host);
+
+          function loop() {
+            if (!running) {
+              raf = 0;
+              return;
+            }
+            t += 0.0025;
+            scene.rotation.y = t * 0.4 + mx * 0.3;
+            scene.rotation.x = my * 0.2;
+            points.rotation.y = -t * 0.15;
+            ico.rotation.x = t * 0.3;
+            ico.rotation.y = -t * 0.2;
+            renderer.render(scene, camera);
+            raf = requestAnimationFrame(loop);
+          }
+          loop();
+          var webglHost = document.getElementById('co-webgl-hero');
+          if (webglHost) webglHost.classList.add('co-ready');
+        }
+      }
+      // ---- GSAP SCROLL ANIMATIONS ----
+      if (window.gsap && window.ScrollTrigger && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.registerPlugin(ScrollTrigger);
+        // Hero reveal
+        gsap.from('.co-hero-badge', {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          delay: 0.1,
+          ease: 'power3.out'
+        });
+        gsap.from('.co-hero h1', {
+          opacity: 0,
+          y: 40,
+          duration: 1.1,
+          delay: 0.2,
+          ease: 'power3.out'
+        });
+        gsap.from('.co-hero-sub', {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          delay: 0.5,
+          ease: 'power3.out'
+        });
+        gsap.from('.co-hero .d-flex', {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          delay: 0.65,
+          ease: 'power3.out'
+        });
+        gsap.from('.co-card-visual', {
+          opacity: 0,
+          y: 60,
+          duration: 1.2,
+          delay: 0.4,
+          ease: 'power3.out'
+        });
+        // Section headings reveal
+        gsap.utils.toArray('.co-section-heading, .co-section-label').forEach(function(el) {
+          gsap.from(el, {
+            opacity: 0,
+            y: 30,
+            duration: 0.9,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%'
+            }
+          });
+        });
+        // Feature cards stagger
+        gsap.utils.toArray('.co-feature-card').forEach(function(el, i) {
+          gsap.from(el, {
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            delay: i * 0.12,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%'
+            }
+          });
+        });
+        // Auto cards stagger
+        gsap.utils.toArray('.co-auto-card').forEach(function(el, i) {
+          gsap.from(el, {
+            opacity: 0,
+            y: 30,
+            duration: 0.7,
+            delay: i * 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 90%'
+            }
+          });
+        });
+        // Testimonials stagger
+        gsap.utils.toArray('.co-testi-card').forEach(function(el, i) {
+          gsap.from(el, {
+            opacity: 0,
+            y: 30,
+            duration: 0.7,
+            delay: i * 0.12,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 88%'
+            }
+          });
+        });
+        // Feed section reveal
+        gsap.from('.co-feed-section .co-section-label, .co-feed-section .co-section-heading', {
+          y: 25,
+          duration: 0.8,
+          stagger: 0.08,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.co-feed-section',
+            start: 'top 80%'
+          }
+        });
+        gsap.from('.co-feed-stats .co-feed-stat', {
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          stagger: 0.07,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.co-feed-stats',
+            start: 'top 85%'
+          }
+        });
+        gsap.from('.co-feed-panel', {
+          opacity: 0,
+          y: 30,
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.co-feed-panel',
+            start: 'top 85%'
+          }
+        });
+        // FAQ items stagger reveal
+        gsap.utils.toArray('.co-faq-item').forEach(function(el, i) {
+          gsap.from(el, {
+            opacity: 0,
+            y: 18,
+            duration: 0.6,
+            delay: i * 0.06,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: '.co-faq-list',
+              start: 'top 85%'
+            }
+          });
+        });
+        gsap.from('.co-faq-badges .co-faq-badge', {
+          opacity: 0,
+          y: 12,
+          duration: 0.5,
+          stagger: 0.08,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.co-faq-badges',
+            start: 'top 90%'
+          }
+        });
+        // Glow section parallax
+        gsap.to('.co-glow-section .co-section-heading', {
+          y: -30,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.co-glow-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1
+          }
+        });
+        // Terminal typing reveal
+        gsap.from('.co-terminal-body > div', {
+          opacity: 0,
+          x: -10,
+          duration: 0.4,
+          stagger: 0.04,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.co-impl-terminal',
+            start: 'top 80%'
+          }
+        });
+        // CTA section scale-in (animate from a visible state)
+        gsap.from('.co-cta-section .co-section-heading', {
+          scale: 0.94,
+          y: 20,
+          duration: 1.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.co-cta-section',
+            start: 'top 80%'
+          }
+        });
+        gsap.from('.co-cta-section .co-section-label, .co-cta-section p, .co-cta-section .d-flex', {
+          opacity: 0,
+          y: 15,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.co-cta-section',
+            start: 'top 78%'
+          }
+        });
+        // Limit bar fill animation
+        gsap.utils.toArray('.co-limit-bar').forEach(function(bar) {
+          var target = bar.style.width;
+          bar.style.width = '0%';
+          gsap.to(bar, {
+            width: target,
+            duration: 1.6,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: bar,
+              start: 'top 88%'
+            }
+          });
+        });
+        // Logo strip subtle drift
+        gsap.to('.co-logo-item', {
+          opacity: 0.35,
+          stagger: {
+            each: 0.6,
+            from: 'random',
+            repeat: -1,
+            yoyo: true
+          },
+          duration: 2.5,
+          ease: 'sine.inOut'
+        });
+        // Float widgets ambient bob
+        gsap.to('.co-float-1', {
+          y: -10,
+          duration: 3,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut'
+        });
+        gsap.to('.co-float-2', {
+          y: -8,
+          duration: 3.5,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          delay: 0.5
+        });
+        // Card number scrub
+        var cardNumEl = document.querySelector('.co-card-number');
+        if (cardNumEl) {
+          var digits = ['4532 8821 0034 8821', '4532 4423 8821 0019', '4532 8821 9923 1142', '4532 8821 0034 8821'];
+          var idx = 0;
+          setInterval(function() {
+            idx = (idx + 1) % digits.length;
+            gsap.to(cardNumEl, {
+              opacity: 0,
+              duration: 0.2,
+              onComplete: function() {
+                cardNumEl.textContent = digits[idx];
+                gsap.to(cardNumEl, {
+                  opacity: 0.8,
+                  duration: 0.3
+                });
+              }
+            });
+          }, 4000);
+        }
+        // Fraud blocked pulse
+        gsap.to('.co-fraud-blocked', {
+          boxShadow: '0 0 0 6px rgba(242,101,34,0.15)',
+          duration: 1.2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut'
+        });
+        // Auth widget "approve" subtle pulse
+        gsap.to('.co-auth-btn-yes', {
+          scale: 1.03,
+          duration: 1.4,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut'
+        });
+      }
+      // Counter animation for active cards / budget figures
+      if (window.gsap) {
+        ScrollTrigger && gsap.utils.toArray('[data-counter]').forEach(function(el) {
+          var target = parseFloat(el.getAttribute('data-counter'));
+          var obj = {
+            v: 0
+          };
+          gsap.to(obj, {
+            v: target,
+            duration: 1.8,
+            ease: 'power2.out',
+            onUpdate: function() {
+              el.textContent = Math.round(obj.v);
+            },
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              once: true
+            }
+          });
+        });
+      }
+    })();
+
+  </script>
+</body>
+</html>

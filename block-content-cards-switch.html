@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore Canvas switchable content cards — toggle between grid and list view layouts. Responsive, flexible card blocks for any website built with Bootstrap.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Cards | Canvas</title>
+
+	<style>
+		.grid-switch-content:not(.col-grid) > div {
+			-ms-flex: 0 0 100%;
+		    flex: 0 0 100%;
+		    max-width: 100%;
+			-ms-flex-direction: column !important;
+			flex-direction: column !important;
+		}
+
+		.grid-switch-content .card-img {
+			-ms-flex: 1 1 auto !important;
+   			flex: 1 1 auto !important;
+   			border-radius: 0.25rem 0.25rem 0 0;
+		}
+
+		@media (min-width: 768px) {
+			.grid-switch-content:not(.col-grid) .card-img {
+			    -ms-flex: 0 0 33.333333%;
+			    flex: 0 0 33.333333%;
+			    max-width: 33.333333%;
+			}
+			.grid-switch-content .col-full .card-img { border-radius: 0.25rem 0 0 0.25rem; }
+		}
+
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-content-cards-switch.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-cards-switch.html">
+	<meta property="og:title" content="Content Cards with Grid/List Switch | Canvas">
+	<meta property="og:description" content="Explore Canvas switchable content cards — toggle between grid and list view layouts. Responsive, flexible card blocks for any website built with Bootstrap.">
+	<meta property="og:image" content="images/blocks/preview/card-2/1.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Content Cards with Grid/List Switch | Canvas">
+	<meta name="twitter:description" content="Explore Canvas switchable content cards — toggle between grid and list view layouts. Responsive, flexible card blocks for any website built with Bootstrap.">
+	<meta name="twitter:image" content="images/blocks/preview/card-2/1.jpg">
+	<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "WebPage",
+			"name": "Content Cards with Grid/List Switch | Canvas",
+			"url": "block-content-cards-switch.html",
+			"description": "Explore Canvas switchable content cards \u2014 toggle between grid and list view layouts. Responsive, flexible card blocks for any website built with Bootstrap.",
+			"image": "images/blocks/preview/card-2/1.jpg",
+			"isPartOf": {
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "index.html"
+			}
+		},
+		{
+			"@type": "SoftwareApplication",
+			"name": "Canvas HTML Template",
+			"applicationCategory": "WebApplication",
+			"description": "A highly customizable Bootstrap HTML template featuring switchable content card layouts with grid and list display modes.",
+			"offers": {
+				"@type": "Offer",
+				"url": "block-content-cards-switch.html"
+			}
+		}
+	]
+}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="d-flex justify-content-center mb-5">
+						<div class="btn-group grid-switch d-none d-md-inline-flex" role="group">
+							<input type="radio" name="options" class="btn-check" id="option1" autocomplete="off" checked>
+							<label for="option1" class="btn btn-outline-dark btn-grid"><i class="bi-grid"></i></label>
+
+							<input type="radio" name="options" class="btn-check" id="option2" autocomplete="off">
+							<label for="option2" class="btn btn-outline-dark btn-full"><i class="bi-justify"></i></label>
+						</div>
+					</div>
+
+					<div class="row grid-switch-content col-grid">
+
+						<div class="entry col-lg-4">
+							<div class="card">
+								<div class="row g-0 align-items-center">
+									<div class="col card-img d-flex align-self-stretch overflow-hidden">
+										<img class="img-fluid" src="images/blocks/preview/card-2/1.jpg" alt="Canvas content card preview one">
+									</div>
+									<div class="col p-4">
+										<div class="card-body">
+											<h3 class="card-title">Card Title</h3>
+											<p class="card-text mb-2">Build modern, responsive layouts with Canvas content cards. Switch effortlessly between grid and list views to find the display style that works best for your audience.</p>
+											<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+											<a href="#" class="btn btn-primary">Learn More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-4">
+							<div class="card">
+								<div class="row g-0 align-items-center">
+									<div class="col card-img d-flex align-self-stretch overflow-hidden">
+										<img class="img-fluid" src="images/blocks/preview/card-2/2.jpg" alt="Canvas content card preview two">
+									</div>
+									<div class="col p-4">
+										<div class="card-body">
+											<h3 class="card-title">Card Title</h3>
+											<p class="card-text mb-2">Showcase your latest projects, articles, or product highlights with flexible card layouts. Canvas makes it simple to present content that looks great on any screen size.</p>
+											<p class="card-text"><small class="text-muted">Last updated 1 hours ago</small></p>
+											<a href="#" class="btn btn-primary">Learn More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-4">
+							<div class="card">
+								<div class="row g-0 align-items-center">
+									<div class="col card-img d-flex align-self-stretch overflow-hidden">
+										<img class="img-fluid" src="images/blocks/preview/card-2/3.jpg" alt="Canvas content card preview three">
+									</div>
+									<div class="col p-4">
+										<div class="card-body">
+											<h3 class="card-title">Card Title</h3>
+											<p class="card-text mb-2">Keep visitors engaged with structured content blocks designed for clarity. Each card adapts to your needs, whether presenting team members, blog posts, or services.</p>
+											<p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
+											<a href="#" class="btn btn-primary">Learn More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		document.querySelector('.btn-grid').onclick = function() {
+			document.querySelector('.grid-switch-content').classList.add('col-grid');
+			document.querySelector('.grid-switch-content').classList.remove('col-full');
+		};
+
+		document.querySelector('.btn-full').onclick = function() {
+			document.querySelector('.grid-switch-content').classList.add('col-full');
+			document.querySelector('.grid-switch-content').classList.remove('col-grid');
+		};
+	</script>
+
+</body>
+</html>

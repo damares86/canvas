@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Buy, sell and store crypto in minutes with Canvas Crypto. Create a free wallet, fund it securely and trade hundreds of coins from one simple dashboard.">
+
+	<!-- Font Imports -->
+	<link rel="stylesheet" href="https://use.typekit.net/exm2kgx.css">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Niche Demos -->
+	<link rel="stylesheet" href="demos/nft-marketplace/nft-marketplace.css"> <!-- nft-marketplace Custom Css -->
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>NFT Marketplace &amp; Crypto Wallet | Canvas</title>
+
+	<style>
+	.device-touch .section {
+		background-attachment: scroll !important;
+	}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#fac130">
+	<link rel="canonical" href="demo-nft-marketplace-2.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="demo-nft-marketplace-2.html">
+	<meta property="og:title" content="NFT Marketplace & Crypto Wallet | Canvas">
+	<meta property="og:description" content="Buy, sell and store crypto in minutes with Canvas Crypto. Create a free wallet, fund it securely and trade hundreds of coins from one simple dashboard.">
+	<meta property="og:image" content="demos/nft-marketplace/images/page-2/1.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="NFT Marketplace & Crypto Wallet | Canvas">
+	<meta name="twitter:description" content="Buy, sell and store crypto in minutes with Canvas Crypto. Create a free wallet, fund it securely and trade hundreds of coins from one simple dashboard.">
+	<meta name="twitter:image" content="demos/nft-marketplace/images/page-2/1.jpg">
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@graph": [
+		    {
+		      "@type": "Organization",
+		      "@id": "demo-nft-marketplace-2.html#org",
+		      "name": "Canvas Crypto",
+		      "url": "demo-nft-marketplace-2.html",
+		      "logo": "demos/nft-marketplace/images/logo.svg",
+		      "description": "Buy, sell and store crypto in minutes with Canvas Crypto. Create a free wallet, fund it securely and trade hundreds of coins from one simple dashboard.",
+		      "address": {
+		        "@type": "PostalAddress",
+		        "streetAddress": "123 Example Avenue",
+		        "addressLocality": "San Francisco",
+		        "addressRegion": "CA",
+		        "postalCode": "94105",
+		        "addressCountry": "US"
+		      },
+		      "contactPoint": {
+		        "@type": "ContactPoint",
+		        "telephone": "+1-555-123-4567",
+		        "contactType": "customer support",
+		        "email": "info@canvas.com"
+		      }
+		    },
+		    {
+		      "@type": "WebSite",
+		      "@id": "demo-nft-marketplace-2.html#website",
+		      "name": "Canvas",
+		      "url": "demo-nft-marketplace-2.html",
+		      "description": "Buy, sell and store crypto in minutes with Canvas Crypto. Create a free wallet, fund it securely and trade hundreds of coins from one simple dashboard.",
+		      "publisher": {
+		        "@id": "demo-nft-marketplace-2.html#org"
+		      }
+		    },
+		    {
+		      "@type": "Service",
+		      "name": "Canvas Crypto Wallet",
+		      "serviceType": "Cryptocurrency trading and wallet",
+		      "provider": {
+		        "@id": "demo-nft-marketplace-2.html#org"
+		      },
+		      "url": "demo-nft-marketplace-2.html",
+		      "image": "demos/nft-marketplace/images/page-2/1.jpg",
+		      "description": "Buy, sell and store crypto in minutes with Canvas Crypto. Create a free wallet, fund it securely and trade hundreds of coins from one simple dashboard.",
+		      "areaServed": "Worldwide"
+		    }
+		  ]
+		}
+	</script>
+
+</head>
+
+<body class="stretched dark nft-demo-2">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="dark transparent-header no-sticky" data-sticky-shrink="false">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-5">
+							<a href="#" ><img src="demos/nft-marketplace/images/logo.svg" alt="Canvas Logo" class="py-3"></a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc ms-auto">
+
+							<div class="header-misc ms-0">
+								<a href="#" class="button button-border border-color button-circle color h-bg-color h-text-dark m-0">Join CanvasCrypto</a>
+							</div>
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon d-block d-xl-none">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows">
+
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Pages</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>About Us</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Pricing</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Pricing</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<section id="slider" class="slider-element include-header gradient-color">
+			<div class="position-absolute start-0 top-0 w-100 h-100 parallax" style="background: url('demos/nft-marketplace/images/page-2/1.jpg') no-repeat center center / cover;" data-start="opacity:1" data-300-start="opacity:0.1"></div>
+			<div class="container">
+					<div class="row align-items-center min-vh-100 justify-content-center">
+						<div class="col-7 text-center">
+							<div class="text-uppercase ls-3 fw-bold mb-4 color" data-animate="fadeInDownSm">Build your own Money</div>
+							<h2 class="display-2 fw-light text-white" data-animate="fadeInDownSm" data-delay="100" style="letter-spacing: -1px;">Control your own <span class="fw-bold nocolor">Crypto</span> with a click</h2>
+							<p class="lead mb-5 fw-normal" data-animate="fadeInDownSm" data-delay="200">Securely trade, store and grow your digital coins from one intuitive dashboard. Take full control of your crypto in just a few clicks now.</p>
+							<div class="bbp-author position-relative mb-4" data-animate="fadeInDownSm" data-delay="300">
+								<a href="#"><img alt="Active crypto trader profile" src="demos/articles/images/authors/3.jpg"></a>
+								<a href="#"><img alt="Active crypto trader profile" src="demos/articles/images/authors/2.jpg"></a>
+								<a href="#"><img alt="Active crypto trader profile" src="demos/forum/images/user.png"></a>
+								<h4 class="d-inline-block" style="margin-left: -20px"><span>2.75m</span> Active Users</h4>
+							</div>
+							<a href="#" class="button button-large button-circle bg-color text-dark" data-animate="fadeInDownSm" data-delay="400">Get Started</a>
+							<a href="#" class="button button-border border-color button-large button-circle color h-bg-color h-text-dark" data-animate="fadeInDownSm" data-delay="400">Add More Coins</a>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="section my-0" style="background: url('demos/nft-marketplace/images/page-2/2.jpg') no-repeat center center / cover; background-attachment: fixed;">
+
+					<div class="container py-6">
+
+						<div class="row align-items-start justify-content-between py-5">
+							<div class="col-lg-6 sticky-section" style="top: var(--sticky-default-gap);">
+								<h1 class="display-4 fw-light mb-5"><span class="fw-bold nocolor">Simple</span> &amp; <span class="fw-bold nocolor">Quick</span> steps to build your own money.</h1>
+								<p class="text-muted mb-6" data-animate="fadeInDownSm" data-delay="100">Getting started with your own crypto wallet takes only minutes. Create an account, verify your details and fund your balance to begin trading instantly. No paperwork and no hidden fees, just simple, secure access to your money.</p>
+								<div class="row g-4" data-animate="fadeInDownSm" data-delay="200">
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-auto">
+												<img src="demos/nft-marketplace/images/page-2/icons/1.png" alt="Secure encryption feature icon" width="50" height="50">
+											</div>
+											<p class="col op-07 small mb-4">
+												Bank-grade encryption keeps every transaction and your wallet fully protected.
+											</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-auto">
+												<img src="demos/nft-marketplace/images/page-2/icons/2.png" alt="Low trading fees feature icon" width="50" height="50">
+											</div>
+											<p class="col op-07 small mb-4">
+												Buy and sell hundreds of coins in real time with low, transparent trading fees.
+											</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-auto">
+												<img src="demos/nft-marketplace/images/page-2/icons/3.png" alt="Portfolio tracking feature icon" width="50" height="50">
+											</div>
+											<p class="col op-07 small mb-4">
+												Track your portfolio with live charts and instant price alerts every single day.
+											</p>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-auto">
+												<img src="demos/nft-marketplace/images/page-2/icons/4.png" alt="Fast withdrawals feature icon" width="50" height="50">
+											</div>
+											<p class="col op-07 small mb-4">
+												Withdraw your earnings to any bank account quickly with same-day processing now.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5 block-sticky-cards-wrap">
+								<div class="sticky-section">
+									<div class="card card-blur border-0 shadow-lg rounded-6">
+										<div class="card-body p-5 min-vh-50 d-flex flex-column justify-content-center text-center">
+											<i class="bi-person fs-1 mb-3 color"></i>
+											<span class="badge rounded-circle square square-sm mt-3 ms-3 bg-color text-dark position-absolute top-0 start-0 p-0" style="--cnvs-square-size: 3rem; line-height: 3rem;">01</span>
+											<h3 class="color">Create a Free Accont</h3>
+											Sign up in seconds with just your email address. Your free account unlocks the full marketplace, with no minimum deposit required to start exploring coins.
+										</div>
+									</div>
+								</div>
+
+								<div class="sticky-section">
+									<div class="card card-blur border-0 shadow rounded-6">
+										<div class="card-body p-5 min-vh-50 d-flex flex-column justify-content-center text-center">
+											<i class="color bi-earmark-richtext fs-1 mb-3"></i>
+											<span class="badge rounded-circle square square-sm mt-3 ms-3 bg-color text-dark position-absolute top-0 start-0 p-0" style="--cnvs-square-size: 3rem; line-height: 3rem;">02</span>
+											<h3 class="color">Add your Personal Details</h3>
+											Add your name and verify your identity so we can keep your funds safe. The quick check protects your account and unlocks higher daily transaction limits.
+										</div>
+									</div>
+								</div>
+
+								<div class="sticky-section">
+									<div class="card card-blur border-0 shadow-sm rounded-6">
+										<div class="card-body p-5 min-vh-50 d-flex flex-column justify-content-center text-center">
+											<i class="color bi-wallet2 fs-1 mb-3"></i>
+											<span class="badge rounded-circle square square-sm mt-3 ms-3 bg-color text-dark position-absolute top-0 start-0 p-0" style="--cnvs-square-size: 3rem; line-height: 3rem;">03</span>
+											<h3 class="color">Add money to Wallet</h3>
+											Top up your wallet using a card or bank transfer. Funds arrive in moments, ready for you to trade, hold or send across the network whenever you choose.
+										</div>
+									</div>
+								</div>
+
+								<div class="sticky-section">
+									<div class="card card-blur border-0 shadow-sm rounded-6">
+										<div class="card-body p-5 min-vh-50 d-flex flex-column justify-content-center text-center">
+											<i class="color bi-credit-card fs-1 mb-3"></i>
+											<span class="badge rounded-circle square square-sm mt-3 ms-3 bg-color text-dark position-absolute top-0 start-0 p-0" style="--cnvs-square-size: 3rem; line-height: 3rem;">04</span>
+											<h3 class="color">Buy/Sell the Coins</h3>
+											Browse live prices and place your first order. Buy or sell any coin instantly, then watch your portfolio grow from the simple, real-time dashboard.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- Code End -->
+
+				<div class="section my-0" style="background: linear-gradient(to right, #101423 50%, transparent), url('demos/nft-marketplace/images/page-2/3.jpg') no-repeat center center / cover;">
+
+					<div class="container py-6">
+
+						<div class="row align-items-center justify-content-between py-4">
+							<div class="col-lg-5">
+								<img src="demos/nft-marketplace/images/page-2/3-1.png" alt="Spinning crypto coin graphic" class="animated spin infinite slower">
+								<img src="images/mask/logo.svg" alt="Canvas Crypto logo emblem" class="crypto-inner">
+							</div>
+
+							<div class="col-lg-6">
+								<h1 class="display-4 fw-light mb-5" data-animate="fadeInDownSm"><span class="fw-bold nocolor">Simple</span> &amp; <span class="fw-bold nocolor">Quick</span> steps to build your own money.</h1>
+								<p class="text-muted mb-5" data-animate="fadeInDownSm" data-delay="100">Building your own digital money has never been easier. Follow a few quick steps to set up your wallet and start moving coins around the globe today.</p>
+								<div class="row" data-animate="fadeInDownSm" data-delay="250">
+									<div class="d-flex">
+										<img src="demos/nft-marketplace/images/page-2/icons/1.png" alt="Secure wallet icon" width="30" height="30">
+										<h4 class="ms-3 fw-medium">Open a secure wallet and manage all your coins in one place.</h4>
+									</div>
+									<div class="d-flex">
+										<img src="demos/nft-marketplace/images/page-2/icons/2.png" alt="Global payments icon" width="30" height="30">
+										<h4 class="ms-3 fw-medium">Send and receive payments worldwide in just a few seconds.</h4>
+									</div>
+									<div class="d-flex">
+										<img src="demos/nft-marketplace/images/page-2/icons/3.png" alt="Instant coin swap icon" width="30" height="30">
+										<h4 class="ms-3 fw-medium">Convert between coins instantly at fair, transparent rates.</h4>
+									</div>
+									<div class="d-flex">
+										<img src="demos/nft-marketplace/images/page-2/icons/4.png" alt="Staking rewards icon" width="30" height="30">
+										<h4 class="ms-3 fw-medium">Stake your holdings and earn steady rewards over time too.</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- Code End -->
+
+				<div class="section my-0" style="background: linear-gradient(to right, #101423 50%, transparent), url('demos/nft-marketplace/images/page-2/3.jpg') no-repeat center center / cover;">
+
+					<div class="container py-6">
+
+						<div class="row align-items-center justify-content-between py-4">
+
+							<div class="col-lg-5">
+								<h1 class="display-4 fw-light mb-5" data-animate="fadeInDownSm"><span class="fw-bold nocolor">Simple</span> &amp; <span class="fw-bold nocolor">Quick</span> steps to build your own money.</h1>
+								<p class="text-white-50 mb-5" data-animate="fadeInDownSm" data-delay="200">From your first coin to a full portfolio, the platform grows with you. Set up a wallet, fund it securely and start building your own money in just minutes.</p>
+							</div>
+
+							<div class="col-lg-7">
+								<div class="position-relative">
+									<img class="z-1" src="images/blocks/preview/crypto/1.svg" alt="Crypto dashboard layer one" data-bottom-top="transform: translateY(-15%); opacity: 0" data-center="transform: translateY(0%); opacity: 1">
+									<img class="z-2 parallax position-absolute top-0 start-0 w-100 h-100" src="images/blocks/preview/crypto/2.svg" alt="Crypto dashboard layer two" data-bottom-top="transform: translateY(-5%); opacity: 0" data-center="transform: translateY(0%); opacity: 1">
+									<img class="z-3 parallax position-absolute top-0 start-0 w-100 h-100" src="images/blocks/preview/crypto/3.svg" alt="Crypto dashboard layer three" data-bottom-top="transform: translateY(-14%); opacity: 0" data-center="transform: translateY(0%); opacity: 1">
+									<img class="parallax position-absolute top-0 start-0 w-100 h-100" src="images/blocks/preview/crypto/4.svg" alt="Crypto dashboard layer four" data-bottom-top="transform: translateY(15%); opacity: 0" data-center="transform: translateY(0%); opacity: 1">
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div><!-- Code End -->
+
+				<div class="section my-0" style="background: linear-gradient(to right, rgba(16, 20, 35, 0.9) 70%, rgba(16, 20, 35, 1)), url('demos/nft-marketplace/images/page-2/4.jpg') no-repeat center center / cover;">
+
+					<div class="container">
+
+						<div class="row align-items-center justify-content-between py-4">
+
+							<div class="col-lg-5 z-1">
+								<h1 class="display-4 fw-light mb-5" data-animate="fadeInDownSm">Find the Best <span class="fw-bold nocolor">Community</span>.</h1>
+								<p class="text-muted mb-5" data-animate="fadeInDownSm" data-delay="100">Connect with thousands of crypto traders and investors in active local communities near you.</p>
+								<div class="card card-blur border-0 shadow rounded-6" data-animate="fadeInDownSm" data-delay="300">
+									<div class="card-body p-5">
+										<div class="hstack">
+											<div class="col">
+												<h3 class="fs-5 mb-2">Bangkok, Thailand</h3>
+												<div class="op-05">1200+ Members</div>
+											</div>
+											<a href="#" class="button button-border button-small border-color rounded-pill color h-bg-color h-text-dark m-0">Join Now</a>
+										</div>
+										<div class="line my-4"></div>
+										<div class="hstack">
+											<div class="col">
+												<h3 class="fs-5 mb-2">Tokyo, Japan</h3>
+												<div class="op-05">547+ Members</div>
+											</div>
+											<a href="#" class="button button-border button-small border-color rounded-pill color h-bg-color h-text-dark m-0">Join Now</a>
+										</div>
+										<div class="line my-4"></div>
+										<div class="hstack">
+											<div class="col">
+												<h3 class="fs-5 mb-2">Bali, Indonesia</h3>
+												<div class="op-05">365+ Members</div>
+											</div>
+											<a href="#" class="button button-border button-small border-color rounded-pill color h-bg-color h-text-dark m-0">Join Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="row align-items-center justify-content-end position-lg-absolute start-0 top-0 end-0 bottom-0 mb-5 mb-lg-0">
+
+						<div class="col-xl-6 col-lg-6">
+							<img src="demos/nft-marketplace/images/page-2/map.svg" alt="World map of crypto communities">
+						</div>
+
+					</div>
+
+				</div><!-- Code End -->
+
+			</div>
+		</section><!-- #content end -->
+
+		<footer id="footer" class="border-0" style="background: linear-gradient(to bottom, #101423, rgba(16, 20, 35, 0.7)), url('demos/nft-marketplace/images/page-2/5.jpg') no-repeat center center / cover;">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row col-mb-50">
+						<div class="col-lg-8">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4">
+
+									<div class="widget">
+
+										<a href="#" ><img src="demos/nft-marketplace/images/logo.svg" alt="Canvas Logo" height="100"></a>
+										<p>Canvas Crypto makes it simple to buy, sell and grow all of your digital coins quickly and securely.</p>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget widget_links">
+
+										<h4>Blogroll</h4>
+
+										<ul>
+											<li><a href="https://codex.wordpress.org/">Documentation</a></li>
+											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+											<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
+											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
+										</ul>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget widget_links">
+										<h4>Recent Posts</h4>
+
+										<ul>
+											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
+											<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
+											<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="row col-mb-50">
+
+								<div class="col-md-5 col-lg-12">
+									<div class="widget subscribe-widget">
+										<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group input-group-footer mx-auto">
+												<div class="input-group-text text-light"><i class="bi-send"></i></div>
+												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+												<button class="btn gradient-color text-light" type="submit">Subscribe</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="col-md-3 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-facebook me-2 mb-0 float-none">
+													<i class="fa-brands fa-facebook-f"></i>
+													<i class="fa-brands fa-facebook-f"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Like Us</strong><br>on Facebook</small></a>
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-rss me-2 mb-0 float-none">
+													<i class="fa-solid fa-rss"></i>
+													<i class="fa-solid fa-rss"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+
+					<div class="row col-mb-30">
+
+						<div class="col-md-6 text-center text-md-start">
+							Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						</div>
+
+						<div class="col-md-6 text-center text-md-end">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="#" class="social-icon si-small border-transparent h-bg-facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-x-twitter">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-google">
+									<i class="fa-brands fa-google"></i>
+									<i class="fa-brands fa-google"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-pinterest">
+									<i class="fa-brands fa-pinterest-p"></i>
+									<i class="fa-brands fa-pinterest-p"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-vimeo">
+									<i class="fa-brands fa-vimeo-v"></i>
+									<i class="fa-brands fa-vimeo-v"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-github">
+									<i class="fa-brands fa-github"></i>
+									<i class="fa-brands fa-github"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-yahoo">
+									<i class="fa-brands fa-yahoo"></i>
+									<i class="fa-brands fa-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-linkedin">
+									<i class="fa-brands fa-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+
+							<div class="clear"></div>
+
+							<i class="bi-envelope"></i> info@canvas.com <span class="middot">&middot;</span> <i class="fa-solid fa-phone"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="bi-skype"></i> CanvasOnSkype
+						</div>
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<!-- Parallax Script
+	============================================= -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script>!SEMICOLON.Mobile.any() && skrollr.init({forceHeight: false});</script>
+
+	<script>
+        jQuery('.block-sticky-cards-wrap .sticky-section').each( function(i) {
+            var gap = getComputedStyle(this).getPropertyValue('--sticky-top-gap');
+            jQuery(this).css({
+                '--sticky-top-gap': 'calc( '+ gap +' * '+ i +' )',
+            });
+        });
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,700 @@
+/* ----------------------------------------------------------------
+	Canvas: Pet Shelter
+-----------------------------------------------------------------*/
+
+    :root { --cnvs-themecolor: #F97316; --cnvs-themecolor-rgb: 249, 115, 22; }
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --cnvs-themecolor: #F97316;
+  --cnvs-themecolor-rgb: 249, 115, 22;
+  --ph-dark: #1c1410;
+  --ph-cream: #fdf8f3;
+  --ph-rust: #c1784f;
+  --ph-teal: #0d9488;
+  --ph-amber: #fbbf24;
+  --ph-text: #1a0f05;
+  --ph-muted: #7a6657;
+  --ph-shadow: 0 4px 24px rgba(249,115,22,0.10), 0 2px 8px rgba(0,0,0,0.07);
+  --ph-shadow-hover: 0 12px 40px rgba(249,115,22,0.18), 0 4px 16px rgba(0,0,0,0.10);
+  --ph-radius: 20px;
+  --ph-radius-pill: 999px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--ph-text);
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Section padding rhythm */
+.section { padding: 96px 0 !important; }
+.section.py-lg { padding: 120px 0 !important; }
+.section.py-sm { padding: 64px 0 !important; }
+
+/* Section eyebrow label */
+.ph-label {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cnvs-themecolor);
+  margin-bottom: 14px;
+}
+.ph-label.white { color: rgba(255,255,255,0.85); }
+
+/* Heading styles */
+.ph-h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ph-text);
+  margin-bottom: 1.25rem;
+}
+.ph-h2.white { color: #ffffff; }
+
+/* Pill / badge CTA buttons */
+.ph-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--ph-radius-pill);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.975rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.ph-btn-primary {
+  background: var(--cnvs-themecolor);
+  color: #ffffff;
+  border-color: var(--cnvs-themecolor);
+}
+.ph-btn-primary:hover {
+  background: #ea6c0a;
+  border-color: #ea6c0a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(249,115,22,0.35);
+}
+.ph-btn-outline-white {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.75);
+}
+.ph-btn-outline-white:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.ph-btn-outline-orange {
+  background: transparent;
+  color: var(--cnvs-themecolor);
+  border-color: var(--cnvs-themecolor);
+}
+.ph-btn-outline-orange:hover {
+  background: var(--cnvs-themecolor);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249,115,22,0.3);
+}
+.ph-btn-white-solid {
+  background: #ffffff;
+  color: var(--cnvs-themecolor);
+  border-color: #ffffff;
+}
+.ph-btn-white-solid:hover {
+  background: #fff8f2;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Paw print SVG watermark (reusable) */
+.ph-paw-watermark {
+  position: absolute;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Smooth section transitions */
+.section { position: relative; overflow: hidden; }
+
+/* Orange top border accent */
+.ph-border-top-orange {
+  border-top: 5px solid var(--cnvs-themecolor);
+}
+
+/* Filter pill toggle bar */
+.ph-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.ph-filter-btn {
+  padding: 9px 24px;
+  border-radius: var(--ph-radius-pill);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 2px solid var(--cnvs-themecolor);
+  background: transparent;
+  color: var(--cnvs-themecolor);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.ph-filter-btn.active,
+.ph-filter-btn:hover {
+  background: var(--cnvs-themecolor);
+  color: #ffffff;
+}
+
+/* Pet adoption card */
+.ph-pet-card {
+  background: #ffffff;
+  border-radius: var(--ph-radius);
+  overflow: hidden;
+  box-shadow: var(--ph-shadow);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  position: relative;
+}
+.ph-pet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--ph-shadow-hover);
+}
+.ph-pet-card .card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.ph-pet-card .card-body {
+  padding: 20px 22px 24px;
+}
+.ph-pet-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: var(--ph-radius-pill);
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.ph-pet-badge.dog { background: rgba(249,115,22,0.12); color: var(--cnvs-themecolor); }
+.ph-pet-badge.cat { background: rgba(13,148,136,0.12); color: var(--ph-teal); }
+.ph-pet-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ph-text);
+  margin: 0 0 4px;
+}
+.ph-pet-meta {
+  font-size: 0.825rem;
+  color: var(--ph-muted);
+  margin-bottom: 10px;
+}
+.ph-pet-blurb {
+  font-size: 0.875rem;
+  color: var(--ph-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+/* Paw watermark inside card */
+.ph-pet-card::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='25' cy='20' rx='10' ry='13' fill='%23F97316'/%3E%3Cellipse cx='55' cy='14' rx='9' ry='12' fill='%23F97316'/%3E%3Cellipse cx='80' cy='25' rx='8' ry='11' fill='%23F97316'/%3E%3Cellipse cx='90' cy='55' rx='7' ry='10' fill='%23F97316'/%3E%3Cpath d='M15 55 Q50 100 85 55 Q70 35 50 38 Q30 35 15 55Z' fill='%23F97316'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Progress bar */
+.ph-progress-wrap { margin: 32px 0 40px; }
+.ph-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ph-text);
+  margin-bottom: 10px;
+}
+.ph-progress-track {
+  width: 100%;
+  height: 18px;
+  background: #f0e8de;
+  border-radius: var(--ph-radius-pill);
+  overflow: hidden;
+}
+.ph-progress-fill {
+  height: 100%;
+  border-radius: var(--ph-radius-pill);
+  background: linear-gradient(90deg, #F97316 0%, #fbbf24 100%);
+  width: 0%;
+  transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ph-progress-fill.animate { width: 68%; }
+
+/* Donation amount grid */
+.ph-donation-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.ph-amount-btn {
+  padding: 11px 28px;
+  border-radius: var(--ph-radius-pill);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  border: 2px solid var(--cnvs-themecolor);
+  background: transparent;
+  color: var(--cnvs-themecolor);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.ph-amount-btn:hover, .ph-amount-btn.active {
+  background: var(--cnvs-themecolor);
+  color: #ffffff;
+}
+.ph-custom-amount {
+  padding: 11px 20px;
+  border-radius: var(--ph-radius-pill);
+  border: 2px solid #d4bfad;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ph-text);
+  outline: none;
+  width: 150px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.ph-custom-amount:focus { border-color: var(--cnvs-themecolor); }
+
+/* Impact cards */
+.ph-impact-card {
+  background: var(--ph-cream);
+  border-radius: var(--ph-radius);
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.ph-impact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F97316, #ea6c0a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 16px;
+}
+.ph-impact-stat {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ph-text);
+  line-height: 1.4;
+}
+.ph-impact-label {
+  font-size: 0.85rem;
+  color: var(--ph-muted);
+  margin-top: 4px;
+}
+
+/* Volunteer form */
+.ph-form-field {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid #e8d9cc;
+  border-radius: 12px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.975rem;
+  color: var(--ph-text);
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin-bottom: 14px;
+}
+.ph-form-field:focus { border-color: var(--cnvs-themecolor); }
+.ph-form-field::placeholder { color: #b8a899; }
+
+/* Spay/Neuter info cards */
+.ph-info-card {
+  background: #ffffff;
+  border-radius: var(--ph-radius);
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: var(--ph-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.ph-info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--ph-shadow-hover);
+}
+.ph-info-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F97316, #ea6c0a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 24px;
+  color: #ffffff;
+}
+.ph-info-card h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--ph-text);
+  margin-bottom: 12px;
+}
+.ph-info-card p {
+  font-size: 0.925rem;
+  color: var(--ph-muted);
+  line-height: 1.65;
+}
+
+/* Success story cards */
+.ph-story-card {
+  border-radius: var(--ph-radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.28s ease;
+  border: 2px solid transparent;
+}
+.ph-story-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--cnvs-themecolor);
+}
+.ph-story-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+.ph-story-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(28,20,16,0.95) 0%, rgba(28,20,16,0.4) 60%, transparent 100%);
+  padding: 32px 24px 24px;
+}
+.ph-story-pet-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+.ph-story-date {
+  font-size: 0.775rem;
+  color: var(--cnvs-themecolor);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.ph-story-quote {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.82);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+/* Stat chips (hero) */
+.ph-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.95);
+  border-radius: var(--ph-radius-pill);
+  padding: 12px 22px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ph-text);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  white-space: nowrap;
+}
+.ph-stat-chip .chip-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--cnvs-themecolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Foster benefit list */
+.ph-benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+.ph-benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+.ph-benefit-list li::before {
+  content: '✓';
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Floating stat card (foster) */
+.ph-floating-stat {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  position: absolute;
+  bottom: 28px;
+  left: -24px;
+  max-width: 280px;
+  z-index: 2;
+}
+.ph-floating-stat .stat-heart {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #F97316, #ea6c0a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+.ph-floating-stat .stat-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ph-text);
+  line-height: 1.4;
+}
+.ph-floating-stat .stat-number {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--cnvs-themecolor);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+/* Volunteer role list */
+.ph-role-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.ph-role-paw {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ph-role-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ph-text);
+  margin: 0 0 3px;
+}
+.ph-role-desc {
+  font-size: 0.875rem;
+  color: var(--ph-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* View all link */
+.ph-view-all {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.975rem;
+  font-weight: 700;
+  color: var(--cnvs-themecolor);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+  padding-bottom: 2px;
+}
+.ph-view-all:hover { border-color: var(--cnvs-themecolor); }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .ph-h2 { font-size: 1.9rem; }
+  .ph-floating-stat { left: 50%; transform: translateX(-50%); bottom: -48px; }
+  .ph-stat-chip { font-size: 0.8rem; padding: 10px 16px; }
+}
+  
+
+  #header {
+    --cnvs-themecolor: #F97316;
+    --cnvs-themecolor-rgb: 249, 115, 22;
+    --cnvs-primary-menu-font: 'Nunito', sans-serif;
+    --cnvs-primary-menu-font-weight: 700;
+    --cnvs-primary-menu-font-size: 0.9375rem;
+    --cnvs-primary-menu-tt: none;
+    --cnvs-primary-menu-ls: 0;
+    --cnvs-primary-menu-hover-color: #F97316;
+  }
+  .ph-header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: #F97316;
+    color: #ffffff !important;
+    border: 2px solid #F97316;
+    text-decoration: none;
+    transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  }
+  .ph-header-cta:hover {
+    background: #ea6c0a;
+    border-color: #ea6c0a;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.38);
+  }
+
+
+    #donate .ph-progress-fill { width: 0%; }
+    #donate .ph-progress-fill.animate { width: 68%; }
+    #donate .donate-impact-card {
+      background: #fdf8f3;
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    #donate .donate-impact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(249,115,22,0.14);
+    }
+    #donate .donate-icon-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #F97316, #ea6c0a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 18px;
+    }
+    #donate .donate-stat {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #1a0f05;
+      margin-bottom: 6px;
+    }
+    #donate .donate-stat-label {
+      font-size: 0.875rem;
+      color: #7a6657;
+      line-height: 1.55;
+    }
+  
+
+.ph-story-card {
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  transition:transform 0.28s ease, border-color 0.28s ease;
+  border:2px solid transparent;
+}
+.ph-story-card:hover {
+  transform:translateY(-6px);
+  border-color:var(--cnvs-themecolor);
+}
+.ph-story-overlay {
+  position:absolute;
+  bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(28,20,16,0.95) 0%,rgba(28,20,16,0.4) 60%,transparent 100%);
+  padding:32px 24px 24px;
+}
+.ph-story-pet-name {
+  font-family:'Nunito',sans-serif;
+  font-size:1.15rem;
+  font-weight:800;
+  color:#ffffff;
+  margin-bottom:4px;
+}
+.ph-story-date {
+  font-size:0.775rem;
+  color:var(--cnvs-themecolor);
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.ph-story-quote {
+  font-size:0.875rem;
+  color:rgba(255,255,255,0.82);
+  font-style:italic;
+  line-height:1.55;
+  margin:0;
+}

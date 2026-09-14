@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore the Canvas GotoTop scroll-to-top component with an animated SVG ring progress indicator, fully configurable via CSS custom properties and Bootstrap Icons.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>GotoTop Scroll Animation | Canvas</title>
+
+	<style>
+		#gotoTop {
+			--cnvs-gotoTop-stroke-color: var(--cnvs-themecolor);
+			--cnvs-gotoTop-stroke-width: 4px;
+			--cnvs-gotoTop-scroll: 260;
+			background-color: transparent !important;
+		}
+
+		#gotoTop::before {
+			/* font-icons.css */
+			content: "\F286";
+			font-family: 'bootstrap-icons';
+
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: calc(32px + calc(var(--cnvs-gotoTop-stroke-width) * .5));
+			height: calc(32px + calc(var(--cnvs-gotoTop-stroke-width) * .5));
+			line-height: calc(32px - 1px);
+			font-size: 1rem;
+			color: #222;
+			transform: translate(-50%, -50%);
+			border: 2px solid rgba(0,0,0,0.1);
+			border-radius: 50%;
+			z-index: -1;
+		}
+
+		#gotoTop circle {
+			stroke: var(--cnvs-gotoTop-stroke-color);
+			stroke-width: var(--cnvs-gotoTop-stroke-width);
+			transform: rotate(-90deg);
+			transform-origin: center;
+			stroke-dashoffset: var(--cnvs-gotoTop-scroll);
+			stroke-dasharray: 255 255;
+			z-index: 1;
+		}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-misc-gototop.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-misc-gototop.html">
+	<meta property="og:title" content="GotoTop Scroll Animation | Canvas">
+	<meta property="og:description" content="Explore the Canvas GotoTop scroll-to-top component with an animated SVG ring progress indicator, fully configurable via CSS custom properties and Bootstrap Icons.">
+	<meta property="og:image" content="demos/blog/images/single/hero-full.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="GotoTop Scroll Animation | Canvas">
+	<meta name="twitter:description" content="Explore the Canvas GotoTop scroll-to-top component with an animated SVG ring progress indicator, fully configurable via CSS custom properties and Bootstrap Icons.">
+	<meta name="twitter:image" content="demos/blog/images/single/hero-full.jpg">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "block-misc-gototop.html",
+				"description": "Explore the Canvas GotoTop scroll-to-top component with an animated SVG ring progress indicator, fully configurable via CSS custom properties and Bootstrap Icons."
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "GotoTop Scroll Animation",
+				"url": "block-misc-gototop.html",
+				"image": "demos/blog/images/single/hero-full.jpg",
+				"description": "A fully configurable scroll-to-top button with animated SVG progress ring, CSS custom properties, and Bootstrap Icons integration for Canvas HTML Template.",
+				"creator": {
+					"@type": "Organization",
+					"name": "Canvas",
+					"url": "block-misc-gototop.html"
+				}
+			}
+		]
+	}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container py-md-4 mw-sm">
+					<h2 class="mb-2 fs-1 fw-bold">Goto Top Animation.</h2>
+					<p class="lead mb-5">Scroll page for Action.</p>
+					<p>The GotoTop button in Canvas is a fully configurable scroll-to-top control that animates smoothly as users navigate long pages. Built with pure CSS variables, it adapts effortlessly to any color scheme or layout without touching a single line of JavaScript. This makes it an ideal starting point for developers building responsive, scroll-heavy landing pages.<br><br>
+
+					The animated SVG ring surrounding the GotoTop icon gives users a visual cue of how far they have scrolled through the page content. As the user scrolls downward, the stroke dashoffset decrements proportionally, creating a smooth circular progress effect. This feature transforms a simple navigation element into a polished, interactive experience that reinforces page depth and engagement.<br><br>
+
+					All visual aspects of the GotoTop component are governed by CSS custom properties, making theme-level overrides straightforward and conflict-free. Developers can change the stroke color, stroke width, and scroll distance threshold without altering the core stylesheet. This architecture keeps customizations isolated, maintainable, and easy to transfer across Canvas projects.<br><br>
+
+					Canvas integrates the Bootstrap Icons library to power the GotoTop arrow icon, giving designers access to a broad set of high-quality vector symbols with no additional dependencies. The icon is injected through a CSS pseudo-element, keeping markup clean and reducing DOM complexity. Switching icons is as simple as updating a single content value in your custom stylesheet override.<br><br>
+
+					The GotoTop button supports a dedicated mobile display mode, toggled via the data-mobile attribute, so it appears only when and where it adds genuine navigational value. On smaller screens, the button reflows seamlessly into the layout without overlapping critical interface elements. This thoughtful responsiveness ensures a consistent and unobtrusive experience across every breakpoint and device.<br><br>
+
+					A configurable offset threshold determines at what scroll depth the GotoTop button appears, giving content authors precise control over its visibility timing. This prevents the button from displaying immediately at the top of the page, where it would serve no purpose. Setting the offset through a data attribute keeps the logic declarative and easy to adjust per page.</p>
+
+					<figure>
+						<img src="demos/blog/images/single/hero-full.jpg" alt="Canvas GotoTop scroll animation demo page with hero image" class="align-wide-xl">
+						<figcaption class="text-center op-05 fst-italic mt-2 small mb-4">Image Caption</figcaption>
+					</figure>
+
+					<p class="mb-0">Canvas is built around a modular component system that lets developers assemble complex page layouts from a library of reusable blocks, each independently styled and scripted. This composable approach dramatically reduces development time and ensures visual consistency across multi-page projects.<br><br>
+
+					The GotoTop scroll listener is bound to the window load event, ensuring it initializes only after all DOM elements are fully ready and layout calculations are accurate. The listener updates the CSS custom property on every scroll tick, delivering frame-accurate progress tracking with minimal overhead. This pattern is a reliable baseline for adding scroll-driven animations throughout any Canvas-based project.<br><br>
+
+					Canvas ships its component logic as a consolidated JavaScript bundle, combining utility functions and plugin initializations into a single optimized file. This reduces HTTP requests and simplifies dependency management for production deployments. The GotoTop initialization code plugs directly into this bundle's event pipeline, benefiting from the same load-order guarantees as every other Canvas component.<br><br>
+
+					The GotoTop SVG ring and icon layer are carefully stacked using z-index to maintain crisp visual separation from page content as the user scrolls. The SVG sits above the background border while the pseudo-element icon remains centered and fully clickable at all times. This layering strategy prevents rendering artifacts and ensures accessibility with keyboard and touch navigation.<br><br>
+
+					The SVG circle uses a dasharray of 255 units matched to the circle's circumference, ensuring the progress animation spans exactly one full revolution from empty to complete. The offset calculation in JavaScript maps scroll percentage to the dashoffset range, producing linear, predictable fill behavior. This mathematical approach guarantees visual accuracy regardless of page height.<br><br>
+
+					Canvas exposes a global theme color variable that the GotoTop stroke inherits by default, so changing your brand palette automatically updates the scroll indicator with no additional configuration. This single-source-of-truth model keeps your design system coherent across all interactive elements. Overriding the stroke color locally is straightforward for pages that require a distinct visual treatment.<br><br>
+
+					The GotoTop button is positioned as a fixed element and remains reachable via keyboard focus, supporting users who navigate without a mouse. Its transparent background and icon-based design keep it visually unobtrusive while remaining a clearly distinguishable interactive control. Adding an aria-label attribute is recommended for screen reader users in production deployments.<br><br>
+
+					When deploying a Canvas project, the GotoTop component requires no separate build steps beyond including the standard plugins bundle and stylesheet. It is ready to use out of the box on any page that includes the core Canvas assets, making it one of the easiest enhancements to add to an existing layout.</p>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" data-mobile="true" data-offset="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="40"></circle></svg></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script>
+		jQuery(window).on( 'load', function(){
+			//GotoTop
+			var cssPosGotoTop = getComputedStyle(document.querySelector('#gotoTop'));
+			var canvasPageScrollPos = (cssPosGotoTop.getPropertyValue('--cnvs-gotoTop-scroll'));
+			var canvasbodyHeight = document.body.offsetHeight;
+
+			window.addEventListener( 'scroll', function() {
+				var scrollPercent = (jQuery(window).scrollTop()) / ((jQuery(document).height()) - (jQuery(window).height()));
+				var getPercent = Math.round(scrollPercent*100);
+
+				document.querySelector('#gotoTop').style.setProperty('--cnvs-gotoTop-scroll', ( 260 - (2.6 * getPercent) ) );
+			});
+		});
+	</script>
+
+</body>
+</html>

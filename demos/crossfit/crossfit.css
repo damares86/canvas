@@ -1,0 +1,399 @@
+/* ----------------------------------------------------------------
+	Canvas: Crossfit
+-----------------------------------------------------------------*/
+
+    :root { --cnvs-themecolor: #f97316; --cnvs-themecolor-rgb: 249, 115, 22; }
+  
+
+  #header {
+    --cnvs-primary-menu-font: "Inter", sans-serif;
+    --cnvs-primary-menu-font-weight: 700;
+    --cnvs-primary-menu-font-size: 0.8rem;
+    --cnvs-primary-menu-tt: uppercase;
+    --cnvs-primary-menu-ls: 0.08em;
+  }
+
+  #header .forge-cta {
+    background: #e8440a;
+    color: #fff !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 3px;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 0 0 rgba(232, 68, 10, 0);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #header .forge-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  #header .forge-cta:hover {
+    background: #ff5217;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(232, 68, 10, 0.45);
+    color: #fff !important;
+  }
+
+  #header .forge-cta:active {
+    transform: translateY(0);
+  }
+
+  #header.sticky-header:not(.dark) .forge-cta {
+    background: #e8440a;
+    color: #fff !important;
+  }
+
+  /* Subtle separator before CTA */
+  #header .header-misc {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  #header .forge-header-tagline {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 18px;
+    line-height: 1.3;
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    #header .forge-header-tagline {
+      display: block;
+    }
+  }
+
+  #header.sticky-header:not(.dark) .forge-header-tagline {
+    color: rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  /* Dot accent on active/hover nav items */
+  #header .menu-item .menu-link > div::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e8440a;
+    margin: 3px auto 0;
+    transition: width 0.25s ease;
+  }
+
+  #header .menu-item:hover .menu-link > div::after,
+  #header .menu-item.current .menu-link > div::after {
+    width: 100%;
+  }
+
+
+    #wod .chalk-texture {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    #wod .wod-accent-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--cnvs-themecolor);
+      z-index: 2;
+    }
+    #wod .wod-inner {
+      position: relative;
+      z-index: 1;
+    }
+    #wod .wod-section-label {
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--cnvs-themecolor);
+    }
+    #wod .wod-heading {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f5f0e8;
+      line-height: 1;
+    }
+    #wod .wod-date {
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      color: rgba(245,240,232,0.45);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    #wod .workout-name {
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+      color: var(--cnvs-themecolor);
+      text-transform: uppercase;
+      text-shadow: 0 0 60px rgba(var(--cnvs-themecolor-rgb), 0.3);
+    }
+    #wod .workout-descriptor {
+      font-size: 0.8125rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.5);
+    }
+    #wod .workout-movements {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #wod .workout-movements li {
+      color: #f5f0e8;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.625rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    #wod .workout-movements li:last-child {
+      border-bottom: none;
+    }
+    #wod .movement-slash {
+      color: var(--cnvs-themecolor);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    #wod .scaling-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.375rem 1rem;
+      border: 2px solid var(--cnvs-themecolor);
+      border-radius: 3px;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cnvs-themecolor);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      background: transparent;
+    }
+    #wod .scaling-badge.active,
+    #wod .scaling-badge:hover {
+      background: var(--cnvs-themecolor);
+      color: #111111;
+    }
+    #wod .wod-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    #wod .wod-meta-label {
+      font-size: 0.625rem;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.35);
+    }
+    #wod .wod-meta-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f5f0e8;
+      letter-spacing: 0.04em;
+    }
+    #wod .wod-meta-value span {
+      color: var(--cnvs-themecolor);
+    }
+    #wod .whiteboard-card {
+      background: #0a0a0a;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 8px 40px rgba(0,0,0,0.5);
+    }
+    #wod .whiteboard-header {
+      background: rgba(var(--cnvs-themecolor-rgb), 0.1);
+      border-bottom: 2px solid var(--cnvs-themecolor);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    #wod .whiteboard-title {
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cnvs-themecolor);
+      margin: 0;
+    }
+    #wod .whiteboard-icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(var(--cnvs-themecolor-rgb), 0.15);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #wod .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    #wod .leaderboard-table thead th {
+      padding: 0.625rem 1.5rem;
+      font-size: 0.5625rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.3);
+      text-align: left;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    #wod .leaderboard-table tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.15s;
+    }
+    #wod .leaderboard-table tbody tr:hover {
+      background: rgba(255,255,255,0.03);
+    }
+    #wod .leaderboard-table tbody tr:last-child {
+      border-bottom: none;
+    }
+    #wod .leaderboard-table tbody td {
+      padding: 0.875rem 1.5rem;
+      font-size: 0.9375rem;
+      color: #f5f0e8;
+      vertical-align: middle;
+    }
+    #wod .rank-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6875rem;
+      font-weight: 900;
+    }
+    #wod .rank-1 { background: var(--cnvs-themecolor); color: #111; }
+    #wod .rank-2 { background: rgba(245,240,232,0.15); color: #f5f0e8; }
+    #wod .rank-3 { background: rgba(245,240,232,0.08); color: rgba(245,240,232,0.7); }
+    #wod .rank-other { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: rgba(245,240,232,0.4); }
+    #wod .athlete-name {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    #wod .athlete-time {
+      font-family: 'Courier New', monospace;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: var(--cnvs-themecolor);
+    }
+    #wod .rx-pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.5625rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+    #wod .rx-pill.rx { background: rgba(var(--cnvs-themecolor-rgb), 0.15); color: var(--cnvs-themecolor); }
+    #wod .rx-pill.scaled { background: rgba(245,240,232,0.08); color: rgba(245,240,232,0.5); }
+    #wod .wod-cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--cnvs-themecolor);
+      font-size: 0.875rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    #wod .wod-cta-link:hover {
+      color: var(--cnvs-themecolor);
+      gap: 0.85rem;
+    }
+    #wod .divider-line {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin: 2rem 0;
+    }
+    @media (max-width: 991.98px) {
+      #wod .workout-name { font-size: 5rem; }
+    }
+  
+
+    .forge-classes-title { color: #fff; font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--cnvs-themecolor); font-weight: 700; }
+    .forge-classes-heading { color: #fff; font-size: 2.75rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.1; }
+    .forge-class-card { position: relative; overflow: hidden; border-radius: 4px; height: 380px; cursor: pointer; }
+    .forge-class-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .forge-class-card:hover img { transform: scale(1.06); }
+    .forge-class-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%); }
+    .forge-class-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px 28px 24px; }
+    .forge-class-name { font-size: 1.625rem; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1; margin-bottom: 8px; }
+    .forge-class-desc { font-size: 0.875rem; color: rgba(255,255,255,0.72); line-height: 1.5; margin-bottom: 14px; }
+    .forge-class-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .forge-class-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.85); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; padding: 4px 10px; border-radius: 2px; }
+    .forge-class-badge i { font-size: 0.8rem; color: var(--cnvs-themecolor); }
+    .forge-class-flames { display: inline-flex; align-items: center; gap: 2px; }
+    .forge-class-flames i { font-size: 0.9rem; }
+    .forge-class-link { font-size: 0.8125rem; font-weight: 700; color: var(--cnvs-themecolor); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: opacity 0.2s; margin-top: 12px; display: inline-block; }
+    .forge-class-link:hover { opacity: 0.75; color: var(--cnvs-themecolor); }
+    .forge-schedule-btn { display: inline-block; background: var(--cnvs-themecolor); color: #fff; font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 16px 44px; border-radius: 2px; text-decoration: none; transition: opacity 0.25s; }
+    .forge-schedule-btn:hover { opacity: 0.85; color: #fff; }
+    .forge-divider-line { width: 48px; height: 3px; background: var(--cnvs-themecolor); margin: 12px auto 32px; }
+  
+
+    .footer-nav-link {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+      padding: 4px 2px;
+    }
+    .footer-nav-link:hover {
+      color: var(--cnvs-themecolor);
+    }
+    .footer-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+    #footer .social-icon:hover {
+      background: var(--cnvs-themecolor) !important;
+      border-color: var(--cnvs-themecolor) !important;
+    }
+  

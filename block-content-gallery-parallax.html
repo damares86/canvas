@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Showcase your work with a scroll-driven parallax gallery block. Dynamic dual-column layout with smooth transitions, built for Canvas Bootstrap Template.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Parallax Gallery Block | Canvas</title>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-content-gallery-parallax.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-content-gallery-parallax.html">
+	<meta property="og:title" content="Parallax Gallery Block | Canvas">
+	<meta property="og:description" content="Showcase your work with a scroll-driven parallax gallery block. Dynamic dual-column layout with smooth transitions, built for Canvas Bootstrap Template.">
+	<meta property="og:image" content="images/blocks/preview/gallery-parallax/1.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Parallax Gallery Block | Canvas">
+	<meta name="twitter:description" content="Showcase your work with a scroll-driven parallax gallery block. Dynamic dual-column layout with smooth transitions, built for Canvas Bootstrap Template.">
+	<meta name="twitter:image" content="images/blocks/preview/gallery-parallax/1.jpg">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "block-content-gallery-parallax.html"
+			},
+			{
+				"@type": "CreativeWork",
+				"name": "Parallax Gallery Block",
+				"url": "block-content-gallery-parallax.html",
+				"image": "images/blocks/preview/gallery-parallax/1.jpg",
+				"description": "A scroll-driven parallax gallery block featuring a dynamic dual-column layout with smooth CSS transitions, designed for portfolio and showcase sections in the Canvas Bootstrap Template.",
+				"creator": {
+					"@type": "Organization",
+					"name": "SemiColonWeb"
+				}
+			}
+		]
+	}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+				<div class="container-fluid">
+
+                    <div class="row mb-5 min-vh-100 align-items-center justify-content-between overflow-hidden bg-color bg-opacity-10">
+						<div class="col-lg-3 offset-lg-1 p-4">
+                            <p class="text-uppercase ls-2 fw-medium op-05">Scroll Me</p>
+							<h3 class="display-4 fw-bold">Parallax Gallery</h3>
+							<p>Explore our curated parallax gallery — a dynamic, scroll-driven layout that adds depth and elegance to any portfolio or showcase section.</p>
+						</div>
+
+                        <div class="col-lg-6 vh-100">
+							<div class="grid-inner">
+								<div class="row gx-3 scroll-detect gy-0">
+									<div class="col-6">
+										<div class="all-ts" style="--cnvs-transitions: .2s linear; transform: translate3d(0,calc(-25% + (1.5% * 100 * var(--cnvs-scroll-end, 0))),0);">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/1.jpg" alt="Parallax gallery image 1 — first panel">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/2.jpg" alt="Parallax gallery image 2 — second panel">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/3.jpg" alt="Parallax gallery image 3 — third panel">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/4.jpg" alt="Parallax gallery image 4 — fourth panel">
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="all-ts" style="--cnvs-transitions: .2s linear; transform: translate3d(0,calc(-1% * 100 * var(--cnvs-scroll-end, 0)),0);">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/6.jpg" alt="Parallax gallery image 6 — right column, first panel">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/5.jpg" alt="Parallax gallery image 5 — right column, second panel">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/3.jpg" alt="Parallax gallery image 3 — right column, third panel">
+											<img class="mb-3" src="images/blocks/preview/gallery-parallax/4.jpg" alt="Parallax gallery image 4 — right column, fourth panel">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                    <div class="min-vh-75 d-flex text-center justify-content-center align-items-center">
+                        <div class="display-4">Content</div>
+                    </div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+</body>
+</html>

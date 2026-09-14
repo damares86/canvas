@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CanvasResume — AI Resume Builder That Lands You More Interviews | Canvas</title>
+  <meta name="description" content="AI-powered resume builder with ATS optimization, one-click tailoring to job descriptions, 50+ templates, cover letter AI, and LinkedIn profile optimization.">
+  <meta name="author" content="SemiColonWeb">
+  <link rel="canonical" href="demo-resume-builder.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-icons.css">
+  <link rel="stylesheet" href="demos/resume-builder/resume-builder.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <meta name="theme-color" content="#1d4ed8">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Canvas">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="demo-resume-builder.html">
+  <meta property="og:title" content="CanvasResume — Land More Interviews with an AI-Tailored Resume | Canvas">
+  <meta property="og:description" content="AI bullet suggestions, ATS scoring, one-click tailoring, 50+ templates, cover letter AI, LinkedIn optimization, and PDF/Word/Docs export.">
+  <meta property="og:image" content="demos/resume-builder/images/saas-001-large.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CanvasResume — Land More Interviews with an AI-Tailored Resume | Canvas">
+  <meta name="twitter:description" content="AI bullet suggestions, ATS scoring, one-click tailoring, 50+ templates, cover letter AI, LinkedIn optimization.">
+  <meta name="twitter:image" content="demos/resume-builder/images/saas-001-large.webp">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+          "@type": "Organization",
+          "name": "CanvasResume",
+          "url": "demo-resume-builder.html",
+          "logo": "demos/resume-builder/images/logo@2x.png"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "CanvasResume",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "AI-powered resume builder with ATS scoring, one-click job tailoring, 50+ templates, cover letter AI, and LinkedIn optimization.",
+          "offers": [{
+              "@type": "Offer",
+              "name": "Free",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Premium",
+              "price": "12",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Pro",
+              "price": "25",
+              "priceCurrency": "USD"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "12480"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [{
+              "@type": "Question",
+              "name": "Does the AI really tailor my resume to a job?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Paste any job description and CanvasResume rewrites your bullets, reorder skills, and rewrites your summary to mirror the role's keywords and priorities, in under 30 seconds."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my resume pass Applicant Tracking Systems?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every template is built on clean, ATS-parsable HTML. Our live ATS score checks keyword coverage, section structure, and formatting to maximize your callback rate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I export to PDF, Word, and Google Docs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — one-click export to ATS-friendly PDF, editable .docx, and Google Docs, all without breaking your formatting."
+              }
+            }
+          ]
+        }
+      ]
+    }
+
+  </script>
+  <link rel="stylesheet" href="css/swiper.css">
+</head>
+
+<body class="stretched">
+
+  <div id="wrapper">
+
+    <header id="header" class="transparent-header dark header-size-md" data-sticky-class="not-dark" data-responsive-class="not-dark" data-sticky-shrink="false">
+      <div id="header-wrap">
+        <div class="container">
+          <div class="header-row justify-content-lg-between">
+
+            <div id="logo">
+              <a href="index.html">
+                <img class="logo-default" src="demos/resume-builder/images/logo@2x.png" srcset="demos/resume-builder/images/logo.png, demos/resume-builder/images/logo@2x.png 2x" alt="CanvasResume">
+                <img class="logo-dark" src="demos/resume-builder/images/logo-dark@2x.png" srcset="demos/resume-builder/images/logo-dark.png, demos/resume-builder/images/logo-dark@2x.png 2x" alt="CanvasResume">
+              </a>
+            </div>
+
+            <div class="primary-menu-trigger" data-target=".primary-menu">
+              <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+              </button>
+            </div>
+
+            <div class="header-misc">
+              <a href="#pricing" class="button text-dark bg-white rounded-pill fw-semibold m-0 px-4 py-2">Build My Resume</a>
+            </div>
+
+            <nav class="primary-menu">
+              <ul class="menu-container">
+                <li class="menu-item"><a class="menu-link" href="#features">
+                    <div>Features</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#templates">
+                    <div>Templates</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#results">
+                    <div>Results</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#pricing">
+                    <div>Pricing</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#faq">
+                    <div>FAQ</div>
+                  </a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+      <div class="header-wrap-clone"></div>
+    </header>
+
+    <section id="hero" class="slider-element include-header dark cr-hero">
+      <div class="cr-hero-aurora"></div>
+      <div class="cr-hero-grid"></div>
+      <div class="cr-hero-noise"></div>
+
+      <div class="container cr-hero-container">
+        <div class="cr-hero-grid-layout">
+
+          <div class="cr-hero-col cr-hero-col-copy">
+            <div class="cr-hero-eyebrow">
+              <span class="cr-hero-eyebrow-dot"></span>
+              <span class="cr-hero-eyebrow-text">AI Resume Builder · v3.4</span>
+              <span class="cr-hero-eyebrow-sep"></span>
+              <span class="cr-hero-eyebrow-meta">2.4M+ job seekers</span>
+            </div>
+
+            <h1 class="cr-hero-headline">
+              <span class="cr-hero-line cr-hero-line-1">Land more interviews</span>
+              <span class="cr-hero-line cr-hero-line-2">with a resume that</span>
+              <span class="cr-hero-line cr-hero-line-3">
+                <span class="cr-hero-mark" aria-label="rewrites itself (emphasized)">rewrites itself</span>
+                <span class="cr-hero-amper">for every job.</span>
+              </span>
+            </h1>
+
+            <p class="cr-hero-sub">
+              CanvasResume reads the role, mirrors the keywords, and rewrites your bullets
+              in your voice, in under 30 seconds. Same experience, three times the callbacks.
+            </p>
+
+            <div class="cr-hero-actions">
+              <a href="#pricing" class="cr-hero-btn-primary">
+                <span>Build my resume free</span>
+                <i class="bi-arrow-right"></i>
+              </a>
+              <a href="#how" class="cr-hero-btn-secondary">
+                <span class="cr-hero-play"><i class="bi-play-fill"></i></span>
+                <span>Watch 60-sec demo</span>
+              </a>
+            </div>
+
+            <div class="cr-hero-stats">
+              <div class="cr-hero-stat">
+                <div class="cr-hero-stat-num">3.1×</div>
+                <div class="cr-hero-stat-label">more interviews</div>
+              </div>
+              <div class="cr-hero-stat-sep"></div>
+              <div class="cr-hero-stat">
+                <div class="cr-hero-stat-num">96</div>
+                <div class="cr-hero-stat-label">avg ATS score</div>
+              </div>
+              <div class="cr-hero-stat-sep"></div>
+              <div class="cr-hero-stat">
+                <div class="cr-hero-stat-num">23s</div>
+                <div class="cr-hero-stat-label">to tailor a resume</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cr-hero-col cr-hero-col-mock">
+            <div class="cr-hero-mock">
+
+              <div class="cr-mock-window">
+
+                <div class="cr-mock-chrome">
+                  <span class="cr-mock-tab cr-mock-tab-active">Senior Product Designer.docx</span>
+                  <span class="cr-mock-tab">Cover letter</span>
+                  <span class="cr-mock-tab">LinkedIn</span>
+                  <span class="cr-mock-chrome-spacer"></span>
+                  <span class="cr-mock-chrome-pill">
+                    <i class="bi-stars"></i>
+                    <span id="cr-mock-ai-status">AI tailoring</span>
+                  </span>
+                </div>
+
+                <div class="cr-mock-body">
+                  <div class="cr-mock-paper">
+
+                    <div class="cr-mock-paper-top">
+                      <div class="cr-mock-name">SARAH CHEN</div>
+                      <div class="cr-mock-role">Senior Product Designer · Loop Studios</div>
+                      <div class="cr-mock-meta">sarah@email.com · San Francisco · 415-555-0192</div>
+                    </div>
+
+                    <div class="cr-mock-row">
+                      <span class="cr-mock-tag cr-mock-tag-blue">EXPERIENCE</span>
+                      <div class="cr-mock-bullets">
+                        <div class="cr-mock-bullet">
+                          <span class="cr-mock-dot"></span>
+                          Led checkout redesign lifting conversion <b>34%</b> in one quarter
+                        </div>
+                        <div class="cr-mock-bullet">
+                          <span class="cr-mock-dot"></span>
+                          Shipped design system adopted by <b>9 product teams</b>
+                        </div>
+                        <div class="cr-mock-bullet">
+                          <span class="cr-mock-dot"></span>
+                          Mentored <b>4 designers</b>; 2 promoted within 9 months
+                        </div>
+                        <div class="cr-mock-bullet cr-mock-bullet-rewriting" data-state="rewriting">
+                          <span class="cr-mock-dot cr-mock-dot-rewriting"></span>
+                          <span class="cr-mock-bullet-text">
+                            <span class="cr-mock-original">Mentored 4 designers, ran weekly critiques, paired on Figma</span>
+                            <span class="cr-mock-rewritten">
+                              Mentored 4 designers through <b>weekly critiques</b>; 2 promoted within 9 months and 1 now leads a team of 6
+                            </span>
+                          </span>
+                          <span class="cr-mock-ai-tag" id="cr-mock-ai-tag">
+                            <span class="cr-mock-ai-spinner"></span>
+                            <span class="cr-mock-ai-tag-text">AI is rewriting</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="cr-mock-row">
+                      <span class="cr-mock-tag cr-mock-tag-blue">SKILLS</span>
+                      <div class="cr-mock-skills">
+                        <span>Figma</span><span>Design Systems</span><span>User Research</span>
+                        <span>Prototyping</span><span>HTML/CSS</span>
+                        <span class="cr-mock-skill-new" id="cr-mock-skill-new" data-state="hidden">+ A/B Testing</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="cr-mock-rail">
+                    <div class="cr-mock-rail-card cr-mock-rail-ats">
+                      <div class="cr-mock-rail-label">ATS Score</div>
+                      <div class="cr-mock-rail-num">
+                        <span id="cr-mock-ats">42</span><span>/100</span>
+                      </div>
+                      <div class="cr-mock-rail-bar">
+                        <span id="cr-mock-ats-bar" style="width:42%"></span>
+                      </div>
+                      <div class="cr-mock-rail-meta">
+                        <i class="bi-arrow-up-short"></i>
+                        <span id="cr-mock-ats-delta">+0 vs. previous</span>
+                      </div>
+                    </div>
+
+                    <div class="cr-mock-rail-card cr-mock-rail-ai">
+                      <div class="cr-mock-rail-label"><i class="bi-stars"></i> AI Suggestion</div>
+                      <div class="cr-mock-rail-text">
+                        Add <em>cross-functional collaboration</em> to match the priority keyword in this JD.
+                      </div>
+                      <div class="cr-mock-rail-actions">
+                        <button class="cr-mock-apply">Apply</button>
+                        <button class="cr-mock-dismiss">Skip</button>
+                      </div>
+                    </div>
+
+                    <div class="cr-mock-rail-card cr-mock-rail-export">
+                      <div class="cr-mock-rail-label">Export</div>
+                      <div class="cr-mock-export-grid">
+                        <span><i class="bi-file-earmark-pdf"></i> PDF</span>
+                        <span><i class="bi-file-earmark-word"></i> Word</span>
+                        <span><i class="bi-google"></i> Docs</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="cr-mock-badge cr-mock-badge-1">
+                <i class="bi-check-circle-fill"></i>
+                <div>
+                  <strong>Resume accepted</strong>
+                  <span>Loop Studios · 4h ago</span>
+                </div>
+              </div>
+
+              <div class="cr-mock-badge cr-mock-badge-2">
+                <i class="bi-chat-quote-fill"></i>
+                <div>
+                  <strong>3.1× callbacks</strong>
+                  <span>vs. last 30 days</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="social-proof" class="py-4 cr-social">
+      <div class="container">
+        <div class="row align-items-center g-4 text-center text-lg-start">
+          <div class="col-lg-3">
+            <p class="text-muted small text-uppercase fw-semibold mb-0">As featured in</p>
+          </div>
+          <div class="col-lg-9">
+            <div class="cr-logo-row">
+              <span>Forbes</span>
+              <span>TechCrunch</span>
+              <span>The Verge</span>
+              <span>WIRED</span>
+              <span>Fast Company</span>
+              <span>Business Insider</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+
+        <div class="text-center mx-auto mb-5" style="max-width:760px;">
+          <span class="cr-eyebrow">What CanvasResume does</span>
+          <h2 class="display-5 fw-bold cr-section-title mt-3">Every feature you need to out-bid other candidates</h2>
+          <p class="lead text-muted mt-3">Built for job seekers who'd rather interview than perfect a Word template. AI does the rewriting, you do the talking.</p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-stars"></i></div>
+              <h4>AI-Powered Bullet Points</h4>
+              <p>Drop in your job title. Get punchy, metric-driven bullet points written in your voice — quantified, action-led, recruiter-friendly.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-bar-chart-line-fill"></i></div>
+              <h4>ATS Score Optimisation</h4>
+              <p>Live score out of 100 with keyword gaps, section structure checks, and formatting fixes so your resume actually makes it past the bots.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-magic"></i></div>
+              <h4>One-Click Job Tailoring</h4>
+              <p>Paste any job description. CanvasResume rewrites your summary, reorders skills, and reframes bullets to match — in under 30 seconds.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-grid-3x3-gap-fill"></i></div>
+              <h4>50+ Pro Templates</h4>
+              <p>Minimal, executive, technical, creative — ATS-clean layouts for every industry and career stage, all designed by hiring pros.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-envelope-paper-fill"></i></div>
+              <h4>Cover Letter AI Generator</h4>
+              <p>Pair-matched cover letters written to your voice. Adjust tone, length, and emphasis without rebuilding from scratch.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-linkedin"></i></div>
+              <h4>LinkedIn Profile Optimisation</h4>
+              <p>Apply the same tailored story to your headline, about, and experience. Recruiters and your AI resume finally agree.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-download"></i></div>
+              <h4>PDF, Word, and Google Docs Export</h4>
+              <p>One click, three formats. ATS-clean PDF for applications, editable .docx for recruiters, instant sync to Google Docs.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-bullseye"></i></div>
+              <h4>Job Match Score</h4>
+              <p>Paste a job link or description, get a compatibility score and exactly which lines to tweak before you hit apply.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-feature-card h-100 cr-feature-cta">
+              <div class="cr-feature-icon cr-icon-blue"><i class="bi-rocket-takeoff-fill"></i></div>
+              <h4>And a lot more</h4>
+              <p>Version history, recruiter analytics, interview prep prompts, and salary insights baked into every plan.</p>
+              <a href="#pricing" class="cr-text-link">See pricing <i class="bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section cr-how-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-5">
+            <span class="cr-eyebrow">How it works</span>
+            <h2 class="display-5 fw-bold cr-section-title mt-3">From blank page to tailored resume in four steps</h2>
+            <p class="lead text-muted mt-3">No drag-and-drop fumbling. No lorem-ipsum filler. Just a resume that reads like the candidate the company already wants to hire.</p>
+
+            <div class="d-flex gap-3 mt-4">
+              <a href="#pricing" class="btn cr-btn-primary rounded-pill px-4">Start for Free</a>
+              <a href="#results" class="btn btn-outline-dark rounded-pill px-4">See real results</a>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="cr-steps">
+
+              <div class="cr-step">
+                <div class="cr-step-num">01</div>
+                <div>
+                  <h5 class="mb-2 fw-bold">Drop in your current resume (or start from scratch)</h5>
+                  <p class="text-muted mb-0">Paste plain text, upload a PDF, or pick a template. The AI parses your background in seconds and pre-fills every section.</p>
+                </div>
+              </div>
+
+              <div class="cr-step">
+                <div class="cr-step-num">02</div>
+                <div>
+                  <h5 class="mb-2 fw-bold">Paste the job description you want</h5>
+                  <p class="text-muted mb-0">One JD, one click. CanvasResume reads it like a recruiter would — priorities, must-haves, hidden keywords — and tailors your resume to fit.</p>
+                </div>
+              </div>
+
+              <div class="cr-step">
+                <div class="cr-step-num">03</div>
+                <div>
+                  <h5 class="mb-2 fw-bold">Review AI-tuned bullets and your ATS score</h5>
+                  <p class="text-muted mb-0">Accept, edit, or rewrite suggestions in plain English. Watch your match score climb from the 60s into the 90s in real time.</p>
+                </div>
+              </div>
+
+              <div class="cr-step">
+                <div class="cr-step-num">04</div>
+                <div>
+                  <h5 class="mb-2 fw-bold">Export to PDF, Word, or Google Docs</h5>
+                  <p class="text-muted mb-0">Hit apply with the ATS-friendly PDF, send the editable .docx to a mentor, or hand it off to Google Docs for tweaks.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section cr-results-section">
+      <div class="container">
+
+        <div class="text-center mx-auto mb-5" style="max-width:760px;">
+          <span class="cr-eyebrow">Before / After</span>
+          <h2 class="display-5 fw-bold text-white cr-section-title mt-3">See the difference a tailored resume makes</h2>
+          <p class="lead text-white-75 mt-3">Same candidate. Same experience. Two completely different interview rates.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+
+          <div class="col-lg-5">
+            <div class="cr-ba-card cr-ba-before h-100">
+              <div class="cr-ba-tag">BEFORE · Generic Resume</div>
+              <div class="cr-ba-doc">
+                <div class="cr-ba-name">Mark Johnson</div>
+                <div class="cr-ba-role text-muted">Marketing Manager</div>
+                <div class="cr-ba-section">
+                  <div class="cr-ba-h">EXPERIENCE</div>
+                  <p class="text-muted">Responsible for marketing campaigns at a mid-size SaaS company. Handled email, social media, and some events. Worked with the sales team.</p>
+                  <p class="text-muted">Helped the team hit quarterly goals and managed a small budget.</p>
+                </div>
+                <div class="cr-ba-section">
+                  <div class="cr-ba-h">SKILLS</div>
+                  <p class="text-muted">Marketing, communication, Microsoft Office, team player</p>
+                </div>
+              </div>
+              <div class="cr-ba-stats">
+                <div>
+                  <div class="cr-ba-stat-label">Interviews / mo</div>
+                  <div class="cr-ba-stat-val text-danger">0.4</div>
+                </div>
+                <div>
+                  <div class="cr-ba-stat-label">ATS Score</div>
+                  <div class="cr-ba-stat-val text-danger">42/100</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 d-flex align-items-center justify-content-center">
+            <div class="cr-ba-arrow">
+              <i class="bi-arrow-right"></i>
+              <div class="cr-ba-arrow-label">AI tailoring · 23s</div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="cr-ba-card cr-ba-after h-100">
+              <div class="cr-ba-tag">AFTER · AI-Tailored Resume</div>
+              <div class="cr-ba-doc">
+                <div class="cr-ba-name">Mark Johnson</div>
+                <div class="cr-ba-role cr-accent-text">Senior Growth Marketing Manager · B2B SaaS</div>
+                <div class="cr-ba-section">
+                  <div class="cr-ba-h">EXPERIENCE</div>
+                  <p>Led end-to-end <strong>demand-gen programs</strong> across paid + organic, contributing to <strong>142% YoY MQL growth</strong> and <strong>$3.2M influenced pipeline</strong>.</p>
+                  <p>Built and scaled the <strong>HubSpot + Salesforce</strong> nurture stack that lifted demo-to-opportunity conversion <strong>28% in one quarter</strong>.</p>
+                </div>
+                <div class="cr-ba-section">
+                  <div class="cr-ba-h">SKILLS</div>
+                  <p>Demand generation · paid search · marketing automation · HubSpot · Salesforce · SQL · ABM · content strategy</p>
+                </div>
+              </div>
+              <div class="cr-ba-stats">
+                <div>
+                  <div class="cr-ba-stat-label">Interviews / mo</div>
+                  <div class="cr-ba-stat-val text-success">3.1</div>
+                </div>
+                <div>
+                  <div class="cr-ba-stat-label">ATS Score</div>
+                  <div class="cr-ba-stat-val text-success">94/100</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-5 g-4 text-center text-lg-start">
+          <div class="col-md-4">
+            <div class="cr-result-stat">
+              <div class="cr-result-num">3×</div>
+              <p class="text-white-75 mb-0">more interviews, on average, within 30 days</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="cr-result-stat">
+              <div class="cr-result-num">2.4M</div>
+              <p class="text-white-75 mb-0">job seekers have used CanvasResume since 2021</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="cr-result-stat">
+              <div class="cr-result-num">68%</div>
+              <p class="text-white-75 mb-0">land a role within 90 days of using Pro</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="templates" class="section">
+      <div class="container">
+
+        <div class="row align-items-end g-4 mb-5">
+          <div class="col-lg-6">
+            <span class="cr-eyebrow">Industry-specific templates</span>
+            <h2 class="display-5 fw-bold cr-section-title mt-3">50+ templates tuned for your industry</h2>
+            <p class="lead text-muted mt-3">Pick the layout hiring managers in your field already trust. Every template is ATS-clean, recruiter-tested, and built to highlight what your industry cares about.</p>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <div class="cr-filter-pills">
+              <button class="cr-pill active">All</button>
+              <button class="cr-pill">Tech</button>
+              <button class="cr-pill">Finance</button>
+              <button class="cr-pill">Creative</button>
+              <button class="cr-pill">Executive</button>
+              <button class="cr-pill">Healthcare</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-tpl-card">
+              <img src="demos/resume-builder/images/saas-001-large.webp" alt="Modern tech resume template" loading="lazy">
+              <div class="cr-tpl-meta">
+                <div>
+                  <h6 class="mb-0">Modern Tech</h6>
+                  <small class="text-muted">Software engineers, PMs, designers</small>
+                </div>
+                <span class="cr-tpl-tag">Popular</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-tpl-card">
+              <img src="demos/resume-builder/images/saas-002-large.webp" alt="Executive resume template" loading="lazy">
+              <div class="cr-tpl-meta">
+                <div>
+                  <h6 class="mb-0">Executive</h6>
+                  <small class="text-muted">VP+, directors, senior leaders</small>
+                </div>
+                <span class="cr-tpl-tag">Premium</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-tpl-card">
+              <img src="demos/resume-builder/images/saas-003-large.webp" alt="Creative portfolio resume template" loading="lazy">
+              <div class="cr-tpl-meta">
+                <div>
+                  <h6 class="mb-0">Creative Studio</h6>
+                  <small class="text-muted">Designers, writers, marketers</small>
+                </div>
+                <span class="cr-tpl-tag">ATS-safe</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-tpl-card">
+              <img src="demos/resume-builder/images/saas-004-large.webp" alt="Finance resume template" loading="lazy">
+              <div class="cr-tpl-meta">
+                <div>
+                  <h6 class="mb-0">Finance Classic</h6>
+                  <small class="text-muted">Banking, consulting, accounting</small>
+                </div>
+                <span class="cr-tpl-tag">ATS-safe</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-tpl-card">
+              <img src="demos/resume-builder/images/saas-005-large.webp" alt="Healthcare resume template" loading="lazy">
+              <div class="cr-tpl-meta">
+                <div>
+                  <h6 class="mb-0">Healthcare Pro</h6>
+                  <small class="text-muted">Nurses, clinicians, medical admin</small>
+                </div>
+                <span class="cr-tpl-tag">New</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="cr-tpl-card">
+              <img src="demos/resume-builder/images/saas-006-large.webp" alt="Minimalist resume template" loading="lazy">
+              <div class="cr-tpl-meta">
+                <div>
+                  <h6 class="mb-0">Minimal Mono</h6>
+                  <small class="text-muted">One clean column, ATS-perfect</small>
+                </div>
+                <span class="cr-tpl-tag">Free</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="#pricing" class="btn cr-btn-primary rounded-pill px-4">Browse all 50+ templates</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="testimonials" class="section cr-testimonials-section">
+      <div class="container">
+
+        <div class="text-center mx-auto mb-5" style="max-width:760px;">
+          <span class="cr-eyebrow">Job seekers love it</span>
+          <h2 class="display-5 fw-bold cr-section-title mt-3">Real people. Real offers. Real payouts.</h2>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <div class="cr-t-card h-100">
+              <div class="cr-t-stars">
+                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i>
+              </div>
+              <p>"I went from complete silence to four interviews in two weeks. The ATS score alone made it obvious why my old resume wasn't landing."</p>
+              <div class="cr-t-meta">
+                <strong>Daniela R.</strong>
+                <div class="small text-muted">Senior PM · hired at a Series C fintech</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="cr-t-card h-100 cr-t-featured">
+              <div class="cr-t-stars">
+                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i>
+              </div>
+              <p>"The one-click tailoring is the real magic. I spent an evening applying to nine roles with nine tailored resumes. Five callbacks."</p>
+              <div class="cr-t-meta">
+                <strong>Marcus T.</strong>
+                <div class="small text-muted">Data Engineer · 9 callbacks from 9 applications</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="cr-t-card h-100">
+              <div class="cr-t-stars">
+                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i>
+              </div>
+              <p>"Switching between tech and consulting-style templates let me apply across two industries at once. Doubled my interview rate."</p>
+              <div class="cr-t-meta">
+                <strong>Aisha K.</strong>
+                <div class="small text-muted">UX Researcher · 2 offers in 6 weeks</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section cr-pricing-section">
+      <div class="container">
+
+        <div class="text-center mx-auto mb-5" style="max-width:760px;">
+          <span class="cr-eyebrow">Pricing</span>
+          <h2 class="display-5 fw-bold cr-section-title mt-3">Simple pricing. No recruiter required.</h2>
+          <p class="lead text-muted mt-3">Start free. Upgrade only when you need unlimited tailoring and every template.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+
+          <div class="col-lg-4">
+            <div class="cr-price-card h-100">
+              <div class="cr-price-tier">Free</div>
+              <div class="cr-price-amount">$0<span class="cr-price-period">/forever</span></div>
+              <p class="text-muted">Try CanvasResume with one polished resume.</p>
+              <a href="#" class="btn btn-outline-dark rounded-pill w-100 mb-4">Get Started</a>
+              <ul class="cr-price-list">
+                <li><i class="bi-check2"></i> 1 resume on a free template</li>
+                <li><i class="bi-check2"></i> PDF export</li>
+                <li><i class="bi-check2"></i> Basic ATS score check</li>
+                <li><i class="bi-check2"></i> Email support</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="cr-price-card cr-price-popular h-100">
+              <div class="cr-price-popular-tag">MOST POPULAR</div>
+              <div class="cr-price-tier">Premium</div>
+              <div class="cr-price-amount">$12<span class="cr-price-period">/month</span></div>
+              <p class="text-muted">For active job hunters applying everywhere.</p>
+              <a href="#" class="btn cr-btn-primary rounded-pill w-100 mb-4">Start 7-day Trial</a>
+              <ul class="cr-price-list">
+                <li><i class="bi-check2"></i> <strong>Unlimited</strong> resumes and cover letters</li>
+                <li><i class="bi-check2"></i> All 50+ pro templates</li>
+                <li><i class="bi-check2"></i> PDF, Word, and Google Docs export</li>
+                <li><i class="bi-check2"></i> AI bullet suggestions</li>
+                <li><i class="bi-check2"></i> Live ATS score and keyword reports</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="cr-price-card h-100">
+              <div class="cr-price-tier">Pro</div>
+              <div class="cr-price-amount">$25<span class="cr-price-period">/month</span></div>
+              <p class="text-muted">Everything plus AI tailoring and LinkedIn.</p>
+              <a href="#" class="btn btn-outline-dark rounded-pill w-100 mb-4">Go Pro</a>
+              <ul class="cr-price-list">
+                <li><i class="bi-check2"></i> Everything in Premium</li>
+                <li><i class="bi-check2"></i> <strong>One-click tailoring</strong> to any JD</li>
+                <li><i class="bi-check2"></i> LinkedIn profile optimisation</li>
+                <li><i class="bi-check2"></i> Cover letter AI generator</li>
+                <li><i class="bi-check2"></i> Priority recruiter alerts</li>
+                <li><i class="bi-check2"></i> Interview prep prompts</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="text-center text-muted mt-4 mb-0 small">All plans include unlimited edits, version history, and ATS-clean exports. Cancel anytime.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="section cr-faq-section">
+      <div class="container">
+        <div class="cr-faq-head">
+          <span class="cr-eyebrow">Frequently asked</span>
+          <h2 class="display-5 fw-bold cr-section-title mt-3">Everything job seekers ask before they sign up</h2>
+          <p class="lead text-muted mt-3">No need to click. Every answer is right here, in plain English. Still stuck? Email <a href="mailto:hello@example.com" class="cr-text-link">hello@example.com</a> and a real human replies within four hours, weekdays.</p>
+        </div>
+
+        <div class="cr-faq-grid">
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">01</div>
+            <h3 class="cr-faq-q">Does the AI really tailor my resume to a specific job?</h3>
+            <p class="cr-faq-a">Yes. Paste any job description and CanvasResume rewrites your summary, reorders your skills, and rewrites bullet points to mirror the role's priorities and keywords. The full rewrite runs in under 30 seconds, and you can accept, edit, or revert any line before exporting.</p>
+            <div class="cr-faq-tag">AI Tailoring</div>
+          </article>
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">02</div>
+            <h3 class="cr-faq-q">Will my resume actually pass ATS systems?</h3>
+            <p class="cr-faq-a">Every template is built on clean, single-column HTML that Workday, Greenhouse, Lever, and Taleo parse without breaking. The live ATS score checks keyword coverage, section structure, and formatting in real time, so you can see exactly why a bot might reject you before you apply.</p>
+            <div class="cr-faq-tag">ATS Optimisation</div>
+          </article>
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">03</div>
+            <h3 class="cr-faq-q">Can I export to PDF, Word, and Google Docs?</h3>
+            <p class="cr-faq-a">Yes, one click each. The PDF is ATS-friendly with selectable text. The .docx stays editable for mentors. The Google Docs link syncs instantly and keeps your formatting. Same content, three destinations, no copy-paste fixes.</p>
+            <div class="cr-faq-tag">Export Formats</div>
+          </article>
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">04</div>
+            <h3 class="cr-faq-q">Do you actually deliver 3× more interviews?</h3>
+            <p class="cr-faq-a">Across 2.4M users in the last 24 months, Pro plan users get 3.1× the interview rate of their previous, non-tailored resume over a 30-day window. Individual results vary by industry, role, and seniority, but the average is real, not marketing fluff.</p>
+            <div class="cr-faq-tag">Results</div>
+          </article>
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">05</div>
+            <h3 class="cr-faq-q">Is the free plan actually useful?</h3>
+            <p class="cr-faq-a">Yes. You can build one polished, ATS-clean resume on a free template and export it to PDF. The upgrade matters once you're applying to multiple roles at once, want cover letter AI, or need LinkedIn optimization.</p>
+            <div class="cr-faq-tag">Free vs Pro</div>
+          </article>
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">06</div>
+            <h3 class="cr-faq-q">Will the AI sound like a robot wrote my resume?</h3>
+            <p class="cr-faq-a">No. The AI is trained on real resumes, not on LinkedIn-speak. It mirrors your voice, the way you describe your wins, and your style. Every bullet is editable in plain English, and you can switch between three tone presets: concise, conversational, or executive.</p>
+            <div class="cr-faq-tag">Voice & Tone</div>
+          </article>
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">07</div>
+            <h3 class="cr-faq-q">Can I cancel anytime? What happens to my data?</h3>
+            <p class="cr-faq-a">Cancel in two clicks from your account page. We never sell your data. You can export every resume as a PDF, Word file, or JSON archive at any time, even after cancellation. Deleting your account permanently removes your data within 30 days.</p>
+            <div class="cr-faq-tag">Billing & Privacy</div>
+          </article>
+
+          <article class="cr-faq-card">
+            <div class="cr-faq-num">08</div>
+            <h3 class="cr-faq-q">Do you have a mobile app?</h3>
+            <p class="cr-faq-a">The editor runs in any modern browser, including phones and tablets. A native iOS app is in private beta in Q3 2026, with Android to follow. Same AI, same templates, same exports, sized for thumb-typing on the bus.</p>
+            <div class="cr-faq-tag">Platforms</div>
+          </article>
+
+        </div>
+
+        <div class="cr-faq-cta">
+          <div>
+            <h4 class="cr-faq-cta-h">Still have a question we missed?</h4>
+            <p class="cr-faq-cta-p">Talk to a real person on the team. We reply within four hours, weekdays.</p>
+          </div>
+          <a href="mailto:hello@example.com" class="cr-faq-cta-btn">
+            <i class="bi-envelope"></i>
+            Email the team
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cr-cta-section">
+      <div class="cr-cta-aurora"></div>
+      <div class="cr-cta-grid"></div>
+
+      <div class="container cr-cta-container">
+        <div class="cr-cta-card">
+
+          <div class="cr-cta-left">
+            <span class="cr-cta-eyebrow">
+              <span class="cr-cta-eyebrow-dot"></span>
+              Your next interview starts tonight
+            </span>
+
+            <h2 class="cr-cta-headline">
+              Build the resume that <span class="cr-cta-italic">earns the call</span> in three minutes flat.
+            </h2>
+
+            <p class="cr-cta-sub">
+              Drop in your background, paste a job description, and watch the AI rewrite your bullets, sharpen your summary, and ship a tailored PDF, Word, or Google Docs file, ready to send before you close the tab.
+            </p>
+
+            <div class="cr-cta-actions">
+              <a href="#pricing" class="cr-cta-btn">
+                <span>Build my resume free</span>
+                <i class="bi-arrow-right"></i>
+              </a>
+              <a href="#templates" class="cr-cta-btn-ghost">
+                <i class="bi-grid-3x3-gap"></i>
+                <span>Browse 50+ templates</span>
+              </a>
+            </div>
+
+            <div class="cr-cta-trust">
+              <div><i class="bi-shield-check"></i> No credit card</div>
+              <div><i class="bi-lightning-charge"></i> Live in 3 minutes</div>
+              <div><i class="bi-x-circle"></i> Cancel anytime</div>
+            </div>
+          </div>
+
+          <div class="cr-cta-right">
+            <div class="cr-cta-stat cr-cta-stat-1">
+              <div class="cr-cta-stat-num">3.1×</div>
+              <div class="cr-cta-stat-lbl">more interviews</div>
+            </div>
+            <div class="cr-cta-stat cr-cta-stat-2">
+              <div class="cr-cta-stat-num">96</div>
+              <div class="cr-cta-stat-lbl">avg ATS score</div>
+            </div>
+            <div class="cr-cta-stat cr-cta-stat-3">
+              <div class="cr-cta-stat-num">23s</div>
+              <div class="cr-cta-stat-lbl">to tailor</div>
+            </div>
+            <div class="cr-cta-stat cr-cta-stat-4">
+              <div class="cr-cta-stat-num">2.4M</div>
+              <div class="cr-cta-stat-lbl">users</div>
+            </div>
+
+            <div class="cr-cta-quote">
+              <i class="bi-quote cr-cta-quote-mark"></i>
+              <p>"Went from ghosted to four interviews in two weeks. The ATS score alone made it obvious why my old resume wasn't landing."</p>
+              <div class="cr-cta-quote-meta">
+                <strong>Daniela R.</strong>
+                <span>Senior PM · hired at a Series C fintech</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="dark cr-footer">
+      <div class="cr-footer-aurora"></div>
+
+      <div class="container cr-footer-inner">
+
+        <div class="cr-footer-top">
+          <div class="cr-footer-brand">
+            <img class="footer-logo" src="demos/resume-builder/images/logo-dark@2x.png" srcset="demos/resume-builder/images/logo-dark.png, demos/resume-builder/images/logo-dark@2x.png 2x" alt="CanvasResume">
+            <p class="cr-footer-tag">The AI resume builder that adapts to every job you apply to. Built so the best candidate actually gets the interview.</p>
+
+            <form class="cr-footer-form" onsubmit="event.preventDefault();this.querySelector('button').innerText='Subscribed';">
+              <label class="cr-footer-form-label" for="cr-footer-email">Weekly resume tips, in your inbox</label>
+              <div class="cr-footer-form-row">
+                <input id="cr-footer-email" type="email" placeholder="you@email.com" required>
+                <button type="submit">Subscribe <i class="bi-arrow-right"></i></button>
+              </div>
+              <small class="cr-footer-form-hint">One short email, every Sunday. No spam, unsubscribe in one click.</small>
+            </form>
+          </div>
+
+          <div class="cr-footer-nav">
+
+            <div class="cr-footer-col">
+              <h6>Product</h6>
+              <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#templates">Templates</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#results">Before / after</a></li>
+                <li><a href="#">ATS checker</a></li>
+                <li><a href="#">Browser extension</a></li>
+              </ul>
+            </div>
+
+            <div class="cr-footer-col">
+              <h6>Use cases</h6>
+              <ul>
+                <li><a href="#">Career switchers</a></li>
+                <li><a href="#">Recent graduates</a></li>
+                <li><a href="#">Senior leaders</a></li>
+                <li><a href="#">Tech professionals</a></li>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Creative industries</a></li>
+              </ul>
+            </div>
+
+            <div class="cr-footer-col">
+              <h6>Resources</h6>
+              <ul>
+                <li><a href="#">Resume guides</a></li>
+                <li><a href="#">Cover letter examples</a></li>
+                <li><a href="#">LinkedIn makeover</a></li>
+                <li><a href="#">Salary explorer</a></li>
+                <li><a href="#">Interview prep</a></li>
+                <li><a href="#">Career blog</a></li>
+              </ul>
+            </div>
+
+            <div class="cr-footer-col">
+              <h6>Company</h6>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers <span class="cr-footer-badge">3 open</span></a></li>
+                <li><a href="#">Press kit</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Affiliate program</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="cr-footer-mid">
+          <div class="cr-footer-trust">
+            <div class="cr-footer-trust-item">
+              <i class="bi-shield-check"></i>
+              <div>
+                <strong>ATS-clean guarantee</strong>
+                <span>If a recruiter rejects on formatting, we refund your plan.</span>
+              </div>
+            </div>
+            <div class="cr-footer-trust-item">
+              <i class="bi-lock"></i>
+              <div>
+                <strong>Your data stays yours</strong>
+                <span>SOC 2 audited. We never sell your resume to recruiters.</span>
+              </div>
+            </div>
+            <div class="cr-footer-trust-item">
+              <i class="bi-arrow-counterclockwise"></i>
+              <div>
+                <strong>Cancel in two clicks</strong>
+                <span>Export every resume before you go. No retention tricks.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cr-footer-bot">
+
+          <div class="cr-footer-contact">
+            <div class="cr-footer-contact-card">
+              <span class="cr-footer-contact-label">HQ</span>
+              <span class="cr-footer-contact-val">500 Howard St, San Francisco, CA</span>
+            </div>
+            <div class="cr-footer-contact-card">
+              <span class="cr-footer-contact-label">Email</span>
+              <span class="cr-footer-contact-val">hello@canvasresume.app</span>
+            </div>
+            <div class="cr-footer-contact-card">
+              <span class="cr-footer-contact-label">Phone</span>
+              <span class="cr-footer-contact-val">+1 (415) 555-0192</span>
+            </div>
+            <div class="cr-footer-contact-card">
+              <span class="cr-footer-contact-label">Hours</span>
+              <span class="cr-footer-contact-val">Mon to Fri, 9am to 6pm PT</span>
+            </div>
+          </div>
+
+          <div class="cr-footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi-tiktok"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi-github"></i></a>
+          </div>
+
+        </div>
+
+        <div id="copyrights" class="cr-footer-legal">
+          <div class="cr-footer-legal-row">
+            <div class="cr-footer-legal-text">
+              Copyrights &copy; 2026 CanvasResume.
+            </div>
+            <div class="cr-footer-legal-links">
+              <a href="#">Privacy</a>
+              <a href="#">Terms</a>
+              <a href="#">Cookies</a>
+              <a href="#">DPA</a>
+              <a href="#">Status</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/plugins.min.js"></script>
+  <script src="js/functions.bundle.js"></script>
+  <script>
+    (function() {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var bullet = document.querySelector('.cr-mock-bullet-rewriting');
+      var tag = document.getElementById('cr-mock-ai-tag');
+      var tagText = tag ? tag.querySelector('.cr-mock-ai-tag-text') : null;
+      var orig = bullet ? bullet.querySelector('.cr-mock-original') : null;
+      var rewrite = bullet ? bullet.querySelector('.cr-mock-rewritten') : null;
+      var skillNew = document.getElementById('cr-mock-skill-new');
+      var atsNum = document.getElementById('cr-mock-ats');
+      var atsBar = document.getElementById('cr-mock-ats-bar');
+      var atsDelta = document.getElementById('cr-mock-ats-delta');
+      var status = document.getElementById('cr-mock-ai-status');
+      if (!bullet || !tag || !orig || !rewrite || !skillNew || !atsNum || !atsBar || !atsDelta || !status || !tagText) return;
+      var states = [{
+          p: 42,
+          d: '+0 vs. previous',
+          s: 'AI reading job description...'
+        },
+        {
+          p: 58,
+          d: '+16 vs. previous',
+          s: 'AI rewriting bullets...'
+        },
+        {
+          p: 74,
+          d: '+32 vs. previous',
+          s: 'AI matching keywords...'
+        },
+        {
+          p: 88,
+          d: '+46 vs. previous',
+          s: 'AI polishing summary...'
+        },
+        {
+          p: 96,
+          d: '+54 vs. previous',
+          s: 'Resume tailored'
+        }
+      ];
+      var tIdx = 0;
+
+      function setState(idx) {
+        var s = states[idx];
+        if (atsNum) atsNum.textContent = s.p;
+        if (atsBar) atsBar.style.width = s.p + '%';
+        if (atsDelta) atsDelta.textContent = s.d;
+        if (status) status.textContent = s.s;
+      }
+      setState(0);
+      setTimeout(function() {
+        tagText.textContent = 'AI is rewriting';
+        bullet.dataset.state = 'rewriting';
+      }, 700);
+      setTimeout(function() {
+        orig.style.opacity = '0';
+        setTimeout(function() {
+          orig.style.display = 'none';
+          rewrite.style.opacity = '1';
+          bullet.dataset.state = 'done';
+          tagText.textContent = 'AI tailored';
+        }, 400);
+      }, 2400);
+      setTimeout(function() {
+        skillNew.dataset.state = 'shown';
+      }, 3000);
+      setTimeout(function() {
+        tIdx = 0;
+
+        function tick() {
+          tIdx = (tIdx + 1) % states.length;
+          setState(tIdx);
+          if (tIdx === 0) {
+            bullet.dataset.state = 'rewriting';
+            tagText.textContent = 'AI is rewriting';
+            orig.style.display = '';
+            orig.style.opacity = '0';
+            setTimeout(function() {
+              orig.style.opacity = '1';
+              rewrite.style.opacity = '0';
+              bullet.dataset.state = 'rewriting';
+            }, 200);
+            setTimeout(function() {
+              orig.style.opacity = '0';
+              setTimeout(function() {
+                orig.style.display = 'none';
+                rewrite.style.opacity = '1';
+                bullet.dataset.state = 'done';
+                tagText.textContent = 'AI tailored';
+              }, 400);
+            }, 1400);
+            skillNew.dataset.state = 'hidden';
+            setTimeout(function() {
+              skillNew.dataset.state = 'shown';
+            }, 2200);
+          }
+        }
+        setInterval(tick, 1800);
+      }, 6000);
+    })();
+
+  </script>
+</body>
+</html>

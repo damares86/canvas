@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Explore Canvas's custom scroll component with LetMeScroll.js: fully themeable scrollbars with auto-hide, color controls, and flexible container sizing.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BMSVieira/letmescroll.js@latest/css/letmescroll.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Custom Scroll | Canvas</title>
+
+	<style>
+		.lms_scrollable {
+			max-width: 100%;
+		}
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-misc-custom-scroll.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-misc-custom-scroll.html">
+	<meta property="og:title" content="Custom Scroll | Canvas">
+	<meta property="og:description" content="Explore Canvas's custom scroll component with LetMeScroll.js: fully themeable scrollbars with auto-hide, color controls, and flexible container sizing.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Custom Scroll | Canvas">
+	<meta name="twitter:description" content="Explore Canvas's custom scroll component with LetMeScroll.js: fully themeable scrollbars with auto-hide, color controls, and flexible container sizing.">
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Canvas",
+      "url": "block-misc-custom-scroll.html",
+      "description": "Explore Canvas's custom scroll component with LetMeScroll.js: fully themeable scrollbars with auto-hide, color controls, and flexible container sizing."
+    },
+    {
+      "@type": "Service",
+      "name": "Custom Scroll Component",
+      "url": "block-misc-custom-scroll.html",
+      "description": "A fully customizable scrollbar component for Canvas HTML template, supporting auto-hide, color theming, and flexible container dimensions via LetMeScroll.js.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Canvas",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Example Avenue",
+          "telephone": "+1-555-123-4567"
+        }
+      }
+    }
+  ]
+}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+					<h2 class="text-center">Use Custom Scroll</h2>
+					<h4>Full width</h4>
+					<div class="canvas-custom-scroll border rounded mb-5" data-height="20rem">
+						<p class="p-4 mb-0">Canvas includes a fully customizable scrollbar component powered by LetMeScroll.js, giving you precise control over scroll behavior, appearance, and container dimensions. Unlike the native browser scrollbar, the custom scroll component adapts seamlessly to any container width or height, allowing you to embed scrollable content areas within cards, modals, sidebars, and panels without disrupting the surrounding page layout or grid structure. You can set fixed heights using the data-height attribute, choose whether the scrollbar auto-hides when idle, and even swap scrollbar colors dynamically at runtime via JavaScript calls. This level of control is essential for building polished, consistent user interfaces where every visual detail—including scrollbars—aligns with your brand identity and design system. The component integrates cleanly with Canvas's existing CSS variables, making it straightforward to theme alongside other UI elements on the same page. Full-width containers benefit greatly from the increased readability and smooth scrolling behavior this component provides, particularly when displaying lengthy content such as terms and conditions, technical documentation, or detailed product descriptions within a clearly defined and bounded viewport area that preserves the overall page structure.</p>
+						<p class="p-4 mb-0">Building rich, content-dense web layouts often requires presenting large amounts of information in confined spaces without overwhelming the user or breaking the surrounding page grid. Canvas's custom scroll solution handles this gracefully by wrapping overflow content in a styled, fully themeable container that behaves with complete consistency across all modern browsers and operating systems. Developers can define the scrollable region's exact dimensions, control the scrollbar track and thumb colors independently, and toggle auto-hide behavior to suit the specific use case—all without writing a single line of custom JavaScript beyond the simple initialization call provided. The configuration options are exposed via HTML data attributes, making it easy for designers to prototype different layouts directly in markup without touching any script files. Because the component initializes automatically on any element bearing the canvas-custom-scroll class, integrating it into existing page structures requires minimal code changes and no additional build steps. This full-width example demonstrates how a wide content block adapts naturally, keeping all content readable and fully accessible while the custom scrollbar remains visually integrated with the rest of the Canvas design language and component system.</p>
+						<p class="p-4 mb-0">The LetMeScroll.js integration within Canvas provides a reliable cross-browser scrollbar replacement that maintains accessibility standards while offering full visual customization across every supported environment. Scrollbar dimensions—both track width and container height—can be configured independently per element, and the auto-hide feature ensures the overall UI remains clean and uncluttered when users are not actively interacting with the scroll region. For content-heavy pages such as policy documents, technical specifications, long-form blog excerpts, or product catalogs embedded in constrained panels, this component significantly improves the reading experience by providing smooth, predictable scrolling behavior at all times. The color-change controls demonstrated further down this page let developers test different scrollbar accent colors in real time, giving a clear and immediate picture of how the component will look alongside various Canvas color themes including the danger, success, warning, info, light, and dark palette variants. Each color setting updates CSS custom properties applied at the document root, so all active scroll panels on the page refresh simultaneously—an efficient and elegant approach for live theming without requiring full page reloads or complex state management.</p>
+					</div>
+					<div class="row mt-6">
+						<div class="col-md-6">
+							<h4>col-6 - Fixed Scrollbar</h4>
+							<div class="canvas-custom-scroll border rounded mb-5">
+								<p class="p-4 mb-0">The fixed scrollbar variant keeps the scrollbar permanently visible within its half-width column container, ensuring users always receive a clear and immediate visual cue that scrollable content exists below the currently visible fold of the panel. This behavior is especially useful in sidebar navigation panels, chat message interfaces, or any component where users need a persistent visual indicator to confirm that additional content is available without needing to attempt a scroll action first. In this six-column grid layout example, the canvas-custom-scroll component occupies exactly half the full page width, demonstrating how the scrollbar adapts gracefully to narrower containers without any loss of functionality, visual quality, or the smooth scroll physics users expect. The scrollbar track scales proportionally with the available container width and maintains the same consistent scrolling behavior regardless of whether the container spans the full page width or is constrained to a narrow column in a complex multi-column grid layout. Developers can easily combine this component with Canvas's Bootstrap grid system, card components, and spacing utility classes to build sophisticated dashboard interfaces where multiple scrollable panels coexist without visual conflict, each maintaining its own independent scroll position and state throughout the user's session.</p>
+								<p class="p-4 mb-0">Combining the fixed scrollbar setting with Canvas's existing border and rounded corner utility classes creates a clean, clearly bounded content region that stands out naturally from the surrounding page layout and immediately draws the user's attention to the defined area. This pattern is widely used for displaying terms and conditions agreements, lengthy product specifications, employee handbook sections, content policy details, or any material that must remain accessible and readable within a precisely defined and bounded display area on the page. The persistent visibility of the scrollbar in this fixed mode differs meaningfully from the default auto-hide behavior, providing an explicit and permanent affordance that encourages users to engage with and scroll through the content rather than leaving them uncertain about whether additional material exists below the visible boundary. When integrating multiple fixed-scrollbar panels within a single page or layout, Canvas's comprehensive spacing utilities—such as the mb-5 and p-4 classes applied here—ensure consistent internal padding and appropriate separation between components, resulting in a well-structured, professional presentation that prioritizes both usability and visual consistency across a wide range of screen sizes and device types.</p>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<h4>col-6 - Dark Background</h4>
+							<div class="canvas-custom-scroll bg-dark dark rounded mb-5">
+								<p class="p-4 mb-0">The dark background variant of the custom scroll component demonstrates clearly how Canvas UI components adapt elegantly to inverted color schemes without requiring separate component configurations or additional CSS overrides for each element. By applying the bg-dark and dark utility classes to the scroll container alongside the standard canvas-custom-scroll initializer class, the scrollbar automatically renders with a light-colored thumb against the dark track surface, maintaining strong contrast ratios and ensuring readability for all users including those with visual impairments. This dark variant is particularly well-suited for code editors, terminal-style output panels, night-mode documentation sections, media playback interfaces, or any design context that calls for a predominantly dark color palette throughout the user interface. The LetMeScroll.js library fully respects the CSS custom properties defined within Canvas's dark mode implementation, so the scrollbar color adapts consistently with all other dark-themed components and elements sharing the same page. Designers can further refine the appearance and accent color by overriding the lms_scrollbar_bg and lms_scrollpath_bg CSS variables directly at runtime, as clearly demonstrated by the interactive color-change controls provided in the section further down this demo page.</p>
+								<p class="p-4 mb-0">Dark-themed scrollable containers within Canvas lend a sophisticated, modern, and high-contrast character to interfaces that rely on contrast-heavy design language and dark color palettes. Whether deployed in analytics dashboards with dense data tables, code documentation portals, streaming media players, terminal emulators, or creative portfolio layouts with strong visual identity requirements, the dark scroll variant integrates naturally and seamlessly with Canvas's broader dark component ecosystem. The scrollbar thumb accent color is fully themeable via CSS custom properties, so the vivid accent options available through the interactive color picker further down this page—including red, green, yellow, teal, light, and true dark options—display clearly and attractively against the dark panel background, enabling fast and intuitive real-time visual testing during the development and design process. Unlike browser-native dark scrollbars that vary inconsistently in appearance and behavior across different operating systems, screen densities, and browser vendors, the LetMeScroll.js implementation provides a completely uniform and predictable visual result on all supported platforms and environments without exception. This cross-platform visual consistency is a critical requirement for premium commercial web products where exacting, pixel-level design precision is expected and maintained across every aspect of the complete user experience.</p>
+							</div>
+						</div>
+					</div>
+
+					<h4 class="mb-3 mt-5 text-center">Change Scroll Color:</h4>
+					<div class="d-flex justify-content-center">
+						<div onclick="changeColor('var(--bs-danger)', 'rgba(var(--bs-danger-rgb),0.2)')" class="square square-sm rounded-circle mx-1 bg-danger"></div>
+						<div onclick="changeColor('var(--bs-success)', 'rgba(var(--bs-success-rgb),0.2)')" class="square square-sm rounded-circle mx-1 bg-success"></div>
+						<div onclick="changeColor('var(--bs-warning)', 'rgba(var(--bs-warning-rgb),0.2)')" class="square square-sm rounded-circle mx-1 bg-warning"></div>
+						<div onclick="changeColor('var(--bs-info)', 'rgba(var(--bs-info-rgb),0.2)')" class="square square-sm rounded-circle mx-1 bg-info"></div>
+						<div onclick="changeColor('var(--bs-light)', 'rgba(var(--bs-light-rgb),0.2)')" class="square square-sm rounded-circle mx-1 bg-light border border-default"></div>
+						<div onclick="changeColor('var(--bs-dark)', 'rgba(var(--bs-dark-rgb),0.2)')" class="square square-sm rounded-circle mx-1 bg-dark"></div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/gh/BMSVieira/letmescroll.js@latest/js/letmescroll.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var scrollPanels = document.querySelectorAll( '.canvas-custom-scroll' );
+
+			scrollPanels.forEach( function(element) {
+				var panelHeight = element.getAttribute('data-height') || "250px";
+				var panelWidth = element.getAttribute('data-width') || "auto";
+				var panelAutohide = element.getAttribute('data-autohide') || "true";
+
+				var elementId = 'canvas-custom-scroll-' + Math.floor( Math.random() * 10000 );
+				element.setAttribute('id', elementId);
+
+				if( panelAutohide == "false" ) {
+					panelAutohide = false;
+				} else {
+					panelAutohide = true;
+				}
+
+				new LetMeScroll({
+					selector: '#' + element.getAttribute('id'),
+					config : {
+						dimensions : {
+							width : panelWidth,
+							height : panelHeight,
+						},
+						scroll : {
+							autoHide: panelAutohide
+						}
+					}
+				});
+			});
+		});
+
+		//Changing Colors
+		function changeColor(cor, fundo) {
+            document.documentElement.style.setProperty("--lms_scrollbar_bg", cor);
+            document.documentElement.style.setProperty("--lms_scrollpath_bg", fundo);
+        }
+	</script>
+
+</body>
+</html>

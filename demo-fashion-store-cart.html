@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart &amp; Checkout — CanvasLoom | Canvas</title>
+  <meta name="description" content="Review your CanvasLoom cart and complete your order. Secure checkout, free returns, and sustainable packaging.">
+  <meta name="author" content="SemiColonWeb">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#B5935A">
+  <link rel="canonical" href="demo-fashion-store-cart.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Canvas">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Cart &amp; Checkout — CanvasLoom | Canvas">
+  <meta property="og:description" content="Complete your CanvasLoom order securely.">
+  <meta property="og:image" content="demos/fashion-store/images/logo-dark@2x.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cart &amp; Checkout — CanvasLoom | Canvas">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CheckoutPage",
+      "name": "Cart & Checkout",
+      "url": "demo-fashion-store-cart.html",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "demo-fashion-store.html"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cart"
+        }]
+      }
+    }
+
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-icons.css">
+  <link rel="stylesheet" href="demos/fashion-store/fashion-store.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="stretched">
+  <div id="wrapper">
+
+    <header id="header" class="full-header">
+      <div id="header-wrap">
+        <div class="container">
+          <div class="header-row">
+            <div id="logo">
+              <a href="demo-fashion-store.html">
+                <img class="logo-default" srcset="demos/fashion-store/images/logo.png, demos/fashion-store/images/logo@2x.png 2x" src="demos/fashion-store/images/logo@2x.png" alt="CanvasLoom">
+                <img class="logo-dark" srcset="demos/fashion-store/images/logo-dark.png, demos/fashion-store/images/logo-dark@2x.png 2x" src="demos/fashion-store/images/logo-dark@2x.png" alt="CanvasLoom">
+              </a>
+            </div>
+            <div class="primary-menu-trigger">
+              <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+              </button>
+            </div>
+            <div class="header-misc">
+              <div class="header-misc-icon">
+                <a href="#" title="Wishlist" aria-label="Wishlist"><i class="bi-heart"></i></a>
+              </div>
+              <div class="header-misc-icon ms-3">
+                <a href="demo-fashion-store-cart.html" title="Shopping Cart" style="position:relative;">
+                  <i class="uil uil-shopping-bag"></i>
+                  <span class="loom-cart-badge">3</span>
+                </a>
+              </div>
+            </div>
+            <nav class="primary-menu">
+              <ul class="menu-container">
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store.html">
+                    <div>Home</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store-shop.html">
+                    <div>Shop</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store-product.html">
+                    <div>New In</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="demo-fashion-store-about.html">
+                    <div>About</div>
+                  </a></li>
+                <li class="menu-item current"><a class="menu-link" href="demo-fashion-store-cart.html">
+                    <div>Cart</div>
+                  </a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header-wrap-clone"></div>
+    </header>
+
+    <div class="loom-page-title">
+      <div class="container">
+        <h1>Your Bag</h1>
+        <div class="loom-breadcrumb"><a href="demo-fashion-store.html">Home</a> &rsaquo; Cart</div>
+      </div>
+    </div>
+
+    <section id="content">
+      <div class="content-wrap">
+        <div class="container">
+
+          <!-- Step Nav -->
+          <div class="loom-stepper" id="loom-stepper">
+            <div class="loom-stepper-item active" data-step="0">
+              <div class="loom-stepper-circle">1</div>
+              <span class="loom-stepper-label">Cart</span>
+            </div>
+            <div class="loom-stepper-item" data-step="1">
+              <div class="loom-stepper-circle">2</div>
+              <span class="loom-stepper-label">Shipping</span>
+            </div>
+            <div class="loom-stepper-item" data-step="2">
+              <div class="loom-stepper-circle">3</div>
+              <span class="loom-stepper-label">Payment</span>
+            </div>
+            <div class="loom-stepper-item" data-step="3">
+              <div class="loom-stepper-circle">4</div>
+              <span class="loom-stepper-label">Review</span>
+            </div>
+          </div>
+
+          <!-- Step 1: Cart -->
+          <div class="loom-step-content active" id="step-0">
+            <div class="row g-4">
+              <div class="col-lg-8">
+
+                <!-- Cart Table -->
+                <div class="table-responsive">
+                  <table class="loom-cart-table">
+                    <thead>
+                      <tr>
+                        <th style="padding-left:0;">Product</th>
+                        <th></th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding-left:0;">
+                          <a href="demo-fashion-store-product.html">
+                            <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/c6d48b8814e8f510.webp" alt="Ivory Linen Blazer" class="loom-cart-item-img">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="demo-fashion-store-product.html" style="font-weight:600;font-size:.9rem;text-decoration:none;color:var(--loom-black);">Ivory Linen Blazer</a>
+                          <br><span style="font-size:0.75rem;color:var(--loom-muted);">Size: M &middot; Color: Ivory</span>
+                        </td>
+                        <td>$215.00</td>
+                        <td>
+                          <div class="loom-qty-wrap">
+                            <button onclick="var i=this.nextElementSibling;i.value=Math.max(1,+i.value-1);updateCart()">-</button>
+                            <input type="number" value="1" min="1" onchange="updateCart()">
+                            <button onclick="var i=this.previousElementSibling;i.value=Math.min(99,+i.value+1);updateCart()">+</button>
+                          </div>
+                        </td>
+                        <td><strong>$215.00</strong></td>
+                        <td><button class="loom-cart-remove" title="Remove"><i class="bi-x-lg"></i></button></td>
+                      </tr>
+                      <tr>
+                        <td style="padding-left:0;">
+                          <a href="demo-fashion-store-product.html">
+                            <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/9abfddb1a0357e76.webp" alt="Natural Canvas Tote" class="loom-cart-item-img">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="demo-fashion-store-product.html" style="font-weight:600;font-size:.9rem;text-decoration:none;color:var(--loom-black);">Natural Canvas Tote</a>
+                          <br><span style="font-size:0.75rem;color:var(--loom-muted);">One Size &middot; Natural</span>
+                          <br><span style="font-size:0.7rem;color:#C8352A;">Sale</span>
+                        </td>
+                        <td>$59.00</td>
+                        <td>
+                          <div class="loom-qty-wrap">
+                            <button onclick="var i=this.nextElementSibling;i.value=Math.max(1,+i.value-1)">-</button>
+                            <input type="number" value="1" min="1">
+                            <button onclick="var i=this.previousElementSibling;i.value=Math.min(99,+i.value+1)">+</button>
+                          </div>
+                        </td>
+                        <td><strong>$59.00</strong></td>
+                        <td><button class="loom-cart-remove" title="Remove"><i class="bi-x-lg"></i></button></td>
+                      </tr>
+                      <tr>
+                        <td style="padding-left:0;">
+                          <a href="demo-fashion-store-product.html">
+                            <img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/a7f163431cc09cfd.webp" alt="Slim Leather Wallet" class="loom-cart-item-img">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="demo-fashion-store-product.html" style="font-weight:600;font-size:.9rem;text-decoration:none;color:var(--loom-black);">Slim Leather Wallet</a>
+                          <br><span style="font-size:0.75rem;color:var(--loom-muted);">One Size &middot; Tan</span>
+                        </td>
+                        <td>$95.00</td>
+                        <td>
+                          <div class="loom-qty-wrap">
+                            <button onclick="var i=this.nextElementSibling;i.value=Math.max(1,+i.value-1)">-</button>
+                            <input type="number" value="1" min="1">
+                            <button onclick="var i=this.previousElementSibling;i.value=Math.min(99,+i.value+1)">+</button>
+                          </div>
+                        </td>
+                        <td><strong>$95.00</strong></td>
+                        <td><button class="loom-cart-remove" title="Remove"><i class="bi-x-lg"></i></button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Coupon -->
+                <div class="mt-4">
+                  <span class="loom-variant-label mb-2" style="font-size:0.7rem;">Promo Code</span>
+                  <div class="loom-coupon-input" style="max-width:360px;">
+                    <input type="text" placeholder="Enter discount code">
+                    <button>Apply</button>
+                  </div>
+                </div>
+
+                <!-- Shipping Calculator -->
+                <div class="loom-shipping-calc mt-4">
+                  <p class="loom-filter-title">Estimate Shipping</p>
+                  <div class="row g-2">
+                    <div class="col-md-4">
+                      <select style="width:100%;font-family:Manrope,sans-serif;font-size:0.8rem;border:1.5px solid var(--loom-border);padding:0.65rem 0.8rem;background:white;outline:none;">
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>United Kingdom</option>
+                        <option>Australia</option>
+                        <option>Germany</option>
+                        <option>France</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" placeholder="State / Province" style="width:100%;font-family:Manrope,sans-serif;font-size:0.8rem;border:1.5px solid var(--loom-border);padding:0.65rem 0.8rem;background:white;outline:none;">
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" placeholder="ZIP / Postcode" style="width:100%;font-family:Manrope,sans-serif;font-size:0.8rem;border:1.5px solid var(--loom-border);padding:0.65rem 0.8rem;background:white;outline:none;">
+                    </div>
+                  </div>
+                  <button class="btn-loom-outline mt-2" style="font-size:0.7rem;padding:0.6rem 1.25rem;">Calculate Shipping</button>
+
+                  <div class="mt-3">
+                    <div class="d-flex gap-3 flex-wrap">
+                      <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.825rem;cursor:pointer;">
+                        <input type="radio" name="shipping" checked style="accent-color:var(--loom-camel);"> Free Standard (5-7 days) &mdash; <strong>Free</strong>
+                      </label>
+                      <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.825rem;cursor:pointer;">
+                        <input type="radio" name="shipping" style="accent-color:var(--loom-camel);"> Express (2-3 days) &mdash; <strong>$12.00</strong>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 mt-4">
+                  <a href="demo-fashion-store-shop.html" class="btn-loom-outline"><i class="bi-arrow-left me-1"></i> Continue Shopping</a>
+                  <button class="btn-loom" onclick="showStep(1)">Proceed to Shipping <i class="bi-arrow-right ms-1"></i></button>
+                </div>
+              </div>
+
+              <!-- Order Summary -->
+              <div class="col-lg-4">
+                <div class="loom-order-summary">
+                  <h3>Order Summary</h3>
+                  <div class="loom-summary-row"><span>Subtotal (3 items)</span><span>$369.00</span></div>
+                  <div class="loom-summary-row"><span>Discount</span><span style="color:#C8352A;">-$26.00</span></div>
+                  <div class="loom-summary-row"><span>Shipping</span><span>Free</span></div>
+                  <div class="loom-summary-row"><span>Estimated Tax</span><span>$27.68</span></div>
+                  <div class="loom-summary-row total"><span>Order Total</span><span>$370.68</span></div>
+                  <button class="btn-loom w-100 mt-4 justify-content-center" onclick="showStep(1)">Checkout <i class="bi-arrow-right ms-1"></i></button>
+                  <div class="mt-3 text-center">
+                    <small style="color:var(--loom-muted);font-size:0.7rem;"><i class="bi-shield-check me-1" style="color:var(--loom-camel);"></i> Secure SSL checkout. Free returns within 30 days.</small>
+                  </div>
+                  <div class="mt-3 d-flex justify-content-center gap-2" style="opacity:0.5;">
+                    <i class="fa-brands fa-cc-visa fa-lg"></i>
+                    <i class="fa-brands fa-cc-mastercard fa-lg"></i>
+                    <i class="fa-brands fa-cc-amex fa-lg"></i>
+                    <i class="fa-brands fa-cc-paypal fa-lg"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Shipping -->
+          <div class="loom-step-content" id="step-1">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <h3 class="mb-4" style="font-size:1.25rem;">Shipping Details</h3>
+                <div class="form-widget">
+                  <div class="form-result"></div>
+                  <form class="loom-checkout-form mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+                    <div class="form-process">
+                      <div class="css3-spinner">
+                        <div class="css3-spinner-scaler"></div>
+                      </div>
+                    </div>
+
+                    <div class="row g-3">
+                      <div class="col-md-6 loom-form-group">
+                        <label for="template-contactform-fname">First Name</label>
+                        <input type="text" class="required" id="template-contactform-fname" name="template-contactform-fname" value="" placeholder="First name">
+                      </div>
+                      <div class="col-md-6 loom-form-group">
+                        <label for="template-contactform-lname">Last Name</label>
+                        <input type="text" class="required" id="template-contactform-lname" name="template-contactform-lname" value="" placeholder="Last name">
+                      </div>
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform-email">Email Address</label>
+                        <input type="email" class="required email" id="template-contactform-email" name="template-contactform-email" value="" placeholder="you@email.com">
+                      </div>
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform-phone">Phone</label>
+                        <input type="tel" class="required" id="template-contactform-phone" name="template-contactform-phone" value="" placeholder="+1 (555) 000-0000">
+                      </div>
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform-address">Street Address</label>
+                        <input type="text" class="required" id="template-contactform-address" name="template-contactform-address" value="" placeholder="Street address">
+                      </div>
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform-apartment">Apartment / Suite (optional)</label>
+                        <input type="text" id="template-contactform-apartment" name="template-contactform-apartment" value="" placeholder="Apt, suite, unit, etc.">
+                      </div>
+                      <div class="col-md-6 loom-form-group">
+                        <label for="template-contactform-city">City</label>
+                        <input type="text" class="required" id="template-contactform-city" name="template-contactform-city" value="" placeholder="City">
+                      </div>
+                      <div class="col-md-3 loom-form-group">
+                        <label for="template-contactform-state">State</label>
+                        <input type="text" class="required" id="template-contactform-state" name="template-contactform-state" value="" placeholder="State">
+                      </div>
+                      <div class="col-md-3 loom-form-group">
+                        <label for="template-contactform-zip">ZIP</label>
+                        <input type="text" class="required" id="template-contactform-zip" name="template-contactform-zip" value="" placeholder="ZIP">
+                      </div>
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform-country">Country</label>
+                        <select class="required" id="template-contactform-country" name="template-contactform-country">
+                          <option>United States</option>
+                          <option>Canada</option>
+                          <option>United Kingdom</option>
+                          <option>Australia</option>
+                        </select>
+                      </div>
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform-notes">Order Notes (optional)</label>
+                        <textarea rows="3" id="template-contactform-notes" name="template-contactform-notes" placeholder="Special instructions, gift message, or delivery notes"></textarea>
+                      </div>
+                      <div class="col-12 d-none">
+                        <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="">
+                      </div>
+                    </div>
+                    <label class="loom-save-card" for="template-contactform-saveshipping">
+                      <div class="loom-save-card-text">
+                        <span class="loom-save-card-title">Save shipping details for future orders</span>
+                        <span class="loom-save-card-sub">Your address will be securely stored for faster checkout next time.</span>
+                      </div>
+                      <span class="loom-toggle">
+                        <input type="checkbox" id="template-contactform-saveshipping" name="template-contactform-saveshipping">
+                        <span class="loom-toggle-track"></span>
+                      </span>
+                    </label>
+                    <div class="d-flex gap-3 mt-4">
+                      <button type="button" class="btn-loom-outline" onclick="showStep(0)"><i class="bi-arrow-left me-1"></i> Back to Cart</button>
+                      <button type="submit" class="btn-loom" id="template-contactform-submit" name="template-contactform-submit" value="submit" onclick="showStep(2)">Continue to Payment <i class="bi-arrow-right ms-1"></i></button>
+                    </div>
+
+                    <input type="hidden" name="prefix" value="template-contactform-">
+
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="loom-order-summary">
+                  <h3>Order Summary</h3>
+                  <div class="loom-summary-row"><span>Subtotal</span><span>$369.00</span></div>
+                  <div class="loom-summary-row"><span>Discount</span><span style="color:#C8352A;">-$26.00</span></div>
+                  <div class="loom-summary-row"><span>Shipping</span><span>Free</span></div>
+                  <div class="loom-summary-row"><span>Tax</span><span>$27.68</span></div>
+                  <div class="loom-summary-row total"><span>Total</span><span>$370.68</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Payment -->
+          <div class="loom-step-content" id="step-2">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <h3 class="mb-4" style="font-size:1.25rem;">Payment</h3>
+                <div class="d-flex flex-column gap-2 mb-4">
+                  <div class="loom-payment-method selected">
+                    <label><input type="radio" name="pay" checked style="accent-color:var(--loom-camel);"> <i class="fa-brands fa-cc-visa me-1"></i><i class="fa-brands fa-cc-mastercard me-1"></i><i class="fa-brands fa-cc-amex me-1"></i> Credit / Debit Card</label>
+                  </div>
+                  <div class="loom-payment-method">
+                    <label><input type="radio" name="pay" style="accent-color:var(--loom-camel);"> <i class="fa-brands fa-cc-paypal me-1"></i> PayPal</label>
+                  </div>
+                  <div class="loom-payment-method">
+                    <label><input type="radio" name="pay" style="accent-color:var(--loom-camel);"> <i class="fa-brands fa-apple-pay me-1"></i> Apple Pay</label>
+                  </div>
+                </div>
+
+                <div class="form-widget">
+                  <div class="form-result"></div>
+                  <form class="loom-checkout-form mb-0" id="template-contactform2" name="template-contactform2" action="include/form.php" method="post">
+
+                    <div class="form-process">
+                      <div class="css3-spinner">
+                        <div class="css3-spinner-scaler"></div>
+                      </div>
+                    </div>
+
+                    <div class="row g-3">
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform2-cardname">Name on Card</label>
+                        <input type="text" class="required" id="template-contactform2-cardname" name="template-contactform2-cardname" value="" placeholder="Full name as it appears on your card">
+                      </div>
+                      <div class="col-12 loom-form-group">
+                        <label for="template-contactform2-cardnumber">Card Number</label>
+                        <input type="text" class="required" id="template-contactform2-cardnumber" name="template-contactform2-cardnumber" value="" placeholder="0000 0000 0000 0000" maxlength="19">
+                      </div>
+                      <div class="col-md-6 loom-form-group">
+                        <label for="template-contactform2-expiry">Expiry Date</label>
+                        <input type="text" class="required" id="template-contactform2-expiry" name="template-contactform2-expiry" value="" placeholder="MM / YY" maxlength="7">
+                      </div>
+                      <div class="col-md-6 loom-form-group">
+                        <label for="template-contactform2-cvv">CVV</label>
+                        <input type="text" class="required" id="template-contactform2-cvv" name="template-contactform2-cvv" value="" placeholder="CVC" maxlength="4">
+                      </div>
+                      <div class="col-12 d-none">
+                        <input type="text" id="template-contactform2-botcheck" name="template-contactform2-botcheck" value="">
+                      </div>
+                    </div>
+                    <label class="loom-check-row" for="template-contactform2-savecard">
+                      <input type="checkbox" id="template-contactform2-savecard" name="template-contactform2-savecard">
+                      <span>Save card for faster checkout next time</span>
+                    </label>
+                    <div class="d-flex gap-3 mt-4">
+                      <button type="button" class="btn-loom-outline" onclick="showStep(1)"><i class="bi-arrow-left me-1"></i> Back</button>
+                      <button type="submit" class="btn-loom" id="template-contactform2-submit" name="template-contactform2-submit" value="submit" onclick="showStep(3)">Review Order <i class="bi-arrow-right ms-1"></i></button>
+                    </div>
+
+                    <input type="hidden" name="prefix" value="template-contactform2-">
+
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="loom-order-summary">
+                  <h3>Order Summary</h3>
+                  <div class="loom-summary-row"><span>Subtotal</span><span>$369.00</span></div>
+                  <div class="loom-summary-row"><span>Discount</span><span style="color:#C8352A;">-$26.00</span></div>
+                  <div class="loom-summary-row"><span>Shipping</span><span>Free</span></div>
+                  <div class="loom-summary-row"><span>Tax</span><span>$27.68</span></div>
+                  <div class="loom-summary-row total"><span>Total</span><span>$370.68</span></div>
+                  <div class="mt-3 text-center"><small style="color:var(--loom-muted);font-size:0.7rem;"><i class="bi-shield-lock me-1" style="color:var(--loom-camel);"></i> 256-bit SSL encryption</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Review -->
+          <div class="loom-step-content" id="step-3">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <h3 class="mb-4" style="font-size:1.25rem;">Review Your Order</h3>
+
+                <div style="background:var(--loom-sand);padding:1.5rem;margin-bottom:1.5rem;">
+                  <p class="loom-filter-title">Shipping To</p>
+                  <p style="font-size:0.875rem;margin:0;color:var(--loom-muted);">Jane Smith &nbsp;&middot;&nbsp; 44 Oak Avenue, Suite 12, San Francisco, CA 94102 &nbsp;&middot;&nbsp; +1 (415) 555-8712</p>
+                </div>
+
+                <table class="loom-cart-table">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="padding-left:0;">Item</th>
+                      <th>Qty</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="padding-left:0;"><img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/c6d48b8814e8f510.webp" alt="Ivory Linen Blazer" class="loom-cart-item-img"></td>
+                      <td><strong style="font-size:.875rem;">Ivory Linen Blazer</strong><br><span style="font-size:.75rem;color:var(--loom-muted);">M / Ivory</span></td>
+                      <td>1</td>
+                      <td><strong>$215.00</strong></td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:0;"><img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/9abfddb1a0357e76.webp" alt="Natural Canvas Tote" class="loom-cart-item-img"></td>
+                      <td><strong style="font-size:.875rem;">Natural Canvas Tote</strong><br><span style="font-size:.75rem;color:var(--loom-muted);">One Size / Natural</span></td>
+                      <td>1</td>
+                      <td><strong>$59.00</strong></td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:0;"><img src="https://assets.cnvs.site/images/ai/8591c44a-6a0d-4b95-ade7-7be11c70bfc2/a7f163431cc09cfd.webp" alt="Slim Leather Wallet" class="loom-cart-item-img"></td>
+                      <td><strong style="font-size:.875rem;">Slim Leather Wallet</strong><br><span style="font-size:.75rem;color:var(--loom-muted);">One Size / Tan</span></td>
+                      <td>1</td>
+                      <td><strong>$95.00</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <label class="loom-check-row mt-4" for="agree-terms">
+                  <input type="checkbox" id="agree-terms" checked>
+                  <span>I agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>.</span>
+                </label>
+                <div class="d-flex gap-3 mt-4">
+                  <button class="btn-loom-outline" onclick="showStep(2)"><i class="bi-arrow-left me-1"></i> Back</button>
+                  <button class="btn-loom px-4 justify-content-center" style="flex:1;">
+                    <i class="bi-shield-check me-1"></i> Place Order &mdash; $370.68
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="loom-order-summary">
+                  <h3>Order Total</h3>
+                  <div class="loom-summary-row"><span>Subtotal</span><span>$369.00</span></div>
+                  <div class="loom-summary-row"><span>Discount</span><span style="color:#C8352A;">-$26.00</span></div>
+                  <div class="loom-summary-row"><span>Shipping</span><span>Free</span></div>
+                  <div class="loom-summary-row"><span>Tax</span><span>$27.68</span></div>
+                  <div class="loom-summary-row total"><span>Total</span><span>$370.68</span></div>
+                  <div class="mt-3"><small style="color:var(--loom-muted);font-size:0.7rem;line-height:1.6;display:block;"><i class="bi-leaf me-1" style="color:var(--loom-camel);"></i> Your order will be shipped in recycled, plastic-free packaging. We plant one tree for every order.</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="dark">
+      <div class="container">
+        <div class="footer-widgets-wrap">
+          <div class="row col-mb-50">
+            <div class="col-lg-4 col-md-6">
+              <div class="widget loom-footer-brand">
+                <img class="footer-logo mb-3" src="demos/fashion-store/images/logo-dark@2x.png" srcset="demos/fashion-store/images/logo-dark.png, demos/fashion-store/images/logo-dark@2x.png 2x" alt="CanvasLoom">
+                <h4>CanvasLoom</h4>
+                <p>Thoughtfully designed pieces for people who believe clothing is more than fabric. Crafted slowly, worn often, built to last beyond seasons.</p>
+                <div class="loom-footer-socials">
+                  <a href="#" class="loom-footer-social-link" aria-label="Instagram"><i class="bi-instagram"></i></a>
+                  <a href="#" class="loom-footer-social-link" aria-label="TikTok"><i class="bi-tiktok"></i></a>
+                  <a href="#" class="loom-footer-social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                  <a href="#" class="loom-footer-social-link" aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+              <div class="widget loom-footer-nav">
+                <p class="loom-footer-nav-heading">Shop</p>
+                <ul>
+                  <li><a href="demo-fashion-store-shop.html">New Arrivals</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Women</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Men</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Accessories</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Sale</a></li>
+                  <li><a href="demo-fashion-store-shop.html">Gift Cards</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+              <div class="widget loom-footer-nav">
+                <p class="loom-footer-nav-heading">Help</p>
+                <ul>
+                  <li><a href="#">Sizing Guide</a></li>
+                  <li><a href="#">Shipping &amp; Returns</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Order Tracking</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="demo-fashion-store-about.html">Sustainability</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="widget loom-footer-newsletter">
+                <p class="loom-footer-nav-heading">Stay In The Loop</p>
+                <p>New arrivals, style notes, and restocks. No noise, just what matters. Join 28,000 people who love getting dressed.</p>
+                <form class="loom-footer-email-form" onsubmit="return false;">
+                  <input type="email" placeholder="Your email address">
+                  <button type="submit">Join</button>
+                </form>
+                <div class="loom-footer-contact">
+                  <div><i class="bi-envelope"></i> hello@canvasloom.co</div>
+                  <div><i class="bi-telephone"></i> +1 (415) 840-2295</div>
+                  <div><i class="bi-geo-alt"></i> 318 Grove St, San Francisco, CA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="copyrights">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md text-center text-md-start">
+              Copyrights &copy; 2026 CanvasLoom.
+            </div>
+            <div class="col-12 col-md-auto text-center text-md-end mt-2 mt-md-0">
+              <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Use</a> &nbsp;&middot;&nbsp; <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/plugins.min.js"></script>
+  <script src="js/functions.bundle.js"></script>
+  <script>
+    function showStep(n) {
+      document.querySelectorAll('.loom-stepper-item').forEach(function(el, i) {
+        el.classList.remove('active', 'done');
+        if (i < n) el.classList.add('done');
+        else if (i === n) el.classList.add('active');
+        // swap number to checkmark for completed steps
+        var circle = el.querySelector('.loom-stepper-circle');
+        if (i < n) {
+          circle.innerHTML = '<i class="bi-check2" style="font-size:1rem;"></i>';
+        } else {
+          circle.innerHTML = i + 1;
+        }
+      });
+      document.querySelectorAll('.loom-step-content').forEach(function(c, i) {
+        c.classList.toggle('active', i === n);
+      });
+      window.scrollTo({
+        top: document.getElementById('loom-stepper').getBoundingClientRect().top + window.scrollY - 120,
+        behavior: 'smooth'
+      });
+    }
+
+    function updateCart() {}
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Browse the Canvas blog grid with hover image effects — a clean, interactive layout for showcasing posts with smooth thumbnail reveals on mouse interaction.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Blog - Grid on Hover | Canvas</title>
+
+	<style>
+
+		/* Image Hover */
+		.hover-reveal {
+			position: fixed;
+			width: 230px;
+			height: 150px;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		.hover-reveal__inner,
+		.hover-reveal__img {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		.hover-reveal__img {
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="#1abc9c">
+	<link rel="canonical" href="block-blog-grid-hover.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Canvas">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="block-blog-grid-hover.html">
+	<meta property="og:title" content="Blog - Grid on Hover | Canvas">
+	<meta property="og:description" content="Browse the Canvas blog grid with hover image effects — a clean, interactive layout for showcasing posts with smooth thumbnail reveals on mouse interaction.">
+	<meta property="og:image" content="images/blog/grid/17.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Blog - Grid on Hover | Canvas">
+	<meta name="twitter:description" content="Browse the Canvas blog grid with hover image effects — a clean, interactive layout for showcasing posts with smooth thumbnail reveals on mouse interaction.">
+	<meta name="twitter:image" content="images/blog/grid/17.jpg">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"name": "Canvas",
+				"url": "block-blog-grid-hover.html",
+				"description": "Browse the Canvas blog grid with hover image effects \u2014 a clean, interactive layout for showcasing posts with smooth thumbnail reveals on mouse interaction."
+			},
+			{
+				"@type": "CollectionPage",
+				"name": "Blog - Grid on Hover",
+				"url": "block-blog-grid-hover.html",
+				"image": "images/blog/grid/17.jpg",
+				"description": "A hover-reveal blog grid layout featuring posts on photography, video embeds, audio content, and gallery formats with smooth image previews.",
+				"publisher": {
+					"@type": "Organization",
+					"name": "Canvas",
+					"url": "block-blog-grid-hover.html"
+				}
+			}
+		]
+	}
+	</script>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<!-- Posts
+					============================================= -->
+					<div id="posts" class="post-grid row gutter-50">
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/17.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is a Standard post with a Preview Image</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 10th Feb 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 13</a></li>
+										<li><a href="#"><i class="uil uil-camera"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Explore how a compelling preview image can transform a blog post — capturing attention at a glance and drawing readers deeper into the full story.</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/10.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-full.html">This is a Standard post with a Vimeo Video</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 16th Feb 2021</li>
+										<li><a href="blog-single-full.html#comments"><i class="uil uil-comments-alt"></i> 19</a></li>
+										<li><a href="#"><i class="uil uil-film"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Embedding a Vimeo video enriches a post with high-quality visual storytelling — giving your audience an engaging multimedia experience right within the article.</p>
+									<a href="blog-single-full.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/20.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-small.html">This is a Standard post with a Slider Gallery</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 24th Feb 2021</li>
+										<li><a href="blog-single-small.html#comments"><i class="uil uil-comments-alt"></i> 21</a></li>
+										<li><a href="#"><i class="uil uil-images"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>A slider gallery lets you showcase multiple visuals in one compact space — ideal for product highlights, event recaps, or photo series within a single post.</p>
+									<a href="blog-single-small.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/2.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is an Embedded SoundCloud Post</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 28th Apr 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 16</a></li>
+										<li><a href="#"><i class="uil uil-music"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Stream the featured track directly from this post with an embedded SoundCloud player — perfect for musicians, podcasters, and audio-driven content creators.</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/3.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-full.html">This is a Standard post with a Youtube Video</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 30th Apr 2021</li>
+										<li><a href="blog-single-full.html#comments"><i class="uil uil-comments-alt"></i> 34</a></li>
+										<li><a href="#"><i class="uil uil-film"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>A YouTube video seamlessly integrated into the post keeps readers engaged longer — delivering rich visual context alongside your written narrative.</p>
+									<a href="blog-single-full.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/12.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is a Standard post with Fade Gallery</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 3rd Mar 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 21</a></li>
+										<li><a href="#"><i class="uil uil-images"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>The fade gallery effect creates a smooth, elegant transition between images — adding a polished, professional touch to any photo-driven blog post.</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/13.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is a Standard post with another Preview Image</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 5th May 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 6</a></li>
+										<li><a href="#"><i class="uil uil-camera"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>A well-chosen preview image sets the tone instantly — sparking curiosity and encouraging readers to click through for the complete article and details.</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="images/blog/grid/21.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-full.html">This is a Standard post with a Dailymotion Video</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 11th May 2021</li>
+										<li><a href="blog-single-full.html#comments"><i class="uil uil-comments-alt"></i> 9</a></li>
+										<li><a href="#"><i class="uil uil-film"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>A Dailymotion video embedded directly in the post brings dynamic content to your readers — ideal for tutorials, interviews, and behind-the-scenes footage.</p>
+									<a href="blog-single-full.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- #posts end -->
+
+					<!-- Pagination
+					============================================= -->
+					<ul class="pagination mt-5 pagination-circle justify-content-center">
+						<li class="page-item disabled"><a class="page-link" href="#"><i class="uil uil-angle-left-b"></i></a></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#"><i class="uil uil-angle-right-b"></i></a></li>
+					</ul>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<!-- Hover Image Animate -->
+	<script src="demos/burger/js/hover-animate.js"></script>
+
+</body>
+</html>

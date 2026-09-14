@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+  <!-- SEO -->
+  <title>Nordlys Bakeri — Slow Mornings, Fresh from the Oven | Canvas</title>
+  <meta name="description" content="Nordlys Bakeri is a Scandinavian-inspired coffee shop and bakery in the heart of the city. Cardamom buns, sourdough, single-origin coffee, and quiet mornings.">
+  <meta name="author" content="SemiColonWeb">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#C08552">
+  <link rel="canonical" href="demo-bakery.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Canvas">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="demo-bakery.html">
+  <meta property="og:title" content="Nordlys Bakeri — Slow Mornings, Fresh from the Oven | Canvas">
+  <meta property="og:description" content="Scandinavian-inspired bakery and coffee shop. Sourdough, cardamom buns, single-origin espresso, and genuine warmth.">
+  <meta property="og:image" content="demos/bakery/images/restaurant-003-hero.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nordlys Bakeri — Slow Mornings, Fresh from the Oven | Canvas">
+  <meta name="twitter:description" content="Scandinavian-inspired bakery and coffee shop. Sourdough, cardamom buns, single-origin espresso, and genuine warmth.">
+  <meta name="twitter:image" content="demos/bakery/images/restaurant-003-hero.webp">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Nordlys Bakeri",
+      "description": "Scandinavian-inspired coffee shop and bakery serving sourdough, cardamom buns, and single-origin coffee.",
+      "url": "demo-bakery.html",
+      "image": "demos/bakery/images/restaurant-003-hero.webp",
+      "servesCuisine": "Scandinavian",
+      "priceRange": "$$",
+      "telephone": "+1-555-867-5309",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14 Linden Street",
+        "addressLocality": "Copenhagen Quarter",
+        "addressRegion": "NY",
+        "postalCode": "10013",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "16:00"
+        }
+      ],
+      "foundingDate": "2014"
+    }
+
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap">
+
+  <!-- Canvas Framework Core -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/font-icons.css">
+
+  <!-- Brand Stylesheet -->
+  <link rel="stylesheet" href="demos/bakery/bakery.css">
+
+  <!-- Canvas Shared Overrides -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="stretched">
+
+  <!-- Custom Cursor (desktop only) -->
+  <div class="nl-cursor" id="nlCursor"></div>
+  <div class="nl-cursor-ring" id="nlCursorRing"></div>
+
+  <div id="wrapper">
+
+    <!-- ================================================
+         HEADER
+    ================================================= -->
+    <header id="header" class="transparent-header dark" data-sticky-class="not-dark" data-responsive-class="not-dark">
+      <div id="header-wrap">
+        <div class="container">
+          <div class="header-row">
+
+            <div id="logo">
+              <a href="index.html">
+                <img class="logo-default" srcset="demos/bakery/images/logo.png, demos/bakery/images/logo@2x.png 2x" src="demos/bakery/images/logo@2x.png" alt="Nordlys Bakeri">
+                <img class="logo-dark" srcset="demos/bakery/images/logo-dark.png, demos/bakery/images/logo-dark@2x.png 2x" src="demos/bakery/images/logo-dark@2x.png" alt="Nordlys Bakeri">
+              </a>
+            </div>
+
+            <div class="primary-menu-trigger">
+              <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+              </button>
+            </div>
+
+            <div class="header-misc">
+              <a href="#nl-location" class="nl-nav-cta nl-magnetic">
+                <i class="bi-geo-alt-fill"></i> Find Us
+              </a>
+            </div>
+
+            <nav class="primary-menu">
+              <ul class="menu-container">
+                <li class="menu-item"><a class="menu-link" href="#nl-hero">
+                    <div>Home</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#nl-philosophy">
+                    <div>Our Story</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#nl-menu">
+                    <div>Menu</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#nl-gallery">
+                    <div>Gallery</div>
+                  </a></li>
+                <li class="menu-item"><a class="menu-link" href="#nl-location">
+                    <div>Visit</div>
+                  </a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+      <div class="header-wrap-clone"></div>
+    </header>
+
+    <!-- ================================================
+         HERO
+    ================================================= -->
+    <section id="nl-hero" class="include-header">
+      <div class="nl-hero-bg" id="nlHeroBg">
+        <!-- SWAP: Replace with your hero photograph of the bakery interior or pastries -->
+        <img src="demos/bakery/images/restaurant-003-hero.webp" alt="Warm pastries fresh from the oven at Nordlys Bakeri" fetchpriority="high" aspect-ratio="16/9">
+      </div>
+      <div class="nl-hero-overlay"></div>
+
+      <div class="container">
+        <div class="nl-hero-content">
+          <div class="nl-hero-eyebrow" id="nlEyebrow">
+            Baking since 2014 &nbsp; · &nbsp; Copenhagen Quarter
+          </div>
+
+          <!-- Word-by-word headline -->
+          <h1 class="nl-hero-headline" id="nlHeadline" aria-label="Slow mornings, fresh from the oven.">
+            <span class="nl-word"><span>Slow</span></span>
+            <span class="nl-word"><span>mornings,</span></span><br>
+            <span class="nl-word"><span>fresh</span></span>
+            <span class="nl-word"><span>from</span></span>
+            <span class="nl-word"><span>the</span></span>
+            <span class="nl-word"><span>oven.</span></span>
+          </h1>
+
+          <p class="nl-hero-sub" id="nlSub">
+            Handmade breads, Scandinavian pastries, and coffee that rewards the pause.
+          </p>
+
+          <div class="nl-hero-actions" id="nlActions">
+            <a href="#nl-menu" class="nl-btn-primary nl-magnetic">
+              See the Menu <i class="bi-arrow-down"></i>
+            </a>
+            <a href="#nl-location" class="nl-btn-ghost nl-magnetic">
+              Find Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="nl-scroll-cue" aria-hidden="true">
+        <div class="nl-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ================================================
+         MARQUEE RIBBON
+    ================================================= -->
+    <div class="nl-marquee-wrap" aria-hidden="true">
+      <div class="nl-marquee-track" id="nlMarquee">
+        <!-- Duplicated for seamless loop -->
+        <span class="nl-marquee-text">Sourdough <span class="nl-marquee-dot">·</span> Cardamom Buns <span class="nl-marquee-dot">·</span> Single-Origin Espresso <span class="nl-marquee-dot">·</span> Cinnamon Rolls <span class="nl-marquee-dot">·</span> Rye Bread <span class="nl-marquee-dot">·</span> Almond Croissant <span class="nl-marquee-dot">·</span> Oat Milk Latte <span class="nl-marquee-dot">·</span> Lingonberry Danish <span class="nl-marquee-dot">·</span></span>
+        <span class="nl-marquee-text">Sourdough <span class="nl-marquee-dot">·</span> Cardamom Buns <span class="nl-marquee-dot">·</span> Single-Origin Espresso <span class="nl-marquee-dot">·</span> Cinnamon Rolls <span class="nl-marquee-dot">·</span> Rye Bread <span class="nl-marquee-dot">·</span> Almond Croissant <span class="nl-marquee-dot">·</span> Oat Milk Latte <span class="nl-marquee-dot">·</span> Lingonberry Danish <span class="nl-marquee-dot">·</span></span>
+      </div>
+    </div>
+
+    <section id="content">
+      <div class="content-wrap" style="padding: 0;">
+
+        <!-- ================================================
+             PHILOSOPHY / INTRO
+        ================================================= -->
+        <section id="nl-philosophy" class="nl-philosophy section">
+          <div class="container">
+            <div class="row align-items-center g-5">
+
+              <div class="col-lg-5 nl-reveal nl-reveal-left">
+                <div class="nl-philosophy-eyebrow">Our Philosophy</div>
+                <h2 class="nl-philosophy-headline">
+                  Made by hand,<br>eaten with care.
+                </h2>
+              </div>
+
+              <div class="col-lg-7">
+                <div class="row g-4">
+                  <div class="col-12 nl-reveal nl-d1">
+                    <p class="nl-philosophy-body">
+                      We opened Nordlys Bakeri with a simple conviction: that good bread and quiet mornings are small acts of kindness. Every loaf is proofed overnight, every pastry shaped by hand before the city wakes. We source our flour from a family mill in the Hudson Valley, our coffee from a single farm in southern Ethiopia.
+                    </p>
+                    <p class="nl-philosophy-body" style="margin-bottom: 0;">
+                      There is nothing rushed here. Sit as long as you like. Order again if you want. The light through our windows changes slowly, and that is part of what we offer.
+                    </p>
+                  </div>
+
+                  <div class="col-12 nl-reveal nl-d2">
+                    <a href="#nl-menu" class="nl-link-underline">
+                      Explore the menu <i class="bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Stats -->
+            <div class="row mt-5 pt-3">
+              <div class="col-12">
+                <div class="nl-stats-row nl-reveal">
+                  <div class="nl-stat-item nl-d1">
+                    <span class="nl-stat-number" data-count="12">0</span>
+                    <span class="nl-stat-label">Years baking</span>
+                  </div>
+                  <div class="nl-stat-item nl-d2">
+                    <span class="nl-stat-number" data-count="24">0</span>
+                    <span class="nl-stat-label">Varieties daily</span>
+                  </div>
+                  <div class="nl-stat-item nl-d3">
+                    <span class="nl-stat-number" data-count="6">0</span>
+                    <span class="nl-stat-label">Local suppliers</span>
+                  </div>
+                  <div class="nl-stat-item nl-d4">
+                    <span class="nl-stat-number" data-count="1">0</span>
+                    <span class="nl-stat-label">Origin coffee</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Philosophy image full-bleed -->
+        <div class="nl-reveal-scale" style="margin: 0 0 0 0; overflow: hidden;">
+          <div class="nl-img-reveal" style="border-radius: 0; height: 380px;">
+            <!-- SWAP: Replace with interior shot of bakery or baking process -->
+            <img src="demos/bakery/images/restaurant-008-large.webp" alt="Bakers at work in the Nordlys Bakeri kitchen" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- ================================================
+             MENU HIGHLIGHTS
+        ================================================= -->
+        <section id="nl-menu" class="nl-menu-section section">
+          <div class="container">
+
+            <div class="nl-section-header nl-reveal">
+              <div class="nl-section-tag">From the kitchen</div>
+              <h2 class="nl-section-title">What we bake today.</h2>
+              <p class="nl-section-subtitle">
+                The full menu changes with the seasons. These are the things we are proudest of right now.
+              </p>
+            </div>
+
+            <div class="nl-menu-grid">
+
+              <!-- Card 1 -->
+              <div class="nl-menu-card nl-reveal nl-d1">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Photo of cardamom buns -->
+                  <img src="demos/bakery/images/restaurant-005-medium.webp" alt="Cardamom buns" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Pastry</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Cardamom Bun</h3>
+                  <p class="nl-menu-desc">Enriched dough, crushed cardamom, pearl sugar. Still warm when we pull them out.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$4.50</span>
+                    <span class="nl-menu-type">House Specialty</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="nl-menu-card nl-reveal nl-d2">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Photo of sourdough loaf -->
+                  <img src="demos/bakery/images/restaurant-011-medium.webp" alt="Country sourdough loaf" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Bread</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Country Sourdough</h3>
+                  <p class="nl-menu-desc">36-hour cold ferment. Crackly crust, open crumb, mild acidity. Available by the half loaf.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$12.00</span>
+                    <span class="nl-menu-type">Daily Bake</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="nl-menu-card nl-reveal nl-d3">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Flat white / coffee photo -->
+                  <img src="demos/bakery/images/restaurant-014-medium.webp" alt="Single-origin flat white" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Coffee</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Flat White</h3>
+                  <p class="nl-menu-desc">Our Yirgacheffe espresso, pulled short. Silky microfoam, no frills. The one to order.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$5.50</span>
+                    <span class="nl-menu-type">Single Origin</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="nl-menu-card nl-reveal nl-d1">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Almond croissant photo -->
+                  <img src="demos/bakery/images/restaurant-019-medium.webp" alt="Almond croissant" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Pastry</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Almond Croissant</h3>
+                  <p class="nl-menu-desc">Day-old croissant, almond cream, toasted flakes. Better the second time around.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$5.00</span>
+                    <span class="nl-menu-type">Morning Only</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="nl-menu-card nl-reveal nl-d2">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Rye bread photo -->
+                  <img src="demos/bakery/images/restaurant-022-medium.webp" alt="Dark rye loaf" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Bread</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Dark Rye</h3>
+                  <p class="nl-menu-desc">Whole grain rye, molasses, and caraway. Dense, earthy, keeps all week. A Nordic staple.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$14.00</span>
+                    <span class="nl-menu-type">Thursday to Sunday</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="nl-menu-card nl-reveal nl-d3">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Danish / lingonberry pastry photo -->
+                  <img src="demos/bakery/images/restaurant-028-medium.webp" alt="Lingonberry Danish" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Pastry</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Lingonberry Danish</h3>
+                  <p class="nl-menu-desc">Laminated dough, vanilla custard, lingonberry compote. Weekend mornings only.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$5.50</span>
+                    <span class="nl-menu-type">Weekend Special</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 7 -->
+              <div class="nl-menu-card nl-reveal nl-d2">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Oat milk latte / pour photo -->
+                  <img src="demos/bakery/images/restaurant-035-medium.webp" alt="Oat milk latte with latte art" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Coffee</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Oat Milk Latte</h3>
+                  <p class="nl-menu-desc">Silky oat milk, medium-roast espresso, a quiet warmth. The choice for a long sit.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$6.00</span>
+                    <span class="nl-menu-type">All Day</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 8 -->
+              <div class="nl-menu-card nl-reveal nl-d3">
+                <div class="nl-menu-img">
+                  <!-- SWAP: Saffron bun / seasonal pastry photo -->
+                  <img src="demos/bakery/images/restaurant-042-medium.webp" alt="Saffron bun with pearl sugar" loading="lazy" aspect-ratio="4/3">
+                  <span class="nl-menu-tag">Seasonal</span>
+                </div>
+                <div class="nl-menu-body">
+                  <h3 class="nl-menu-name">Saffron Lussekatt</h3>
+                  <p class="nl-menu-desc">Enriched dough, saffron, raisins. A Swedish winter tradition we keep all year.</p>
+                  <div class="nl-menu-footer">
+                    <span class="nl-menu-price">$4.75</span>
+                    <span class="nl-menu-type">Limited Daily</span>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- .nl-menu-grid -->
+
+            <div class="text-center mt-5 nl-reveal">
+              <a href="#nl-location" class="nl-btn-dark nl-magnetic">
+                Come taste for yourself <i class="bi-arrow-right"></i>
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================================================
+             OUR BAKERS / STORY
+        ================================================= -->
+        <section id="nl-story" class="nl-story-section section">
+          <div class="container">
+            <div class="row align-items-center g-5">
+
+              <div class="col-lg-5 nl-reveal nl-reveal-left">
+                <div class="nl-story-img-wrap">
+                  <!-- SWAP: Portrait of your baker(s) or baking scene -->
+                  <img src="demos/bakery/images/restaurant-006-large.webp" alt="Head baker Ingrid Larsen shaping dough at Nordlys Bakeri" loading="lazy" aspect-ratio="3/4">
+                  <div class="nl-story-badge">
+                    <span class="nl-story-badge-num" data-count="12">12</span>
+                    <div class="nl-story-badge-label">Years Baking</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-7 nl-story-content nl-reveal nl-reveal-right">
+                <div class="nl-section-tag">The People</div>
+                <h2 class="nl-section-title" style="margin-bottom: 0;">
+                  Two bakers,<br>one obsession.
+                </h2>
+
+                <blockquote class="nl-blockquote">
+                  "We wanted a place that felt like it had always been there. Where the bread has a crust you can hear."
+                </blockquote>
+
+                <p class="nl-philosophy-body">
+                  Ingrid and Mikkel met while training under a baker in Gothenburg. They moved to New York in 2014 with two sourdough starters wrapped in a tea towel, and opened Nordlys Bakeri three months later. The name means Northern Lights. Not because of any particular drama, but because good light is worth chasing.
+                </p>
+                <p class="nl-philosophy-body">
+                  Ingrid looks after the bread. Mikkel handles the pastry. They share the espresso machine and disagree, fondly, about most things.
+                </p>
+
+                <div class="mt-4 nl-d2">
+                  <a href="#nl-newsletter" class="nl-link-underline">
+                    Get weekly news from the bakery <i class="bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================
+             GALLERY
+        ================================================= -->
+        <section id="nl-gallery" class="nl-gallery-section section">
+          <div class="container-fluid px-4">
+
+            <div class="row mb-5">
+              <div class="col-lg-6 nl-reveal">
+                <div class="nl-section-tag">Gallery</div>
+                <h2 class="nl-section-title" style="color: var(--nl-bg);">
+                  Light, flour, and patience.
+                </h2>
+              </div>
+              <div class="col-lg-6 d-flex align-items-end justify-content-lg-end nl-reveal nl-d2">
+                <p style="color: rgba(247,244,239,0.5); font-size: 15px; max-width: 380px; text-align: right;">
+                  A few quiet images from our kitchen and our corner of the city.
+                </p>
+              </div>
+            </div>
+
+            <!-- Masonry gallery — CSS columns, images fill gaps naturally -->
+            <div class="nl-masonry-gallery">
+              <!-- SWAP: Replace all gallery images with your own photography -->
+              <div class="nl-gal-item nl-reveal">
+                <img src="demos/bakery/images/restaurant-002-large.webp" alt="Sourdough loaves cooling on wire racks" loading="lazy">
+              </div>
+              <div class="nl-gal-item nl-reveal nl-d1">
+                <img src="demos/bakery/images/restaurant-009-large.webp" alt="Coffee being poured at the espresso bar" loading="lazy">
+              </div>
+              <div class="nl-gal-item nl-reveal nl-d2">
+                <img src="demos/bakery/images/restaurant-015-large.webp" alt="Cardamom buns on a linen cloth" loading="lazy">
+              </div>
+              <div class="nl-gal-item nl-reveal nl-d1">
+                <img src="demos/bakery/images/restaurant-020-large.webp" alt="Morning light in the bakery window" loading="lazy">
+              </div>
+              <div class="nl-gal-item nl-reveal nl-d2">
+                <img src="demos/bakery/images/restaurant-025-large.webp" alt="Baker scoring a sourdough loaf" loading="lazy">
+              </div>
+              <div class="nl-gal-item nl-reveal nl-d3">
+                <img src="demos/bakery/images/restaurant-030-large.webp" alt="Interior of Nordlys Bakeri cafe tables" loading="lazy">
+              </div>
+              <div class="nl-gal-item nl-reveal nl-d2">
+                <img src="demos/bakery/images/restaurant-036-large.webp" alt="Pastries in the bakery display case" loading="lazy">
+              </div>
+              <div class="nl-gal-item nl-reveal nl-d1">
+                <img src="demos/bakery/images/restaurant-043-large.webp" alt="A warm cup of coffee on a wooden table" loading="lazy">
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================================================
+             HOURS & LOCATION
+        ================================================= -->
+        <section id="nl-location" class="nl-location-section section">
+          <div class="container">
+
+            <div class="row g-5 align-items-start">
+
+              <div class="col-lg-5 nl-reveal nl-reveal-left">
+                <div class="nl-section-tag">Visit Us</div>
+                <h2 class="nl-section-title" style="margin-bottom: 28px;">
+                  14 Linden Street,<br>Copenhagen Quarter.
+                </h2>
+                <p class="nl-philosophy-body">
+                  We are on the ground floor of the old mill building, between the linden trees. You cannot miss the smell of bread.
+                </p>
+
+                <ul class="nl-hours-list" role="list">
+                  <li>
+                    <span class="nl-hours-day">Monday to Friday</span>
+                    <span class="nl-hours-time">7:00 am to 6:00 pm</span>
+                  </li>
+                  <li>
+                    <span class="nl-hours-day">Saturday</span>
+                    <span class="nl-hours-time">8:00 am to 4:00 pm</span>
+                  </li>
+                  <li>
+                    <span class="nl-hours-day">Sunday</span>
+                    <span class="nl-hours-time">8:00 am to 2:00 pm</span>
+                  </li>
+                  <li>
+                    <span class="nl-hours-day">Public Holidays</span>
+                    <span class="nl-hours-time nl-hours-closed">Closed</span>
+                  </li>
+                </ul>
+
+                <div class="mt-4 d-flex gap-3 flex-wrap">
+                  <a href="tel:+15558675309" class="nl-link-underline">
+                    <i class="bi-telephone" style="color:var(--nl-accent)"></i> +1 (555) 867-5309
+                  </a>
+                </div>
+                <div class="mt-2">
+                  <a href="mailto:hello@nordlysbakeri.com" class="nl-link-underline">
+                    <i class="bi-envelope" style="color:var(--nl-accent)"></i> hello@nordlysbakeri.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-7 nl-reveal nl-reveal-right">
+                <div class="nl-map-card">
+                  <!-- SWAP: Embed a Google Maps iframe or replace with your own map image -->
+                  <img class="nl-map-placeholder" src="demos/bakery/images/restaurant-040-large.webp" alt="Map showing Nordlys Bakeri location at 14 Linden Street" loading="lazy" aspect-ratio="4/3">
+                  <div class="nl-address-overlay">
+                    <div class="nl-address-name">Nordlys Bakeri</div>
+                    <div class="nl-address-line">
+                      <i class="bi-geo-alt-fill"></i>
+                      <span>14 Linden Street, Copenhagen Quarter, New York, NY 10013</span>
+                    </div>
+                    <div class="nl-address-line">
+                      <i class="bi-train-front-fill"></i>
+                      <span>3 min walk from Canal St station</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================
+             NEWSLETTER
+        ================================================= -->
+        <section id="nl-newsletter" class="nl-newsletter-band section">
+          <div class="container">
+            <div class="row align-items-center justify-content-between g-4">
+              <div class="col-lg-5 nl-reveal nl-reveal-left">
+                <h2 class="nl-newsletter-headline">
+                  Good news, once a week.
+                </h2>
+                <p class="nl-newsletter-sub">
+                  New bakes, seasonal specials, and the occasional recipe. No noise, no sales pitch. Just a note from the kitchen.
+                </p>
+              </div>
+              <div class="col-lg-auto nl-reveal nl-d2">
+                <form class="nl-newsletter-form" onsubmit="return false;" novalidate>
+                  <label for="nl-email" class="visually-hidden">Your email address</label>
+                  <input type="email" id="nl-email" class="nl-newsletter-input" placeholder="Your email, quietly" autocomplete="email" required>
+                  <button type="submit" class="nl-btn-primary nl-magnetic">
+                    Subscribe <i class="bi-arrow-right"></i>
+                  </button>
+                </form>
+                <p style="font-size: 12px; color: var(--nl-muted); margin-top: 12px; opacity: 0.7;">
+                  Unsubscribe any time. We do not share your address.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- .content-wrap -->
+    </section><!-- #content -->
+
+    <!-- ================================================
+         FOOTER
+    ================================================= -->
+    <footer id="footer" class="dark">
+
+      <div class="container py-5">
+        <div class="row g-5">
+
+          <!-- Brand Column -->
+          <div class="col-lg-4 col-md-6">
+            <div class="nl-footer-brand">
+              <img class="footer-logo" src="demos/bakery/images/logo-dark@2x.png" srcset="demos/bakery/images/logo-dark.png, demos/bakery/images/logo-dark@2x.png 2x" alt="Nordlys Bakeri">
+              <p>
+                A Scandinavian bakery and coffee shop in Copenhagen Quarter, New York. Open daily from the early hours until the bread runs out.
+              </p>
+              <div class="nl-footer-socials">
+                <a href="#" aria-label="Instagram" title="Instagram"><i class="bi-instagram"></i></a>
+                <a href="#" aria-label="TikTok" title="TikTok"><i class="bi-tiktok"></i></a>
+                <a href="#" aria-label="Facebook" title="Facebook"><i class="bi-facebook"></i></a>
+                <a href="#" aria-label="Pinterest" title="Pinterest"><i class="bi-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Explore Column -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="nl-footer-heading">Explore</div>
+            <ul class="nl-footer-links">
+              <li><a href="#nl-philosophy">Our Story</a></li>
+              <li><a href="#nl-menu">Menu</a></li>
+              <li><a href="#nl-gallery">Gallery</a></li>
+              <li><a href="#nl-location">Visit</a></li>
+              <li><a href="#nl-newsletter">Newsletter</a></li>
+            </ul>
+          </div>
+
+          <!-- Hours Column -->
+          <div class="col-lg-3 col-md-6 col-6">
+            <div class="nl-footer-heading">Opening Hours</div>
+            <ul class="nl-footer-links">
+              <li><a href="#" style="cursor: default; pointer-events: none;">Mon to Fri: 7 am to 6 pm</a></li>
+              <li><a href="#" style="cursor: default; pointer-events: none;">Saturday: 8 am to 4 pm</a></li>
+              <li><a href="#" style="cursor: default; pointer-events: none;">Sunday: 8 am to 2 pm</a></li>
+              <li><a href="#" style="cursor: default; pointer-events: none; color: rgba(192,133,82,0.7);">Public Holidays: Closed</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Column -->
+          <div class="col-lg-3 col-md-6">
+            <div class="nl-footer-heading">Get in Touch</div>
+            <div class="nl-footer-contact-item">
+              <i class="bi-geo-alt-fill"></i>
+              <span>14 Linden Street, Copenhagen Quarter, New York, NY 10013</span>
+            </div>
+            <div class="nl-footer-contact-item">
+              <i class="bi-telephone-fill"></i>
+              <span>+1 (555) 867-5309</span>
+            </div>
+            <div class="nl-footer-contact-item">
+              <i class="bi-envelope-fill"></i>
+              <span>hello@nordlysbakeri.com</span>
+            </div>
+            <div style="margin-top: 20px;">
+              <a href="#nl-newsletter" class="nl-btn-primary" style="font-size: 11px; padding: 10px 20px;">
+                Join the list <i class="bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="copyrights">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md text-center text-md-start">
+              Copyrights &copy; 2026 Nordlys Bakeri.
+            </div>
+            <div class="col-12 col-md-auto text-center text-md-end mt-2 mt-md-0">
+              <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp;
+              <a href="#">Accessibility</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+  </div><!-- #wrapper -->
+
+  <!-- Canvas Framework JS -->
+  <script src="js/plugins.min.js"></script>
+  <script src="js/functions.bundle.js"></script>
+
+  <!-- Nordlys Bakeri — Custom Interactions -->
+  <script>
+    (function() {
+      'use strict';
+      /* ── Utility ─────────────────────────────────────── */
+      function $(sel, ctx) {
+        return (ctx || document).querySelector(sel);
+      }
+
+      function $$(sel, ctx) {
+        return Array.from((ctx || document).querySelectorAll(sel));
+      }
+      /* ── Hero Word-by-word entrance ─────────────────── */
+      function heroEntrance() {
+        var eyebrow = $('#nlEyebrow');
+        var words = $$('.nl-word span');
+        var sub = $('#nlSub');
+        var actions = $('#nlActions');
+        // Eyebrow
+        if (eyebrow) {
+          setTimeout(function() {
+            eyebrow.classList.add('visible');
+          }, 180);
+        }
+        // Words staggered
+        words.forEach(function(word, i) {
+          setTimeout(function() {
+            word.classList.add('visible');
+          }, 340 + i * 100);
+        });
+        // Sub + actions
+        if (sub) {
+          setTimeout(function() {
+            sub.classList.add('visible');
+          }, 900);
+        }
+        if (actions) {
+          setTimeout(function() {
+            actions.classList.add('visible');
+          }, 1050);
+        }
+      }
+      /* ── Scroll Reveal ───────────────────────────────── */
+      var revealEls = [];
+
+      function collectRevealEls() {
+        revealEls = $$('.nl-reveal, .nl-reveal-left, .nl-reveal-right, .nl-reveal-scale, .nl-img-reveal');
+      }
+
+      function checkReveal() {
+        var vh = window.innerHeight;
+        revealEls.forEach(function(el) {
+          if (el.classList.contains('visible')) return;
+          var rect = el.getBoundingClientRect();
+          if (rect.top < vh * 0.88) {
+            el.classList.add('visible');
+          }
+        });
+      }
+      /* ── Parallax Hero ───────────────────────────────── */
+      var heroBg = $('#nlHeroBg');
+
+      function parallaxHero() {
+        if (!heroBg) return;
+        var sy = window.scrollY;
+        if (sy < window.innerHeight * 1.2) {
+          heroBg.style.transform = 'translateY(' + (sy * 0.28) + 'px)';
+        }
+      }
+      /* ── Sticky Header Transition ────────────────────── */
+      function stickyHeaderCheck() {
+        if (window.scrollY > 60) {
+          document.body.classList.add('header-solid');
+        } else {
+          document.body.classList.remove('header-solid');
+        }
+      }
+      /* ── Count-up Numbers ────────────────────────────── */
+      var countEls = $$('[data-count]');
+      var counted = new Set();
+
+      function animateCount(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var start = 0;
+        var duration = 1400;
+        var startTime = null;
+
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          var progress = Math.min((ts - startTime) / duration, 1);
+          var ease = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(start + (target - start) * ease);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target;
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      function checkCounts() {
+        countEls.forEach(function(el) {
+          if (counted.has(el)) return;
+          var rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.88) {
+            counted.add(el);
+            animateCount(el);
+          }
+        });
+      }
+      /* ── Magnetic Buttons ────────────────────────────── */
+      function initMagnetic() {
+        $$('.nl-magnetic').forEach(function(btn) {
+          btn.addEventListener('mousemove', function(e) {
+            var rect = btn.getBoundingClientRect();
+            var cx = rect.left + rect.width / 2;
+            var cy = rect.top + rect.height / 2;
+            var dx = (e.clientX - cx) * 0.3;
+            var dy = (e.clientY - cy) * 0.3;
+            btn.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+          });
+          btn.addEventListener('mouseleave', function() {
+            btn.style.transform = '';
+          });
+        });
+      }
+      /* ── Custom Cursor ───────────────────────────────── */
+      function initCursor() {
+        var cursor = $('#nlCursor');
+        var ring = $('#nlCursorRing');
+        if (!cursor || !ring) return;
+        var cx = 0,
+          cy = 0;
+        var rx = 0,
+          ry = 0;
+        document.addEventListener('mousemove', function(e) {
+          cx = e.clientX;
+          cy = e.clientY;
+          cursor.style.left = cx + 'px';
+          cursor.style.top = cy + 'px';
+          cursor.style.opacity = '1';
+          ring.style.opacity = '1';
+        });
+        // Ring follows with lag
+        function animRing() {
+          rx += (cx - rx) * 0.12;
+          ry += (cy - ry) * 0.12;
+          ring.style.left = rx + 'px';
+          ring.style.top = ry + 'px';
+          requestAnimationFrame(animRing);
+        }
+        animRing();
+        // Active on interactive elements
+        $$('a, button, .nl-menu-card, .nl-magnetic, input').forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            cursor.classList.add('active');
+            ring.classList.add('active');
+          });
+          el.addEventListener('mouseleave', function() {
+            cursor.classList.remove('active');
+            ring.classList.remove('active');
+          });
+        });
+        // Hide on touch
+        document.addEventListener('touchstart', function() {
+          cursor.style.display = 'none';
+          ring.style.display = 'none';
+        }, {
+          once: true
+        });
+      }
+      /* ── Smooth scroll for anchor links ─────────────── */
+      function initSmoothScroll() {
+        $$('a[href^="#"]').forEach(function(a) {
+          a.addEventListener('click', function(e) {
+            var target = document.querySelector(a.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            var offset = 80;
+            var top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({
+              top: top,
+              behavior: 'smooth'
+            });
+          });
+        });
+      }
+      /* ── Scroll handler ──────────────────────────────── */
+      var ticking = false;
+
+      function onScroll() {
+        if (!ticking) {
+          requestAnimationFrame(function() {
+            checkReveal();
+            checkCounts();
+            parallaxHero();
+            stickyHeaderCheck();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      /* ── Init ────────────────────────────────────────── */
+      function init() {
+        collectRevealEls();
+        heroEntrance();
+        initMagnetic();
+        initCursor();
+        initSmoothScroll();
+        window.addEventListener('scroll', onScroll, {
+          passive: true
+        });
+        window.addEventListener('resize', function() {
+          collectRevealEls();
+          checkReveal();
+        });
+        // Initial check after a short delay (for above-fold reveals)
+        setTimeout(function() {
+          checkReveal();
+          checkCounts();
+          stickyHeaderCheck();
+        }, 200);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+
+  </script>
+
+</body>
+</html>
